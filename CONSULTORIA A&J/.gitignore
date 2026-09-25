@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Playwright
+.playwright/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Brand kit do usuário (gerado no primeiro uso)
+brand-kit.json
+
+# Carrosséis gerados (ficam locais — não commitar saídas)
+conteudos/*/
+!conteudos/.gitkeep
+
+# Logs / temporários
+*.log
+.tmp/

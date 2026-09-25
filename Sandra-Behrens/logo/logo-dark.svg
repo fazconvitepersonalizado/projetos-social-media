@@ -1,0 +1,12 @@
+<svg width="480" height="210" viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sandra Behrens — Psicóloga">
+  <title>Sandra Behrens — Psicóloga (monocromática)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Parisienne&amp;family=Cormorant+Garamond:wght@500;600&amp;family=Poppins:wght@500&amp;display=swap');
+    .script { font-family: 'Parisienne', 'Brush Script MT', cursive; }
+    .serif  { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .sans   { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; }
+  </style>
+  <text class="script" x="240" y="90" text-anchor="middle" font-size="72" fill="#3A342C">Sandra</text>
+  <text class="serif" x="240" y="136" text-anchor="middle" font-size="32" font-weight="600" letter-spacing="7" fill="#3A342C">BEHRENS</text>
+  <text class="sans" x="240" y="162" text-anchor="middle" font-size="12" font-weight="500" letter-spacing="4" fill="#3A342C">PSICÓLOGA</text>
+</svg>
