@@ -50,20 +50,70 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Manter o arquivo original (raw) separado do editado, pra poder refazer o
   ajuste sem precisar buscar a imagem de novo.
 - Ao cortar uma foto com pessoa, evitar cortar rosto/cabeça — enquadrar com
-  viés pra cima quando a foto for mais alta que o espaço final.
+  viés pra cima quando a foto for mais alta que o espaço final. Se o
+  recorte final (na proporção real de exibição, não só na proporção
+  intermediária do arquivo) empurrar a pessoa/rosto pra fora do quadro,
+  ajustar `object-position` (ou recorte manual) até o sujeito aparecer.
 - Tratamento visual (tinta de marca, filtro) deve ser sutil — o objetivo é a
   foto parecer parte do design, não um filtro pesado por cima. Na dúvida,
   menos é mais.
 - Ao buscar foto (quando eu não fornecer uma): usar só bancos livres para
   uso comercial sem pedir permissão (ex.: Unsplash, Pexels, Pixabay) —
   nunca resultado de busca de imagem genérica ou site de terceiros, que
-  normalmente tem direito autoral.
+  normalmente tem direito autoral. Cuidado com variantes pagas dentro do
+  mesmo banco (ex.: Unsplash+/Getty) — confirmar que a licença é gratuita
+  antes de baixar, não só que o site é "livre" no geral.
 - A busca deve ser pelo conteúdo específico daquele trecho/peça, não pelo
   tema geral do projeto — busca genérica traz foto genérica, que parece
   "de banco de imagens" e não da marca.
 - Antes de baixar/usar a foto escolhida, mostrar 2–3 opções e perguntar qual
   usar — nunca decidir sozinho e já aplicar, pra não gastar trabalho de
-  edição numa foto que pode ser trocada.
+  edição numa foto que pode ser trocada. Exceção: se eu autorizar
+  explicitamente ("escolhe você, com critério lógico") para aquela rodada,
+  pode escolher direto, mas ainda assim justificando a escolha.
+
+## Carrosséis: perguntas obrigatórias antes de montar
+- Sempre que um carrossel novo (qualquer marca) for incluir fotos reais,
+  perguntar de uma vez, como escolhas fechadas (nunca como "como você quer
+  que eu decida isso"):
+  1. Slides com foto: escolha aleatória (o agente decide) ou manual (eu
+     indico)?
+  2. Estilo de imagem: emoldurada (card), full-bleed (slide inteiro), ou
+     variado (mistura dos dois no mesmo carrossel)?
+  3. Texto sobre full-bleed: centralizado, ou deslocado pra cima/baixo
+     conforme o espaço vazio daquela foto específica?
+  4. Opacidade da foto: vívida ou suave/esmaecida?
+  5. Indicador de swipe: manter a barra de progresso segmentada + contador
+     padrão do design system, ou usar outro indicador (ex.: selo discreto
+     "ARRASTE PARA O LADO →" só na capa)? Não é regra fixa pra nenhum lado.
+  6. Foto própria ou buscar uma livre de direitos?
+  Não repetir a(s) mesma(s) posição(ões) de foto do carrossel anterior da
+  mesma marca.
+- Logo/marca-d'água nunca sobre rosto em foto: reposicionar pra uma área sem
+  rosto quando necessário. Toda instância de logo num carrossel com fotos
+  (capa, watermark, CTA) leva um "chip" de fundo justo (raio ~6-8px,
+  padding ~6-8px, cantos levemente arredondados) usando os tokens da
+  própria marca (ex.: `LIGHT_BG`/`LIGHT_BORDER` translúcido em fundo claro,
+  `rgba(0,0,0,0.22-0.24)` em fundo escuro/gradiente) — nunca um quadrado
+  forçado nem cor de outra marca.
+- Tamanhos de fonte do design-system podem ficar pequenos demais no
+  celular: antes de fechar, gerar um preview (screenshot na escala real de
+  exportação) e checar legibilidade; se precisar aumentar, também apertar
+  o espaçamento pra caber no slide de 525px.
+- No slide de CTA com fundo gradiente da marca, nunca colorir uma frase ou
+  título inteiro com o tom escuro da marca (baixo contraste) — esse tom só
+  em destaque pontual de 1-2 palavras dentro de uma frase branca/clara.
+- **Verificação visual obrigatória antes de apresentar (qualquer carrossel
+  com foto):** depois de gerar ou editar o HTML, sempre renderizar cada
+  slide como imagem (screenshot) e ler de volta, conferindo por slide: (1)
+  o texto está legível de fato contra o que está atrás dele naquele ponto
+  específico, não contra a cor teórica do token; (2) a parte da foto que
+  sobrou depois do recorte (`object-fit:cover`) ainda mostra o que o texto
+  daquele slide está falando, sem cortar o sujeito/ação relevante pra fora
+  do quadro. Rodar de novo a cada correção. Se achar problema, **sempre
+  avisar antes de mexer**, mesmo em ajuste técnico pequeno (object-position,
+  opacidade de overlay) — nunca corrigir silenciosamente. Se estiver tudo
+  certo, dizer isso explicitamente em vez de simplesmente seguir em frente.
 
 ## Salvamento automático (git)
 - Sempre que um **marco relevante** for concluído em qualquer projeto desta
@@ -80,10 +130,18 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Só fazer push depois de confirmação explícita.
 
 ## Comunicação e estilo de trabalho
-<!-- Ex: respostas diretas e curtas, sempre em português -->
+- Evitar travessão/traço (—, -) na copy de qualquer peça; usar ponto e
+  vírgula no lugar quando for unir duas frases relacionadas.
 
 ## Organização de projetos
-<!-- Princípios gerais de estrutura de pastas, nomenclatura, README, o que fica fora do git, etc. -->
+- `galeria.html` na raiz desta pasta lista todos os carrosséis de todos os
+  clientes (miniatura da capa + título + data), agrupados por marca; clicar
+  num card abre o `carousel.html` original direto. Gerado por
+  `generate_gallery.py` (também na raiz) — roda automaticamente ao final da
+  Fase 5 (exportação) de qualquer carrossel novo (ver skill
+  `instagram-carousel`), ou pode ser rodado manualmente (`python
+  generate_gallery.py`, ou `--force` pra regerar todas as miniaturas). As
+  miniaturas ficam em `.gallery-cache/` (fora do git).
 
 ## Manutenção entre projetos
 - Quando um projeto ganha uma melhoria de processo que **não** é exclusiva
@@ -100,3 +158,24 @@ projeto atual, pergunte antes de só aplicar e seguir:
   (privado). Definido o protocolo de salvamento: commit local automático a
   cada marco concluído (com aviso do que foi salvo); push só mediante
   confirmação, revisado periodicamente.
+- 2026-09-25 — Padronizado evitar travessão/traço na copy de qualquer
+  carrossel; usar ponto e vírgula no lugar (pedido durante o carrossel
+  "5 motivos de acidentes de trabalho" da A&J).
+- 2026-09-25 — Recuperadas e unificadas aqui várias regras de qualidade de
+  carrossel (perguntas obrigatórias sobre fotos/indicador de swipe, chip de
+  proteção de logo, checagem de legibilidade de fonte, contraste no CTA de
+  gradiente) que existiam apenas em memórias de sessões antigas presas em
+  pastas `Downloads\Sandra-Behrens` e `Downloads\instagram-carrossel-main`,
+  nunca migradas pra esta pasta — por isso não estavam sendo aplicadas em
+  novos carrosséis como o da A&J.
+- 2026-09-25 — Criada a etapa de verificação visual obrigatória (renderizar
+  e ler cada slide de volta, checando legibilidade de texto e se a foto
+  recortada ainda bate com o texto), como `references/visual-qa.md` na
+  skill `instagram-carousel` de ambos os projetos (A&J e Sandra-Behrens).
+  Qualquer problema encontrado deve ser reportado antes de qualquer ajuste,
+  mesmo pequeno; nunca corrigir sozinho sem avisar.
+- 2026-09-25 — Criada `galeria.html` + `generate_gallery.py` na raiz da
+  pasta: página única listando todos os carrosséis de todos os clientes,
+  com miniatura clicável que abre o carrossel original. Integrada à Fase 5
+  da skill `instagram-carousel` pra rodar automaticamente após cada
+  exportação.

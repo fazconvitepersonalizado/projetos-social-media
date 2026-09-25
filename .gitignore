@@ -11,3 +11,6 @@ desktop.ini
 .env
 .env.*
 *.env
+
+# Miniaturas geradas pra galeria.html (regenerar com generate_gallery.py)
+.gallery-cache/

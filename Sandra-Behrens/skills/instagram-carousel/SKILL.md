@@ -27,6 +27,7 @@ work.
 - `references/design-system.md` — Colors, typography, slide sequences, components, layout, IG frame
 - `references/edit-panel.md` — Side-panel editor + "Baixar HTML" button injected into the preview
 - `references/export.md` — Playwright export to 1080×1350 PNGs + project path conventions
+- `references/visual-qa.md` — Rendering every slide and reading it back for text legibility + photo/text relevance before showing it to the user
 
 Read a reference fully before doing work that depends on it. If a reference
 contradicts something you remember, the reference wins.
@@ -101,7 +102,14 @@ Once the plan is approved:
 4. **Inject the edit panel** per `references/edit-panel.md`. Every text element
    that the user is likely to tweak gets a `data-edit-id="slideN-role"`
    attribute.
-5. Tell the user the file path and instruct them to open it in a browser to
+5. **Run the visual QA pass per `references/visual-qa.md`** — render every
+   slide as a screenshot and read each one back, checking text legibility
+   and photo/text relevance. This is mandatory, not optional, and runs again
+   after any fix. If a slide fails either check, stop and report the
+   specific problem and proposed fix to the user; wait for approval before
+   changing anything, even a small technical tweak like `object-position` or
+   overlay opacity. If everything passes, say so explicitly.
+6. Tell the user the file path and instruct them to open it in a browser to
    review and edit.
 
 ### Phase 4 — Review & edit
@@ -127,7 +135,11 @@ Only after explicit approval ("pode exportar" / "aprovado" / "ok"):
    panel first (see `references/edit-panel.md` safety check).
 2. Run the Playwright export per `references/export.md`. Write PNGs to
    `conteudos/<YYYY-MM-DD>-<slug>/slides/`.
-3. Report the output folder back to the user.
+3. Run `python ../generate_gallery.py` (from the project root) to refresh
+   `galeria.html` at the top of `PROJETOS SOCIAL MEDIA/` so the new carousel
+   shows up there too. Skip silently if that script doesn't exist (older
+   checkout) instead of failing the export.
+4. Report the output folder back to the user.
 
 ---
 
@@ -144,6 +156,10 @@ Only after explicit approval ("pode exportar" / "aprovado" / "ok"):
 - Always embed user images as base64 `data:` URIs.
 - Always keep `.ig-frame` at exactly 420px.
 - Never skip the review step. Never export without explicit approval.
+- **Never skip visual QA:** after generating or editing `carousel.html`,
+  always render and read back every slide per `references/visual-qa.md`
+  before telling the user it's ready. Never silently fix what it finds,
+  even a small technical tweak, report it and wait for approval first.
 - **Universal centralization:** every slide uses `justify-content: center`
   with the content block at `max-width: 360px; margin: 0 auto` and slide
   padding `64px 36px 76px`. Never align content to `flex-end`, regardless of
