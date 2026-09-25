@@ -65,6 +65,20 @@ projeto atual, pergunte antes de só aplicar e seguir:
   usar — nunca decidir sozinho e já aplicar, pra não gastar trabalho de
   edição numa foto que pode ser trocada.
 
+## Salvamento automático (git)
+- Sempre que um **marco relevante** for concluído em qualquer projeto desta
+  pasta — um conteúdo finalizado, uma correção de skill/padrão, uma
+  atualização de configuração — fazer `git add` + `git commit` local com uma
+  mensagem descritiva, **sem precisar perguntar antes**, e avisar em seguida
+  o que foi salvo (ex.: "Salvei localmente: ajuste no fundo do slide 3 do
+  carrossel X").
+- Não commitar a cada edição intermediária/exploratória — só quando algo
+  chegar a um estado concluído/estável.
+- **Não dar `git push` automaticamente.** De vez em quando (ou quando fizer
+  sentido, tipo ao final de uma sessão de trabalho), resumir quais commits
+  locais ainda não foram enviados ao GitHub e perguntar se já pode enviar.
+  Só fazer push depois de confirmação explícita.
+
 ## Comunicação e estilo de trabalho
 <!-- Ex: respostas diretas e curtas, sempre em português -->
 
@@ -82,3 +96,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   generalizadas as regras de legibilidade de logo e tratamento de imagens
   (extraídas de instruções já dadas nos projetos CONSULTORIA A&J e
   Sandra-Behrens), removendo valores específicos de cada cliente.
+- 2026-09-25 — Repositório único `projetos-social-media` criado no GitHub
+  (privado). Definido o protocolo de salvamento: commit local automático a
+  cada marco concluído (com aviso do que foi salvo); push só mediante
+  confirmação, revisado periodicamente.
