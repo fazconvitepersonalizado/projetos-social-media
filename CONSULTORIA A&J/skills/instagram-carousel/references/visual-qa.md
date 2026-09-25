@@ -86,6 +86,64 @@ tweak like `object-position` or overlay opacity, not just a full photo swap.
 If nothing fails, say so explicitly ("conferi os N slides, texto e foto
 batem em todos") instead of staying silent about the check having happened.
 
+## Fixing text-over-photo legibility (recipe)
+
+When Step 2 finds a text-over-photo slide that fails the legibility check,
+this is the recipe that actually fixed it in practice (A&J, "5 motivos de
+acidentes de trabalho", 2026-09-25) — use it as the starting point instead
+of re-deriving a fix from scratch each time:
+
+1. **Size the scrim to the real content height, not a guessed percentage.**
+   A single-stop gradient that fades out at, say, 55% of the slide looks
+   fine in isolation but fails the moment the actual text block (headline +
+   subhead + any small label/badge) extends further down than that — the
+   tail of the text lands directly on the bare photo. Look at where the
+   text block *actually* ends in the rendered screenshot and make sure the
+   gradient stays at a legible opacity at least that far down, e.g.:
+   ```html
+   <div style="position:absolute;inset:0;background:linear-gradient(180deg,
+     rgba(18,63,60,0.92) 0%, rgba(18,63,60,0.82) 20%, rgba(18,63,60,0.68) 40%,
+     rgba(18,63,60,0.52) 58%, rgba(18,63,60,0.34) 72%, rgba(18,63,60,0.14) 90%
+   );z-index:1;"></div>
+   ```
+   (hex values are `{DARK_BG}` as rgba — interpolate the brand's actual dark
+   token, this is the A&J example).
+
+2. **Add a low, uniform flat wash as a safety net**, on top of the
+   directional gradient, so no point on the slide — including the very tail
+   of the fade — ever drops below a baseline contrast floor:
+   ```html
+   <div style="position:absolute;inset:0;background:rgba({DARK_BG_rgb},0.16);z-index:1;"></div>
+   ```
+   This is cheap insurance: it catches whatever the directional gradient's
+   math doesn't quite cover, without visibly changing the design.
+
+3. **A secondary opposite-edge gradient is fine for vignette consistency**,
+   but keep it genuinely subtle and don't let it re-darken an area you
+   deliberately kept clear for another reason (e.g. a face) — cap its reach
+   (a `to top, ... transparent 38%` style stop that only touches the very
+   bottom edge) rather than letting it grow to meet the main scrim.
+
+4. **Never use a brand's pale/light accent token (e.g. `BRAND_LIGHT`) for
+   emphasized text sitting directly on a photo.** It reads fine over a flat
+   brand-gradient CTA slide (fully controlled background) but loses contrast
+   fast over a real photo, especially in a scrim's fade zone where the
+   underlying image can be bright (sky, light concrete, etc). Use white or
+   cream instead, and get the "mixed weight" emphasis effect from
+   weight+italic alone (e.g. `font-weight:700;font-style:italic;color:#fff`)
+   rather than from color, whenever the text sits over a photo.
+
+5. **Low-opacity microcopy (a small swipe hint, a secondary label) needs a
+   higher floor over a photo than over a flat/solid slide background.**
+   Something styled at `opacity:0.5-0.6` reads as an intentional, quiet
+   detail over `LIGHT_BG`/`DARK_BG`/the brand gradient, but the same opacity
+   over a busy photo — especially past the point where the scrim has faded —
+   can become genuinely unreadable. Push it toward `0.75-0.85` and bump the
+   font-weight when it sits over a photo.
+
+Re-render after applying and re-check per Step 2 above — don't assume the
+recipe worked without looking at the result.
+
 ## When to re-run
 
 Any time `carousel.html`'s slides change: after first generation, after any

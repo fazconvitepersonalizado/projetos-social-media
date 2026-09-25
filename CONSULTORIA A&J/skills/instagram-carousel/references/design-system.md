@@ -402,7 +402,14 @@ special case.
 ```
 Use the photo's own composition to decide top vs. bottom scrim direction —
 keep text over the visually calmest part of the photo (usually where the
-subject leaves negative space).
+subject leaves negative space). The single-stop example above is a starting
+point only — size the scrim to the actual rendered content, and layer extra
+protection when the photo has bright/busy areas. See the legibility recipe
+in `references/visual-qa.md` ("Fixing text-over-photo legibility") for the
+concrete layering pattern (multi-stop gradient sized to content height +
+flat uniform wash + white/cream text instead of a brand's pale accent
+color) — this is required whenever a single directional gradient leaves any
+part of the text sitting on a light/busy patch of the photo.
 
 **Framed photo card** (Feature/Detail/How-to — photo supports the copy, doesn't replace it):
 ```html

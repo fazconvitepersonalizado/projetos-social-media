@@ -114,6 +114,25 @@ projeto atual, pergunte antes de só aplicar e seguir:
   avisar antes de mexer**, mesmo em ajuste técnico pequeno (object-position,
   opacidade de overlay) — nunca corrigir silenciosamente. Se estiver tudo
   certo, dizer isso explicitamente em vez de simplesmente seguir em frente.
+- **Receita pra corrigir legibilidade de texto sobre foto** (qualquer
+  carrossel, qualquer cliente), quando a verificação acima achar problema:
+  1. Dimensionar o degradê de proteção pela altura real do bloco de texto
+     (headline + subtítulo + qualquer selo/legenda), não por uma
+     porcentagem arbitrária — se o texto vai até 68% da altura do slide, o
+     degradê precisa continuar com opacidade útil até lá, não sumir aos 55%.
+  2. Reforçar com uma camada uniforme leve (`rgba` baixo, ex.: 0.15-0.18) por
+     cima do degradê direcional, como rede de segurança pros pontos onde o
+     gradiente já enfraqueceu.
+  3. Nunca usar a cor clara/pálida da marca (`BRAND_LIGHT`) em destaque de
+     texto sobre foto — perde contraste fácil contra céu/fundo claro; usar
+     branco/creme e conseguir o efeito de "peso misto" só com
+     peso+itálico.
+  4. Textos pequenos/discretos (selo de "arraste", legenda) que ficam bem a
+     ~0.5-0.6 de opacidade sobre fundo liso (`LIGHT_BG`/`DARK_BG`/gradiente)
+     precisam de mais opacidade (~0.75-0.85) e mais peso quando estão sobre
+     uma foto de verdade.
+  Receita completa com exemplos de código em `references/visual-qa.md` da
+  skill `instagram-carousel` ("Fixing text-over-photo legibility").
 
 ## Salvamento automático (git)
 - Sempre que um **marco relevante** for concluído em qualquer projeto desta
@@ -179,3 +198,9 @@ projeto atual, pergunte antes de só aplicar e seguir:
   com miniatura clicável que abre o carrossel original. Integrada à Fase 5
   da skill `instagram-carousel` pra rodar automaticamente após cada
   exportação.
+- 2026-09-25 — Registrada a receita de correção de legibilidade de texto
+  sobre foto (degradê dimensionado pelo texto real, camada uniforme de
+  reforço, evitar cor clara da marca em destaque sobre foto, opacidade maior
+  pra legendas pequenas sobre foto), em `references/visual-qa.md` de ambos
+  os projetos — derivada da correção iterativa do slide 1 do carrossel
+  "5 motivos de acidentes de trabalho" da A&J.
