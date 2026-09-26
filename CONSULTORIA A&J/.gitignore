@@ -21,10 +21,6 @@ desktop.ini
 # Brand kit do usuário (gerado no primeiro uso)
 brand-kit.json
 
-# Carrosséis gerados (ficam locais — não commitar saídas)
-conteudos/*/
-!conteudos/.gitkeep
-
 # Logs / temporários
 *.log
 .tmp/
