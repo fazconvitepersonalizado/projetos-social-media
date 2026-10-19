@@ -178,7 +178,65 @@ EDITOR = base.EDITOR.replace(
     '{1:"Capa (foto)",2:"Total do dia",3:"Fome mais tarde",4:"Jantar equilibrado",5:"Quantidade",6:"Prato em 3 partes (foto)",7:"CTA",8:"Encerramento"}',
     '{1:"Capa (foto)",2:"Dia inteiro",3:"Geladeira 23h (foto)",4:"Jantar (foto)",5:"Tamanho do prato",6:"Prato de olho",7:"Pergunta",8:"Encerramento"}')
 assert EDITOR != base.EDITOR
-html = HEAD + base.FRAME.replace("".join(base.SLIDES), "".join(SLIDES)) + EDITOR + base.SWIPE
+# Navegação da prévia: fica na faixa dos pontinhos, fora da área do slide,
+# então nunca entra no export (export_carousel.py só captura .ig-viewport).
+CHEV = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="{d}"/></svg>'
+NAV_DOTS = "".join(f'<button class="ig-dot" type="button" aria-label="Ir para o slide {i + 1}" data-go="{i}"></button>'
+                   for i in range(TOTAL))
+NAV = f'''<div class="ig-dots ig-nav">
+  <button class="ig-nav-btn" id="ig-prev" type="button" aria-label="Slide anterior">{CHEV.format(d="M15 6l-6 6 6 6")}</button>
+  <div class="ig-nav-dots">{NAV_DOTS}</div>
+  <span class="ig-nav-count" id="ig-count">1/{TOTAL}</span>
+  <button class="ig-nav-btn" id="ig-next" type="button" aria-label="Próximo slide">{CHEV.format(d="M9 6l6 6-6 6")}</button>
+</div>'''
+NAV_CSS = f'''<style>
+  .ig-nav {{ display:flex; align-items:center; justify-content:center; gap:12px; padding:10px 14px; }}
+  .ig-nav-dots {{ display:flex; gap:6px; align-items:center; }}
+  .ig-nav .ig-dot {{ width:7px; height:7px; padding:0; border:0; border-radius:4px; background:rgba(0,0,0,0.2); cursor:pointer; transition:width .2s, background .2s; }}
+  .ig-nav .ig-dot.on {{ width:18px; background:{PRIMARY}; }}
+  .ig-nav-btn {{ width:34px; height:34px; border-radius:50%; border:1px solid rgba(0,0,0,0.12); background:#fff; color:#111;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .15s, color .15s, opacity .15s; }}
+  .ig-nav-btn:hover:not(:disabled) {{ background:{PRIMARY}; color:#fff; border-color:{PRIMARY}; }}
+  .ig-nav-btn:disabled {{ opacity:.3; cursor:default; }}
+  .ig-nav-btn:focus-visible, .ig-nav .ig-dot:focus-visible {{ outline:2px solid {PRIMARY}; outline-offset:2px; }}
+  .ig-nav-count {{ font:500 12px 'DM Mono', monospace; color:#666; min-width:30px; text-align:center; }}
+</style>'''
+NAV_JS = '''<script>
+(function(){
+  const track = document.querySelector('.ig-track');
+  const viewport = document.querySelector('.ig-viewport');
+  const dots = Array.from(document.querySelectorAll('.ig-nav .ig-dot'));
+  const prev = document.getElementById('ig-prev'), next = document.getElementById('ig-next');
+  const count = document.getElementById('ig-count');
+  const total = track.children.length, slideW = 420;
+  let index = 0, startX = 0, dragging = false, currentX = 0;
+  function goTo(i){
+    index = Math.max(0, Math.min(total - 1, i));
+    track.style.transition = 'transform .35s ease';
+    track.style.transform = 'translateX(' + (-index * slideW) + 'px)';
+    dots.forEach((d, di) => d.classList.toggle('on', di === index));
+    prev.disabled = index === 0; next.disabled = index === total - 1;
+    count.textContent = (index + 1) + '/' + total;
+  }
+  prev.addEventListener('click', () => goTo(index - 1));
+  next.addEventListener('click', () => goTo(index + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.go)));
+  document.addEventListener('keydown', (e) => {
+    if (/^(TEXTAREA|INPUT)$/.test(document.activeElement.tagName)) return;  // não atrapalha o painel de edição
+    if (e.key === 'ArrowRight') goTo(index + 1);
+    if (e.key === 'ArrowLeft') goTo(index - 1);
+  });
+  viewport.addEventListener('pointerdown', (e) => { dragging = true; startX = e.clientX; currentX = -index * slideW; track.style.transition = 'none'; viewport.setPointerCapture(e.pointerId); });
+  viewport.addEventListener('pointermove', (e) => { if(!dragging) return; track.style.transform = 'translateX(' + (currentX + e.clientX - startX) + 'px)'; });
+  viewport.addEventListener('pointerup', (e) => { if(!dragging) return; dragging = false; const dx = e.clientX - startX; if (dx < -60) goTo(index + 1); else if (dx > 60) goTo(index - 1); else goTo(index); });
+  viewport.addEventListener('pointerleave', () => { if(dragging){ dragging = false; goTo(index); } });
+  goTo(0);
+})();
+</script>
+'''
+FRAME = base.FRAME.replace("".join(base.SLIDES), "".join(SLIDES)).replace(f'<div class="ig-dots">{base.DOTS}</div>', NAV)
+assert NAV in FRAME
+html = HEAD + NAV_CSS + FRAME + EDITOR + NAV_JS
 html = html.replace("Arrasta pro lado que eu te explico.", "Arrasta que eu explico.")
 assert "".join(SLIDES) in html
 assert not re.search(r"[—–]", re.sub(r"<[^>]+>", "", "".join(SLIDES))), "travessão na copy"
