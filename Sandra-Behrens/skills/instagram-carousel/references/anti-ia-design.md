@@ -2,7 +2,7 @@
 
 Regras de design para todo carrossel, derivadas do Impeccable (Paul Bakaus,
 Apache 2.0; 61 regras automáticas de "visual de IA") e testadas em
-2026-10-19 no carrossel "Carboidrato à noite engorda?" (Marina Couto): o
+2026-10-19 no carrossel "Carboidrato à noite engorda?" (cliente de teste fictícia, já removida): o
 detector caiu de 15 problemas para 0 problemas reais. Vencem
 `references/design-system.md` em caso de conflito.
 

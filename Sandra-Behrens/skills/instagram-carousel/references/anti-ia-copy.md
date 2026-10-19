@@ -4,7 +4,7 @@ Revisão obrigatória da copy de todo carrossel, **antes** de gerar o HTML
 (Fase 2, junto com o plano). Fontes: humanizer (blader, baseado no guia
 "Signs of AI writing" da Wikipédia), stop-slop (Hardik Pandya) e a skill
 no-ai-slop, adaptadas para português e para carrossel. Testado em
-2026-10-19 no carrossel "Carboidrato à noite engorda?" (Marina Couto):
+2026-10-19 no carrossel "Carboidrato à noite engorda?" (cliente de teste fictícia, já removida):
 nota da copy foi de 25/50 para 38/50.
 
 ## A voz do cliente vem primeiro
@@ -13,7 +13,7 @@ Estas regras tiram vícios genéricos; elas **não** substituem a voz de cada
 cliente. Antes de revisar, leia a skill de marca do cliente
 (`skills/marca-<slug>/SKILL.md`), o brand-kit (`tone`) e as legendas/carrosséis
 já aprovados. Expressões da marca (ex.: "Comida de verdade, sem neura." da
-Marina) ficam, mesmo que pareçam bordão: bordão do cliente é assinatura,
+cliente de teste) ficam, mesmo que pareçam bordão: bordão do cliente é assinatura,
 bordão genérico é vício. Gírias, regionalismos, humor e o jeito de falar do
 cliente também ficam.
 

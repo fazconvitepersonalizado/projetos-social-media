@@ -84,8 +84,7 @@ NAV_JS = """<script>
 
 As classes `.ig-viewport` e `.ig-track` são as da moldura padrão; se a
 moldura usar outros nomes (carrosséis antigos usavam `.carousel-viewport` /
-`.carousel-track`), ajuste os seletores. Referência pronta e testada:
-`TESTE Marina Couto/conteudos/2026-10-19-carboidrato-a-noite-engorda/_generate.py`.
+`.carousel-track`), ajuste os seletores.
 
 ## Conferência
 

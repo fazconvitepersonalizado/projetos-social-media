@@ -317,3 +317,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   clicáveis, contador, setas do teclado) virou padrão: `references/preview-nav.md`
   na skill `instagram-carousel` de todos os clientes e do `_modelo-cliente/`.
   Fica fora da área exportada.
+- 2026-10-19 — Removida a pasta da cliente de teste fictícia "TESTE Marina
+  Couto" (usada para testar o fluxo de cliente novo, o sorteio e as regras
+  anti-IA). Tudo que virou padrão continua nas skills; a pasta fica só no
+  histórico do git.

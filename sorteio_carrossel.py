@@ -180,7 +180,7 @@ def imprimir(s: dict, tema: str):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cliente", help="pasta do cliente (ex.: 'TESTE Marina Couto')")
+    ap.add_argument("cliente", help="pasta do cliente (ex.: 'Sandra-Behrens')")
     ap.add_argument("--tema", required=True)
     ap.add_argument("--slides", type=int, default=8)
     ap.add_argument("--seed", type=int, default=None, help="repete um sorteio específico")
