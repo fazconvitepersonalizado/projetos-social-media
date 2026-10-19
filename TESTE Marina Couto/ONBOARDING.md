@@ -24,6 +24,7 @@ Ex.: 2026-10-20 · Cor principal: Terracota #B5573A (cliente escolheu entre as 2
 - 2026-10-19 · Cenário A: sem Instagram, briefing respondido. Marca pelo nome "Marina Couto", sem título.
 - 2026-10-19 · Cor principal: Azul Claro #9EC3DA (escolha da cliente, fora das opções oliva/terracota do briefing); Azul Profundo #3D6A85 para texto. Nos tokens do carrossel, Azul Profundo = BRAND_PRIMARY e Azul Claro = BRAND_LIGHT (contraste).
 - 2026-10-19 · Fontes: Fraunces (destaque), DM Sans (texto), DM Mono (utilitária).
+- 2026-10-19 · Fonte de destaque trocada para Source Serif 4 (Thiago achou a Fraunces "tremida" nos títulos do carrossel); Fraunces fica só no desenho do logo. Manual, brand-kit e marca-marina-couto atualizados.
 - 2026-10-19 · Conceito "Comer em Paz" (nome do programa carro-chefe vira conceito da marca).
 
 ## Pendências com o cliente

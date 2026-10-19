@@ -25,6 +25,7 @@ Regras:
 - Linguagem adequada ao público; estratégico, criativo, nada genérico.
 - Textos curtos, claros e envolventes: no máximo 25 a 30 palavras por card.
 - Sequência lógica com começo, desenvolvimento e conclusão; ganchos que puxem para o próximo card.
+- Sem cara de IA: sem "não é X; é Y", sem "Spoiler:"/revelação encenada, sem grupo de três forçado, sem frase de efeito no fim do card, sem travessão; cenas concretas no lugar de abstração (regras completas em `references/anti-ia-copy.md` da skill `instagram-carousel`). A voz e as expressões desta marca ficam.
 - Sem repetições nem informação desnecessária. Conferir sempre informação nutricional e científica; na dúvida, afirmar menos.
 
 Formato obrigatório da resposta (somente os textos, sem introdução, explicações ou sugestões):
@@ -46,7 +47,7 @@ Card 7 — CTA
 Card 8 — Encerramento
 [Texto do card]
 
-Só crie as artes visuais dos cards se a pessoa pedir; nesse caso, siga o modelo "Carrossel educativo" abaixo.
+Só crie as artes visuais dos cards se a pessoa pedir; nesse caso, use a skill `instagram-carousel` (sorteio da estrutura + regras anti-IA) com a identidade do modelo "Carrossel educativo" abaixo.
 
 ## Quem é
 - Marina Couto, nutricionista há 6 anos, especializada em nutrição comportamental, consultório próprio. Atende online e presencial em Campinas (SP).
@@ -71,9 +72,9 @@ COR PRINCIPAL: **Azul Claro #9EC3DA** (texto sobre ela: Grafite Café #2E2A25; p
 - Nunca texto branco sobre Azul Claro (contraste 1,9:1) e nunca Azul Claro como texto sobre creme ou sobre foto.
 
 ## Tipografia (Google Fonts, disponíveis no Canva)
-- Destaque: **Fraunces** (regular e itálico). Só em títulos e poucas palavras; o itálico marca a palavra-chave. Nunca em textos longos.
+- Destaque: **Source Serif 4** (regular/500 e itálico). Só em títulos e poucas palavras; itálico em no máximo 1 ou 2 palavras-chave por peça. Nunca em textos longos. (Trocada da Fraunces em 2026-10-19: a Fraunces parecia "tremida" nos títulos grandes; ela continua só no desenho do logo.)
 - Títulos e texto: **DM Sans** (700 nos subtítulos, 400 no texto).
-- Legendas/etiquetas: **DM Mono** caixa alta com espaçamento (numeração "2/8", rodapés, etiqueta de pilar).
+- Utilitária: **DM Mono** (numeração "2/8", rodapés, horários e dados). Nunca como etiqueta acima do título.
 
 ## Assinatura
 "Marina" em Fraunces regular grafite + "Couto" em Fraunces itálico Azul Profundo, com NUTRICIONISTA em DM Mono espaçado embaixo. Monograma: "MC", M regular + C itálico. Arquivos em `logo/`. Não distorcer, não trocar cores, não separar em linhas com cores trocadas, não usar sem contraste; sobre foto, sempre com chip de proteção.
@@ -81,7 +82,8 @@ COR PRINCIPAL: **Azul Claro #9EC3DA** (texto sobre ela: Grafite Café #2E2A25; p
 ## Estilo de imagem: cozinha de casa
 - Revista de culinária: luz natural de janela, linho creme, madeira, louça azul clara, comida de verdade.
 - Nunca comida "fitness" com balança e fita métrica, nunca antes e depois, nunca IA simulando a própria Marina.
-- Texto sobre foto: Fraunces branco/creme, com degradê grafite dimensionado pelo texto.
+- Texto sobre foto: Source Serif 4 branco/creme, com degradê grafite dimensionado pelo texto.
+- Fotos em carrossel: vívidas (sem véu creme pesado), mostrando exatamente o que o texto daquele slide diz; no máximo 1 a cada 3 slides.
 - Prompt para gerar com IA: "Editorial food magazine photograph, natural window light, soft shadows, warm cream linen, pale light-blue ceramic. [cena]. Real, honest home cooking, calm mood. No text, no logos."
 - As fotos geradas mostram modelos, não a cliente. Com fotos reais dela, aplicar o mesmo tratamento: contraste +4%, saturação −4%, luz natural.
 
@@ -105,11 +107,11 @@ Acolhedora, prática, leve. Frases curtas, exemplos do dia a dia, termo técnico
 - Frequência: carrossel 2×/semana, post único 1×, Reels 0, stories 3×.
 
 ## Modelos de peça visual (1080×1350, 4:5)
-- **Post de frase:** fundo Azul Claro, frase em Fraunces grafite com a segunda metade em itálico, rodapé em DM Mono.
-- **Carrossel educativo:** capa com foto full-bleed + degradê grafite e título Fraunces branco com a palavra-chave em itálico; telas internas em creme, numeração "N/8" em DM Mono, um destaque em Azul Claro (bloco ou chip), selo final "salva pra montar sua semana".
+- **Post de frase:** fundo Azul Claro, frase em Source Serif 4 grafite, itálico só na palavra-chave, rodapé em DM Mono.
+- **Carrossel educativo:** estrutura e composição de cada slide vêm do sorteio (`sorteio_carrossel.py`); fundos chapados em creme, grafite, Azul Claro e Azul Profundo; título e texto de apoio no mesmo bloco; numeração "N/8" em DM Mono; fotos vívidas e elementos desenhados com função (linha do dia, prato dividido). Referência aprovada: `conteudos/2026-10-19-carboidrato-a-noite-engorda/`. Regras anti-IA da skill `instagram-carousel` (`references/anti-ia-copy.md` e `anti-ia-design.md`).
 - **Sem neura (quadro fixo):** pergunta-mito na capa em Azul Claro, resposta nos cards seguintes, rodapé "SEM NEURA · @marinacouto".
 - **Chamada para consulta:** fundo grafite, título creme com itálico em Azul Claro, 3 benefícios, botão "Agende pelo link da bio" em Azul Claro com texto grafite.
-- **Story enquete:** foto de cozinha com área clara no topo, pergunta em Fraunces, enquete com a opção principal em Azul Claro.
+- **Story enquete:** foto de cozinha com área clara no topo, pergunta em Source Serif 4, enquete com a opção principal em Azul Claro.
 
 ## Pendências com o cliente (perguntar só se forem relevantes para a peça)
 - Disponibilidade do @marinacouto.

@@ -6,7 +6,7 @@ from playwright.async_api import async_playwright
 
 HERE = Path(__file__).resolve().parent
 FS = Path(sys.argv[1])
-FACES = [("Fraunces", "fraunces", [("400", "normal"), ("600", "normal"), ("400", "italic"), ("600", "italic")]),
+FACES = [("Source Serif 4", "source-serif-4", [("400", "normal"), ("600", "normal"), ("400", "italic"), ("600", "italic")]),
          ("DM Sans", "dm-sans", [("400", "normal"), ("500", "normal"), ("700", "normal")]),
          ("DM Mono", "dm-mono", [("400", "normal"), ("500", "normal")])]
 css = "".join(

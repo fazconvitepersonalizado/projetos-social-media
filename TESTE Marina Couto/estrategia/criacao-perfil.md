@@ -20,7 +20,7 @@ Checklist da Etapa 6 do fluxo `novo-cliente`. Marcar cada item quando feito.
 - [ ] Nós publicamos: conectar a uma página do Facebook e gerar o acesso
       da Meta API (skill `instagram-publish`).
 - [ ] Destaques: Comece aqui, Consulta, Comer em Paz, Receitas, Dúvidas
-      (capas creme com letra em Fraunces itálico Azul Profundo).
+      (capas creme com letra em Source Serif 4 itálico Azul Profundo).
 - [ ] Estreia em 2/11: publicar juntos os 3 posts da semana 1 do
       calendário (Prazer, Marina Couto; Comida de verdade, sem neura;
       Carboidrato à noite engorda?), com os destaques já prontos.

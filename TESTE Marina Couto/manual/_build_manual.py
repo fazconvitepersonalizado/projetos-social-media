@@ -58,14 +58,14 @@ grid_html = "\n".join(tile(*g) for g in GRID)
 HTML = """<title>Manual Marina Couto</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: caderno de cozinha; cada seção é uma página com etiqueta em mono à esquerda e conteúdo à direita.
    Tema único (as cores do manual são as cores reais da marca; não invertem no modo escuro). */
 :root {
   --creme: #F4EEE3; --areia: #E6DCCB; --pedra: #8A8174; --grafite: #2E2A25;
   --azul: #9EC3DA; --azul-fundo: #3D6A85; --branco: #FFFDF9;
-  --f-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
   --f-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono: "DM Mono", ui-monospace, Consolas, monospace;
   --step--1: 0.8125rem; --step-0: 1rem; --step-1: 1.25rem; --step-2: 1.75rem; --step-3: 2.5rem; --step-4: clamp(2.75rem, 7vw, 5rem);
@@ -368,7 +368,7 @@ footer { padding-block: 40px 64px; border-top: 1px solid var(--areia); display: 
     <h2>Três fontes, <em>três papéis</em></h2>
     <p>Todas do Google Fonts e disponíveis no Canva.</p>
     <div class="type-rows">
-      <div class="type-row"><div class="spec"><span class="label">Destaque</span><b>Fraunces</b><small>Regular e itálico. Títulos e poucas palavras.</small></div><div class="sample-display">Comer em <em>Paz</em></div></div>
+      <div class="type-row"><div class="spec"><span class="label">Destaque</span><b>Source Serif 4</b><small>Regular e itálico. Títulos e poucas palavras. A Fraunces fica só no desenho do logo.</small></div><div class="sample-display">Comer em <em>Paz</em></div></div>
       <div class="type-row"><div class="spec"><span class="label">Títulos e texto</span><b>DM Sans</b><small>Bold nos subtítulos, regular no texto.</small></div><div class="sample-body"><b>Marmita da semana em 1 hora</b>Escolha 2 proteínas, 3 legumes e 1 carboidrato. Cozinhe tudo junto no domingo e monte os potes em 15 minutos.</div></div>
       <div class="type-row"><div class="spec"><span class="label">Utilitária</span><b>DM Mono</b><small>Caixa alta espaçada. Numeração, etiquetas, rodapés.</small></div><div class="sample-mono">2/8 · Rotina prática · @marinacouto</div></div>
     </div>
