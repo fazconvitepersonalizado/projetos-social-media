@@ -162,6 +162,17 @@ projeto atual, pergunte antes de só aplicar e seguir:
   generate_gallery.py`, ou `--force` pra regerar todas as miniaturas). As
   miniaturas ficam em `.gallery-cache/` (fora do git).
 
+## Marca de cada cliente (skill `marca-cliente`)
+- A identidade de cada cliente (tom, pilares, restrições, perfil, modelos de
+  peça, carrossel de 8 cards a partir de um tema) fica em
+  `<cliente>/skills/marca-<slug>/SKILL.md`, gerada a partir do modelo único
+  `.claude/skills/marca-cliente/template.md`.
+- A skill `marca-cliente` (em `.claude/skills/` na raiz) localiza a marca do
+  cliente pedido e, se não existir, cria a partir do modelo, reaproveitando
+  `brand-kit.json`/README e perguntando só o que faltar.
+- Melhoria de formato que vale pra todos vai no `template.md` e é replicada
+  nas marcas já preenchidas.
+
 ## Manutenção entre projetos
 - Quando um projeto ganha uma melhoria de processo que **não** é exclusiva
   daquele cliente/formato, replicar nos demais projetos da pasta e registrar
@@ -204,3 +215,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   pra legendas pequenas sobre foto), em `references/visual-qa.md` de ambos
   os projetos — derivada da correção iterativa do slide 1 do carrossel
   "5 motivos de acidentes de trabalho" da A&J.
+- 2026-10-19 — Adicionada a skill genérica `marca-cliente` (modelo de
+  identidade de marca reaproveitável para qualquer cliente atual ou futuro),
+  com o modelo em `.claude/skills/marca-cliente/template.md` e cada marca
+  preenchida em `<cliente>/skills/marca-<slug>/SKILL.md`.
