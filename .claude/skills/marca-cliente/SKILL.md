@@ -43,8 +43,11 @@ cliente em minúsculas, sem acento, com hífen.
 ## 2. Criar ou atualizar a marca de um cliente
 
 1. **Juntar o que já existe** antes de perguntar qualquer coisa, na pasta do
-   cliente: `brand-kit.json` (nome, @, cores derivadas, fontes, tom, e
-   `brand_manual` se houver), `README.md`, logos em `logo/`, e os carrosséis em
+   cliente: `estrategia/base-estrategica.md` (fonte principal quando
+   existir: posicionamento, público, pilares, tom, restrições, marca pelo
+   nome; manter as etiquetas [S] como proposta e "A confirmar" como
+   Pendências), `briefing/briefing.md`, `brand-kit.json` (nome, @, cores
+   derivadas, fontes, tom, e `brand_manual` se houver), `README.md`, logos em `logo/`, e os carrosséis em
    `conteudos/` (temas já tratados, tom real usado). Para cliente novo sem
    pasta, criar `<Nome do Cliente>/skills/` primeiro.
 2. **Preencher o [template.md](template.md)** com esses dados. Cores e fontes

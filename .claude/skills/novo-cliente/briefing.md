@@ -1,6 +1,6 @@
 # Questionário de briefing (modelo)
 
-Usado na Etapa 3 da skill `novo-cliente`. O briefing é **opcional**: ele
+Usado na Etapa 2 da skill `novo-cliente`. O briefing é **opcional**: ele
 enriquece a marca e o conteúdo, mas o fluxo não espera por ele. Serve de
 duas formas:
 
@@ -51,8 +51,10 @@ abaixo, as respostas no lugar das perguntas e uma seção final
 18. Perguntas que você mais ouve.
 
 ## 5. Instagram atual
-19. ★ Já tem perfil? Se sim, qual @? (Se o manual for feito, define o
-    caminho: A = partir do perfil existente; B = criar do zero.)
+19. ★ Já tem perfil? Se sim, qual @? (Para o agente: com @, o perfil é
+    diagnosticado e cruzado com este briefing; sem @, a marca nasce do
+    nome e sobrenome. Nesse caso, perguntar também como quer ser
+    chamado(a) publicamente e se usa título, ex.: Dra./Prof.)
 20. O que gosta e o que não gosta no perfil atual.
 
 ## 6. Identidade visual existente

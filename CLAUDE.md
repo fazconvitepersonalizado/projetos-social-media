@@ -164,14 +164,20 @@ projeto atual, pergunte antes de só aplicar e seguir:
 
 ## Cliente novo (skill `novo-cliente`)
 - Todo cliente novo entra pelo passo a passo da skill `novo-cliente`
-  (`.claude/skills/novo-cliente/`): 1 pasta → 2 identidade mínima →
-  3 briefing (opcional) → 4 manual da marca (opcional) → 5 apresentação de
-  estratégia → 6 carrosséis.
-- Briefing e manual da marca **enriquecem, não travam**: só pasta e
-  identidade mínima (nome, @, cor, fontes, logo, tom) são obrigatórias.
-  Quando briefing ou manual chegam depois, atualizam `brand-kit.json` e
-  `marca-<slug>` (avisando antes se mudar algo já em uso). O que faltar
-  vira "a confirmar"/Pendências, nunca suposição.
+  (`.claude/skills/novo-cliente/`): 1 pasta → 2 briefing (opcional) →
+  3 diagnóstico do perfil (se tem @) → 4 base estratégica → 5 manual /
+  identidade → 6 criação do perfil (se não tem @) → 7 apresentação →
+  8 carrosséis.
+- Quatro cenários: **sem Instagram**, a marca nasce do **nome e sobrenome**
+  do cliente (@, nome de exibição, bio, monograma) e o manual é sempre
+  feito; **com perfil + briefing**, os dois são **cruzados** (manter /
+  corrigir / criar / contradições a confirmar).
+- A `estrategia/base-estrategica.md` de cada cliente é a **fonte única**
+  para manual, marca, apresentação e carrosséis; cada afirmação leva a
+  origem ([B] briefing, [P] perfil, [S] sugestão nossa).
+- Briefing **enriquece, não trava**: o que faltar vira "a confirmar"/
+  Pendências, nunca suposição. Briefing ou perfil que chegarem depois
+  atualizam a base (avisando antes de mudar algo já em uso).
 - A pasta é criada com `python novo_cliente.py "Nome do Cliente"`, que copia
   `_modelo-cliente/` (estrutura padrão + skills de carrossel e publicação).
   Melhoria nas skills de carrossel/publicação que valha pra todos vai
@@ -259,3 +265,9 @@ projeto atual, pergunte antes de só aplicar e seguir:
   fluxo de cliente novo: viram etapas opcionais de enriquecimento. Criada
   a etapa "identidade mínima" (brand-kit + marca enxuta) como único
   pré-requisito para produzir.
+- 2026-10-19 — Fluxo de cliente novo ganha cenários: sem Instagram, marca
+  pelo nome e sobrenome (`marca-pelo-nome.md`) + estratégia pelo briefing +
+  checklist de criação do perfil; com perfil, diagnóstico
+  (`diagnostico-perfil.md`); com perfil + briefing, cruzamento dos dois na
+  base estratégica (`base-estrategica.md`), que vira a fonte única das
+  etapas seguintes.
