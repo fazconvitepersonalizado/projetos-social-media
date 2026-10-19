@@ -240,6 +240,27 @@ projeto atual, pergunte antes de só aplicar e seguir:
   estratégia, calendário, próximos passos) pra qualquer cliente, usando a
   marca do cliente (`marca-cliente`) e o `brand-kit.json` como fonte.
 
+## Conteúdo mensal, Trello, relatórios e trends
+- Skills genéricas em `.claude/skills/`, adaptadas em 2026-10-19 de skills
+  de terceiros (originais intocados em `NOVAS SKILLS/`):
+  `conteudo-mensal` (plano do mês em 3 fases), `alterar-conteudo`,
+  `briefing-design` (texto das artes), `designs-no-trello` (anexar artes),
+  `instagram-metrics-report` (PDF de métricas nas cores do cliente) e
+  `trend-finder` (trends da semana, só quando pedido).
+- **Trello é a ferramenta de organização e entrega**: um quadro por cliente
+  (`<Cliente> · Conteúdo`), listas por etapa (Gaveta, Planejado, Em produção,
+  Aprovação do cliente, Ajustes, Agendado, Publicado), mês como etiqueta;
+  quadro `Trends` com uma lista por semana. IDs em `<cliente>/trello.json`.
+  Estrutura completa em `conteudo-mensal/references/trello.md`.
+- **A pasta local é a fonte da verdade** (`<cliente>/conteudos/planos/
+  <AAAA-MM>.md`, versionado); o Trello espelha. Divergência entre os dois:
+  perguntar qual vale.
+- Relatórios de métricas em `<cliente>/relatorios/<AAAA-MM>/`.
+- **Ao incorporar skill ou conhecimento novo, o que já existe no projeto
+  tem prioridade** (8 cards, sorteio, anti-IA, verificação visual, regras
+  deste arquivo). O novo só substitui o existente quando melhora a criação
+  de forma relevante; no resto, complementa.
+
 ## Manutenção entre projetos
 - Quando um projeto ganha uma melhoria de processo que **não** é exclusiva
   daquele cliente/formato, replicar nos demais projetos da pasta e registrar
@@ -325,3 +346,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Couto" (usada para testar o fluxo de cliente novo, o sorteio e as regras
   anti-IA). Tudo que virou padrão continua nas skills; a pasta fica só no
   histórico do git.
+- 2026-10-19 — Adaptadas as 6 skills de `NOVAS SKILLS/` (feitas para outra
+  agência: ClickUp, português de Portugal, fichas e IDs de clientes dela).
+  Removidos todos os dados de terceiros; ClickUp trocado por Trello (quadro
+  por cliente, listas por etapa); voz do cliente lida da base estratégica/
+  marca/brand-kit em vez de fichas próprias; carrossel no padrão de 8 cards
+  com sorteio e anti-IA; relatório de métricas com paleta do brand-kit do
+  cliente e textos automáticos que dependem dos números; tudo em PT-BR.
+  Registrada a regra "o que já existe tem prioridade sobre o novo".

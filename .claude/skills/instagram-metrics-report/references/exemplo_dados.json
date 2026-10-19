@@ -1,0 +1,86 @@
+{
+  "_aviso": "EXEMPLO FICTÍCIO. Números e títulos inventados só para servir de molde; nunca usar em relatório real. Os links ficam vazios porque o link de cada post precisa ser real.",
+  "cliente": "Cliente Exemplo",
+  "perfil": "@cliente.exemplo",
+  "mes_ref": "Outubro",
+  "ano": "2026",
+  "periodo_dias": 30,
+  "periodo_views": "1 Out → 30 Out 2026",
+  "periodo_views_curto": "1 Out → 30 Out",
+  "periodo_seguidores": "1 Out → 31 Out 2026",
+  "conta_verificada": false,
+  "views_total": 48210,
+  "interacoes_total": 2315,
+  "contas_alcancadas": 9870,
+  "total_seguidores": 3412,
+  "novos_seguidores": 186,
+  "novos_seguidores_var": "+5,8% vs Set",
+  "publicacoes": 14,
+  "follows": 214,
+  "unfollows": 28,
+  "net": 186,
+  "views_seg_pct": 61.4,
+  "views_nonseg_pct": 38.6,
+  "inter_seg_pct": 72.0,
+  "inter_nonseg_pct": 28.0,
+  "views_formato": {
+    "Posts": 52.3,
+    "Reels": "~31",
+    "Stories": "~16.7"
+  },
+  "inter_formato": {
+    "Posts": 58.1,
+    "Reels": 30.2,
+    "Stories": "~11.7"
+  },
+  "contas_alcancadas_var": "+12.4%",
+  "top5": [
+    {
+      "formato": "Carrossel",
+      "titulo": "Exemplo: carrossel educativo do mês",
+      "obs": "Exemplo: carrossel mais salvo do período.",
+      "metricas": [
+        {"label": "views", "valor": "6,2K"},
+        {"label": "salvamentos", "valor": "184"},
+        {"label": "compartilhamentos", "valor": "97"}
+      ],
+      "link": ""
+    },
+    {
+      "formato": "Reels",
+      "titulo": "Exemplo: reels de bastidor",
+      "obs": "Exemplo: maior alcance entre não-seguidores.",
+      "metricas": [
+        {"label": "views", "valor": "5,1K"},
+        {"label": "alcance", "valor": "4,3K"}
+      ],
+      "link": ""
+    },
+    {
+      "formato": "Posts",
+      "titulo": "Exemplo: post único com dica rápida",
+      "metricas": [
+        {"label": "views", "valor": "3,9K"},
+        {"label": "comentários", "valor": "42"}
+      ],
+      "link": ""
+    },
+    {
+      "formato": "Carrossel",
+      "titulo": "Exemplo: perguntas frequentes",
+      "metricas": [
+        {"label": "views", "valor": "3,4K"},
+        {"label": "salvamentos", "valor": "120"}
+      ],
+      "link": ""
+    },
+    {
+      "formato": "Reels",
+      "titulo": "Exemplo: resposta a uma dúvida da caixinha",
+      "metricas": [
+        {"label": "views", "valor": "2,8K"}
+      ],
+      "link": ""
+    }
+  ]
+}

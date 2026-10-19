@@ -1,0 +1,133 @@
+# Estrutura no Trello
+
+Referência compartilhada pelas skills `conteudo-mensal`, `alterar-conteudo`,
+`briefing-design` e `designs-no-trello`. Estrutura aprovada pelo Thiago em
+2026-10-19: **um quadro por cliente, listas por etapa, mês como etiqueta**.
+
+## Regra de ouro: a pasta local é a fonte da verdade
+- O conteúdo vive em `<cliente>/conteudos/planos/<AAAA-MM>.md` (plano do mês)
+  e em `<cliente>/conteudos/<AAAA-MM-DD>-<slug>/` (carrossel com arte), tudo
+  versionado no git.
+- O Trello é o **espelho** para organizar, entregar e aprovar. Toda escrita no
+  Trello sai do arquivo local; se os dois divergirem, avisar o Thiago e
+  perguntar qual vale antes de sobrescrever qualquer lado.
+
+## Acesso
+- Pelo conector do Trello. Os nomes das ferramentas variam conforme o
+  conector; localizar com `ToolSearch` (busca "trello") antes da primeira
+  chamada.
+- Se as ferramentas do Trello não aparecerem na sessão, **dizer isso
+  exatamente** (não fingir que escreveu), seguir só com os arquivos locais e
+  deixar anotado no plano o que falta espelhar ("Pendente no Trello").
+- Ler é ação sem efeito. **Criar, editar, mover ou anexar** é ação com efeito:
+  mostrar o que vai ser feito e esperar o OK antes de escrever em massa.
+
+## Quadro por cliente
+- Nome: `<Nome do cliente> · Conteúdo` (ex.: `Sandra Behrens · Conteúdo`).
+- Listas, nesta ordem:
+  1. `Gaveta` (ideias e temas reserva; equivale ao "POST [GAVETA]")
+  2. `Planejado`
+  3. `Em produção`
+  4. `Aprovação do cliente`
+  5. `Ajustes`
+  6. `Agendado`
+  7. `Publicado`
+- Etiquetas:
+  - **Mês:** `Nov/2026`, `Dez/2026`… (uma por mês, criada quando o mês começa).
+  - **Formato:** `carrossel`, `post único`, `frase`, `roteiro`, `reels`,
+    `terceiros`, `corte`, `stories`.
+  - **Pilar** (opcional): os pilares da base estratégica/marca do cliente.
+
+### IDs de cada cliente (registro local)
+Na primeira vez que um cliente for usado com o Trello, guardar os IDs em
+`<cliente>/trello.json` (não é segredo; vai para o git):
+
+```json
+{
+  "quadro": {"id": "...", "nome": "Sandra Behrens · Conteúdo", "url": "..."},
+  "listas": {"Gaveta": "...", "Planejado": "...", "Em produção": "...",
+             "Aprovação do cliente": "...", "Ajustes": "...",
+             "Agendado": "...", "Publicado": "..."},
+  "etiquetas": {"Nov/2026": "...", "carrossel": "...", "post único": "..."},
+  "atualizado_em": "AAAA-MM-DD"
+}
+```
+
+- Se `trello.json` não existir: procurar o quadro pelo nome. Se não existir,
+  **propor criar** (quadro + listas + etiquetas), esperar o OK, criar e salvar
+  os IDs.
+- Se uma lista ou etiqueta do registro sumir (renomeada/apagada no Trello),
+  avisar em vez de recriar sozinho.
+- Nunca guardar token, chave ou senha nesse arquivo nem em lugar nenhum do
+  projeto fora do `.env`.
+
+## Cartão de post
+- **Nome:** `POST NN · [formato] tema` (NN com zero à esquerda, numerado
+  dentro do mês; ex.: `POST 03 · [carrossel] Menopausa não é o fim`).
+  Slots de vídeo sem tema: `POST NN · [terceiros]` / `POST NN · [corte]`.
+- **Data de entrega (due):** a data do post.
+- **Etiquetas:** mês + formato (+ pilar, se houver).
+- **Lista inicial:** `Planejado` na Fase 1 aprovada; `Em produção` quando o
+  conteúdo for escrito; daí em diante o Thiago (ou a skill, se ele pedir)
+  move.
+- **Descrição** (texto simples, mesma estrutura do plano local):
+
+  Carrossel:
+  ```
+  Referências e observações:
+  <links, pedidos do cliente, ou "nenhuma">
+
+  Texto da arte:
+  Card 1 (headline)
+  <texto>
+  Card 2
+  <texto>
+  ...
+  Card 8 (encerramento)
+  <texto>
+
+  Legenda:
+  <legenda>
+
+  Arquivo local: <cliente>/conteudos/planos/<AAAA-MM>.md (POST NN)
+  ```
+
+  Post único ("leia legenda"):
+  ```
+  Referências e observações:
+
+  Texto da arte:
+  Arte única com a headline
+  <headline>
+
+  Legenda:
+  <legenda com os pontos>
+
+  Arquivo local: ...
+  ```
+
+  Frase: `Texto da arte:` com a frase; `Legenda:` curta.
+  Roteiro: `Roteiro:` com as falas; `Legenda:`.
+  Terceiros/corte: descrição em branco até o vídeo chegar (Fase 3).
+
+- **Anexos:** os PNGs finais, na ordem dos slides (ver skill
+  `designs-no-trello`).
+
+## Achar os posts de um mês
+1. Ler `<cliente>/trello.json` para o ID do quadro e da etiqueta do mês.
+2. Listar os cartões do quadro (todas as listas) e filtrar pela etiqueta do
+   mês. Nunca filtrar só pela lista: um post do mês pode estar em qualquer
+   etapa.
+3. Casar pelo número `POST NN` do nome. Os números podem não ser contínuos;
+   casar pelo número, não pela ordem.
+4. Ignorar cartões da lista `Gaveta`, a não ser que o pedido seja sobre ela.
+
+## Fase 3: vídeo de terceiros/corte
+- O vídeo chega como anexo ou comentário no cartão (muitas vezes link do
+  Google Drive), ou como arquivo/print enviado no chat.
+- O arquivo de vídeo em si não é legível. A transcrição vem de: (a) painel de
+  transcrição do Drive aberto no navegador, (b) texto colado pelo Thiago, ou
+  (c) print do painel de transcrição.
+
+## Quadro de trends
+Quadro separado, usado pela skill `trend-finder` (estrutura descrita lá).

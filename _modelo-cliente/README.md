@@ -19,6 +19,9 @@ apresentacoes/                  # apresentação de estratégia + calendario.md 
 logo/                           # logo-primary / logo-white / logo-dark (SVG ou PNG)
 assets/raw/                     # fotos originais, sem tratamento
 conteudos/<YYYY-MM-DD>-<slug>/  # um carrossel por pasta (Etapa 8)
+conteudos/planos/<AAAA-MM>.md   # plano do mês (skill conteudo-mensal); fonte da verdade
+relatorios/<AAAA-MM>/           # relatório de métricas em PDF (skill instagram-metrics-report)
+trello.json                     # IDs do quadro do cliente no Trello (criado no 1º uso)
 skills/instagram-carousel/      # geração dos carrosséis (HTML + exportação PNG)
 skills/instagram-publish/       # publicação via Meta API
 export_carousel.py              # exportador HTML -> PNG 1080x1350
