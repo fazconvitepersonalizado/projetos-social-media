@@ -162,6 +162,22 @@ projeto atual, pergunte antes de só aplicar e seguir:
   generate_gallery.py`, ou `--force` pra regerar todas as miniaturas). As
   miniaturas ficam em `.gallery-cache/` (fora do git).
 
+## Cliente novo (skill `novo-cliente`)
+- Todo cliente novo entra pelo passo a passo da skill `novo-cliente`
+  (`.claude/skills/novo-cliente/`): 1 pasta → 2 briefing → 3 manual da
+  marca → 4 apresentação de estratégia → 5 carrosséis, com portão de
+  aprovação entre as etapas 2, 3 e 4.
+- A pasta é criada com `python novo_cliente.py "Nome do Cliente"`, que copia
+  `_modelo-cliente/` (estrutura padrão + skills de carrossel e publicação).
+  Melhoria nas skills de carrossel/publicação que valha pra todos vai
+  também no `_modelo-cliente/`, pra que os próximos clientes já nasçam com ela.
+- O questionário padrão de briefing fica em
+  `.claude/skills/novo-cliente/briefing.md`; a resposta de cada cliente em
+  `<cliente>/briefing/briefing.md`.
+- Cada cliente tem um `ONBOARDING.md` (checklist das 5 etapas, decisões
+  fixadas, pendências); toda sessão sobre o cliente começa lendo esse
+  arquivo e retoma da primeira etapa pendente.
+
 ## Marca de cada cliente (skill `marca-cliente`)
 - A identidade de cada cliente (tom, pilares, restrições, perfil, modelos de
   peça, carrossel de 8 cards a partir de um tema) fica em
@@ -229,3 +245,8 @@ projeto atual, pergunte antes de só aplicar e seguir:
   (apresentação de estratégia de conteúdo em 4 partes, qualquer cliente),
   com seção local apontando onde ficam os materiais de cada cliente nesta
   pasta.
+- 2026-10-19 — Criado o fluxo de cliente novo: skill `novo-cliente`
+  (orquestra briefing, manual, apresentação, pasta e carrosséis com portões
+  de aprovação), questionário padrão de briefing, pasta-modelo
+  `_modelo-cliente/` e script `novo_cliente.py`, e checklist
+  `ONBOARDING.md` por cliente.
