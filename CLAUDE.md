@@ -164,9 +164,14 @@ projeto atual, pergunte antes de só aplicar e seguir:
 
 ## Cliente novo (skill `novo-cliente`)
 - Todo cliente novo entra pelo passo a passo da skill `novo-cliente`
-  (`.claude/skills/novo-cliente/`): 1 pasta → 2 briefing → 3 manual da
-  marca → 4 apresentação de estratégia → 5 carrosséis, com portão de
-  aprovação entre as etapas 2, 3 e 4.
+  (`.claude/skills/novo-cliente/`): 1 pasta → 2 identidade mínima →
+  3 briefing (opcional) → 4 manual da marca (opcional) → 5 apresentação de
+  estratégia → 6 carrosséis.
+- Briefing e manual da marca **enriquecem, não travam**: só pasta e
+  identidade mínima (nome, @, cor, fontes, logo, tom) são obrigatórias.
+  Quando briefing ou manual chegam depois, atualizam `brand-kit.json` e
+  `marca-<slug>` (avisando antes se mudar algo já em uso). O que faltar
+  vira "a confirmar"/Pendências, nunca suposição.
 - A pasta é criada com `python novo_cliente.py "Nome do Cliente"`, que copia
   `_modelo-cliente/` (estrutura padrão + skills de carrossel e publicação).
   Melhoria nas skills de carrossel/publicação que valha pra todos vai
@@ -250,3 +255,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   de aprovação), questionário padrão de briefing, pasta-modelo
   `_modelo-cliente/` e script `novo_cliente.py`, e checklist
   `ONBOARDING.md` por cliente.
+- 2026-10-19 — Briefing e manual da marca deixam de ser obrigatórios no
+  fluxo de cliente novo: viram etapas opcionais de enriquecimento. Criada
+  a etapa "identidade mínima" (brand-kit + marca enxuta) como único
+  pré-requisito para produzir.

@@ -2,13 +2,15 @@
 
 Checklist do fluxo de cliente novo (skill `novo-cliente`). Marcar cada etapa
 ao concluir, com a data. Ao abrir uma sessão nova, o agente lê este arquivo e
-retoma da primeira etapa não marcada.
+retoma dali. Etapas (opcional) enriquecem a marca, mas não travam o fluxo;
+se forem puladas, marcar como "pulada por agora".
 
 - [x] **Etapa 1 · Pasta do cliente criada** ({{DATA}})
-- [ ] **Etapa 2 · Briefing** → `briefing/briefing.md`
-- [ ] **Etapa 3 · Manual da marca** → `manual/`, `brand-kit.json`, `skills/marca-{{SLUG}}/SKILL.md`
-- [ ] **Etapa 4 · Apresentação de estratégia** → `apresentacoes/`
-- [ ] **Etapa 5 · Carrosséis** → `conteudos/`
+- [ ] **Etapa 2 · Identidade mínima** → `brand-kit.json`, `skills/marca-{{SLUG}}/SKILL.md`
+- [ ] **Etapa 3 · Briefing (opcional)** → `briefing/briefing.md`
+- [ ] **Etapa 4 · Manual da marca (opcional)** → `manual/`, atualiza `brand-kit.json` e `marca-{{SLUG}}`
+- [ ] **Etapa 5 · Apresentação de estratégia** → `apresentacoes/`
+- [ ] **Etapa 6 · Carrosséis** → `conteudos/`
 
 ## Decisões fixadas
 <!-- Uma linha por decisão: data, o que ficou decidido e por quê.

@@ -1,14 +1,17 @@
 # Questionário de briefing (modelo)
 
-Usado na Etapa 2 da skill `novo-cliente`. Serve de duas formas:
+Usado na Etapa 3 da skill `novo-cliente`. O briefing é **opcional**: ele
+enriquece a marca e o conteúdo, mas o fluxo não espera por ele. Serve de
+duas formas:
 
 - **Preencher com o Thiago no chat:** perguntar bloco por bloco, de uma vez
   por bloco, com escolhas fechadas onde houver opções (via AskUserQuestion).
 - **Enviar ao cliente:** gerar uma versão limpa só com as perguntas (sem as
   marcações ★ e sem as notas "para o agente"), em linguagem de conversa.
 
-★ = obrigatória para seguir para o manual. As demais, se ficarem sem
-resposta, vão para "Pendências" no `briefing.md`; nunca inventar.
+★ = as que mais enriquecem o conteúdo; vale perguntar primeiro. Nenhuma
+pergunta trava o fluxo: sem resposta, vai para "Pendências" no
+`briefing.md`; nunca inventar.
 
 O resultado é salvo em `<cliente>/briefing/briefing.md`, com as mesmas seções
 abaixo, as respostas no lugar das perguntas e uma seção final
@@ -48,8 +51,8 @@ abaixo, as respostas no lugar das perguntas e uma seção final
 18. Perguntas que você mais ouve.
 
 ## 5. Instagram atual
-19. ★ Já tem perfil? Se sim, qual @? (Define o caminho do manual:
-    A = partir do perfil existente; B = criar do zero.)
+19. ★ Já tem perfil? Se sim, qual @? (Se o manual for feito, define o
+    caminho: A = partir do perfil existente; B = criar do zero.)
 20. O que gosta e o que não gosta no perfil atual.
 
 ## 6. Identidade visual existente
