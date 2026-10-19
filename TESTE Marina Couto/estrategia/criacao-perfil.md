@@ -21,7 +21,7 @@ Checklist da Etapa 6 do fluxo `novo-cliente`. Marcar cada item quando feito.
       da Meta API (skill `instagram-publish`).
 - [ ] Destaques: Comece aqui, Consulta, Comer em Paz, Receitas, Dúvidas
       (capas creme com letra em Fraunces itálico Azul Profundo).
-- [ ] Plano de estreia: publicar juntos os 9 primeiros posts da grade
-      (manual, seção Prévia), começando pelo carrossel "Carboidrato à noite
-      engorda?".
+- [ ] Estreia em 2/11: publicar juntos os 3 posts da semana 1 do
+      calendário (Prazer, Marina Couto; Comida de verdade, sem neura;
+      Carboidrato à noite engorda?), com os destaques já prontos.
 - [ ] Conferir se o CRN precisa aparecer na bio (pendência).

@@ -15,7 +15,7 @@ etapa opcional pulada: "pulada por agora".
 - [x] **Etapa 4 · Base estratégica** (2026-10-19) → `estrategia/base-estrategica.md`
 - [x] **Etapa 5 · Manual da marca / identidade** (2026-10-19) → `manual/`, `brand-kit.json`, `skills/marca-marina-couto/SKILL.md`
 - [ ] **Etapa 6 · Criação do perfil (só sem Instagram)** → `estrategia/criacao-perfil.md` (checklist pronto; marcar quando o perfil existir)
-- [ ] **Etapa 7 · Apresentação de estratégia** → `apresentacoes/`, `apresentacoes/calendario.md`
+- [x] **Etapa 7 · Apresentação de estratégia** (2026-10-19, aprovada) → `apresentacoes/`, `apresentacoes/calendario.md`
 - [ ] **Etapa 8 · Carrosséis** → `conteudos/`
 
 ## Decisões fixadas
@@ -28,6 +28,8 @@ Ex.: 2026-10-20 · Cor principal: Terracota #B5573A (cliente escolheu entre as 2
 
 ## Pendências com o cliente
 <!-- O que ainda falta o cliente responder/enviar. Remover a linha quando resolvido. -->
+- Prazo de aprovação semanal (proposto: até domingo).
+- Temas propostos por nós no calendário (6 de 12).
 - Disponibilidade do @marinacouto (alternativas na base estratégica).
 - Aprovação de bio e nome de exibição.
 - CRN na bio/peças: conferir regra atual do CFN.
