@@ -173,6 +173,12 @@ projeto atual, pergunte antes de só aplicar e seguir:
 - Melhoria de formato que vale pra todos vai no `template.md` e é replicada
   nas marcas já preenchidas.
 
+## Apresentação de estratégia (skill `apresentacao-estrategia-conteudo`)
+- Skill genérica em `.claude/skills/apresentacao-estrategia-conteudo/` que
+  monta a apresentação de estratégia de Instagram em 4 partes (entendimento,
+  estratégia, calendário, próximos passos) pra qualquer cliente, usando a
+  marca do cliente (`marca-cliente`) e o `brand-kit.json` como fonte.
+
 ## Manutenção entre projetos
 - Quando um projeto ganha uma melhoria de processo que **não** é exclusiva
   daquele cliente/formato, replicar nos demais projetos da pasta e registrar
@@ -219,3 +225,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   identidade de marca reaproveitável para qualquer cliente atual ou futuro),
   com o modelo em `.claude/skills/marca-cliente/template.md` e cada marca
   preenchida em `<cliente>/skills/marca-<slug>/SKILL.md`.
+- 2026-10-19 — Adicionada a skill genérica `apresentacao-estrategia-conteudo`
+  (apresentação de estratégia de conteúdo em 4 partes, qualquer cliente),
+  com seção local apontando onde ficam os materiais de cada cliente nesta
+  pasta.
