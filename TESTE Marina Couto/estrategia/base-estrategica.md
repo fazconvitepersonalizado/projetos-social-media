@@ -61,10 +61,11 @@ comportamental [B].
   marca: a paz com a comida substitui a guerra das dietas. Metáforas de
   mesa posta e cozinha de casa, com moderação ("mesa sem culpa", "comida
   de verdade", "sem neura").
-- **Visual:** paleta terrosa a partir das cores que ela ama [B]: duas
-  opções de cor principal para ela escolher, **Verde-oliva** ou
-  **Terracota** [S]. Nada de rosa choque nem verde-limão [B]. Fotos com
-  estética de revista de culinária, luz natural, comida de verdade [B].
+- **Visual:** a cliente escolheu **Azul Claro #9EC3DA** como cor principal
+  (2026-10-19), fora das opções Verde-oliva/Terracota que o briefing
+  indicava [B: escolha posterior ao briefing]. Par de leitura: Azul
+  Profundo #3D6A85. Neutros creme, areia, pedra e grafite. Fotos com
+  estética de revista de culinária, luz natural, louça azul clara [B+S].
 
 ## 7. Pilares de conteúdo [S]
 | Pilar | % | Função | Exemplos |
@@ -110,8 +111,6 @@ caixinha de perguntas e fotos do dia a dia do consultório [S].
   internamente e nunca usar IA para simular a própria Marina [S].
 
 ## 12. A confirmar com o cliente
-- Qual cor principal: Verde-oliva ou Terracota? → "Marina, das duas
-  paletas do manual, qual tem mais a sua cara?"
 - O @ recomendado está livre? → conferir ao criar a conta.
 - Bio e nome de exibição aprovados? → "Posso usar essa bio no perfil?"
 - O CRN precisa aparecer na bio ou nas peças? → conferir regra atual do CFN.
