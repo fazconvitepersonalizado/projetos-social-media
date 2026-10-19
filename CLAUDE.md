@@ -271,3 +271,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   (`diagnostico-perfil.md`); com perfil + briefing, cruzamento dos dois na
   base estratégica (`base-estrategica.md`), que vira a fonte única das
   etapas seguintes.
+- 2026-10-19 — Criado `sorteio_carrossel.py` (fórmula de sorteio com
+  histórico por cliente) para nunca repetir a estrutura de um carrossel;
+  ligado como passo obrigatório na Fase 2 da skill `instagram-carousel` de
+  todos os clientes e do `_modelo-cliente/`.

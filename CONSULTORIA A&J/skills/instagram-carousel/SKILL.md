@@ -82,6 +82,21 @@ Ask the user for **the carousel theme/topic** and confirm:
   specific slide's message and the brand kit's tone/palette, never a
   generic stock image (see `references/photo-sourcing.md`).
 
+**Sorteio obrigatório (nunca repetir carrossel):** antes de escrever o plano,
+rode na raiz `PROJETOS SOCIAL MEDIA`:
+`python sorteio_carrossel.py "<pasta do cliente>" --tema "<tema>" --slides <n>`.
+O sorteio define estrutura narrativa, tipo de gancho, ritmo de fundos,
+composição de cada slide (capa, miolo, CTA), quais slides levam foto,
+alinhamento, onde o texto se apoia e o indicador de arraste, e confere no
+`conteudos/historico-sorteios.json` do cliente para nunca repetir combinação,
+posições de foto ou estrutura+gancho do carrossel anterior. Ele substitui a
+sequência fixa de `references/design-system.md`; cor, fonte e tom continuam
+vindo da marca. Mostre o resultado do sorteio junto com o plano. Se um slide
+sorteado pedir material que não existe (dado real, fala real, foto do
+cliente), sorteie de novo com outro `--seed` em vez de inventar. Se o Thiago
+indicar manualmente os slides com foto, a indicação dele vence. Use
+`--simular` só para testes (não grava no histórico).
+
 Draft the slide-by-slide copy plan (hook, problem, solution, …) and **show it
 in chat** for approval before generating any HTML. Keep it short.
 
