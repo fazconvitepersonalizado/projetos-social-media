@@ -533,11 +533,11 @@ When displaying in chat, wrap in an Instagram-style frame:
 
 - **Header:** Avatar (BRAND_PRIMARY circle + logo) + handle + subtitle
 - **Viewport:** 4:5 aspect ratio, swipeable/draggable track with all slides
-- **Dots:** Small dot indicators below the viewport
+- **Navegação (obrigatória desde 2026-10-19):** faixa abaixo do viewport com botões ‹ ›, pontos clicáveis, contador n/total e setas do teclado, conforme `references/preview-nav.md` (substitui os pontinhos simples)
 - **Actions:** Heart, comment, share, bookmark SVG icons
 - **Caption:** Handle + short description + "2 HOURS AGO" timestamp
 
-Include pointer-based swipe/drag interaction for preview. Slides are still standalone export-ready images.
+Include pointer-based swipe/drag interaction for preview (já incluída no script de `references/preview-nav.md`). Slides are still standalone export-ready images.
 
 **Important:** `.ig-frame` must be exactly **420px wide**. The carousel viewport is 420×525px. Do NOT change this width — export depends on it.
 

@@ -29,6 +29,7 @@ work.
 - `references/export.md` — Playwright export to 1080×1350 PNGs + project path conventions
 - `references/visual-qa.md` — Rendering every slide and reading it back for text legibility + photo/text relevance before showing it to the user
 - `references/anti-ia-copy.md` — Revisão da copy sem cara de IA (padrões a cortar, nota em 5 eixos), sempre respeitando a voz do cliente
+- `references/preview-nav.md` — Navegação da prévia (setas, pontos clicáveis, contador, teclado), fora da área exportada
 - `references/anti-ia-design.md` — Design sem cara de IA (vícios de template, composição, detector do Impeccable); a identidade do cliente vem antes
 
 Read a reference fully before doing work that depends on it. If a reference
@@ -123,7 +124,8 @@ Once the plan is approved:
    - `references/design-system.md`
    - `references/anti-ia-design.md` (vence o design-system em conflito; a
      identidade do cliente vence os dois)
-4. **Inject the edit panel** per `references/edit-panel.md`. Every text element
+4. **Add the preview navigation** per `references/preview-nav.md` (setas, pontos, contador, teclado).
+   **Inject the edit panel** per `references/edit-panel.md`. Every text element
    that the user is likely to tweak gets a `data-edit-id="slideN-role"`
    attribute.
 5. **Run the visual QA pass per `references/visual-qa.md`** — render every

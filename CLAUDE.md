@@ -313,3 +313,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   obrigatória saíram do padrão) na skill `instagram-carousel` de todos os
   clientes e do `_modelo-cliente/`; `marca-cliente/template.md` atualizado.
   Regra explícita do Thiago: manter a individualidade de cada cliente.
+- 2026-10-19 — Navegação da prévia do carrossel (botões ‹ ›, pontos
+  clicáveis, contador, setas do teclado) virou padrão: `references/preview-nav.md`
+  na skill `instagram-carousel` de todos os clientes e do `_modelo-cliente/`.
+  Fica fora da área exportada.
