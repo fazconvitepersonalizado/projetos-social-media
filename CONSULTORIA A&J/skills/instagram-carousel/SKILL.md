@@ -28,6 +28,8 @@ work.
 - `references/edit-panel.md` — Side-panel editor + "Baixar HTML" button injected into the preview
 - `references/export.md` — Playwright export to 1080×1350 PNGs + project path conventions
 - `references/visual-qa.md` — Rendering every slide and reading it back for text legibility + photo/text relevance before showing it to the user
+- `references/anti-ia-copy.md` — Revisão da copy sem cara de IA (padrões a cortar, nota em 5 eixos), sempre respeitando a voz do cliente
+- `references/anti-ia-design.md` — Design sem cara de IA (vícios de template, composição, detector do Impeccable); a identidade do cliente vem antes
 
 Read a reference fully before doing work that depends on it. If a reference
 contradicts something you remember, the reference wins.
@@ -100,6 +102,11 @@ indicar manualmente os slides com foto, a indicação dele vence. Use
 Draft the slide-by-slide copy plan (hook, problem, solution, …) and **show it
 in chat** for approval before generating any HTML. Keep it short.
 
+**Copy sem cara de IA (obrigatório):** antes de mostrar o plano, revise a
+copy por `references/anti-ia-copy.md` e mostre a nota nos 5 eixos junto do
+plano (abaixo de 35/50, reescreva antes). A voz e as expressões do cliente
+ficam; o que sai são os vícios genéricos.
+
 ### Phase 3 — Generate HTML
 
 Once the plan is approved:
@@ -114,12 +121,15 @@ Once the plan is approved:
    - `references/images.md`
    - `references/photo-sourcing.md` (if photos are involved)
    - `references/design-system.md`
+   - `references/anti-ia-design.md` (vence o design-system em conflito; a
+     identidade do cliente vence os dois)
 4. **Inject the edit panel** per `references/edit-panel.md`. Every text element
    that the user is likely to tweak gets a `data-edit-id="slideN-role"`
    attribute.
 5. **Run the visual QA pass per `references/visual-qa.md`** — render every
    slide as a screenshot and read each one back, checking text legibility
-   and photo/text relevance. This is mandatory, not optional, and runs again
+   and photo/text relevance, and run the Impeccable detector per
+   `references/anti-ia-design.md` (section 4). This is mandatory, not optional, and runs again
    after any fix. If a slide fails either check, stop and report the
    specific problem and proposed fix to the user; wait for approval before
    changing anything, even a small technical tweak like `object-position` or

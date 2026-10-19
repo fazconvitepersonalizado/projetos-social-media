@@ -1,8 +1,11 @@
 # Design System — Colors, Typography, Slides, Components, Layout
 
-> All rules in this file are **verbatim** from the original skill. Do not edit
-> any value, table or code block here — exporters and previewers depend on
-> them being exact.
+> Valores técnicos (420×525, IG frame, export, logo, contraste) são fixos:
+> exportadores dependem deles. As regras **estéticas** foram revisadas em
+> 2026-10-19 com `references/anti-ia-design.md`, que vence em caso de
+> conflito. A identidade de cada cliente (brand-kit, skill de marca, manual,
+> carrosséis aprovados) vence as duas: nada aqui deve fazer um cliente
+> parecer com outro.
 
 ---
 
@@ -23,7 +26,10 @@ DARK_BG         = {near-black with brand tint}       // Dark slide background
 - LIGHT_BG: tinted off-white complementing the primary (warm → warm cream, cool → cool gray-white)
 - DARK_BG: near-black with subtle brand tint (warm → #1A1918, cool → #0F172A)
 - LIGHT_BORDER: always ~1 shade darker than LIGHT_BG
-- Brand gradient (mesh): three overlapping `radial-gradient`s anchored at different corners over `BRAND_PRIMARY`. Never a flat linear gradient.
+- Fundo de marca: `BRAND_PRIMARY` **chapado** por padrão. O degradê em malha
+  abaixo saiu do padrão em 2026-10-19 (o detector do Impeccable marca como
+  brilho difuso de IA); use só quando for assinatura aprovada do cliente,
+  e com a scrim de legibilidade.
 
 ```css
 /* Brand gradient — used on Solution and CTA slides */
@@ -54,9 +60,12 @@ This is not optional and not a substitute for the grain overlay — both layers
 are present on every brand-gradient slide. Never anchor this scrim at the
 slide's center — always match the light stop's own position (15% 20%).
 
-### Background composition — NEVER use flat colors
+### Background composition — chapado por padrão
 
-`LIGHT_BG` and `DARK_BG` are tokens but they are **never** used as a single flat fill. Every slide background is a layered composition:
+`LIGHT_BG`, `DARK_BG`, `BRAND_PRIMARY` e `BRAND_LIGHT` entram **chapados**.
+As composições em camadas abaixo (radial sobre o token) saíram do padrão em
+2026-10-19; ficam documentadas só para clientes que tenham isso como
+assinatura aprovada:
 
 **Light slides:**
 ```css
@@ -76,9 +85,10 @@ background:
 
 The `{COLOR}NN` suffix is a hex alpha (e.g. `1F` ≈ 12% opacity). Always interpolate the actual hex into the suffix — do NOT leave token names in the CSS.
 
-### Grain overlay (every slide)
+### Grain overlay (removido em 2026-10-19)
 
-Every slide includes a fractal-noise SVG overlay at low opacity. This kills the "AI-rendered" feel and gives a paper/film texture:
+Não usar. O granulado `feTurbulence` lê como amador (Impeccable). Código
+mantido só como registro:
 
 ```html
 <svg class="grain" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;mix-blend-mode:overlay;z-index:1;">
@@ -87,7 +97,8 @@ Every slide includes a fractal-noise SVG overlay at low opacity. This kills the 
 </svg>
 ```
 
-All slide content sits at `z-index: 2` or higher. The grain `<svg>` is the very first child inside the slide container.
+(Sem granulado, o conteúdo pode ficar em `z-index` normal; camadas de foto
+e degradê de legibilidade continuam abaixo do texto.)
 
 ---
 
@@ -101,23 +112,28 @@ Based on the user's font preference, pick a **heading font** and **body font** f
 | Modern / clean | Plus Jakarta Sans (700) | Plus Jakarta Sans (400) |
 | Warm / approachable | Lora | Nunito Sans |
 | Technical / sharp | Space Grotesk | Space Grotesk |
-| Bold / expressive | Fraunces | Outfit |
+| Bold / expressive | Source Serif 4 (500) | Outfit |
 | Classic / trustworthy | Libre Baskerville | Work Sans |
 | Rounded / friendly | Bricolage Grotesque | Bricolage Grotesque |
 
-**Editorial font size scale (fixed across all brands):**
-- Hero headline (Slide 1): **44–56px**, weight 600, letter-spacing -1px, line-height 1.05
-- Slide headline (problem/solution/features/etc): **32–40px**, weight 600, letter-spacing -0.5px, line-height 1.1
-- Subhead / lead paragraph: 16–17px, weight 400, line-height 1.45, opacity 0.75
-- Body: 14px, weight 400, line-height 1.5–1.55
-- Tags/labels: 10px, weight 600, letter-spacing 2px, uppercase
-- Step numbers: heading font, 44px, weight 300 (used *above* the step title, not inline)
-- Big-stat number: heading font, 72–96px, weight 300, letter-spacing -3px (see Big Stat component)
-- Small text: 11–12px
+Em marca **nova**, evite as fontes que todo gerador usa (Inter, Roboto,
+Plus Jakarta Sans, Space Grotesk, Fraunces). Em marca existente, a fonte do
+cliente fica. Confira sempre o título grande no render (ver
+`anti-ia-design.md`, "Fonte de título sem defeito de desenho").
+
+**Editorial font size scale (revisada em 2026-10-19 para leitura no celular):**
+- Hero headline (Slide 1): **48–58px**, line-height 1.0–1.05, letter-spacing -0.02 a -0.03em
+- Slide headline: **36–58px** conforme a composição sorteada (frase gigante usa o topo da faixa), line-height 1.0–1.1
+- Texto de apoio: **17–18px**, line-height 1.45, **colado no título** (16–20px de distância)
+- Small text (numeração, rodapé, legenda): **12px no mínimo**
+- Tags/labels acima do título: **não usar** (ver `anti-ia-design.md`)
+- Big-stat number: só com dado real, 72–96px
 
 Apply via CSS classes `.serif` (heading font) and `.sans` (body font) throughout all slides.
 
-**Mandatory mixed-weight headline:** In every carousel, at least ONE headline must mix weights/styles inside the same title to break monotony. Example:
+**Mixed-weight headline (opcional, revisado em 2026-10-19):** itálico ou peso
+misto em no máximo 1 ou 2 títulos por carrossel, só onde a marca pede (a
+palavra-chave). Itálico colorido em todo título virou sinal de IA. Exemplo:
 
 ```html
 <h1 class="serif" style="font-size:48px;line-height:1.05;">
@@ -148,6 +164,11 @@ The first slide must stop the scroll in under 1 second. Prioritize these formats
 ---
 
 ## Slide Sequences
+
+> **Substituídas pelo sorteio** (`sorteio_carrossel.py`, Fase 2 da skill):
+> a estrutura e a composição de cada slide vêm do sorteio, para nenhum
+> carrossel repetir outro. As sequências abaixo ficam só como referência de
+> narrativa.
 
 ### Standard (7 slides — default)
 
@@ -204,9 +225,14 @@ Use for: "X ferramentas", "X erros", "X dicas"
 ### Format
 - Aspect ratio: **4:5** (Instagram carousel standard)
 - Each slide is self-contained — all UI elements baked into the image
-- Alternate LIGHT_BG and DARK_BG backgrounds for visual rhythm
+- Ritmo de fundos: vem do sorteio (alternado, blocos, claro com pausa...).
 
-### Required Elements on Every Slide
+### Indicadores de navegação (o sorteio escolhe qual usar)
+
+O indicador de arraste vem do sorteio: selo "arraste" só na capa, contador
+discreto (n/total), barra de progresso segmentada, ou nenhum. Os
+componentes abaixo continuam válidos quando sorteados; não são mais
+obrigatórios em todo slide.
 
 #### 1. Progress Bar (segmented, "stories" style — bottom of every slide)
 
@@ -261,9 +287,12 @@ function swipeArrow(isLightSlide) {
 
 ---
 
-#### 3. Decorative layer (every slide)
+#### 3. Decorative layer (removida do padrão em 2026-10-19)
 
-A minimal "visual language" used across all slides for cohesion. All three appear on every slide.
+Enfeite repetido em todo slide é vício de template (Impeccable). **Não usar**
+cruz de canto, marca-d'água "01 / 07" no topo nem tracinho sob etiqueta. O
+logo/monograma como marca-d'água só se for assinatura aprovada do cliente.
+Registro do que existia:
 
 **Corner mark** — small SVG (cross/plus) anchored top-right:
 ```html
@@ -291,17 +320,21 @@ A minimal "visual language" used across all slides for cohesion. All three appea
 
 ## Reusable Components
 
-### Strikethrough pills
+> Componentes marcados com ⛔ saíram do padrão em 2026-10-19 (vícios de
+> template, ver `anti-ia-design.md`); só voltam se forem assinatura
+> aprovada do cliente.
+
+### ⛔ Strikethrough pills
 ```html
 <span style="font-size:11px;padding:5px 12px;border:1px solid rgba(255,255,255,0.1);border-radius:20px;color:#6B6560;text-decoration:line-through;">{Old tool}</span>
 ```
 
-### Tag pills
+### ⛔ Tag pills
 ```html
 <span style="font-size:11px;padding:5px 12px;background:rgba(255,255,255,0.06);border-radius:20px;color:{BRAND_LIGHT};">{Label}</span>
 ```
 
-### Prompt / quote box
+### ⛔ Prompt / quote box
 ```html
 <div style="padding:16px;background:rgba(0,0,0,0.15);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
   <p class="sans" style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">{Label}</p>
@@ -309,7 +342,7 @@ A minimal "visual language" used across all slides for cohesion. All three appea
 </div>
 ```
 
-### Feature list (icon tile, no borders)
+### ⛔ Feature list (icon tile, no borders)
 ```html
 <div style="display:flex;align-items:flex-start;gap:14px;padding:6px 0;">
   <span style="
@@ -334,7 +367,7 @@ A minimal "visual language" used across all slides for cohesion. All three appea
 ```
 
 ### Big Stat (impact number)
-Use at least once per carousel (typically Slide 2 or 5) — provides editorial weight.
+Só com dado real que sustenta o slide (composição "dado-em-destaque" do sorteio). Nunca por obrigação.
 ```html
 <div style="text-align:center;">
   <span class="serif" style="font-size:88px;font-weight:300;color:{BRAND_PRIMARY};line-height:1;letter-spacing:-3px;display:block;">4.200</span>
@@ -342,7 +375,7 @@ Use at least once per carousel (typically Slide 2 or 5) — provides editorial w
 </div>
 ```
 
-### Pull-quote (vertical bar)
+### ⛔ Pull-quote (vertical bar): citação vai em tipografia grande, sem borda
 ```html
 <blockquote style="border-left:2px solid {BRAND_PRIMARY};padding:6px 0 6px 18px;margin:0;">
   <p class="serif" style="font-size:22px;font-style:italic;font-weight:400;line-height:1.3;color:{DARK_BG};margin:0;">"{Quote text}"</p>
@@ -350,7 +383,7 @@ Use at least once per carousel (typically Slide 2 or 5) — provides editorial w
 </blockquote>
 ```
 
-### Glass card (gradient slides only)
+### ⛔ Glass card (gradient slides only)
 For containing quotes / stats / CTA blocks on top of the brand gradient.
 ```html
 <div style="
@@ -373,7 +406,7 @@ For containing quotes / stats / CTA blocks on top of the brand gradient.
 </div>
 ```
 
-### Tag / Category Label
+### ⛔ Tag / Category Label (etiqueta acima do título)
 ```html
 <span class="sans" style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;color:{color};margin-bottom:16px;">{TAG TEXT}</span>
 ```
@@ -390,9 +423,11 @@ embedding step. Neither component below is complete without that: a
 correctly-placed but off-topic or off-brand photo still fails the "visually
 beautiful" bar this design system exists for.
 
-Both components still require the full Decorative Layer (grain overlay,
-corner mark, watermark, progress bar, swipe arrow) — a photo slide is not a
-special case.
+Slides com foto seguem o indicador sorteado, como os outros; sem camada
+decorativa. Composições disponíveis: foto no slide inteiro (abaixo), foto
+dividindo o slide (foto em cima ou de um lado com largura/altura total, texto
+no espaço restante sobre o fundo da marca) e foto emoldurada. Fotos vívidas
+ou suaves conforme a escolha da rodada.
 
 **Photo slide — full-bleed** (Hero or a single "proof" slide):
 ```html
@@ -476,9 +511,14 @@ If `logo.type` is `initial` / `none`, fall back to the 40px circle described abo
 
 ## Layout Rules
 
-**Universal centralization — all slides:**
+**Composição (revisada em 2026-10-19):**
 
-- Every slide is a flex column with `justify-content: center` on the vertical axis. **Never use `flex-end`**, regardless of content density.
+- Alinhamento e apoio do texto (topo, centro, base) vêm do sorteio; `flex-end`
+  é permitido (ex.: texto embaixo sobre foto com o rosto no alto).
+- Título e texto de apoio formam **um bloco só** (16–20px entre eles). Nunca
+  título no topo e apoio no rodapé com vão no meio.
+- Slide sem metade vazia sem intenção: tipografia grande, foto ou elemento
+  desenhado ocupam o espaço.
 - Slide padding (fixed): `64px 36px 76px` (top / sides / bottom-clears-progress-bar).
 - The content block inside the slide uses `max-width: 360px; margin: 0 auto` so wrapping is consistent across slides.
 - Slides with lists (Features, How-to, Listicle items): center the **list block** as a whole, with `display:flex; flex-direction:column; gap:14px;`. Each list item still left-aligns its text inside the centered block.
@@ -505,13 +545,13 @@ Include pointer-based swipe/drag interaction for preview. Slides are still stand
 
 ## Design Principles
 
-1. **Every slide is export-ready** — arrow and progress bar are part of the slide image
-2. **Light/dark alternation** — creates visual rhythm across swipes
+1. **Every slide is export-ready** — o indicador sorteado faz parte da imagem
+2. **Ritmo sorteado** — fundos e composições variam por carrossel
 3. **Heading + body font pairing** — display font for impact, body for readability
 4. **Brand-derived palette** — all colors stem from one primary, keeping everything cohesive
-5. **Progressive disclosure** — progress bar fills and arrow guides forward
-6. **Last slide is special** — no arrow, full progress bar, clear CTA
-7. **Consistent components** — same tag style, list style, spacing across all slides
+5. **Individualidade do cliente** — a marca de cada cliente vence as regras gerais; nenhum cliente parece com outro
+6. **Last slide is special** — clear CTA
+7. **Coerência sem carimbo** — mesmas cores, fontes e espaçamentos, composições diferentes
 8. **Content padding clears UI** — body text never overlaps progress bar or arrow
 9. **Hook-first copy** — Slide 1 exists to stop the scroll, not to introduce the brand
 10. **Iterate fast** — show preview, fix specific slides, don't rebuild from scratch

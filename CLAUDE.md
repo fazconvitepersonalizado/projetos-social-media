@@ -134,6 +134,26 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Receita completa com exemplos de código em `references/visual-qa.md` da
   skill `instagram-carousel` ("Fixing text-over-photo legibility").
 
+## Conteúdo sem cara de IA (copy e design)
+- **Individualidade do cliente vem primeiro:** as regras anti-IA tiram só
+  vícios genéricos de template. Voz, expressões, cores, fontes, logo,
+  modelos de peça e elementos que o cliente aprovou como dele ficam, e
+  nenhum cliente pode ficar parecido com outro. Na primeira vez que um
+  cliente passar pelas regras, listar o que é assinatura (fica) e o que é
+  vício do template antigo (sai) e confirmar com o Thiago antes.
+- **Copy:** revisão obrigatória antes do HTML por
+  `references/anti-ia-copy.md` da skill `instagram-carousel` (sem "não é X;
+  é Y", sem "Spoiler:", sem grupo de três forçado, sem frase de efeito no
+  fim, cenas concretas), com nota em 5 eixos (mínimo 35/50). Nunca inventar
+  fato, caso ou fala para soar humano.
+- **Design:** `references/anti-ia-design.md` (sem etiqueta acima do título,
+  sem granulado, sem brilho difuso como padrão, sem pílulas/cards de app,
+  título e apoio no mesmo bloco, elementos desenhados com função, fotos
+  que mostram o que o texto diz) + detector do Impeccable na verificação
+  visual.
+- Fontes das regras: humanizer (blader), stop-slop (Hardik Pandya),
+  no-ai-slop e Impeccable (Paul Bakaus), adaptadas para português.
+
 ## Salvamento automático (git)
 - Sempre que um **marco relevante** for concluído em qualquer projeto desta
   pasta — um conteúdo finalizado, uma correção de skill/padrão, uma
@@ -285,3 +305,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
   histórico por cliente) para nunca repetir a estrutura de um carrossel;
   ligado como passo obrigatório na Fase 2 da skill `instagram-carousel` de
   todos os clientes e do `_modelo-cliente/`.
+- 2026-10-19 — Regras anti cara de IA (copy e design) testadas no carrossel
+  "Carboidrato à noite engorda?" da Marina Couto (detector 15 → 0 problemas
+  reais; nota da copy 25 → 38) e aprovadas pelo Thiago. Criadas
+  `anti-ia-copy.md` e `anti-ia-design.md` e revisado o `design-system.md`
+  (granulado, enfeites de canto, etiquetas, pílulas e centralização
+  obrigatória saíram do padrão) na skill `instagram-carousel` de todos os
+  clientes e do `_modelo-cliente/`; `marca-cliente/template.md` atualizado.
+  Regra explícita do Thiago: manter a individualidade de cada cliente.

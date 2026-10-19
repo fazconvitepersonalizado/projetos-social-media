@@ -75,6 +75,12 @@ at once, look at each slide on its own:
    Also re-confirm no logo/watermark lands on a face (see
    `logo-protection-chip` rule already required by `design-system.md`).
 
+## Step 2b — Detector de visual de IA
+
+Depois de ler os screenshots, rode o detector do Impeccable no HTML e
+filtre os falsos positivos conforme `references/anti-ia-design.md`
+(seção 4). Os achados reais entram no mesmo relatório do Step 3.
+
 ## Step 3 — Report, don't silently fix
 
 For every slide that fails either check: **stop and tell the user** exactly

@@ -22,6 +22,7 @@ Regras:
 - Linguagem adequada ao público; estratégico, criativo, nada genérico.
 - Textos curtos, claros e envolventes: no máximo 25 a 30 palavras por card.
 - Sequência lógica com começo, desenvolvimento e conclusão; ganchos que puxem para o próximo card.
+- Sem cara de IA: sem "não é X; é Y", sem "Spoiler:"/revelação encenada, sem grupo de três forçado, sem frase de efeito no fim do card, sem travessão; cenas concretas no lugar de abstração (regras completas em `references/anti-ia-copy.md` da skill `instagram-carousel`). A voz e as expressões desta marca ficam.
 - Sem repetições nem informação desnecessária. {{Fatos que precisam ser conferidos sempre, ex.: dados técnicos, normas, valores nutricionais}}.
 
 Formato obrigatório da resposta (somente os textos, sem introdução, explicações ou sugestões):
@@ -43,7 +44,7 @@ Card 7 — CTA
 Card 8 — Encerramento
 [Texto do card]
 
-Só crie as artes visuais dos cards se a pessoa pedir; nesse caso, siga o modelo "Carrossel educativo" abaixo.
+Só crie as artes visuais dos cards se a pessoa pedir; nesse caso, use a skill `instagram-carousel` (sorteio da estrutura + regras anti-IA) com a identidade do modelo "Carrossel educativo" abaixo.
 
 ## Quem é
 - {{NOME DO CLIENTE}}, {{formação/trajetória em uma linha}}. {{Contexto profissional relevante}}. {{Cidade (UF)}}.
@@ -104,7 +105,7 @@ COR PRINCIPAL: **A DEFINIR com o cliente ({{Opção A}} ou {{Opção B}}).** Enq
 
 ## Modelos de peça visual (1080×1350, 4:5)
 - **{{Peça recorrente 1}}:** {{fundo, elementos, fontes, cor}}.
-- **Carrossel educativo:** capa {{descrição}}; telas internas {{descrição}}, numeração "N/8", {{elemento de destaque}}, {{selo final, ex.: "salva pra lembrar"}}.
+- **Carrossel educativo:** assinaturas visuais deste cliente que todo carrossel mantém ({{fundos/cores, fonte de título, elemento próprio, selo final}}); estrutura e composição de cada slide vêm do sorteio (`sorteio_carrossel.py`), sem os vícios de `references/anti-ia-design.md`.
 - **{{Quadro fixo da marca}}:** {{descrição}}, rodapé "{{NOME DO QUADRO}} · @{{handle}}".
 - **Chamada para {{oferta}}:** {{composição}}, {{3 benefícios}}, botão "{{CTA}}" na cor principal.
 - **Story {{interativo}}:** {{descrição}}.
