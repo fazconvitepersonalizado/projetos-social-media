@@ -161,6 +161,16 @@ projeto atual, pergunte antes de só aplicar e seguir:
   `instagram-carousel`), ou pode ser rodado manualmente (`python
   generate_gallery.py`, ou `--force` pra regerar todas as miniaturas). As
   miniaturas ficam em `.gallery-cache/` (fora do git).
+- **Nunca repetir carrossel (sorteio):** todo carrossel novo, de qualquer
+  cliente, começa com `python sorteio_carrossel.py "<pasta do cliente>"
+  --tema "<tema>" --slides <n>` (raiz desta pasta). O script sorteia
+  estrutura narrativa, gancho, ritmo de fundos, composição de cada slide,
+  slides com foto, alinhamento e indicador de arraste, e confere no
+  `<cliente>/conteudos/historico-sorteios.json` para não repetir a
+  combinação, as posições de foto nem estrutura+gancho do carrossel
+  anterior, nem passar de 40% de composição igual aos últimos 6. Sorteia só
+  estrutura; cor, fonte e tom vêm da marca. Passo obrigatório na Fase 2 da
+  skill `instagram-carousel`.
 
 ## Cliente novo (skill `novo-cliente`)
 - Todo cliente novo entra pelo passo a passo da skill `novo-cliente`
