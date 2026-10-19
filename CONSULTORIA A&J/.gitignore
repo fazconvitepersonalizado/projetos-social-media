@@ -18,8 +18,7 @@ desktop.ini
 .vscode/
 .idea/
 
-# Brand kit do usuário (gerado no primeiro uso)
-brand-kit.json
+# brand-kit.json é versionado (regra: tudo guardado no GitHub)
 
 # Logs / temporários
 *.log

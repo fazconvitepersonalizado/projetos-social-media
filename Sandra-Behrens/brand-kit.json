@@ -1,0 +1,136 @@
+{
+  "brand_name": "Sandra Behrens",
+  "instagram_handle": "@psicologasandrabehrens",
+  "primary_color": "#C69A46",
+  "logo": {
+    "type": "svg",
+    "path": "C:\\Users\\thiag\\Downloads\\Sandra-Behrens\\logo\\logo-primary.svg",
+    "variants": {
+      "primary": "C:\\Users\\thiag\\Downloads\\Sandra-Behrens\\logo\\logo-primary.svg",
+      "white": "C:\\Users\\thiag\\Downloads\\Sandra-Behrens\\logo\\logo-white.svg",
+      "dark": "C:\\Users\\thiag\\Downloads\\Sandra-Behrens\\logo\\logo-dark.svg"
+    },
+    "initial_fallback": "S",
+    "lockup_sizes": {
+      "hero": {"width": 160, "height": 70},
+      "watermark": {"width": 136, "height": 60},
+      "cta": {"width": 280, "height": 122},
+      "avatar": {"width": 22, "height": 10},
+      "note": "Padrão fixado em 2026-09-14 a pedido da usuária: watermark (slides 2..N-1) um pouco maior que o tamanho anterior (120x52) para melhorar a leitura do texto 'BEHRENS PSICÓLOGA'. Usar estes valores em todo carrossel novo, mantendo a proporção do viewBox 0 0 480 210."
+    }
+  },
+  "heading_font": "Cormorant Garamond",
+  "body_font": "Poppins",
+  "tone": "sofisticado, acolhedor e sereno",
+  "language": "pt-BR",
+  "default_format": "standard",
+  "derived": {
+    "BRAND_PRIMARY": "#C69A46",
+    "BRAND_LIGHT": "#D1AE6B",
+    "BRAND_DARK": "#8B6C31",
+    "LIGHT_BG": "#F5EDDF",
+    "LIGHT_BORDER": "#E7DBC5",
+    "DARK_BG": "#3E4234"
+  },
+  "saved_at": "2026-09-12T19:56:27.466354+00:00",
+  "brand_manual": {
+    "source": "Manual da Marca Sandra Behrens v1.0 (2026)",
+    "tagline": "Vamos conversar sobre você",
+    "positioning": "Psicologia para mulheres que buscam se cuidar com profundidade, unindo técnica (EMDR) e sensibilidade (Arteterapia) num acompanhamento humano e próximo.",
+    "who": "Sandra Behrens é psicóloga dedicada ao cuidado emocional de mulheres, com atuação em Arteterapia e EMDR. A marca comunica um espaço seguro de escuta e transformação, com estética sofisticada, afetiva e feminina.",
+    "personality": [
+      "Feminina",
+      "Calorosa",
+      "Serena",
+      "Sofisticada sem ser distante",
+      "Profissional sem ser fria"
+    ],
+    "essence_pillars": [
+      "Acolhimento",
+      "Delicadeza",
+      "Transformação"
+    ],
+    "voice": {
+      "traits": [
+        "Acolhedor",
+        "Próximo",
+        "Empático",
+        "Reflexivo",
+        "Sereno"
+      ],
+      "principles": [
+        "Fale com ela, não sobre ela — segunda pessoa e convites gentis.",
+        "Acolha antes de informar — valide a emoção primeiro, a técnica vem depois, de forma simples.",
+        "Sem jargão nem promessas — linguagem clara, humana e responsável, sem prometer curas."
+      ],
+      "avoid": [
+        "Tom técnico, distante ou impositivo",
+        "Promessas de resultado ou soluções milagrosas",
+        "Sensacionalismo e culpabilização"
+      ],
+      "sample_lines": [
+        "Que tal começar a olhar para você com mais carinho?",
+        "Menopausa não é o fim.",
+        "Acolhimento emocional para mulheres."
+      ]
+    },
+    "content_pillars": [
+      "Saúde emocional da mulher — acolhimento, autoestima e bem-estar em todas as fases",
+      "Fases da vida & menopausa — conteúdo educativo e afetivo sobre transições e maturidade",
+      "Autoconhecimento & autocuidado — convites à reflexão e ao olhar gentil para si mesma",
+      "Abordagens terapêuticas — como funcionam EMDR e Arteterapia, de forma simples",
+      "Bastidores & vínculo — quem é Sandra e como funciona o atendimento, gerando confiança"
+    ],
+    "signature_font": "Parisienne",
+    "font_alternates": {
+      "heading_alt": "Playfair Display",
+      "body_alt": "Montserrat"
+    },
+    "extended_palette": {
+      "mostarda_dourada": {
+        "hex": "#C69A46",
+        "uso": "destaque, títulos, molduras"
+      },
+      "verde_salvia": {
+        "hex": "#6E7359",
+        "uso": "base, autoridade, texto de título"
+      },
+      "terracota": {
+        "hex": "#B5653F",
+        "uso": "acento quente"
+      },
+      "rosa_antigo": {
+        "hex": "#C7A9A4",
+        "uso": "toque afetivo"
+      },
+      "verde_profundo": {
+        "hex": "#3E4234",
+        "uso": "fundos escuros"
+      },
+      "bege_areia": {
+        "hex": "#E7DBC5",
+        "uso": "fundos suaves"
+      },
+      "creme": {
+        "hex": "#F5EDDF",
+        "uso": "fundo principal"
+      },
+      "marrom_cafe": {
+        "hex": "#3A342C",
+        "uso": "texto corrido"
+      }
+    },
+    "graphic_elements": [
+      "Formas geométricas terrosas (triângulos, semicírculos, arcos) em terracota/mostarda/verde — usar com moderação, como pontuação visual",
+      "Linhas douradas orgânicas — traços finos e curvos, nunca sobrecarregar",
+      "Fotografia afetiva — mulheres em luz quente e natural, expressões serenas e reais, enquadramentos limpos com espaço para texto",
+      "Texturas & colagem — papel, aquarela suave, recortes discretos (ligação com Arteterapia)"
+    ],
+    "carousel_indicator_note": "Selo 'ARRASTE PARA O LADO →' discreto no rodapé das capas, cor neutra sobre fundo claro.",
+    "links": {
+      "instagram": "@psicologasandrabehrens",
+      "linktree": "linktr.ee/behrens.sandra"
+    },
+    "logo_note": "Assinatura reconstruída em SVG (manuscrito 'Sandra' em Parisienne + 'BEHRENS' em Cormorant Garamond caixa-alta + 'PSICOLOGA' em Poppins), fiel ao Manual da Marca v1.0. Arquivos em logo/logo-primary.svg (fundo claro), logo-white.svg (fundo escuro/gradiente) e logo-dark.svg (monocromatica, usos em impresso/carimbo). Para uso oficial em qualquer peca formal, substitua pelo arquivo vetorial original da marca caso exista."
+  }
+}

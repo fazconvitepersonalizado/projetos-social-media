@@ -163,6 +163,10 @@ projeto atual, pergunte antes de só aplicar e seguir:
   carrossel X").
 - Não commitar a cada edição intermediária/exploratória — só quando algo
   chegar a um estado concluído/estável.
+- **Tudo vai para o GitHub** (pedido do Thiago, 2026-10-19): brand-kits,
+  miniaturas da galeria e qualquer arquivo de projeto são versionados. A
+  única exceção são arquivos de senha/token (`.env`), que nunca sobem;
+  antes de versionar um arquivo novo, conferir que ele não guarda segredo.
 - **Não dar `git push` automaticamente.** De vez em quando (ou quando fizer
   sentido, tipo ao final de uma sessão de trabalho), resumir quais commits
   locais ainda não foram enviados ao GitHub e perguntar se já pode enviar.

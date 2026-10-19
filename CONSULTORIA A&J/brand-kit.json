@@ -1,0 +1,25 @@
+{
+  "brand_name": "A&J Soluções em SSTMA",
+  "instagram_handle": "@aejsolucoesemsstma",
+  "primary_color": "#5FA23B",
+  "logo": {
+    "type": "image",
+    "path": "logo/icon.png",
+    "variants": {},
+    "initial_fallback": "A"
+  },
+  "heading_font": "Lora",
+  "body_font": "Poppins",
+  "tone": "consultivo-educativo: séria e confiável, mas acessível e humana; explica o porquê, provoca reflexão com perguntas, provocativa na medida",
+  "language": "pt-BR",
+  "default_format": "standard",
+  "derived": {
+    "BRAND_PRIMARY": "#5FA23B",
+    "BRAND_LIGHT": "#D9E8D6",
+    "BRAND_DARK": "#1C5B57",
+    "LIGHT_BG": "#F4F0E7",
+    "LIGHT_BORDER": "#E3DCCC",
+    "DARK_BG": "#123F3C"
+  },
+  "saved_at": "2026-09-01T00:27:55.684968+00:00"
+}

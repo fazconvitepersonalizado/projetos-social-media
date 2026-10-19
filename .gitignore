@@ -12,5 +12,4 @@ desktop.ini
 .env.*
 *.env
 
-# Miniaturas geradas pra galeria.html (regenerar com generate_gallery.py)
-.gallery-cache/
+# .gallery-cache/ (miniaturas da galeria) é versionado (regra: tudo guardado no GitHub)
