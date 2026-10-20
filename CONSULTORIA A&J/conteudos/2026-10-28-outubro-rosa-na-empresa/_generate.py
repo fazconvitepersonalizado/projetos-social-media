@@ -28,7 +28,7 @@ def linha_do_ano(n, t):
                  f'border-radius:50%;background:{ROSA if out else "#fff"};{borda}"></span></div>'
                  f'<span class="sans" style="font-size:{16 if out else 13}px;font-weight:{700 if out else 500};'
                  f'color:{VINHO if out else t["mute"]};">{m.upper() if out else m}</span></div>')
-    return (f'<div style="position:relative;margin-top:34px;">'
+    return (f'<div data-ap-fixo style="position:relative;margin-top:34px;">'
             f'<div style="position:absolute;left:4%;right:4%;top:12px;height:2px;background:{t["line"]};"></div>'
             f'<div style="position:relative;display:flex;">{cols}</div></div>')
 

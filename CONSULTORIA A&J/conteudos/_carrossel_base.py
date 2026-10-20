@@ -115,7 +115,7 @@ def logo_lockup(t, size=30, fs=13, align="center", gap_below=22, chip=None):
     jc = "center" if align == "center" else "flex-start"
     border = (f"border:1px solid {LBR};" if t is TONS["claro"]
               else f"border:1px solid {t['chip_border']};" if "chip_border" in t else "")
-    return (f'<div style="display:flex;justify-content:{jc};margin-bottom:{gap_below}px;">'
+    return (f'<div data-ap-fixo style="display:flex;justify-content:{jc};margin-bottom:{gap_below}px;">'
             f'<div style="display:inline-flex;align-items:center;gap:9px;padding:7px 11px 7px 7px;border-radius:8px;'
             f'background:{chip or chip_bg(t)};{border}">'
             f'<img src="{LOGO}" style="width:{size}px;height:{size}px;object-fit:contain;display:block;">'
@@ -132,14 +132,14 @@ def botao(n, text, role="cta", bg=None, fg=None):
 # ---------------------------------------------------------------- indicadores (sorteados)
 def indicador(tipo, i, total, t):
     if tipo == "selo" and i == 0:
-        return (f'<div class="sans" style="position:absolute;right:28px;bottom:26px;z-index:4;font-size:12px;'
+        return (f'<div class="sans" data-ap-fixo style="position:absolute;right:28px;bottom:26px;z-index:4;font-size:12px;'
                 f'font-weight:600;letter-spacing:1.2px;color:{t["mute"]};">ARRASTE PARA O LADO →</div>')
     if tipo == "selo" and 0 < i < total - 1:
         # do slide 2 ao penúltimo, só uma setinha (Thiago, 2026-10-20); o último fica sem
-        return (f'<div class="sans" style="position:absolute;right:28px;bottom:20px;z-index:4;font-size:20px;'
+        return (f'<div class="sans" data-ap-fixo style="position:absolute;right:28px;bottom:20px;z-index:4;font-size:20px;'
                 f'font-weight:600;line-height:1;color:{t["mute"]};">→</div>')
     if tipo == "contador":
-        return (f'<div class="sans" style="position:absolute;right:28px;bottom:24px;z-index:4;font-size:12px;'
+        return (f'<div class="sans" data-ap-fixo style="position:absolute;right:28px;bottom:24px;z-index:4;font-size:12px;'
                 f'font-weight:500;color:{t["mute"]};">{i + 1}/{total}</div>')
     if tipo == "barra":
         claro = t["bg"] in (LBG, ROSA_CLARO)
@@ -147,7 +147,7 @@ def indicador(tipo, i, total, t):
         track = "rgba(0,0,0,0.10)" if claro else "rgba(255,255,255,0.22)"
         segs = "".join(f'<div style="flex:1;height:3px;border-radius:2px;background:{fill if k <= i else track};"></div>'
                        for k in range(total))
-        return (f'<div style="position:absolute;left:0;right:0;bottom:0;padding:16px 28px 20px;z-index:4;'
+        return (f'<div data-ap-fixo style="position:absolute;left:0;right:0;bottom:0;padding:16px 28px 20px;z-index:4;'
                 f'display:flex;align-items:center;gap:10px;"><div style="flex:1;display:flex;gap:4px;">{segs}</div>'
                 f'<span class="sans" style="font-size:12px;font-weight:500;color:{t["mute"]};">{i + 1}/{total}</span></div>')
     return ""
@@ -193,7 +193,7 @@ def passos_verticais(n, t, etapas, retorno=None, size=17, gap_top=22, seta=False
                  f'<span style="position:absolute;left:5px;bottom:-8px;width:0;height:0;border-left:6px solid transparent;'
                  f'border-right:6px solid transparent;border-top:7px solid {t["acc"]};"></span>')
         out += (f'<div style="position:relative;display:flex;gap:14px;align-items:flex-start;padding-bottom:16px;">{linha}{ponta}'
-                f'<span class="sans" style="position:relative;flex:none;width:22px;height:22px;border-radius:50%;'
+                f'<span class="sans" data-ap-fixo style="position:relative;flex:none;width:22px;height:22px;border-radius:50%;'
                 f'background:{t["acc"]};color:{t["bg"] or DBG};font-size:12px;font-weight:700;display:flex;'
                 f'align-items:center;justify-content:center;">{k}</span>'
                 f'<span class="sans" data-edit-id="slide{n}-step-{k}" style="font-size:{size}px;line-height:1.3;'
@@ -220,7 +220,7 @@ def calendario(t, dia=15, rotulo="reunião", primeiro=3, dias=31, gap_top=26, ch
         else:
             cel += (f'<span class="sans" style="height:{ch}px;font-size:13px;color:{t["mute"]};display:flex;'
                     f'align-items:center;justify-content:center;">{d}</span>')
-    return (f'<div style="margin-top:{gap_top}px;padding:16px 16px 12px;border:1.5px solid {t["line"]};border-radius:12px;">'
+    return (f'<div data-ap-fixo style="margin-top:{gap_top}px;padding:16px 16px 12px;border:1.5px solid {t["line"]};border-radius:12px;">'
             f'<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px 6px;">{sem}{cel}</div>'
             f'<div class="sans" style="margin-top:10px;font-size:13px;color:{t["acc"]};font-weight:600;text-align:right;">'
             f'● {rotulo}</div></div>')
@@ -302,7 +302,7 @@ def ficha(n, t, campos, gap_top=22):
 def numero_passo(num, total, t, size=150):
     trilha = "".join(f'<span style="flex:1;height:4px;border-radius:2px;background:{t["acc"] if k < num else t["line"]};"></span>'
                      for k in range(total))
-    return (f'<div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:6px;">'
+    return (f'<div data-ap-fixo style="display:flex;align-items:flex-end;gap:16px;margin-bottom:6px;">'
             f'<span class="serif" style="font-size:{size}px;line-height:0.8;font-weight:600;color:{t["acc"]};">{num}</span>'
             f'<div style="flex:1;padding-bottom:10px;"><span class="sans" style="display:block;font-size:13px;font-weight:600;'
             f'color:{t["mute"]};margin-bottom:8px;">passo {num} de {total}</span><div style="display:flex;gap:5px;">{trilha}</div>'

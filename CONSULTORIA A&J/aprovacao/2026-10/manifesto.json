@@ -1,0 +1,874 @@
+{
+ "cliente": "CONSULTORIA A&J",
+ "mes": "2026-10",
+ "posts": [
+  {
+   "id": "2026-10-21-cipa-no-papel",
+   "num": 1,
+   "arquivo": "conteudos\\2026-10-21-cipa-no-papel\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "A ata da CIPA ficou pronta [[antes]] da reunião."
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Aí a comissão existe só no papel."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "O erro: CIPA virar data no calendário."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Reunião, ata assinada, pasta. O risco continua no lugar."
+    },
+    {
+     "id": "slide3-col-a",
+     "slide": 3,
+     "papel": "col-a",
+     "texto": "No papel"
+    },
+    {
+     "id": "slide3-col-b",
+     "slide": 3,
+     "papel": "col-b",
+     "texto": "Funcionando"
+    },
+    {
+     "id": "slide3-row-1-a",
+     "slide": 3,
+     "papel": "row-1-a",
+     "texto": "Ata copiada"
+    },
+    {
+     "id": "slide3-row-1-b",
+     "slide": 3,
+     "papel": "row-1-b",
+     "texto": "Ata com o que foi visto no setor"
+    },
+    {
+     "id": "slide3-row-2-a",
+     "slide": 3,
+     "papel": "row-2-a",
+     "texto": "Membro que só assina"
+    },
+    {
+     "id": "slide3-row-2-b",
+     "slide": 3,
+     "papel": "row-2-b",
+     "texto": "Membro que traz a voz da equipe"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "O que a NR-5 espera da CIPA"
+    },
+    {
+     "id": "slide4-item-1",
+     "slide": 4,
+     "papel": "item-1",
+     "texto": "Identificar riscos"
+    },
+    {
+     "id": "slide4-item-2",
+     "slide": 4,
+     "papel": "item-2",
+     "texto": "Acompanhar a análise de acidentes"
+    },
+    {
+     "id": "slide4-item-3",
+     "slide": 4,
+     "papel": "item-3",
+     "texto": "Propor e cobrar melhorias"
+    },
+    {
+     "id": "slide4-item-4",
+     "slide": 4,
+     "papel": "item-4",
+     "texto": "Prevenir o assédio"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Cumpre tabela ou previne?"
+    },
+    {
+     "id": "slide5-col-a",
+     "slide": 5,
+     "papel": "col-a",
+     "texto": "Cumpre tabela"
+    },
+    {
+     "id": "slide5-col-b",
+     "slide": 5,
+     "papel": "col-b",
+     "texto": "Previne"
+    },
+    {
+     "id": "slide5-row-1-a",
+     "slide": 5,
+     "papel": "row-1-a",
+     "texto": "Lê a ata e encerra"
+    },
+    {
+     "id": "slide5-row-1-b",
+     "slide": 5,
+     "papel": "row-1-b",
+     "texto": "Revisa cada pendência"
+    },
+    {
+     "id": "slide5-row-2-a",
+     "slide": 5,
+     "papel": "row-2-a",
+     "texto": "Sem prazo"
+    },
+    {
+     "id": "slide5-row-2-b",
+     "slide": 5,
+     "papel": "row-2-b",
+     "texto": "Cada ação com responsável e data"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Um ciclo por mês"
+    },
+    {
+     "id": "slide6-center",
+     "slide": 6,
+     "papel": "center",
+     "texto": "todo mês"
+    },
+    {
+     "id": "slide6-step-1",
+     "slide": 6,
+     "papel": "step-1",
+     "texto": "Ouvir a equipe"
+    },
+    {
+     "id": "slide6-step-2",
+     "slide": 6,
+     "papel": "step-2",
+     "texto": "Registrar"
+    },
+    {
+     "id": "slide6-step-3",
+     "slide": 6,
+     "papel": "step-3",
+     "texto": "Levar à reunião"
+    },
+    {
+     "id": "slide6-step-4",
+     "slide": 6,
+     "papel": "step-4",
+     "texto": "Definir responsável e prazo"
+    },
+    {
+     "id": "slide6-step-5",
+     "slide": 6,
+     "papel": "step-5",
+     "texto": "Conferir na reunião seguinte"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Manda pra quem é da CIPA e salva pra próxima reunião."
+    },
+    {
+     "id": "slide8-headline",
+     "slide": 8,
+     "papel": "headline",
+     "texto": "Quer ajuda pra tirar a CIPA [[do papel?]]"
+    },
+    {
+     "id": "slide8-cta",
+     "slide": 8,
+     "papel": "cta",
+     "texto": "Chama a A&J no direct"
+    },
+    {
+     "id": "slide8-handle",
+     "slide": 8,
+     "papel": "handle",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "CIPA: sua comissão previne acidentes ou só assina ata?\n\nA NR-5 espera que a CIPA ajude a identificar riscos, acompanhe a análise dos acidentes, proponha melhorias e, desde 2022, também atue contra o assédio. Na prática, muita comissão vira uma reunião rápida por mês e uma ata guardada na pasta.\n\nNo carrossel está um ciclo simples para a reunião da CIPA voltar a resolver coisa: ouvir a equipe, registrar, definir responsável e prazo e conferir no mês seguinte.\n\nManda para quem é da CIPA na sua empresa.\n\n#CIPA #NR5 #SegurancaDoTrabalho #PrevencaoDeAcidentes #SST"
+  },
+  {
+   "id": "2026-10-23-quase-acidente",
+   "num": 2,
+   "arquivo": "conteudos\\2026-10-23-quase-acidente\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "O carrinho de carga tombou no corredor. Ninguém estava passando."
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "E ninguém anotou nada."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Mito: ninguém se feriu, nada a registrar."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "O quase acidente mostra o risco antes da vítima."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "O mesmo risco em três momentos"
+    },
+    {
+     "id": "slide3-node-1",
+     "slide": 3,
+     "papel": "node-1",
+     "texto": "Condição de risco"
+    },
+    {
+     "id": "slide3-node-2",
+     "slide": 3,
+     "papel": "node-2",
+     "texto": "Quase acidente"
+    },
+    {
+     "id": "slide3-node-3",
+     "slide": 3,
+     "papel": "node-3",
+     "texto": "Acidente"
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "É a última chance de agir antes da lesão."
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Da próxima vez, o carrinho pode tombar [[em cima de alguém.]]"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Mito: registrar é procurar culpado."
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "O registro aponta a causa:"
+    },
+    {
+     "id": "slide5-item-1",
+     "slide": 5,
+     "papel": "item-1",
+     "texto": "Piso"
+    },
+    {
+     "id": "slide5-item-2",
+     "slide": 5,
+     "papel": "item-2",
+     "texto": "Carga"
+    },
+    {
+     "id": "slide5-item-3",
+     "slide": 5,
+     "papel": "item-3",
+     "texto": "Pressa"
+    },
+    {
+     "id": "slide5-item-4",
+     "slide": 5,
+     "papel": "item-4",
+     "texto": "Equipamento"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Registrar é simples."
+    },
+    {
+     "id": "slide6-field-1",
+     "slide": 6,
+     "papel": "field-1",
+     "texto": "O que houve"
+    },
+    {
+     "id": "slide6-field-2",
+     "slide": 6,
+     "papel": "field-2",
+     "texto": "Onde"
+    },
+    {
+     "id": "slide6-field-3",
+     "slide": 6,
+     "papel": "field-3",
+     "texto": "O que podia ter acontecido"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Qual foi o último quase acidente na sua empresa?"
+    },
+    {
+     "id": "slide7-question",
+     "slide": 7,
+     "papel": "question",
+     "texto": "[[Alguém anotou?]]"
+    },
+    {
+     "id": "slide8-headline",
+     "slide": 8,
+     "papel": "headline",
+     "texto": "Quer um jeito simples de registrar quase acidentes?"
+    },
+    {
+     "id": "slide8-cta",
+     "slide": 8,
+     "papel": "cta",
+     "texto": "A A&J ajuda. Chama no direct."
+    },
+    {
+     "id": "slide8-handle",
+     "slide": 8,
+     "papel": "handle",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Quase acidente: por que registrar o que não machucou ninguém.\n\nQuando nada acontece com ninguém, a tendência é seguir o dia. Só que o quase acidente mostra exatamente onde o próximo acidente pode acontecer, e de graça. Registrar o que houve, onde e o que podia ter acontecido já permite tratar a causa: piso, carga, pressa ou equipamento.\n\nConta nos comentários: na sua empresa, quase acidente vira registro ou vira história de corredor?\n\n#QuaseAcidente #PrevencaoDeAcidentes #SegurancaDoTrabalho #GestaoDeRiscos #SST"
+  },
+  {
+   "id": "2026-10-26-dds-que-a-equipe-escuta",
+   "num": 3,
+   "arquivo": "conteudos\\2026-10-26-dds-que-a-equipe-escuta\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Sua equipe escuta o DDS ou só espera ele acabar?"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Roda, tema lido, alguém no celular."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Na hora do serviço, ninguém lembra."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Fale do serviço de hoje."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Nada de tema genérico da lista."
+    },
+    {
+     "id": "slide4-step",
+     "slide": 4,
+     "papel": "step",
+     "texto": "Abra com uma pergunta:"
+    },
+    {
+     "id": "slide4-question",
+     "slide": 4,
+     "papel": "question",
+     "texto": "[[“O que pode dar errado hoje?”]]"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Use o que aconteceu aqui."
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "O quase acidente da semana ensina mais que a apostila."
+    },
+    {
+     "id": "slide6-step",
+     "slide": 6,
+     "papel": "step",
+     "texto": "Feche com um combinado:"
+    },
+    {
+     "id": "slide6-question",
+     "slide": 6,
+     "papel": "question",
+     "texto": "“Quem confere o quê antes de começar?”"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Reveze quem conduz."
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "Sai o tom de palestra."
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Salva e testa no próximo DDS."
+    },
+    {
+     "id": "slide8-headline",
+     "slide": 8,
+     "papel": "headline",
+     "texto": "Precisa montar os temas de DDS da sua operação?"
+    },
+    {
+     "id": "slide8-cta",
+     "slide": 8,
+     "papel": "cta",
+     "texto": "Chama a A&J no direct."
+    },
+    {
+     "id": "slide8-handle",
+     "slide": 8,
+     "papel": "handle",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "DDS que funciona: 5 passos para o Diálogo Diário de Segurança sair do automático.\n\nQuando o DDS vira leitura do tema do dia, a equipe escuta por educação e esquece no primeiro serviço. Falar da tarefa de hoje, abrir com uma pergunta, usar o que aconteceu na própria obra ou fábrica e fechar com um combinado muda o tom da conversa.\n\nSalva para testar no próximo DDS e manda para o encarregado ou técnico de segurança que conduz o seu.\n\n#DDS #SegurancaDoTrabalho #TreinamentoDeSeguranca #PrevencaoDeAcidentes #SST"
+  },
+  {
+   "id": "2026-10-28-outubro-rosa-na-empresa",
+   "num": 4,
+   "arquivo": "conteudos\\2026-10-28-outubro-rosa-na-empresa\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Em outubro, o laço rosa aparece no crachá. Em novembro, [[some.]]"
+    },
+    {
+     "id": "slide2-col-a",
+     "slide": 2,
+     "papel": "col-a",
+     "texto": "Fachada"
+    },
+    {
+     "id": "slide2-col-b",
+     "slide": 2,
+     "papel": "col-b",
+     "texto": "Cuidado"
+    },
+    {
+     "id": "slide2-row-1-a",
+     "slide": 2,
+     "papel": "row-1-a",
+     "texto": "Foto de rosa"
+    },
+    {
+     "id": "slide2-row-1-b",
+     "slide": 2,
+     "papel": "row-1-b",
+     "texto": "Horário livre para o exame"
+    },
+    {
+     "id": "slide2-row-2-a",
+     "slide": 2,
+     "papel": "row-2-a",
+     "texto": "Palestra em outubro"
+    },
+    {
+     "id": "slide2-row-2-b",
+     "slide": 2,
+     "papel": "row-2-b",
+     "texto": "Informação o ano todo"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Exame que depende de favor ao chefe fica para depois."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Combinar a saída custa pouco."
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Quem precisa sair para um exame sabe como pedir?"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Outubro abre a conversa"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Os outros onze meses mostram se a empresa levou a sério."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Quando alguém está em tratamento"
+    },
+    {
+     "id": "slide6-col-a",
+     "slide": 6,
+     "papel": "col-a",
+     "texto": "Sem cuidado"
+    },
+    {
+     "id": "slide6-col-b",
+     "slide": 6,
+     "papel": "col-b",
+     "texto": "Com cuidado"
+    },
+    {
+     "id": "slide6-row-1-a",
+     "slide": 6,
+     "papel": "row-1-a",
+     "texto": "Comentário no corredor"
+    },
+    {
+     "id": "slide6-row-1-b",
+     "slide": 6,
+     "papel": "row-1-b",
+     "texto": "Conversa reservada com o RH"
+    },
+    {
+     "id": "slide6-row-2-a",
+     "slide": 6,
+     "papel": "row-2-a",
+     "texto": "Volta sem plano"
+    },
+    {
+     "id": "slide6-row-2-b",
+     "slide": 6,
+     "papel": "row-2-b",
+     "texto": "Retorno avaliado pela medicina do trabalho (NR‑7)"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Do aviso ao exame"
+    },
+    {
+     "id": "slide7-step-1",
+     "slide": 7,
+     "papel": "step-1",
+     "texto": "Informação com fonte (INCA, Ministério da Saúde)"
+    },
+    {
+     "id": "slide7-step-2",
+     "slide": 7,
+     "papel": "step-2",
+     "texto": "Horário combinado"
+    },
+    {
+     "id": "slide7-step-3",
+     "slide": 7,
+     "papel": "step-3",
+     "texto": "Exame feito"
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Salva e manda pro RH."
+    },
+    {
+     "id": "slide8-headline",
+     "slide": 8,
+     "papel": "headline",
+     "texto": "Saúde da mulher também é saúde do trabalho."
+    },
+    {
+     "id": "slide8-body",
+     "slide": 8,
+     "papel": "body",
+     "texto": "A A&J ajuda a montar ações que passam de outubro."
+    },
+    {
+     "id": "slide8-cta",
+     "slide": 8,
+     "papel": "cta",
+     "texto": "Chama no direct"
+    },
+    {
+     "id": "slide8-handle",
+     "slide": 8,
+     "papel": "handle",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Outubro Rosa na empresa: ações de saúde que continuam depois do laço.\n\nLaço no crachá e foto da equipe ajudam a lembrar da campanha. O que faz diferença para quem trabalha é conseguir sair para fazer o exame sem constrangimento, receber informação de fonte confiável e, se precisar de tratamento, voltar ao trabalho com o retorno avaliado pela medicina do trabalho.\n\nPara saber quando e quais exames fazer, a referência é o seu médico e os materiais do INCA e do Ministério da Saúde.\n\nNa sua empresa, o Outubro Rosa termina em 31 de outubro?\n\n#OutubroRosa #SaudeOcupacional #SaudeDaMulher #SegurancaDoTrabalho #SST"
+  },
+  {
+   "id": "2026-10-30-precisa-de-consultoria-sst",
+   "num": 5,
+   "arquivo": "conteudos\\2026-10-30-precisa-de-consultoria-sst\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Sua empresa [[precisa]] de consultoria em SST?"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Faça o teste de 4 passos."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Separe os documentos"
+    },
+    {
+     "id": "slide2-item-1",
+     "slide": 2,
+     "papel": "item-1",
+     "texto": "PGR"
+    },
+    {
+     "id": "slide2-item-2",
+     "slide": 2,
+     "papel": "item-2",
+     "texto": "PCMSO"
+    },
+    {
+     "id": "slide2-item-3",
+     "slide": 2,
+     "papel": "item-3",
+     "texto": "Laudos (como o LTCAT)"
+    },
+    {
+     "id": "slide2-item-4",
+     "slide": 2,
+     "papel": "item-4",
+     "texto": "Certificados dos treinamentos de NR"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Confira as datas."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Algo mudou no setor, na máquina ou na função depois do documento?"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Compare papel e rotina"
+    },
+    {
+     "id": "slide4-col-a",
+     "slide": 4,
+     "papel": "col-a",
+     "texto": "No PGR"
+    },
+    {
+     "id": "slide4-col-b",
+     "slide": 4,
+     "papel": "col-b",
+     "texto": "Na rotina"
+    },
+    {
+     "id": "slide4-row-1-a",
+     "slide": 4,
+     "papel": "row-1-a",
+     "texto": "Protetor auricular previsto"
+    },
+    {
+     "id": "slide4-row-1-b",
+     "slide": 4,
+     "papel": "row-1-b",
+     "texto": "Protetor no pescoço"
+    },
+    {
+     "id": "slide4-row-2-a",
+     "slide": 4,
+     "papel": "row-2-a",
+     "texto": "Equipe treinada"
+    },
+    {
+     "id": "slide4-row-2-b",
+     "slide": 4,
+     "papel": "row-2-b",
+     "texto": "Novato sem integração"
+    },
+    {
+     "id": "slide5-step",
+     "slide": 5,
+     "papel": "step",
+     "texto": "Pergunte a quem faz o serviço:"
+    },
+    {
+     "id": "slide5-question",
+     "slide": 5,
+     "papel": "question",
+     "texto": "“Qual é o risco da sua tarefa?”"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Resposta vaga: o documento não chegou até ele."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Resolver dentro ou chamar consultoria?"
+    },
+    {
+     "id": "slide6-col-a",
+     "slide": 6,
+     "papel": "col-a",
+     "texto": "Resolver dentro"
+    },
+    {
+     "id": "slide6-col-b",
+     "slide": 6,
+     "papel": "col-b",
+     "texto": "Chamar consultoria"
+    },
+    {
+     "id": "slide6-row-1-a",
+     "slide": 6,
+     "papel": "row-1-a",
+     "texto": "Ajuste que a equipe já sabe"
+    },
+    {
+     "id": "slide6-row-1-b",
+     "slide": 6,
+     "papel": "row-1-b",
+     "texto": "Documentos desatualizados"
+    },
+    {
+     "id": "slide6-row-2-a",
+     "slide": 6,
+     "papel": "row-2-a",
+     "texto": "Dúvida pontual"
+    },
+    {
+     "id": "slide6-row-2-b",
+     "slide": 6,
+     "papel": "row-2-b",
+     "texto": "Riscos novos, como os psicossociais (NR-1)"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Salva o teste e faz esta semana."
+    },
+    {
+     "id": "slide7-check-1",
+     "slide": 7,
+     "papel": "check-1",
+     "texto": "Documentos separados"
+    },
+    {
+     "id": "slide7-check-2",
+     "slide": 7,
+     "papel": "check-2",
+     "texto": "Datas conferidas"
+    },
+    {
+     "id": "slide7-check-3",
+     "slide": 7,
+     "papel": "check-3",
+     "texto": "Papel x rotina comparados"
+    },
+    {
+     "id": "slide7-check-4",
+     "slide": 7,
+     "papel": "check-4",
+     "texto": "Equipe ouvida"
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "Dúvida em mais de um passo? Já vale uma conversa."
+    },
+    {
+     "id": "slide8-headline",
+     "slide": 8,
+     "papel": "headline",
+     "texto": "A A&J faz esse diagnóstico com você e acompanha o que vem depois."
+    },
+    {
+     "id": "slide8-cta",
+     "slide": 8,
+     "papel": "cta",
+     "texto": "Chama no direct"
+    },
+    {
+     "id": "slide8-handle",
+     "slide": 8,
+     "papel": "handle",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Consultoria em SST: um teste rápido para saber se a sua empresa precisa.\n\nSeparar PGR, PCMSO, laudos e certificados, conferir as datas, comparar o que está no papel com o que acontece na rotina e perguntar a quem faz o serviço. Em quatro passos dá para ver se a segurança do trabalho da empresa está em dia ou se só os documentos estão.\n\nFez o teste e ficou com dúvida? Chama a A&J no direct.\n\n#ConsultoriaSST #SegurancaDoTrabalho #PGR #SaudeOcupacional #SST"
+  }
+ ]
+}

@@ -1,0 +1,663 @@
+[
+ {
+  "post": 1,
+  "tipo": "texto do slide 1",
+  "trello": [
+   "A ata da CIPA ficou pronta antes da reunião.",
+   "Aí a comissão existe só no papel."
+  ],
+  "local": [
+   "A ata da CIPA ficou pronta antes da reunião.",
+   "Aí a comissão existe só no papel.",
+   "ARRASTE PARA O LADO →"
+  ],
+  "campos": [
+   "slide1-headline",
+   "slide1-subhead",
+   "slide1-t2"
+  ]
+ },
+ {
+  "post": 1,
+  "tipo": "texto do slide 2",
+  "trello": [
+   "O erro: CIPA virar data no calendário.",
+   "Reunião, ata assinada, pasta. O risco continua no lugar.",
+   "[calendário do mês com o dia 15 marcado: reunião da CIPA]"
+  ],
+  "local": [
+   "O erro: CIPA virar data no calendário.",
+   "Reunião, ata assinada, pasta. O risco continua no lugar.",
+   "D S T Q Q S S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31",
+   "● reunião da CIPA"
+  ],
+  "campos": [
+   "slide2-headline",
+   "slide2-body",
+   "slide2-t1",
+   "slide2-t2"
+  ]
+ },
+ {
+  "post": 1,
+  "tipo": "texto do slide 3",
+  "trello": [
+   "No papel | Funcionando",
+   "Ata copiada | Ata com o que foi visto no setor",
+   "Membro que só assina | Membro que traz a voz da equipe"
+  ],
+  "local": [
+   "No papel",
+   "Funcionando",
+   "Ata copiada",
+   "Ata com o que foi visto no setor",
+   "Membro que só assina",
+   "Membro que traz a voz da equipe"
+  ],
+  "campos": [
+   "slide3-col-a",
+   "slide3-col-b",
+   "slide3-row-1-a",
+   "slide3-row-1-b",
+   "slide3-row-2-a",
+   "slide3-row-2-b"
+  ]
+ },
+ {
+  "post": 1,
+  "tipo": "texto do slide 5",
+  "trello": [
+   "Cumpre tabela ou previne?",
+   "Lê a ata e encerra | Revisa cada pendência",
+   "Sem prazo | Cada ação com responsável e data"
+  ],
+  "local": [
+   "Cumpre tabela ou previne?",
+   "Cumpre tabela",
+   "Previne",
+   "Lê a ata e encerra",
+   "Revisa cada pendência",
+   "Sem prazo",
+   "Cada ação com responsável e data"
+  ],
+  "campos": [
+   "slide5-headline",
+   "slide5-col-a",
+   "slide5-col-b",
+   "slide5-row-1-a",
+   "slide5-row-1-b",
+   "slide5-row-2-a",
+   "slide5-row-2-b"
+  ]
+ },
+ {
+  "post": 1,
+  "tipo": "texto do slide 6",
+  "trello": [
+   "Um ciclo por mês",
+   "[ciclo em roda: Ouvir a equipe → Registrar → Levar à reunião → Definir responsável e prazo → Conferir na reunião seguinte · todo mês]"
+  ],
+  "local": [
+   "Um ciclo por mês",
+   "todo mês",
+   "Ouvir a equipe",
+   "Registrar",
+   "Levar à reunião",
+   "Definir responsável e prazo",
+   "Conferir na reunião seguinte"
+  ],
+  "campos": [
+   "slide6-headline",
+   "slide6-center",
+   "slide6-step-1",
+   "slide6-step-2",
+   "slide6-step-3",
+   "slide6-step-4",
+   "slide6-step-5"
+  ]
+ },
+ {
+  "post": 2,
+  "tipo": "texto do slide 1",
+  "trello": [
+   "O carrinho de carga tombou no corredor. Ninguém estava passando.",
+   "E ninguém anotou nada."
+  ],
+  "local": [
+   "O carrinho de carga tombou no corredor. Ninguém estava passando.",
+   "E ninguém anotou nada.",
+   "ARRASTE PARA O LADO →"
+  ],
+  "campos": [
+   "slide1-headline",
+   "slide1-subhead",
+   "slide1-t2"
+  ]
+ },
+ {
+  "post": 2,
+  "tipo": "texto do slide 2",
+  "trello": [
+   "[símbolo de alerta]",
+   "Mito: ninguém se feriu, nada a registrar.",
+   "O quase acidente mostra o risco antes da vítima."
+  ],
+  "local": [
+   "Mito: ninguém se feriu, nada a registrar.",
+   "O quase acidente mostra o risco antes da vítima."
+  ],
+  "campos": [
+   "slide2-headline",
+   "slide2-body"
+  ]
+ },
+ {
+  "post": 2,
+  "tipo": "texto do slide 3",
+  "trello": [
+   "O mesmo risco em três momentos",
+   "Condição de risco → Quase acidente → Acidente",
+   "É a última chance de agir antes da lesão."
+  ],
+  "local": [
+   "O mesmo risco em três momentos",
+   "Condição de risco",
+   "Quase acidente",
+   "Acidente",
+   "É a última chance de agir antes da lesão."
+  ],
+  "campos": [
+   "slide3-headline",
+   "slide3-node-1",
+   "slide3-node-2",
+   "slide3-node-3",
+   "slide3-body"
+  ]
+ },
+ {
+  "post": 2,
+  "tipo": "texto do slide 5",
+  "trello": [
+   "Mito: registrar é procurar culpado.",
+   "O registro aponta a causa:",
+   "Piso · Carga · Pressa · Equipamento"
+  ],
+  "local": [
+   "Mito: registrar é procurar culpado.",
+   "O registro aponta a causa:",
+   "Piso",
+   "Carga",
+   "Pressa",
+   "Equipamento"
+  ],
+  "campos": [
+   "slide5-headline",
+   "slide5-body",
+   "slide5-item-1",
+   "slide5-item-2",
+   "slide5-item-3",
+   "slide5-item-4"
+  ]
+ },
+ {
+  "post": 2,
+  "tipo": "texto do slide 6",
+  "trello": [
+   "Registrar é simples.",
+   "[ficha para preencher: O que houve · Onde · O que podia ter acontecido]"
+  ],
+  "local": [
+   "Registrar é simples.",
+   "O que houve",
+   "Onde",
+   "O que podia ter acontecido"
+  ],
+  "campos": [
+   "slide6-headline",
+   "slide6-field-1",
+   "slide6-field-2",
+   "slide6-field-3"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 1",
+  "trello": [
+   "Sua equipe escuta o DDS ou só espera ele acabar?"
+  ],
+  "local": [
+   "Sua equipe escuta o DDS ou só espera ele acabar?",
+   "ARRASTE PARA O LADO →"
+  ],
+  "campos": [
+   "slide1-headline",
+   "slide1-t2"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 3",
+  "trello": [
+   "[1 · passo 1 de 5]",
+   "Fale do serviço de hoje.",
+   "Nada de tema genérico da lista."
+  ],
+  "local": [
+   "1",
+   "passo 1 de 5",
+   "Fale do serviço de hoje.",
+   "Nada de tema genérico da lista."
+  ],
+  "campos": [
+   "slide3-t1",
+   "slide3-t2",
+   "slide3-headline",
+   "slide3-body"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 4",
+  "trello": [
+   "[2 · passo 2 de 5]",
+   "Abra com uma pergunta:",
+   "\"O que pode dar errado hoje?\""
+  ],
+  "local": [
+   "2",
+   "passo 2 de 5",
+   "Abra com uma pergunta:",
+   "“O que pode dar errado hoje?”"
+  ],
+  "campos": [
+   "slide4-t1",
+   "slide4-t2",
+   "slide4-step",
+   "slide4-question"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 5",
+  "trello": [
+   "[3 · passo 3 de 5]",
+   "Use o que aconteceu aqui.",
+   "O quase acidente da semana ensina mais que a apostila."
+  ],
+  "local": [
+   "3",
+   "passo 3 de 5",
+   "Use o que aconteceu aqui.",
+   "O quase acidente da semana ensina mais que a apostila."
+  ],
+  "campos": [
+   "slide5-t1",
+   "slide5-t2",
+   "slide5-headline",
+   "slide5-body"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 6",
+  "trello": [
+   "[4 · passo 4 de 5]",
+   "Feche com um combinado:",
+   "\"Quem confere o quê antes de começar?\""
+  ],
+  "local": [
+   "4",
+   "passo 4 de 5",
+   "Feche com um combinado:",
+   "“Quem confere o quê antes de começar?”"
+  ],
+  "campos": [
+   "slide6-t1",
+   "slide6-t2",
+   "slide6-step",
+   "slide6-question"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "texto do slide 7",
+  "trello": [
+   "[5 · passo 5 de 5]",
+   "Reveze quem conduz.",
+   "Sai o tom de palestra.",
+   "Salva e testa no próximo DDS."
+  ],
+  "local": [
+   "5",
+   "passo 5 de 5",
+   "Reveze quem conduz.",
+   "Sai o tom de palestra.",
+   "Salva e testa no próximo DDS."
+  ],
+  "campos": [
+   "slide7-t1",
+   "slide7-t2",
+   "slide7-headline",
+   "slide7-body",
+   "slide7-cta"
+  ]
+ },
+ {
+  "post": 4,
+  "tipo": "texto do slide 1",
+  "trello": [
+   "Em outubro, o laço rosa aparece no crachá. Em novembro, some."
+  ],
+  "local": [
+   "Em outubro, o laço rosa aparece no crachá. Em novembro, some.",
+   "ARRASTE PARA O LADO →"
+  ],
+  "campos": [
+   "slide1-headline",
+   "slide1-t2"
+  ]
+ },
+ {
+  "post": 4,
+  "tipo": "texto do slide 2",
+  "trello": [
+   "Fachada | Cuidado",
+   "Foto de rosa | Horário livre para o exame",
+   "Palestra em outubro | Informação o ano todo"
+  ],
+  "local": [
+   "Fachada",
+   "Cuidado",
+   "Foto de rosa",
+   "Horário livre para o exame",
+   "Palestra em outubro",
+   "Informação o ano todo"
+  ],
+  "campos": [
+   "slide2-col-a",
+   "slide2-col-b",
+   "slide2-row-1-a",
+   "slide2-row-1-b",
+   "slide2-row-2-a",
+   "slide2-row-2-b"
+  ]
+ },
+ {
+  "post": 4,
+  "tipo": "texto do slide 5",
+  "trello": [
+   "Outubro abre a conversa",
+   "[linha do ano com OUT destacado em rosa]",
+   "Os outros onze meses mostram se a empresa levou a sério."
+  ],
+  "local": [
+   "Outubro abre a conversa",
+   "jan",
+   "fev",
+   "mar",
+   "abr",
+   "mai",
+   "jun",
+   "jul",
+   "ago",
+   "set",
+   "OUT",
+   "nov",
+   "dez",
+   "Os outros onze meses mostram se a empresa levou a sério."
+  ],
+  "campos": [
+   "slide5-headline",
+   "slide5-t1",
+   "slide5-t2",
+   "slide5-t3",
+   "slide5-t4",
+   "slide5-t5",
+   "slide5-t6",
+   "slide5-t7",
+   "slide5-t8",
+   "slide5-t9",
+   "slide5-t10",
+   "slide5-t11",
+   "slide5-t12",
+   "slide5-body"
+  ]
+ },
+ {
+  "post": 4,
+  "tipo": "texto do slide 6",
+  "trello": [
+   "Quando alguém está em tratamento",
+   "Sem cuidado | Com cuidado",
+   "Comentário no corredor | Conversa reservada com o RH",
+   "Volta sem plano | Retorno avaliado pela medicina do trabalho (NR-7)"
+  ],
+  "local": [
+   "Quando alguém está em tratamento",
+   "Sem cuidado",
+   "Com cuidado",
+   "Comentário no corredor",
+   "Conversa reservada com o RH",
+   "Volta sem plano",
+   "Retorno avaliado pela medicina do trabalho (NR‑7)"
+  ],
+  "campos": [
+   "slide6-headline",
+   "slide6-col-a",
+   "slide6-col-b",
+   "slide6-row-1-a",
+   "slide6-row-1-b",
+   "slide6-row-2-a",
+   "slide6-row-2-b"
+  ]
+ },
+ {
+  "post": 4,
+  "tipo": "texto do slide 7",
+  "trello": [
+   "Do aviso ao exame",
+   "Informação com fonte (INCA, Ministério da Saúde) → Horário combinado → Exame feito",
+   "Salva e manda pro RH."
+  ],
+  "local": [
+   "Do aviso ao exame",
+   "1",
+   "Informação com fonte (INCA, Ministério da Saúde)",
+   "2",
+   "Horário combinado",
+   "3",
+   "Exame feito",
+   "Salva e manda pro RH."
+  ],
+  "campos": [
+   "slide7-headline",
+   "slide7-t1",
+   "slide7-step-1",
+   "slide7-t2",
+   "slide7-step-2",
+   "slide7-t3",
+   "slide7-step-3",
+   "slide7-cta"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 1",
+  "trello": [
+   "Sua empresa precisa de consultoria em SST?",
+   "Faça o teste de 4 passos.",
+   "[4 casinhas de checklist vazias]"
+  ],
+  "local": [
+   "Sua empresa precisa de consultoria em SST?",
+   "Faça o teste de 4 passos.",
+   "ARRASTE PARA O LADO →"
+  ],
+  "campos": [
+   "slide1-headline",
+   "slide1-subhead",
+   "slide1-t2"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 2",
+  "trello": [
+   "[1 · passo 1 de 4]",
+   "Separe os documentos",
+   "PGR",
+   "PCMSO",
+   "Laudos (como o LTCAT)",
+   "Certificados dos treinamentos de NR"
+  ],
+  "local": [
+   "1",
+   "passo 1 de 4",
+   "Separe os documentos",
+   "PGR",
+   "PCMSO",
+   "Laudos (como o LTCAT)",
+   "Certificados dos treinamentos de NR"
+  ],
+  "campos": [
+   "slide2-t1",
+   "slide2-t2",
+   "slide2-headline",
+   "slide2-item-1",
+   "slide2-item-2",
+   "slide2-item-3",
+   "slide2-item-4"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 3",
+  "trello": [
+   "[2 · passo 2 de 4]",
+   "Confira as datas.",
+   "Algo mudou no setor, na máquina ou na função depois do documento?"
+  ],
+  "local": [
+   "2",
+   "passo 2 de 4",
+   "Confira as datas.",
+   "Algo mudou no setor, na máquina ou na função depois do documento?"
+  ],
+  "campos": [
+   "slide3-t1",
+   "slide3-t2",
+   "slide3-headline",
+   "slide3-body"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 4",
+  "trello": [
+   "[3 · passo 3 de 4]",
+   "Compare papel e rotina",
+   "No PGR | Na rotina",
+   "Protetor auricular previsto | Protetor no pescoço",
+   "Equipe treinada | Novato sem integração"
+  ],
+  "local": [
+   "3",
+   "passo 3 de 4",
+   "Compare papel e rotina",
+   "No PGR",
+   "Na rotina",
+   "Protetor auricular previsto",
+   "Protetor no pescoço",
+   "Equipe treinada",
+   "Novato sem integração"
+  ],
+  "campos": [
+   "slide4-t1",
+   "slide4-t2",
+   "slide4-headline",
+   "slide4-col-a",
+   "slide4-col-b",
+   "slide4-row-1-a",
+   "slide4-row-1-b",
+   "slide4-row-2-a",
+   "slide4-row-2-b"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 5",
+  "trello": [
+   "[4 · passo 4 de 4]",
+   "Pergunte a quem faz o serviço:",
+   "\"Qual é o risco da sua tarefa?\"",
+   "Resposta vaga: o documento não chegou até ele."
+  ],
+  "local": [
+   "4",
+   "passo 4 de 4",
+   "Pergunte a quem faz o serviço:",
+   "“Qual é o risco da sua tarefa?”",
+   "Resposta vaga: o documento não chegou até ele."
+  ],
+  "campos": [
+   "slide5-t1",
+   "slide5-t2",
+   "slide5-step",
+   "slide5-question",
+   "slide5-body"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 6",
+  "trello": [
+   "Resolver dentro ou chamar consultoria?",
+   "Resolver dentro | Chamar consultoria",
+   "Ajuste que a equipe já sabe | Documentos desatualizados",
+   "Dúvida pontual | Riscos novos, como os psicossociais (NR-1)"
+  ],
+  "local": [
+   "Resolver dentro ou chamar consultoria?",
+   "Resolver dentro",
+   "Chamar consultoria",
+   "Ajuste que a equipe já sabe",
+   "Documentos desatualizados",
+   "Dúvida pontual",
+   "Riscos novos, como os psicossociais (NR-1)"
+  ],
+  "campos": [
+   "slide6-headline",
+   "slide6-col-a",
+   "slide6-col-b",
+   "slide6-row-1-a",
+   "slide6-row-1-b",
+   "slide6-row-2-a",
+   "slide6-row-2-b"
+  ]
+ },
+ {
+  "post": 5,
+  "tipo": "texto do slide 7",
+  "trello": [
+   "Salva o teste e faz esta semana.",
+   "[checklist: Documentos separados · Datas conferidas · Papel x rotina comparados · Equipe ouvida]",
+   "Dúvida em mais de um passo? Já vale uma conversa."
+  ],
+  "local": [
+   "Salva o teste e faz esta semana.",
+   "Documentos separados",
+   "Datas conferidas",
+   "Papel x rotina comparados",
+   "Equipe ouvida",
+   "Dúvida em mais de um passo? Já vale uma conversa."
+  ],
+  "campos": [
+   "slide7-headline",
+   "slide7-check-1",
+   "slide7-check-2",
+   "slide7-check-3",
+   "slide7-check-4",
+   "slide7-body"
+  ]
+ }
+]

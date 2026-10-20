@@ -42,6 +42,9 @@ var APCampos = (function () {
       for (var k = 0; k < els.length; k++) {
         var el = els[k], tag = el.tagName.toUpperCase();
         if (tag === "SCRIPT" || tag === "STYLE" || el.closest("svg")) continue;
+        // Fora: elemento marcado como fixo pelo gerador do carrossel (logo, selo
+        // "arraste", setinha, calendário, número do passo...): não é texto para a cliente editar.
+        if (el.closest("[data-ap-fixo]")) continue;
         if (pegos.some(function (p) { return p.contains(el); })) continue;
         var id = el.getAttribute("data-edit-id");
         if (id) {
