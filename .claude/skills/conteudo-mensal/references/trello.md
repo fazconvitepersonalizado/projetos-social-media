@@ -129,5 +129,12 @@ Na primeira vez que um cliente for usado com o Trello, guardar os IDs em
   transcrição do Drive aberto no navegador, (b) texto colado pelo Thiago, ou
   (c) print do painel de transcrição.
 
+## Lista Publicado → página de aprovação
+A lista `Publicado` é a fonte de "o que já foi ao ar" para a grade da skill
+`pagina-aprovacao`. Mover para `Publicado` só o que foi publicado de fato,
+com a data de entrega igual à data real do post. Antes de gerar uma página
+de aprovação, exportar essa lista para `<cliente>/trello-publicados.json`
+(formato e passos no `SKILL.md` da `pagina-aprovacao`).
+
 ## Quadro de trends
 Quadro separado, usado pela skill `trend-finder` (estrutura descrita lá).

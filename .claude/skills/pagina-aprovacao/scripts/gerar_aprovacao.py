@@ -260,14 +260,43 @@ def capturar(ctx, arq: Path):
         pg.close()
 
 
-def anteriores(cli: Path, mes: str, limite: int, ignorar: set):
-    """Pastas de carrossel de meses anteriores, da mais nova para a mais antiga."""
+def ler_publicados(cli: Path):
+    """Registro dos posts que estão na lista "Publicado" do Trello da cliente,
+    exportado pelo Claude para <cliente>/trello-publicados.json antes de gerar.
+    Devolve a lista de posts ou None quando não há registro."""
+    arq = cli / "trello-publicados.json"
+    if not arq.exists():
+        return None
+    return json.loads(arq.read_text(encoding="utf-8")).get("posts", [])
+
+
+def anteriores(cli: Path, mes: str, limite: int, ignorar: set, publicados):
+    """Posts de meses anteriores para a grade, do mais novo para o mais antigo.
+    Com registro do Trello: só os publicados de fato, pela data real
+    (confirmado=True). Sem registro: pastas de conteudos/ com data anterior,
+    sem afirmar que foram ao ar (confirmado=False).
+    Devolve [(pasta, date, confirmado)]."""
     out = []
+    if publicados is not None:
+        vistos = set()
+        for reg in publicados:
+            pasta = (cli / reg.get("pasta", "")).resolve() if reg.get("pasta") else None
+            try:
+                d = date.fromisoformat(str(reg.get("data", ""))[:10])
+            except ValueError:
+                continue
+            if (not pasta or not (pasta / "carousel.html").exists() or pasta.name in ignorar
+                    or pasta.name in vistos or d.strftime("%Y-%m") >= mes):
+                continue
+            vistos.add(pasta.name)
+            out.append((pasta, d, True))
+        out.sort(key=lambda x: x[1], reverse=True)
+        return out[:limite]
     for p in sorted((cli / "conteudos").glob("*"), reverse=True):
-        m = re.match(r"^(\d{4}-\d{2})-\d{2}-", p.name)
-        if not m or m.group(1) >= mes or p.name in ignorar or not (p / "carousel.html").exists():
+        m = re.match(r"^(\d{4})-(\d{2})-(\d{2})-", p.name)
+        if not m or f"{m.group(1)}-{m.group(2)}" >= mes or p.name in ignorar or not (p / "carousel.html").exists():
             continue
-        out.append(p)
+        out.append((p, date(int(m.group(1)), int(m.group(2)), int(m.group(3))), False))
         if len(out) >= limite:
             break
     return out
@@ -339,14 +368,23 @@ def gerar_indice(cli: Path, bk: dict, marca: str, logo, f_t, f_c, claro, escuro)
 
 def lista_meses(cli: Path, atual: str, n_atual: int):
     """Meses da cliente para a barra lateral: os que têm página de aprovação
-    (com link do claude.ai e caminho local) e os que só têm posts em conteudos/."""
+    (com link do claude.ai e caminho local) e os anteriores sem página, contados
+    pela lista Publicado do Trello (confirmado) ou, sem registro, pelas pastas
+    de conteudos/ (não confirmado)."""
     base = cli / "aprovacao"
     links = json.loads((base / "links.json").read_text(encoding="utf-8")) if (base / "links.json").exists() else {}
+    publicados = ler_publicados(cli)
     meses = {}
-    for p in (cli / "conteudos").glob("*"):
-        m = re.match(r"^(\d{4}-\d{2})-\d{2}-", p.name)
-        if m and (p / "carousel.html").exists():
-            meses.setdefault(m.group(1), {"posts": 0, "pagina": False})["posts"] += 1
+    if publicados is not None:
+        for reg in publicados:
+            mid = str(reg.get("data", ""))[:7]
+            if re.match(r"^\d{4}-\d{2}$", mid):
+                meses.setdefault(mid, {"posts": 0, "pagina": False, "confirmado": True})["posts"] += 1
+    else:
+        for p in (cli / "conteudos").glob("*"):
+            m = re.match(r"^(\d{4}-\d{2})-\d{2}-", p.name)
+            if m and (p / "carousel.html").exists():
+                meses.setdefault(m.group(1), {"posts": 0, "pagina": False, "confirmado": False})["posts"] += 1
     if base.exists():
         for p in base.iterdir():
             if p.is_dir() and re.match(r"^\d{4}-\d{2}$", p.name) and (p / "manifesto.json").exists():
@@ -358,7 +396,7 @@ def lista_meses(cli: Path, atual: str, n_atual: int):
         ano, mes = map(int, mid.split("-"))
         info = meses[mid]
         out.append({"id": mid, "rotulo": f"{MESES[mes - 1].capitalize()} de {ano}", "posts": info["posts"],
-                    "atual": mid == atual, "link": links.get(mid),
+                    "atual": mid == atual, "link": links.get(mid), "confirmado": info.get("confirmado", False),
                     "local": f"../{mid}/aprovacao.html" if info["pagina"] and mid != atual else None})
     return out
 
@@ -448,16 +486,18 @@ def main():
                   + ("" if legenda else " · sem legenda"))
 
         antigos = []
-        for pasta in anteriores(cli, a.mes, a.anteriores, {p.name for p in pastas}):
+        publicados = ler_publicados(cli)
+        for pasta, d, confirmado in anteriores(cli, a.mes, a.anteriores, {p.name for p in pastas}, publicados):
             info, thumb = capturar(ctx, pasta / "carousel.html")
             if info.get("erro"):
                 continue
-            m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", pasta.name)
             antigos.append({"thumb": "data:image/jpeg;base64," + base64.b64encode(thumb).decode(),
-                            "data": f"{int(m.group(3))} de {MESES[int(m.group(2)) - 1]}",
-                            "mesRotulo": f"{MESES[int(m.group(2)) - 1].capitalize()} de {m.group(1)}"})
-        if antigos:
-            print(f"{len(antigos)} posts já publicados entram esmaecidos na grade")
+                            "data": f"{d.day} de {MESES[d.month - 1]}", "confirmado": confirmado,
+                            "mesRotulo": f"{MESES[d.month - 1].capitalize()} de {d.year}"})
+        if publicados is None:
+            print(f"Sem trello-publicados.json: {len(antigos)} posts anteriores entram como 'não confirmado'.")
+        else:
+            print(f"{len(antigos)} posts publicados (lista Publicado do Trello) entram esmaecidos na grade")
         nav.close()
 
     posts.sort(key=lambda p: p["num"])

@@ -511,8 +511,12 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   document.querySelectorAll("[data-handle-curto]").forEach(function (el) { el.textContent = HANDLE; });
   document.querySelectorAll("[data-mes]").forEach(function (el) { el.textContent = D.mes; });
   $("bio").textContent = D.marca.bio || "";
-  $("numeros").innerHTML = "<li><b>" + POSTS.length + "</b> posts novos</li>" + (ANTIGOS.length ? "<li><b>" + ANTIGOS.length + "</b> já publicados</li>" : "");
-  $("nota-grade").textContent = "Os posts novos aparecem no topo, como vão ficar depois de publicados." + (ANTIGOS.length ? " Os esmaecidos já estão no perfil." : "") + " A grade corta as bordas como o Instagram; ao abrir, o post aparece inteiro.";
+  // "Publicado" só quando a lista Publicado do Trello confirmou; senão, "anterior".
+  var CONF = ANTIGOS.length > 0 && ANTIGOS.every(function (a) { return a.confirmado; });
+  $("numeros").innerHTML = "<li><b>" + POSTS.length + "</b> posts novos</li>" + (ANTIGOS.length ? "<li><b>" + ANTIGOS.length + "</b> " + (CONF ? "já publicados" : "anteriores") + "</li>" : "");
+  $("nota-grade").textContent = "Os posts novos aparecem no topo, como vão ficar depois de publicados." +
+    (ANTIGOS.length ? (CONF ? " Os esmaecidos já estão no perfil." : " Os esmaecidos são posts de meses anteriores feitos aqui; a publicação deles não foi confirmada.") : "") +
+    " A grade corta as bordas como o Instagram; ao abrir, o post aparece inteiro.";
 
   var porId = {};
   POSTS.forEach(function (p) { porId[p.id] = p; });
@@ -538,11 +542,11 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     if (a.mesRotulo !== mesAnt) {
       mesAnt = a.mesRotulo;
       var n = ANTIGOS.filter(function (x) { return x.mesRotulo === mesAnt; }).length;
-      divisoria(mesAnt || "Já publicados", n + (n === 1 ? " publicado" : " publicados"), false);
+      divisoria(mesAnt || "Anteriores", CONF ? n + (n === 1 ? " publicado" : " publicados") : n + (n === 1 ? " anterior · não confirmado" : " anteriores · não confirmados"), false);
     }
     var d = document.createElement("div");
     d.className = "cel antigo";
-    d.innerHTML = '<img src="' + a.thumb + '" alt="Post já publicado' + (a.data ? " em " + esc(a.data) : "") + '" loading="lazy"><span class="cel-tag">publicado</span>';
+    d.innerHTML = '<img src="' + a.thumb + '" alt="' + (a.confirmado ? "Post publicado" : "Post anterior") + (a.data ? " em " + esc(a.data) : "") + '" loading="lazy"><span class="cel-tag">' + (a.confirmado ? "publicado" : "anterior") + "</span>";
     grade.appendChild(d);
   });
   grade.addEventListener("click", function (e) { var c = e.target.closest("button.cel"); if (c) abrir(porId[c.dataset.id], c); });
@@ -553,7 +557,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   (D.meses || []).forEach(function (m) {
     var li = document.createElement("li"), alvo = local ? m.local : m.link;
     var temPagina = m.atual || m.local || m.link;
-    var info = "<span>" + esc(m.rotulo) + "</span><small>" + m.posts + (temPagina ? " posts" : (m.posts === 1 ? " publicado" : " publicados")) + "</small>";
+    var info = "<span>" + esc(m.rotulo) + "</span><small>" + m.posts + (temPagina || !m.confirmado ? " posts" : (m.posts === 1 ? " publicado" : " publicados")) + "</small>";
     if (m.atual) li.innerHTML = '<span class="m atual" aria-current="page">' + info + "</span>";
     else if (alvo) li.innerHTML = '<a href="' + esc(alvo) + '"' + (local ? "" : ' target="_blank" rel="noopener"') + ">" + info + "</a>";
     else li.innerHTML = '<span class="m semlink" title="Página deste mês ainda não publicada">' + info + "</span>";

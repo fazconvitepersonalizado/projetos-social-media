@@ -49,9 +49,31 @@ em `links.json` e refazer o índice (`gerar_indice` do script).
   do brand-kit; números só do que existe: posts novos e já publicados, nunca
   seguidores inventados), abas e grade 3 colunas em **3:4**, que corta as
   bordas como o Instagram faz hoje.
-- **Posts já publicados** (até `--anteriores`, padrão 9, das pastas de meses
-  anteriores) aparecem esmaecidos abaixo dos novos, para a cliente ver como
-  o mês encaixa no feed.
+- **Posts publicados** (até `--anteriores`, padrão 9) aparecem esmaecidos
+  abaixo dos novos, para a cliente ver como o mês encaixa no feed. **Fonte:
+  a lista `Publicado` do Trello da cliente**, exportada antes de gerar (ver
+  "Registro de publicados"). Sem esse registro, a página não afirma
+  publicação: mostra as pastas de meses anteriores de `conteudos/` como
+  "anterior · não confirmado".
+
+## Registro de publicados (antes de gerar)
+1. Com o conector do Trello disponível, ler `<cliente>/trello.json` e listar
+   os cartões da lista `Publicado` (ver `conteudo-mensal/references/trello.md`).
+2. Para cada cartão, achar a pasta da arte: linha "Arquivo local" da
+   descrição → post do plano do mês → `Pasta da arte:`. Data = data de
+   entrega (due) do cartão, que é a data do post.
+3. Gravar `<cliente>/trello-publicados.json` (vai para o git, não tem
+   segredo):
+   ```json
+   {"atualizado_em": "AAAA-MM-DD", "fonte": "Trello · lista Publicado",
+    "posts": [{"cartao": "POST 03 · [carrossel] tema", "data": "AAAA-MM-DD",
+               "pasta": "conteudos/AAAA-MM-DD-slug", "url_cartao": "https://trello.com/c/..."}]}
+   ```
+4. Cartão publicado sem pasta encontrada (ex.: post feito fora daqui) fica
+   fora da grade; avisar o Thiago quais foram.
+5. Sem Trello na sessão: dizer isso, não criar o arquivo e gerar mesmo
+   assim (sai "não confirmado"). Arquivo antigo: avisar a data de
+   `atualizado_em` antes de usar.
 - **Post aberto no formato do Instagram:** mídia à esquerda e coluna com
   cabeçalho do @, legenda como comentário do @ (hashtags/menções
   destacadas), ícones e data; no celular, tela cheia como no app. Slides
