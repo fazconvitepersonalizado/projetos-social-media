@@ -10,6 +10,7 @@ references/preview-nav.md e painel de references/edit-panel.md.
 """
 import base64
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -139,7 +140,43 @@ def botao(n, text, role="cta", bg=None, fg=None):
 
 
 # ---------------------------------------------------------------- indicadores (sorteados)
-def indicador(tipo, i, total, t):
+# Loguinho de canto nos slides do meio (teste pedido pelo Thiago em 2026-10-20; desligada por padrão).
+# AJ_MARCA_CANTO = "sem-chip" (chip só sobre foto) ou "com-chip" (sempre). O ícone vira uma cor só,
+# escolhida pelo fundo do slide: petróleo no claro e no verde, vinho no rosa-claro, branco nos escuros.
+MARCA_CANTO = os.environ.get("AJ_MARCA_CANTO", "")
+
+
+def cor_marca(t):
+    if t is TONS["claro"] or t is TONS["verde"]:
+        return DBG, 0.72
+    if t is TONS["rosa"]:
+        return VINHO, 0.78
+    return "#fff", 0.82
+
+
+def marca_canto(i, total, t, foto_no_canto=False, canto="tl"):
+    if not MARCA_CANTO or not 0 < i < total - 1:
+        return ""
+    cor, op = cor_marca(t)
+    if foto_no_canto:
+        cor, op = "#fff", 0.95
+    pos = {"tl": "top:20px;left:22px;", "tr": "top:20px;right:22px;", "bl": "bottom:20px;left:22px;"}[canto]
+    chip = foto_no_canto or t is TONS["foto"] or MARCA_CANTO == "com-chip"
+    fundo = ""
+    if chip:
+        escuro = cor == "#fff"
+        fundo = (f"background:{'rgba(18,63,60,0.55)' if escuro else 'rgba(255,255,255,0.45)'};"
+                 "padding:6px;border-radius:7px;")
+    icone = (f'<div style="width:22px;height:21px;background:{cor};opacity:{op};'
+             f'-webkit-mask:url({LOGO}) center/contain no-repeat;mask:url({LOGO}) center/contain no-repeat;"></div>')
+    return f'<div data-ap-fixo data-ap-logo style="position:absolute;{pos}z-index:4;{fundo}">{icone}</div>'
+
+
+def indicador(tipo, i, total, t, foto_no_canto=False, canto="tl"):
+    return seta(tipo, i, total, t) + marca_canto(i, total, t, foto_no_canto, canto)
+
+
+def seta(tipo, i, total, t):
     if tipo == "selo" and i == 0:
         if t.get("chip_pequeno"):  # texto pequeno sobre cor chapada clara: chip escuro (>7:1)
             return (f'<div class="sans" data-ap-fixo style="position:absolute;right:22px;bottom:20px;z-index:4;font-size:12px;'

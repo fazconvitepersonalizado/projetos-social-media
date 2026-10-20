@@ -69,7 +69,7 @@ s.append(slide(PT,
                 ("Equipe treinada", "Novato sem integração"),
             ], size=15, gap_top=8, cab_size=13),
             anchor="top", pad="244px 36px 34px")
-    + indicador(IND, 4, N, PT)))
+    + indicador(IND, 4, N, PT, foto_no_canto=True)))
 # 6 · passo 4: pergunta gigante (a pausa escura)
 s.append(slide(E, bloco(
     numero_passo(4, 4, E, size=120)

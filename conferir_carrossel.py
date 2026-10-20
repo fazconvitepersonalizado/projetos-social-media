@@ -18,7 +18,8 @@ Regras conferidas na arte (renderizada no navegador, 420x525 por slide):
   capa em fundo claro · mais de 2 slides de fundo claro · slide só com fundo e texto ·
   faixa vazia maior que 1/3 do slide · título com mais de ~10 palavras · apoio com mais de ~15 ·
   travessão · contador "n/total" · seta no último slide · letra menor que 12px · número em
-  destaque sem fonte · mais de 2 fotos full no miolo · títulos repetindo a mesma ideia · erro de JS.
+  destaque sem fonte · mais de 2 fotos full no miolo · títulos repetindo a mesma ideia · erro de JS ·
+  logo de canto ([data-ap-logo]) encostada em texto.
   No --mes: pelo menos 2 capas com foto no slide inteiro.
 No roteiro: começo, meio e fim (gancho primeiro, chamada no fim, por que importa antes de como
 fazer) · tamanho de título e apoio · travessão · dado sem fonte e dado demais · slide sem recurso
@@ -125,7 +126,19 @@ JS_MEDIR = """(i) => {
     .filter(el => !el.parentElement.closest('[data-edit-id], h1, h2, h3, p'))
     .map(el => ({tag: el.tagName.toLowerCase(), edit: el.getAttribute('data-edit-id') || '',
                  txt: el.innerText.replace(/\\s+/g, ' ').trim()}));
-  return {textos, imgs, blocos, todo: s.innerText};
+  const logo = s.querySelector('[data-ap-logo]');
+  const toca = [];
+  if (logo) {
+    const L = logo.getBoundingClientRect(), m = 6;
+    for (const el of s.querySelectorAll('*')) {
+      if (el.closest('[data-ap-fixo]')) continue;
+      const proprio = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join('').trim();
+      if (!proprio) continue;
+      const r = el.getBoundingClientRect();
+      if (r.left < L.right + m && r.right > L.left - m && r.top < L.bottom + m && r.bottom > L.top - m) toca.push(proprio.slice(0, 40));
+    }
+  }
+  return {textos, imgs, blocos, todo: s.innerText, logo: !!logo, toca};
 }"""
 
 JS_ESCONDER_TEXTO = r"""(i) => {
@@ -135,6 +148,7 @@ JS_ESCONDER_TEXTO = r"""(i) => {
   // indicador de arraste e logo não contam como recurso visual
   for (const el of s.querySelectorAll('[data-ap-fixo]'))
     if (/→|arraste|^\s*\d+\s*\/\s*\d+\s*$/i.test(el.innerText.trim())) some(el);
+  for (const el of s.querySelectorAll('[data-ap-logo]')) some(el);
   for (const im of s.querySelectorAll('img')) {
     const r = im.getBoundingClientRect();
     if (r.width * r.height < 0.03 * r0.width * r0.height) some(im.closest('[data-ap-fixo]') || im);
@@ -303,6 +317,8 @@ def conferir_arte(html_path: Path, folha: Path | None):
             menor = min(pequenas, key=lambda t: t["fs"])
             mais = f" e mais {len(pequenas) - 1}" if len(pequenas) > 1 else ""
             rel.achado(onde, f"letra de {menor['fs']:.0f}px (mínimo {MIN_FONTE}): \"{menor['proprio'][:40]}\"{mais}")
+        if dom["toca"]:
+            rel.achado(onde, f"logo de canto encostada no texto: \"{dom['toca'][0]}\"")
         if i == n and any(t["fixo"] and ("→" in t["proprio"] or "ARRASTE" in t["proprio"].upper()) for t in dom["textos"]):
             rel.achado(onde, "seta ou selo de arraste no último slide")
         grandes = [t["proprio"] for t in dom["textos"] if t["fs"] >= 48 and re.search(r"\d{2,}|%", t["proprio"])]

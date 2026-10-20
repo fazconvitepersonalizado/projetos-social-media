@@ -63,7 +63,7 @@ s.append(slide(PT,
     '<!-- foto: pexels.com/photo/8961064 -->'
     f'<img src="{FOTO7}" alt="" style="position:absolute;left:0;top:0;width:420px;height:262px;object-fit:cover;object-position:50% 30%;">'
     + bloco(h(7, "Manda pra quem é da CIPA e salva pra próxima reunião.", PT, size=34, lh=1.12, align="center"),
-            align="center", anchor="center", pad="290px 36px 40px") + indicador(IND, 6, N, PT)))
+            align="center", anchor="center", pad="290px 36px 40px") + indicador(IND, 6, N, PT, foto_no_canto=True)))
 # 8 · CTA (degradê assinatura)
 s.append(slide(CTA, bloco(
     logo_lockup(CTA, size=40, fs=15)

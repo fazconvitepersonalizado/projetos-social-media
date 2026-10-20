@@ -73,7 +73,7 @@ s.append(slide(RC,
       f'justify-content:center;padding:40px 22px 70px 22px;">'
     + h(4, "Exame que depende de favor ao chefe fica para depois.", RC, size=27, lh=1.14)
     + p(4, "Combinar a saída custa pouco.", RC, size=18, gap=18, weight=600, color=VINHO)
-    + "</div>" + indicador(IND, 3, N, RC)))
+    + "</div>" + indicador(IND, 3, N, RC, foto_no_canto=True)))
 # 5 · a pergunta para a empresa, em rosa forte
 s.append(slide(RF, bloco(
     h(5, "Quem precisa sair para um exame sabe como pedir?", RF, size=50, lh=1.05),
