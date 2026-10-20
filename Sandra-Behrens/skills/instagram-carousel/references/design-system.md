@@ -229,10 +229,11 @@ Use for: "X ferramentas", "X erros", "X dicas"
 
 ### Indicadores de navegação (o sorteio escolhe qual usar)
 
-O indicador de arraste vem do sorteio: selo "arraste" só na capa, contador
-discreto (n/total), barra de progresso segmentada, ou nenhum. Os
-componentes abaixo continuam válidos quando sorteados; não são mais
-obrigatórios em todo slide.
+O indicador de arraste é **perguntado ao Thiago** na criação de cada
+carrossel, dizendo o que cada post vai ter (o sorteio só sugere): selo
+"arraste" só na capa, contador discreto (n/total) ou nenhum. A barra de
+progresso segmentada saiu das opções em 2026-10-20 (Thiago); o código
+abaixo fica só como registro.
 
 #### 1. Progress Bar (segmented, "stories" style — bottom of every slide)
 

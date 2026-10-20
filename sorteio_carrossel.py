@@ -88,7 +88,9 @@ CTAS = {
 
 ALINHAMENTOS = ["esquerda", "centralizado", "misto (capa e CTA centralizados, miolo à esquerda)"]
 APOIO_DO_TEXTO = ["topo", "base", "centro", "varia por slide"]
-INDICADORES = ["selo 'arraste' só na capa", "contador discreto (n/total)", "barra de progresso segmentada", "sem indicador"]
+# Barra de progresso saiu em 2026-10-20 (Thiago). O indicador sorteado é só sugestão:
+# perguntar ao Thiago, post a post, antes de montar (CLAUDE.md, pergunta 5).
+INDICADORES = ["selo 'arraste' só na capa", "contador discreto (n/total)", "sem indicador"]
 
 
 def historico_path(cliente: Path) -> Path:
@@ -170,7 +172,7 @@ def imprimir(s: dict, tema: str):
     print(f"Estrutura:  {s['estrutura']}: {ESTRUTURAS[s['estrutura']]}")
     print(f"Gancho:     {s['gancho']}: {GANCHOS[s['gancho']]}")
     print(f"Fundos:     {s['ritmo']}: {RITMOS[s['ritmo']]}")
-    print(f"Alinhamento: {s['alinhamento']} · texto apoiado: {s['apoio_do_texto']} · indicador: {s['indicador']}")
+    print(f"Alinhamento: {s['alinhamento']} · texto apoiado: {s['apoio_do_texto']} · indicador (sugestão, confirmar com o Thiago): {s['indicador']}")
     print(f"Fotos nos slides: {s['slides_com_foto'] or 'nenhum'}\n")
     for i, c in enumerate(s["composicao"], 1):
         print(f"  {i:>2}. {c:<24} {desc[c]}")
