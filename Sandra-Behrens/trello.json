@@ -13,7 +13,11 @@
     "Agendado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c09351894d08a483dbeb",
     "Publicado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c093a098399e5e72b2bf"
   },
-  "etiquetas": {},
-  "pendente": "Etiquetas de mês e formato ainda não criadas: o conector do Trello não cria nem renomeia etiquetas. Criar no Trello e registrar os IDs aqui.",
-  "atualizado_em": "2026-10-19"
+  "etiquetas": {
+    "Set/2026 (azul)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bdabcd5380b1660a0",
+    "carrossel (verde)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bdabcd5380b16609b"
+  },
+  "pendente": "Etiquetas criadas sem nome (o conector não nomeia). Dar nome no Trello a cada cor conforme a chave entre parênteses; mês novo pede uma etiqueta nova criada à mão.",
+  "atualizado_em": "2026-10-19",
+  "checklist": "Etapas: Texto revisado, Arte pronta, Enviado para aprovação, Aprovado pela cliente, Agendado, Publicado"
 }

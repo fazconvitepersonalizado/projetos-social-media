@@ -109,6 +109,18 @@ em `links.json` e refazer o índice (`gerar_indice` do script).
 
 ## Fluxo
 
+### 0. Conferir com o Trello (página e cartões sempre iguais)
+Antes de gerar ou republicar: ler os cartões do mês, gravar
+`<cliente>/aprovacao/<AAAA-MM>/trello-export.json` e rodar
+```bash
+python .claude/skills/pagina-aprovacao/scripts/sincronizar_trello.py comparar "<pasta do cliente>" <AAAA-MM> "<cliente>/aprovacao/<AAAA-MM>/trello-export.json"
+```
+Cada diferença (post só de um lado, data, legenda, texto de um slide) vai
+para o Thiago escolher qual lado vale. Depois de gerar, `... cartoes` monta
+nome, descrição, etiquetas e checklist dos cartões a partir do mesmo
+manifesto da página; gravar no Trello pelo conector. Formato do cartão e
+regras em `conteudo-mensal/references/trello.md`.
+
 ### 1. Gerar
 Na raiz do projeto:
 ```bash

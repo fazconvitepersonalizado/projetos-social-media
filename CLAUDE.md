@@ -255,6 +255,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
 - **A pasta local é a fonte da verdade** (`<cliente>/conteudos/planos/
   <AAAA-MM>.md`, versionado); o Trello espelha. Divergência entre os dois:
   perguntar qual vale.
+- **Página de aprovação e Trello dizem a mesma coisa:** cartão montado pelo
+  `sincronizar_trello.py` a partir do manifesto da página (nome `DD/MM ·
+  POST NN · Formato · tema`, seções Legenda / Texto da arte / Aprovação,
+  checklist Etapas, etiqueta de mês e de formato). Antes de gerar a página,
+  comparar com o Trello e mostrar cada diferença para o Thiago escolher.
 - Relatórios de métricas em `<cliente>/relatorios/<AAAA-MM>/`.
 - **Aprovação da cliente** (skill `pagina-aprovacao`): página com o feed do
   mês na marca da própria cliente, slides reais dos `carousel.html` com
@@ -365,3 +370,9 @@ projeto atual, pergunte antes de só aplicar e seguir:
   (sem assinatura de agência), ganhou aprovação por post, edição dos textos
   dos slides ao vivo (como o painel do instagram-carousel) e duas vias de
   resposta (banco da página + WhatsApp). Testada com setembro da A&J.
+- 2026-10-19 — Página de aprovação ganhou legenda com busca + hashtags e
+  botão de copiar (só nesta página), layout responsivo e pedido de ajuste
+  por slide. Cartões do Trello reorganizados (data no nome, seções,
+  checklist, etiquetas de cor) e sincronizados com a página pelo
+  `sincronizar_trello.py`, que compara os dois lados. A&J e Sandra
+  migradas; A&J ganhou página de agosto.

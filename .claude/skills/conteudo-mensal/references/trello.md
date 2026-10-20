@@ -67,11 +67,48 @@ Na primeira vez que um cliente for usado com o Trello, guardar os IDs em
 - Nunca guardar token, chave ou senha nesse arquivo nem em lugar nenhum do
   projeto fora do `.env`.
 
-## Cartão de post
-- **Nome:** `POST NN · [formato] tema` (NN com zero à esquerda, numerado
-  dentro do mês; ex.: `POST 03 · [carrossel] Menopausa não é o fim`).
-  Slots de vídeo sem tema: `POST NN · [terceiros]` / `POST NN · [corte]`.
-- **Data de entrega (due):** a data do post.
+## Cartão de post (formato aprovado em 2026-10-19)
+Página de aprovação e cartão saem da MESMA fonte (manifesto da página +
+plano do mês), montados pelo script
+`.claude/skills/pagina-aprovacao/scripts/sincronizar_trello.py cartoes`.
+Não escrever o cartão à mão quando houver página do mês.
+- **Nome:** `DD/MM · POST NN · Formato · tema` (data na frente para o
+  quadro ficar em ordem; NN numerado dentro do mês; ex.:
+  `17/09 · POST 03 · Post único · Quanto custa não prevenir?`).
+  Slots de vídeo sem tema: `DD/MM · POST NN · Terceiros`.
+- **Data de entrega (due):** a data do post, 09:00 de Brasília (12:00Z).
+- **Etiquetas:** mês + formato. O conector não cria nem nomeia etiquetas:
+  usar as cores que o quadro já tem, convenção por quadro no `trello.json`
+  (ex.: roxo = Ago/2026, azul = Set/2026, verde = carrossel, amarelo = post
+  único); o Thiago dá o nome a cada cor uma vez. Mês novo: pedir para ele
+  criar a etiqueta e registrar o ID.
+- **Descrição em seções (Markdown):** linha de resumo (data, dia da semana,
+  formato, nº de slides) + link da página de aprovação do mês + caminho dos
+  arquivos; `## Legenda` (pronta para copiar); `## Texto da arte` com
+  `**Slide N · capa/encerramento**`; `## Aprovação` (aguardando, aprovado,
+  ou os pedidos de ajuste por slide e o comentário geral da cliente).
+- **Checklist "Etapas":** Texto revisado, Arte pronta, Enviado para
+  aprovação, Aprovado pela cliente, Agendado, Publicado; marcar conforme a
+  lista em que o cartão está.
+
+## Página de aprovação ↔ Trello (os dois sempre iguais)
+- **Antes de gerar ou republicar a página de um mês:** ler os cartões do
+  mês pelo conector, gravar em `<cliente>/aprovacao/<AAAA-MM>/trello-export.json`
+  (`{"cartoes": [{"nome","desc","due","lista","url"}]}`) e rodar
+  `sincronizar_trello.py comparar`. Diferença encontrada (post só de um
+  lado, data, legenda ou texto de um slide): **mostrar ao Thiago e ele
+  escolhe qual lado vale**; o escolhido atualiza o outro (Trello vence →
+  plano/carousel.html via aplicar_respostas; local vence → cartão).
+- **Depois de gerar:** `sincronizar_trello.py cartoes` e gravar nome,
+  descrição, etiquetas e checklist de cada cartão.
+- **Quando a cliente responde:** seção `## Aprovação` do cartão recebe a
+  decisão e os pedidos por slide, checklist marca "Aprovado pela cliente"
+  e o cartão vai para `Agendado` ou `Ajustes` (confirmando antes).
+- Todo post em `Aprovação do cliente` precisa estar numa página de
+  aprovação, e vice-versa.
+
+## Formato antigo (até 2026-10-19, só referência)
+- **Nome:** `POST NN · [formato] tema`.
 - **Etiquetas:** mês + formato (+ pilar, se houver).
 - **Lista inicial:** `Planejado` na Fase 1 aprovada; `Em produção` quando o
   conteúdo for escrito; daí em diante o Thiago (ou a skill, se ele pedir)
