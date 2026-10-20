@@ -43,6 +43,16 @@ Detalhe ilustrativo (ex.: "23h10") pode, desde que não seja apresentado como
 dado. Afirmações técnicas novas ou mais fortes que as do briefing vão para
 validação do cliente.
 
+## Copy concreta e dado com moderação (Thiago, 2026-10-20, padrão geral)
+
+- Texto vago vira cena ou exemplo do dia a dia do público ("a escada sem
+  trava", "entrou máquina nova"), sem apresentar exemplo ilustrativo como caso real.
+- Dado estatístico real só onde o número reforça o ponto: cerca de 1 por
+  carrossel, e nem todo carrossel precisa. Destaque simples (um número + uma
+  frase), nunca tabela. Fonte oficial no slide (letra pequena) e na legenda.
+- Fontes divergentes: usar o piso conservador ("mais de 700 mil") e dizer o
+  ano. Pesquisar antes; nunca inventar nem arredondar para cima.
+
 ## Nota antes de seguir (stop-slop)
 
 Dê nota de 1 a 10 em cada eixo e mostre junto com o plano:

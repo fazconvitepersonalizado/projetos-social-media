@@ -4,7 +4,8 @@ Sorteio: comparacao · cena-do-dia-a-dia · seed 65 · esquerda.
 2026-10-20: data temática usa a cor da campanha (rosa domina; verde da A&J só no logo) + texto curto;
 capa com foto no slide inteiro e véu vinho; rosa-claro só nos slides 3 e 5; fotos full no miolo
 sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
-Nenhum slide só com fundo e texto: meio círculo (2), laço em traço (4), estetoscópio em traço (6)."""
+História: capa, por que importa (INCA), fachada x cuidado, obstáculo, pergunta, do aviso ao exame, tratamento, chamada.
+Nenhum slide só com fundo e texto: linha do ano (2), meio círculo (3), laço em traço (5), estetoscópio em traço (7)."""
 import sys
 from pathlib import Path
 
@@ -31,7 +32,7 @@ def linha_do_ano(n, t):
                  f'border-radius:50%;background:{ROSA if out else "#fff"};{borda}"></span></div>'
                  f'<span class="sans" style="font-size:{16 if out else 13}px;font-weight:{700 if out else 500};'
                  f'color:{VINHO if out else t["mute"]};">{m.upper() if out else m}</span></div>')
-    return (f'<div data-ap-fixo style="position:relative;margin-top:34px;">'
+    return (f'<div data-ap-fixo style="position:relative;margin-top:22px;">'
             f'<div style="position:absolute;left:4%;right:4%;top:12px;height:2px;background:{t["line"]};"></div>'
             f'<div style="position:relative;display:flex;">{cols}</div></div>')
 
@@ -46,54 +47,56 @@ s.append(slide(F,
               size=38, lh=1.08),
             anchor="bottom", pad="64px 34px 66px")
     + indicador(IND, 0, N, F)))
-# 2 · comparação em vinho (os cabeçalhos são o título)
+# 2 · por que importa: o dado do INCA + linha do ano · claro 1/2
+s.append(slide(RC, bloco(
+    h(2, "Outubro abre a conversa", RC, size=40, lh=1.04)
+    + numero_destaque(2, "78.610", "casos novos de câncer de mama por ano no Brasil",
+                      "Fonte: INCA, estimativa 2026–2028", RC, size=54, gap_top=14)
+    + linha_do_ano(2, RC)
+    + p(2, "Os outros onze meses mostram se a empresa levou a sério.", RC, size=20, gap=22, weight=500, color=VINHO,
+        extra="font-family:'Lora',serif;line-height:1.3;"),
+    anchor="center", pad="40px 30px 56px") + indicador(IND, 1, N, RC)))
+# 3 · o que muda: fachada x cuidado, em vinho (os cabeçalhos são o título)
 s.append(slide(V, bloco(
-    comparacao(2, V, "Fachada", "Cuidado", [
+    comparacao(3, V, "Fachada", "Cuidado", [
         ("Foto de rosa", "Horário livre para o exame"),
         ("Palestra em outubro", "Informação o ano todo"),
     ], size=21, gap_top=0, cab_serif=True, cab_size=40),
-    anchor="center") + indicador(IND, 1, N, V),
+    anchor="center") + indicador(IND, 2, N, V),
     layers=circulo(ROSA, 420, 525, 150, op=0.9)))
-# 3 · foto dividida: foto à esquerda, texto à direita em rosa-claro · claro 1/2
+# 4 · o obstáculo real: foto à esquerda, texto à direita em rosa-claro · claro 2/2
 s.append(slide(RC,
     '<!-- foto: pexels.com/photo/8487402 -->'
     f'<img src="{FOTO3}" alt="" style="position:absolute;left:0;top:0;width:200px;height:525px;object-fit:cover;object-position:50% 25%;">'
     + f'<div style="position:absolute;left:200px;right:0;top:0;bottom:0;z-index:2;display:flex;flex-direction:column;'
       f'justify-content:center;padding:40px 22px 70px 22px;">'
-    + h(3, "Exame que depende de favor ao chefe fica para depois.", RC, size=27, lh=1.14)
-    + p(3, "Combinar a saída custa pouco.", RC, size=18, gap=18, weight=600, color=VINHO)
-    + "</div>" + indicador(IND, 2, N, RC)))
-# 4 · pergunta grande em rosa forte
+    + h(4, "Exame que depende de favor ao chefe fica para depois.", RC, size=27, lh=1.14)
+    + p(4, "Combinar a saída custa pouco.", RC, size=18, gap=18, weight=600, color=VINHO)
+    + "</div>" + indicador(IND, 3, N, RC)))
+# 5 · a pergunta para a empresa, em rosa forte
 s.append(slide(RF, bloco(
-    h(4, "Quem precisa sair para um exame sabe como pedir?", RF, size=50, lh=1.05),
-    anchor="center") + indicador(IND, 3, N, RF),
+    h(5, "Quem precisa sair para um exame sabe como pedir?", RF, size=50, lh=1.05),
+    anchor="center") + indicador(IND, 4, N, RF),
     layers=traco("laco", "#fff", 196, 332, 250, op=0.4, sw=5, rot=-8)))
-# 5 · diagrama: linha do ano · claro 2/2
-s.append(slide(RC, bloco(
-    h(5, "Outubro abre a conversa", RC, size=46, lh=1.04)
-    + linha_do_ano(5, RC)
-    + p(5, "Os outros onze meses mostram se a empresa levou a sério.", RC, size=22, gap=34, weight=500, color=VINHO,
-        extra="font-family:'Lora',serif;line-height:1.3;"),
-    anchor="center", pad="64px 30px 76px") + indicador(IND, 4, N, RC)))
-# 6 · comparação em vinho escuro
-s.append(slide(VE, bloco(
-    h(6, "Quando alguém está em tratamento", VE, size=38, lh=1.06)
-    + comparacao(6, VE, "Sem cuidado", "Com cuidado", [
-        ("Comentário no corredor", "Conversa reservada com o RH"),
-        ("Volta sem plano", "Retorno avaliado pela medicina do trabalho (NR&#8209;7)"),
-    ], size=19, gap_top=24, cab_size=15),
-    anchor="bottom", pad="64px 36px 64px") + indicador(IND, 5, N, VE),
-    layers=traco("estetoscopio", ROSA_SUAVE, 292, -26, 150, op=0.85, sw=5, rot=10)))
-# 7 · diagrama: do aviso ao exame, em vinho
+# 6 · como fazer: do aviso ao exame, em vinho
 s.append(slide(V, bloco(
-    h(7, "Do aviso ao exame", V, size=46)
-    + passos_verticais(7, V, [
+    h(6, "Do aviso ao exame", V, size=46)
+    + passos_verticais(6, V, [
         "Informação com fonte (INCA, Ministério da Saúde)",
         "Horário combinado",
         "Exame feito",
     ], seta=True, gap_top=28, size=21)
-    + p(7, "Salva e manda pro RH.", V, role="cta", size=19, weight=600, color=ROSA_SUAVE, gap=12),
-    anchor="center") + indicador(IND, 6, N, V)))
+    + p(6, "Salva e manda pro RH.", V, role="cta", size=19, weight=600, color=ROSA_SUAVE, gap=12),
+    anchor="center") + indicador(IND, 5, N, V)))
+# 7 · e depois do exame: quando alguém está em tratamento, em vinho escuro
+s.append(slide(VE, bloco(
+    h(7, "Quando alguém está em tratamento", VE, size=38, lh=1.06)
+    + comparacao(7, VE, "Sem cuidado", "Com cuidado", [
+        ("Comentário no corredor", "Conversa reservada com o RH"),
+        ("Volta sem plano", "Retorno avaliado pela medicina do trabalho (NR&#8209;7)"),
+    ], size=19, gap_top=24, cab_size=15),
+    anchor="bottom", pad="64px 36px 64px") + indicador(IND, 6, N, VE),
+    layers=traco("estetoscopio", ROSA_SUAVE, 292, -26, 150, op=0.85, sw=5, rot=10)))
 # 8 · CTA no degradê da campanha
 s.append(slide(CR, bloco(
     logo_lockup(CR, size=38, fs=14)
@@ -103,7 +106,7 @@ s.append(slide(CR, bloco(
     + p(8, HANDLE, CR, role="handle", size=15, align="center", gap=16, weight=500),
     align="center") + indicador(IND, 7, N, CR)))
 
-LABELS = {1: "Capa", 2: "Fachada x cuidado", 3: "Foto + exame", 4: "Pergunta", 5: "Linha do ano", 6: "Tratamento", 7: "Do aviso ao exame", 8: "CTA"}
+LABELS = {1: "Capa", 2: "Por que importa", 3: "Fachada x cuidado", 4: "Foto + exame", 5: "Pergunta", 6: "Do aviso ao exame", 7: "Tratamento", 8: "CTA"}
 html = pagina("Outubro Rosa na empresa", "Saúde e segurança do trabalho",
               "Outubro Rosa na empresa: ações de saúde que continuam depois do laço.", s, LABELS,
               "conteudos/2026-10-28-outubro-rosa-na-empresa")

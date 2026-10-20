@@ -165,6 +165,12 @@ projeto atual, pergunte antes de só aplicar e seguir:
   nenhum cliente pode ficar parecido com outro. Na primeira vez que um
   cliente passar pelas regras, listar o que é assinatura (fica) e o que é
   vício do template antigo (sai) e confirmar com o Thiago antes.
+- **Copy concreta e dado com moderação** (2026-10-20, todos os clientes):
+  texto vago vira cena ou exemplo do dia a dia do público. Dado estatístico
+  real entra só onde o número reforça o ponto (cerca de 1 por carrossel, e
+  nem todo carrossel precisa), em destaque simples: um número + uma frase,
+  nunca tabela; fonte oficial no próprio slide e na legenda; se as fontes
+  divergirem, usar o piso conservador ("mais de 700 mil"). Nunca inventar.
 - **Copy:** revisão obrigatória antes do HTML por
   `references/anti-ia-copy.md` da skill `instagram-carousel` (sem "não é X;
   é Y", sem "Spoiler:", sem grupo de três forçado, sem frase de efeito no
@@ -219,6 +225,13 @@ projeto atual, pergunte antes de só aplicar e seguir:
   anterior, nem passar de 40% de composição igual aos últimos 6. Sorteia só
   estrutura; cor, fonte e tom vêm da marca. Passo obrigatório na Fase 2 da
   skill `instagram-carousel`.
+- **História primeiro, sorteio depois** (2026-10-20, todos os clientes):
+  todo carrossel conta uma história com começo, meio e fim (gancho → por
+  que importa → o que muda → como fazer → chamada). O texto é escrito
+  primeiro, nessa ordem; o sorteio só decide a composição visual de cada
+  slide, e uma composição pode ser trocada de lugar para servir à
+  história. Nunca repetir a mesma ideia em dois slides para preencher a
+  composição sorteada.
 
 ## Cliente novo (skill `novo-cliente`)
 - Todo cliente novo entra pelo passo a passo da skill `novo-cliente`
@@ -425,3 +438,10 @@ projeto atual, pergunte antes de só aplicar e seguir:
   novo: nenhum slide só com fundo e texto (traço temático, formas de cor
   ou objeto recortado, misturados), no lugar da proibição anti-IA de
   ilustração decorativa (CLAUDE.md, anti-ia-design.md de todos).
+- 2026-10-20 — O Thiago achou textos vagos e sem dado. Padrão geral novo: copy
+  concreta e dado estatístico com fonte, com moderação (1 número + 1 frase,
+  só onde reforça o ponto), no CLAUDE.md e no anti-ia-copy.md de todos.
+- 2026-10-20 — O Thiago sentiu os carrosséis de outubro sem começo, meio e
+  fim (texto encaixado na composição sorteada, ideia repetida). Padrão geral:
+  história primeiro, sorteio só no visual (CLAUDE.md, skill instagram-carousel
+  de todos e do modelo, sorteio).

@@ -32,40 +32,28 @@
      "texto": "Reunião, ata assinada, pasta. O risco continua no lugar."
     },
     {
-     "id": "slide3-col-a",
+     "id": "slide3-dado",
      "slide": 3,
-     "papel": "col-a",
-     "texto": "No papel"
+     "papel": "dado",
+     "texto": "+700 mil"
     },
     {
-     "id": "slide3-col-b",
+     "id": "slide3-dado-frase",
      "slide": 3,
-     "papel": "col-b",
-     "texto": "Funcionando"
+     "papel": "dado-frase",
+     "texto": "acidentes de trabalho registrados no Brasil em 2024"
     },
     {
-     "id": "slide3-row-1-a",
+     "id": "slide3-fonte",
      "slide": 3,
-     "papel": "row-1-a",
-     "texto": "Ata copiada"
+     "papel": "fonte",
+     "texto": "Fonte: Anuário Estatístico da Previdência Social"
     },
     {
-     "id": "slide3-row-1-b",
+     "id": "slide3-headline",
      "slide": 3,
-     "papel": "row-1-b",
-     "texto": "Ata com o que foi visto no setor"
-    },
-    {
-     "id": "slide3-row-2-a",
-     "slide": 3,
-     "papel": "row-2-a",
-     "texto": "Membro que só assina"
-    },
-    {
-     "id": "slide3-row-2-b",
-     "slide": 3,
-     "papel": "row-2-b",
-     "texto": "Membro que traz a voz da equipe"
+     "papel": "headline",
+     "texto": "Prevenir é o motivo de a CIPA existir."
     },
     {
      "id": "slide4-headline",
@@ -98,45 +86,51 @@
      "texto": "Prevenir o assédio"
     },
     {
-     "id": "slide5-headline",
-     "slide": 5,
-     "papel": "headline",
-     "texto": "Cumpre tabela ou previne?"
-    },
-    {
      "id": "slide5-col-a",
      "slide": 5,
      "papel": "col-a",
-     "texto": "Cumpre tabela"
+     "texto": "No papel"
     },
     {
      "id": "slide5-col-b",
      "slide": 5,
      "papel": "col-b",
-     "texto": "Previne"
+     "texto": "Funcionando"
     },
     {
      "id": "slide5-row-1-a",
      "slide": 5,
      "papel": "row-1-a",
-     "texto": "Lê a ata e encerra"
+     "texto": "Ata copiada"
     },
     {
      "id": "slide5-row-1-b",
      "slide": 5,
      "papel": "row-1-b",
-     "texto": "Revisa cada pendência"
+     "texto": "Ata com o que foi visto no setor"
     },
     {
      "id": "slide5-row-2-a",
      "slide": 5,
      "papel": "row-2-a",
-     "texto": "Sem prazo"
+     "texto": "Lê a ata e encerra"
     },
     {
      "id": "slide5-row-2-b",
      "slide": 5,
      "papel": "row-2-b",
+     "texto": "Revisa cada pendência"
+    },
+    {
+     "id": "slide5-row-3-a",
+     "slide": 5,
+     "papel": "row-3-a",
+     "texto": "Sem prazo"
+    },
+    {
+     "id": "slide5-row-3-b",
+     "slide": 5,
+     "papel": "row-3-b",
      "texto": "Cada ação com responsável e data"
     },
     {
@@ -206,7 +200,7 @@
      "texto": "@aejsolucoesemsstma"
     }
    ],
-   "legenda": "CIPA: sua comissão previne acidentes ou só assina ata?\n\nA NR-5 espera que a CIPA ajude a identificar riscos, acompanhe a análise dos acidentes, proponha melhorias e, desde 2022, também atue contra o assédio. Na prática, muita comissão vira uma reunião rápida por mês e uma ata guardada na pasta.\n\nNo carrossel está um ciclo simples para a reunião da CIPA voltar a resolver coisa: ouvir a equipe, registrar, definir responsável e prazo e conferir no mês seguinte.\n\nManda para quem é da CIPA na sua empresa.\n\n#CIPA #NR5 #SegurancaDoTrabalho #PrevencaoDeAcidentes #SST"
+   "legenda": "CIPA: sua comissão previne acidentes ou só assina ata?\n\nA NR-5 espera que a CIPA ajude a identificar riscos, acompanhe a análise dos acidentes, proponha melhorias e, desde 2022, também atue contra o assédio. Na prática, muita comissão vira uma reunião rápida por mês e uma ata guardada na pasta. Enquanto isso, o Brasil registrou mais de 700 mil acidentes de trabalho em 2024, segundo o Anuário Estatístico da Previdência Social.\n\nNo carrossel está um ciclo simples para a reunião da CIPA voltar a resolver coisa: ouvir a equipe, registrar, definir responsável e prazo e conferir no mês seguinte.\n\nManda para quem é da CIPA na sua empresa.\n\n#CIPA #NR5 #SegurancaDoTrabalho #PrevencaoDeAcidentes #SST"
   },
   {
    "id": "2026-10-23-quase-acidente",
@@ -229,49 +223,61 @@
      "id": "slide2-headline",
      "slide": 2,
      "papel": "headline",
-     "texto": "Mito: ninguém se feriu, nada a registrar."
-    },
-    {
-     "id": "slide2-body",
-     "slide": 2,
-     "papel": "body",
-     "texto": "O quase acidente mostra o risco antes da vítima."
+     "texto": "Da próxima vez, o carrinho pode tombar [[em cima de alguém.]]"
     },
     {
      "id": "slide3-headline",
      "slide": 3,
      "papel": "headline",
-     "texto": "O mesmo risco em três momentos"
+     "texto": "Mito: ninguém se feriu, nada a registrar."
     },
     {
-     "id": "slide3-node-1",
+     "id": "slide3-dado",
      "slide": 3,
-     "papel": "node-1",
-     "texto": "Condição de risco"
+     "papel": "dado",
+     "texto": "600"
     },
     {
-     "id": "slide3-node-2",
+     "id": "slide3-dado-frase",
      "slide": 3,
-     "papel": "node-2",
-     "texto": "Quase acidente"
+     "papel": "dado-frase",
+     "texto": "quase acidentes para cada acidente grave"
     },
     {
-     "id": "slide3-node-3",
+     "id": "slide3-fonte",
      "slide": 3,
-     "papel": "node-3",
-     "texto": "Acidente"
-    },
-    {
-     "id": "slide3-body",
-     "slide": 3,
-     "papel": "body",
-     "texto": "É a última chance de agir antes da lesão."
+     "papel": "fonte",
+     "texto": "Fonte: Frank Bird, estudo de 1969 com 297 empresas"
     },
     {
      "id": "slide4-headline",
      "slide": 4,
      "papel": "headline",
-     "texto": "Da próxima vez, o carrinho pode tombar [[em cima de alguém.]]"
+     "texto": "O mesmo risco em três momentos"
+    },
+    {
+     "id": "slide4-node-1",
+     "slide": 4,
+     "papel": "node-1",
+     "texto": "Condição de risco"
+    },
+    {
+     "id": "slide4-node-2",
+     "slide": 4,
+     "papel": "node-2",
+     "texto": "Quase acidente"
+    },
+    {
+     "id": "slide4-node-3",
+     "slide": 4,
+     "papel": "node-3",
+     "texto": "Acidente"
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "É a última chance de agir antes da lesão."
     },
     {
      "id": "slide5-headline",
@@ -364,7 +370,7 @@
      "texto": "@aejsolucoesemsstma"
     }
    ],
-   "legenda": "Quase acidente: por que registrar o que não machucou ninguém.\n\nQuando nada acontece com ninguém, a tendência é seguir o dia. Só que o quase acidente mostra exatamente onde o próximo acidente pode acontecer, e de graça. Registrar o que houve, onde e o que podia ter acontecido já permite tratar a causa: piso, carga, pressa ou equipamento.\n\nConta nos comentários: na sua empresa, quase acidente vira registro ou vira história de corredor?\n\n#QuaseAcidente #PrevencaoDeAcidentes #SegurancaDoTrabalho #GestaoDeRiscos #SST"
+   "legenda": "Quase acidente: por que registrar o que não machucou ninguém.\n\nQuando nada acontece com ninguém, a tendência é seguir o dia. Um estudo clássico de Frank Bird, de 1969, com 297 empresas, encontrou em média 600 quase acidentes para cada acidente grave. Só que o quase acidente mostra exatamente onde o próximo acidente pode acontecer, e de graça. Registrar o que houve, onde e o que podia ter acontecido já permite tratar a causa: piso, carga, pressa ou equipamento.\n\nConta nos comentários: na sua empresa, quase acidente vira registro ou vira história de corredor?\n\n#QuaseAcidente #PrevencaoDeAcidentes #SegurancaDoTrabalho #GestaoDeRiscos #SST"
   },
   {
    "id": "2026-10-26-dds-que-a-equipe-escuta",
@@ -423,7 +429,7 @@
      "id": "slide5-body",
      "slide": 5,
      "papel": "body",
-     "texto": "O quase acidente da semana ensina mais que a apostila."
+     "texto": "A escada sem trava, a carga que escorregou: o caso da semana ensina mais que a apostila."
     },
     {
      "id": "slide6-step",
@@ -488,142 +494,160 @@
      "texto": "Em outubro, o laço rosa aparece no crachá. Em novembro, [[some.]]"
     },
     {
-     "id": "slide2-col-a",
+     "id": "slide2-headline",
      "slide": 2,
+     "papel": "headline",
+     "texto": "Outubro abre a conversa"
+    },
+    {
+     "id": "slide2-dado",
+     "slide": 2,
+     "papel": "dado",
+     "texto": "78.610"
+    },
+    {
+     "id": "slide2-dado-frase",
+     "slide": 2,
+     "papel": "dado-frase",
+     "texto": "casos novos de câncer de mama por ano no Brasil"
+    },
+    {
+     "id": "slide2-fonte",
+     "slide": 2,
+     "papel": "fonte",
+     "texto": "Fonte: INCA, estimativa 2026–2028"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Os outros onze meses mostram se a empresa levou a sério."
+    },
+    {
+     "id": "slide3-col-a",
+     "slide": 3,
      "papel": "col-a",
      "texto": "Fachada"
     },
     {
-     "id": "slide2-col-b",
-     "slide": 2,
+     "id": "slide3-col-b",
+     "slide": 3,
      "papel": "col-b",
      "texto": "Cuidado"
     },
     {
-     "id": "slide2-row-1-a",
-     "slide": 2,
+     "id": "slide3-row-1-a",
+     "slide": 3,
      "papel": "row-1-a",
      "texto": "Foto de rosa"
     },
     {
-     "id": "slide2-row-1-b",
-     "slide": 2,
+     "id": "slide3-row-1-b",
+     "slide": 3,
      "papel": "row-1-b",
      "texto": "Horário livre para o exame"
     },
     {
-     "id": "slide2-row-2-a",
-     "slide": 2,
+     "id": "slide3-row-2-a",
+     "slide": 3,
      "papel": "row-2-a",
      "texto": "Palestra em outubro"
     },
     {
-     "id": "slide2-row-2-b",
-     "slide": 2,
+     "id": "slide3-row-2-b",
+     "slide": 3,
      "papel": "row-2-b",
      "texto": "Informação o ano todo"
-    },
-    {
-     "id": "slide3-headline",
-     "slide": 3,
-     "papel": "headline",
-     "texto": "Exame que depende de favor ao chefe fica para depois."
-    },
-    {
-     "id": "slide3-body",
-     "slide": 3,
-     "papel": "body",
-     "texto": "Combinar a saída custa pouco."
     },
     {
      "id": "slide4-headline",
      "slide": 4,
      "papel": "headline",
-     "texto": "Quem precisa sair para um exame sabe como pedir?"
+     "texto": "Exame que depende de favor ao chefe fica para depois."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Combinar a saída custa pouco."
     },
     {
      "id": "slide5-headline",
      "slide": 5,
      "papel": "headline",
-     "texto": "Outubro abre a conversa"
-    },
-    {
-     "id": "slide5-body",
-     "slide": 5,
-     "papel": "body",
-     "texto": "Os outros onze meses mostram se a empresa levou a sério."
+     "texto": "Quem precisa sair para um exame sabe como pedir?"
     },
     {
      "id": "slide6-headline",
      "slide": 6,
      "papel": "headline",
-     "texto": "Quando alguém está em tratamento"
+     "texto": "Do aviso ao exame"
     },
     {
-     "id": "slide6-col-a",
+     "id": "slide6-step-1",
      "slide": 6,
-     "papel": "col-a",
-     "texto": "Sem cuidado"
+     "papel": "step-1",
+     "texto": "Informação com fonte (INCA, Ministério da Saúde)"
     },
     {
-     "id": "slide6-col-b",
+     "id": "slide6-step-2",
      "slide": 6,
-     "papel": "col-b",
-     "texto": "Com cuidado"
+     "papel": "step-2",
+     "texto": "Horário combinado"
     },
     {
-     "id": "slide6-row-1-a",
+     "id": "slide6-step-3",
      "slide": 6,
-     "papel": "row-1-a",
-     "texto": "Comentário no corredor"
+     "papel": "step-3",
+     "texto": "Exame feito"
     },
     {
-     "id": "slide6-row-1-b",
+     "id": "slide6-cta",
      "slide": 6,
-     "papel": "row-1-b",
-     "texto": "Conversa reservada com o RH"
-    },
-    {
-     "id": "slide6-row-2-a",
-     "slide": 6,
-     "papel": "row-2-a",
-     "texto": "Volta sem plano"
-    },
-    {
-     "id": "slide6-row-2-b",
-     "slide": 6,
-     "papel": "row-2-b",
-     "texto": "Retorno avaliado pela medicina do trabalho (NR‑7)"
+     "papel": "cta",
+     "texto": "Salva e manda pro RH."
     },
     {
      "id": "slide7-headline",
      "slide": 7,
      "papel": "headline",
-     "texto": "Do aviso ao exame"
+     "texto": "Quando alguém está em tratamento"
     },
     {
-     "id": "slide7-step-1",
+     "id": "slide7-col-a",
      "slide": 7,
-     "papel": "step-1",
-     "texto": "Informação com fonte (INCA, Ministério da Saúde)"
+     "papel": "col-a",
+     "texto": "Sem cuidado"
     },
     {
-     "id": "slide7-step-2",
+     "id": "slide7-col-b",
      "slide": 7,
-     "papel": "step-2",
-     "texto": "Horário combinado"
+     "papel": "col-b",
+     "texto": "Com cuidado"
     },
     {
-     "id": "slide7-step-3",
+     "id": "slide7-row-1-a",
      "slide": 7,
-     "papel": "step-3",
-     "texto": "Exame feito"
+     "papel": "row-1-a",
+     "texto": "Comentário no corredor"
     },
     {
-     "id": "slide7-cta",
+     "id": "slide7-row-1-b",
      "slide": 7,
-     "papel": "cta",
-     "texto": "Salva e manda pro RH."
+     "papel": "row-1-b",
+     "texto": "Conversa reservada com o RH"
+    },
+    {
+     "id": "slide7-row-2-a",
+     "slide": 7,
+     "papel": "row-2-a",
+     "texto": "Volta sem plano"
+    },
+    {
+     "id": "slide7-row-2-b",
+     "slide": 7,
+     "papel": "row-2-b",
+     "texto": "Retorno avaliado pela medicina do trabalho (NR‑7)"
     },
     {
      "id": "slide8-headline",
@@ -650,7 +674,7 @@
      "texto": "@aejsolucoesemsstma"
     }
    ],
-   "legenda": "Outubro Rosa na empresa: ações de saúde que continuam depois do laço.\n\nLaço no crachá e foto da equipe ajudam a lembrar da campanha. O que faz diferença para quem trabalha é conseguir sair para fazer o exame sem constrangimento, receber informação de fonte confiável e, se precisar de tratamento, voltar ao trabalho com o retorno avaliado pela medicina do trabalho.\n\nPara saber quando e quais exames fazer, a referência é o seu médico e os materiais do INCA e do Ministério da Saúde.\n\nNa sua empresa, o Outubro Rosa termina em 31 de outubro?\n\n#OutubroRosa #SaudeOcupacional #SaudeDaMulher #SegurancaDoTrabalho #SST"
+   "legenda": "Outubro Rosa na empresa: ações de saúde que continuam depois do laço.\n\nO INCA estima 78.610 casos novos de câncer de mama por ano no Brasil entre 2026 e 2028; é o câncer mais frequente entre as mulheres. Laço no crachá e foto da equipe ajudam a lembrar da campanha. O que faz diferença para quem trabalha é conseguir sair para fazer o exame sem constrangimento, receber informação de fonte confiável e, se precisar de tratamento, voltar ao trabalho com o retorno avaliado pela medicina do trabalho.\n\nPara saber quando e quais exames fazer, a referência é o seu médico e os materiais do INCA e do Ministério da Saúde.\n\nNa sua empresa, o Outubro Rosa termina em 31 de outubro?\n\n#OutubroRosa #SaudeOcupacional #SaudeDaMulher #SegurancaDoTrabalho #SST"
   },
   {
    "id": "2026-10-30-precisa-de-consultoria-sst",
@@ -709,7 +733,7 @@
      "id": "slide3-body",
      "slide": 3,
      "papel": "body",
-     "texto": "Algo mudou no setor, na máquina ou na função depois do documento?"
+     "texto": "Entrou máquina nova, mudou o layout, surgiu uma função? O PGR precisa acompanhar."
     },
     {
      "id": "slide4-headline",

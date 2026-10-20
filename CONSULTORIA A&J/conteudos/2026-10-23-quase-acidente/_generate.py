@@ -3,7 +3,8 @@
 Sorteio: mito-e-verdade · cena-do-dia-a-dia · seed 1 · centralizado.
 2026-10-20: texto curto + elementos desenhados; capa com foto no slide inteiro e véu; creme só nos slides
 2 e 5; fotos full no miolo sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
-Nenhum slide só com fundo e texto: carrinho em traço (4), "?" vazado (7), caneta em traço (8)."""
+História: cena, consequência, mito 1 + dado, três momentos, mito 2, ficha, pergunta, chamada.
+Nenhum slide só com fundo e texto: carrinho em traço (2), "?" vazado (7), caneta em traço (8)."""
 import sys
 from pathlib import Path
 
@@ -44,23 +45,23 @@ s.append(slide(F,
             + p(1, "E ninguém anotou nada.", F, role="subhead", size=21, gap=14, weight=500),
             anchor="bottom", pad="64px 36px 66px")
     + indicador(IND, 0, N, F)))
-# 2 · mito + alerta desenhado · creme 1/2
-s.append(slide(C, bloco(
-    alerta(C, tam=120)
-    + h(2, "Mito: ninguém se feriu, nada a registrar.", C, size=42, lh=1.05, align="center")
-    + p(2, "O quase acidente mostra o risco antes da vítima.", C, size=21, align="center", gap=18),
-    align="center") + indicador(IND, 1, N, C)))
-# 3 · diagrama
-s.append(slide(E, bloco(
-    h(3, "O mesmo risco em três momentos", E, size=40, lh=1.05, align="center")
-    + tres_momentos(3, E)
-    + p(3, "É a última chance de agir antes da lesão.", E, size=22, align="center", gap=40, weight=500, color="#fff"),
-    align="center", pad="64px 26px 76px") + indicador(IND, 2, N, E)))
-# 4 · frase gigante em verde chapado
+# 2 · a consequência: frase gigante em verde chapado + carrinho em traço
 s.append(slide(V, bloco(
-    h(4, f"Da próxima vez, o carrinho pode tombar {it('em cima de alguém.', V)}", V, size=48, lh=1.03, align="center"),
-    align="center", anchor="top", pad="54px 36px 76px") + indicador(IND, 3, N, V),
+    h(2, f"Da próxima vez, o carrinho pode tombar {it('em cima de alguém.', V)}", V, size=48, lh=1.03, align="center"),
+    align="center", anchor="top", pad="54px 36px 76px") + indicador(IND, 1, N, V),
     layers=traco("carrinho", "#fff", 96, 292, 280, op=0.9, sw=6)))
+# 3 · mito 1 + o dado (Bird) · creme 1/2
+s.append(slide(C, bloco(
+    h(3, "Mito: ninguém se feriu, nada a registrar.", C, size=42, lh=1.05, align="center")
+    + numero_destaque(3, "600", "quase acidentes para cada acidente grave",
+                      "Fonte: Frank Bird, estudo de 1969 com 297 empresas", C, size=110, align="center", gap_top=26),
+    align="center") + indicador(IND, 2, N, C)))
+# 4 · diagrama: o mesmo risco em três momentos
+s.append(slide(E, bloco(
+    h(4, "O mesmo risco em três momentos", E, size=40, lh=1.05, align="center")
+    + tres_momentos(4, E)
+    + p(4, "É a última chance de agir antes da lesão.", E, size=22, align="center", gap=40, weight=500, color="#fff"),
+    align="center", pad="64px 26px 76px") + indicador(IND, 3, N, E)))
 # 5 · mito + grade de causas · creme 2/2
 s.append(slide(C, bloco(
     h(5, "Mito: registrar é procurar culpado.", C, size=40, lh=1.05, align="center")
@@ -88,7 +89,7 @@ s.append(slide(V, bloco(
     align="center") + indicador(IND, 7, N, V),
     layers=traco("caneta", "#fff", -40, 372, 170, op=0.75, sw=6)))
 
-LABELS = {1: "Capa", 2: "Mito 1", 3: "Três momentos", 4: "Frase", 5: "Mito 2", 6: "Ficha", 7: "Pergunta", 8: "CTA"}
+LABELS = {1: "Capa", 2: "Consequência", 3: "Mito 1", 4: "Três momentos", 5: "Mito 2", 6: "Ficha", 7: "Pergunta", 8: "CTA"}
 html = pagina("Quase acidente", "Prevenção de acidentes",
               "Quase acidente: por que registrar o que não machucou ninguém.", s, LABELS,
               "conteudos/2026-10-23-quase-acidente")

@@ -100,6 +100,12 @@ cliente), sorteie de novo com outro `--seed` em vez de inventar. Se o Thiago
 indicar manualmente os slides com foto, a indicação dele vence. Use
 `--simular` só para testes (não grava no histórico).
 
+**História primeiro (2026-10-20, padrão geral):** escreva a história antes de
+olhar a composição sorteada: começo, meio e fim (gancho → por que importa → o
+que muda → como fazer → chamada), uma ideia por slide, sem repetir. Depois
+distribua as composições do sorteio pelos slides; troque a ordem delas se a
+história pedir. Nunca dobre o texto para caber numa composição.
+
 Draft the slide-by-slide copy plan (hook, problem, solution, …) and **show it
 in chat** for approval before generating any HTML. Keep it short.
 

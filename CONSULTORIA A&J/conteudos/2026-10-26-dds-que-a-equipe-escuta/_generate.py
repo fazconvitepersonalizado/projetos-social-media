@@ -65,7 +65,7 @@ s.append(slide(F,
 s.append(slide(C, bloco(
     numero_passo(3, 5, C)
     + h(5, "Use o que aconteceu aqui.", C, size=46, lh=1.04, extra="margin-top:22px;")
-    + p(5, "O quase acidente da semana ensina mais que a apostila.", C, size=23, gap=16, weight=500, color=DBG, extra=SERIF_APOIO),
+    + p(5, "A escada sem trava, a carga que escorregou: o caso da semana ensina mais que a apostila.", C, size=23, gap=16, weight=500, color=DBG, extra=SERIF_APOIO),
     anchor="center") + indicador(IND, 4, N, C),
     layers=circulo(PL, 92, 196, 132)))
 # 6 · passo 4 em petróleo

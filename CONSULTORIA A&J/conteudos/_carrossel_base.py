@@ -351,6 +351,18 @@ def checklist(n, t, itens, marcados=0, size=19, gap_top=24):
     return f'<div style="margin-top:{gap_top}px;text-align:left;">{out}</div>'
 
 
+def numero_destaque(n, numero, frase, fonte, t, size=64, align="left", gap_top=18, cor=None):
+    """Dado real em destaque simples (regra de 2026-10-20: com moderação, um número + uma frase, fonte no slide)."""
+    a = f"text-align:{align};"
+    return (f'<div style="margin-top:{gap_top}px;{a}">'
+            f'<div class="serif" data-edit-id="slide{n}-dado" style="font-size:{size}px;line-height:0.95;font-weight:700;'
+            f'letter-spacing:-0.02em;color:{cor or t["acc"]};">{numero}</div>'
+            f'<div class="sans" data-edit-id="slide{n}-dado-frase" style="font-size:17px;line-height:1.3;font-weight:600;'
+            f'color:{t["h"]};margin-top:6px;">{frase}</div>'
+            f'<div class="sans" data-edit-id="slide{n}-fonte" style="font-size:12px;line-height:1.3;font-weight:500;'
+            f'color:{t["mute"]};margin-top:5px;">{fonte}</div></div>')
+
+
 # ---------------------------------------------------------------- ilustração, formas e recorte (2026-10-20)
 # Regra geral: nenhum slide só com fundo e texto. Tudo aqui fica atrás do texto (z-index 1),
 # pode sair pela borda (x/y negativos) e é marcado como fixo para a página de aprovação.

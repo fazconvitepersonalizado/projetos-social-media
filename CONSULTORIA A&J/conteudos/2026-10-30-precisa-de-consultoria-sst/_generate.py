@@ -47,7 +47,7 @@ s.append(slide(C, bloco(
     f'<div style="border-radius:12px;overflow:hidden;margin-top:16px;"><img src="{FOTO3}" alt="" style="display:block;'
     'width:100%;height:170px;object-fit:cover;object-position:55% 45%;"></div>'
     + h(3, "Confira as datas.", C, size=36, extra="margin-top:16px;")
-    + p(3, "Algo mudou no setor, na máquina ou na função depois do documento?", C, size=19, gap=10),
+    + p(3, "Entrou máquina nova, mudou o layout, surgiu uma função? O PGR precisa acompanhar.", C, size=19, gap=10),
     anchor="bottom", pad="40px 36px 56px") + indicador(IND, 2, N, C)))
 # 4 · passo 3: foto grande em cima (rosto e protetor no pescoço inteiros), texto embaixo em petróleo
 s.append(slide(PT,
