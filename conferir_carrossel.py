@@ -404,8 +404,8 @@ def main():
     ap.add_argument("--mes", nargs=2, metavar=("CLIENTE", "AAAA-MM"))
     ap.add_argument("--roteiro", type=Path)
     ap.add_argument("--folha", type=Path, help="pasta para gravar os slides renderizados e a folha")
-    a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
+    a = ap.parse_args()
 
     if a.roteiro:
         rels = conferir_roteiro(a.roteiro)
