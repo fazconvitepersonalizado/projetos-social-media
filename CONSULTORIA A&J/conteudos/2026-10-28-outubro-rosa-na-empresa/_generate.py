@@ -10,7 +10,7 @@ sys.path.insert(0, str(BASE.parent))
 from _carrossel_base import *  # noqa: E402,F403
 
 RC, V, CR = tom("rosa"), tom("vinho"), tom("cta_rosa")
-IND, N = "nenhum", 8  # contador e barra retirados em 2026-10-20 (pedido do Thiago)
+IND, N = "selo", 8  # 2026-10-20: sem contador nem barra; selo "arraste" só na capa (pedido do Thiago)
 ED = BASE / "assets" / "edited"
 FOTO1, FOTO3 = foto(ED / "slide1-photo.jpg"), foto(ED / "slide3-photo.jpg")
 VR = "140,36,83"  # VINHO em rgb

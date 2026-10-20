@@ -11,7 +11,7 @@ sys.path.insert(0, str(BASE.parent))
 from _carrossel_base import *  # noqa: E402,F403
 
 C, E, F = tom("claro"), tom("escuro"), tom("foto")
-IND, N = "nenhum", 8  # contador e barra retirados em 2026-10-20 (pedido do Thiago)
+IND, N = "selo", 8  # 2026-10-20: sem contador nem barra; selo "arraste" só na capa (pedido do Thiago)
 ED = BASE / "assets" / "edited"
 FOTO1, FOTO2, FOTO8 = foto(ED / "slide1-photo.jpg"), foto(ED / "slide2-photo.jpg"), foto(ED / "slide8-photo.jpg")
 R = "18,63,60"  # DARK_BG em rgb, para os degradês de legibilidade
