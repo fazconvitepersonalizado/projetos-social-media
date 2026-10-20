@@ -238,6 +238,105 @@ def humanizar(slug):
     return s[:1].upper() + s[1:]
 
 
+# ---------------------------------------------------------------- captura
+def capturar(ctx, arq: Path):
+    """Abre um carousel.html (JavaScript da página desligado), marca os textos,
+    extrai o documento enxuto e fotografa a capa. Devolve (info, jpeg)."""
+    pg = ctx.new_page()
+    try:
+        pg.goto(arq.as_uri(), wait_until="load", timeout=60000)
+        pg.evaluate("document.fonts.ready.then(() => true)")
+        pg.wait_for_timeout(400)
+        pg.evaluate("(() => {" + CAMPOS_JS + "; window.APCampos = APCampos; return true; })()")
+        info = pg.evaluate(EXTRAIR)
+        if info.get("erro"):
+            return info, None
+        # add_style_tag trava com o JavaScript da página desligado; inserir direto.
+        pg.evaluate("css => { const s = document.createElement('style'); s.textContent = css; document.head.appendChild(s); }",
+                    INJETAR + f".ig-frame{{width:{info['w']}px!important}}")
+        pg.wait_for_timeout(150)
+        return info, pg.locator("[data-ap-vp]").first.screenshot(type="jpeg", quality=82)
+    finally:
+        pg.close()
+
+
+def anteriores(cli: Path, mes: str, limite: int, ignorar: set):
+    """Pastas de carrossel de meses anteriores, da mais nova para a mais antiga."""
+    out = []
+    for p in sorted((cli / "conteudos").glob("*"), reverse=True):
+        m = re.match(r"^(\d{4}-\d{2})-\d{2}-", p.name)
+        if not m or m.group(1) >= mes or p.name in ignorar or not (p / "carousel.html").exists():
+            continue
+        out.append(p)
+        if len(out) >= limite:
+            break
+    return out
+
+
+INDICE = """<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aprovações {marca}</title>
+<link rel="stylesheet" href="{fontes}">
+<style>
+{tokens}
+*,*::before,*::after{{box-sizing:border-box}}
+body{{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}}
+main{{max-width:980px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}}
+header{{display:flex;align-items:center;gap:16px;margin-bottom:32px}}
+.chip{{width:56px;height:56px;border-radius:12px;padding:7px;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center}}
+.chip img{{max-width:100%;max-height:100%;object-fit:contain}}
+small.r{{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}}
+h1{{margin:2px 0 0;font-family:var(--f-display);font-weight:600;font-size:30px;line-height:1.15}}
+.meses{{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}}
+.mes{{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid}}
+.mos{{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}}
+.mos img{{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}}
+.info{{padding:16px 18px 18px;display:grid;gap:12px}}
+.info h2{{margin:0;font-family:var(--f-display);font-weight:600;font-size:21px}}
+.info p{{margin:0;color:var(--muted);font-size:13.5px}}
+.lk{{display:flex;flex-wrap:wrap;gap:8px}}
+.lk a{{display:inline-flex;align-items:center;min-height:38px;padding:7px 14px;border-radius:10px;border:1px solid var(--line-strong);color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:500}}
+.lk a.forte{{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}}
+.lk a:hover{{filter:brightness(.97)}}
+</style></head>
+<body><main>
+<header><span class="chip">{logo}</span><div><small class="r">Aprovação de conteúdo</small><h1>{marca}</h1></div></header>
+<section class="meses">
+{cards}
+</section>
+</main></body></html>
+"""
+
+
+def gerar_indice(cli: Path, bk: dict, marca: str, logo, f_t, f_c, claro, escuro):
+    base = cli / "aprovacao"
+    links = {}
+    if (base / "links.json").exists():
+        links = json.loads((base / "links.json").read_text(encoding="utf-8"))
+    cards = []
+    for pasta in sorted((p for p in base.iterdir() if p.is_dir() and re.match(r"^\d{4}-\d{2}$", p.name)), reverse=True):
+        man = pasta / "manifesto.json"
+        if not man.exists():
+            continue
+        posts = json.loads(man.read_text(encoding="utf-8"))["posts"]
+        ano, mes = map(int, pasta.name.split("-"))
+        mins = sorted((pasta / "miniaturas").glob("*.jpg"))[:3]
+        mosaico = "".join(f'<img src="{pasta.name}/miniaturas/{m.name}" alt="">' for m in mins)
+        botoes = [f'<a class="forte" href="{pasta.name}/aprovacao.html">Abrir página</a>']
+        if links.get(pasta.name):
+            botoes.append(f'<a href="{links[pasta.name]}" target="_blank" rel="noopener">Link da cliente</a>')
+        resp = "respostas recebidas" if (pasta / "respostas.json").exists() else "aguardando respostas"
+        cards.append(f'<article class="mes"><div class="mos">{mosaico}</div><div class="info">'
+                     f'<h2>{MESES[mes - 1].capitalize()} de {ano}</h2>'
+                     f'<p>{len(posts)} posts · {resp}</p><div class="lk">{"".join(botoes)}</div></div></article>')
+    logo_html = f'<img src="{logo}" alt="">' if logo else ""
+    html = INDICE.format(marca=marca, fontes=link_fontes(f_t, f_c), logo=logo_html,
+                         tokens=bloco_tokens(claro, escuro, f_t, f_c), cards="\n".join(cards))
+    (base / "index.html").write_text(html, encoding="utf-8")
+    return base / "index.html"
+
+
 # ---------------------------------------------------------------- principal
 def main():
     try:
@@ -250,6 +349,8 @@ def main():
     ap.add_argument("--posts", nargs="*")
     ap.add_argument("--arquivo", action="append", default=[])
     ap.add_argument("--saida")
+    ap.add_argument("--anteriores", type=int, default=9,
+                    help="quantos posts já publicados mostrar esmaecidos na grade (0 = nenhum)")
     a = ap.parse_args()
 
     cli = Path(a.cliente).resolve()
@@ -280,21 +381,10 @@ def main():
                               java_script_enabled=False)
         for i, pasta in enumerate(pastas, 1):
             arq = pasta / outros.get(pasta.name, "carousel.html")
-            pg = ctx.new_page()
-            pg.goto(arq.as_uri(), wait_until="load", timeout=60000)
-            pg.evaluate("document.fonts.ready.then(() => true)")
-            pg.wait_for_timeout(400)
-            pg.evaluate("(() => {" + CAMPOS_JS + "; window.APCampos = APCampos; return true; })()")
-            info = pg.evaluate(EXTRAIR)
+            info, thumb = capturar(ctx, arq)
             if info.get("erro"):
                 print(f"Pulando {pasta.name}: {info['erro']}")
-                pg.close(); continue
-            # add_style_tag trava com o JavaScript da página desligado; inserir direto.
-            pg.evaluate("css => { const s = document.createElement('style'); s.textContent = css; document.head.appendChild(s); }",
-                        INJETAR + f".ig-frame{{width:{info['w']}px!important}}")
-            pg.wait_for_timeout(150)
-            thumb = pg.locator("[data-ap-vp]").first.screenshot(type="jpeg", quality=82)
-            pg.close()
+                continue
 
             doc = ("<!doctype html><html lang=\"pt-BR\"><head>" + info["head"] +
                    "<style>" + INJETAR + f".ig-frame{{width:{info['w']}px!important}}</style></head><body>" +
@@ -330,17 +420,32 @@ def main():
                               "campos": info["campos"], "legenda": legenda})
             print(f"POST {num:02d} · {pasta.name}: {info['n']} slides, {len(info['campos'])} textos editáveis"
                   + ("" if legenda else " · sem legenda"))
+
+        antigos = []
+        for pasta in anteriores(cli, a.mes, a.anteriores, {p.name for p in pastas}):
+            info, thumb = capturar(ctx, pasta / "carousel.html")
+            if info.get("erro"):
+                continue
+            m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", pasta.name)
+            antigos.append({"thumb": "data:image/jpeg;base64," + base64.b64encode(thumb).decode(),
+                            "data": f"{int(m.group(3))} de {MESES[int(m.group(2)) - 1]}"})
+        if antigos:
+            print(f"{len(antigos)} posts já publicados entram esmaecidos na grade")
         nav.close()
 
     posts.sort(key=lambda p: p["num"])
     marca = bk.get("brand_name") or cli.name
     rotulo_mes = f"{MESES[mes - 1].capitalize()} de {ano}"
+    manual = bk.get("brand_manual") or {}
+    bio = bk.get("bio") or manual.get("tagline") or ""
+    logo = achar_logo(cli, bk)
     dados = {
         "chave": f"{cli.name}:{a.mes}",
         "mes": rotulo_mes,
-        "marca": {"nome": marca, "handle": bk.get("instagram_handle", ""), "logo": achar_logo(cli, bk)},
+        "marca": {"nome": marca, "handle": bk.get("instagram_handle", ""), "logo": logo, "bio": bio},
         "whatsapp": cfg.get("whatsapp", ""),
         "posts": posts,
+        "anteriores": antigos,
     }
     f_t = bk.get("heading_font") or "Lora"
     f_c = bk.get("body_font") or "Poppins"
@@ -364,10 +469,16 @@ def main():
     (saida / "aprovacao.html").write_text(completa, encoding="utf-8")
     (saida / "manifesto.json").write_text(json.dumps({"cliente": cli.name, "mes": a.mes, "posts": manifesto},
                                                      ensure_ascii=False, indent=1), encoding="utf-8")
+    mini = saida / "miniaturas"
+    mini.mkdir(exist_ok=True)
+    for p in posts:
+        (mini / f"{p['num']:02d}.jpg").write_bytes(base64.b64decode(p["thumb"].split(",", 1)[1]))
     mb = (saida / "aprovacao.html").stat().st_size / 1_048_576
     print(f"\nPágina gerada em {saida} ({len(posts)} posts, {mb:.1f} MB)")
     if mb > 15:
         print("Aviso: acima de 15 MB; o claude.ai aceita no máximo 16 MB. Divida o mês com --posts.")
+    if not a.saida:
+        print("Índice dos meses:", gerar_indice(cli, bk, marca, logo, f_t, f_c, claro, escuro))
 
 
 if __name__ == "__main__":

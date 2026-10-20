@@ -20,14 +20,37 @@ cliente** (cores, fontes e logo do `brand-kit.json`), sem assinatura de
 agência, e os slides são os `carousel.html` reais, então os textos podem ser
 editados ao vivo, como no painel do template atual.
 
+## Organização (na pasta da cliente)
+```
+<cliente>/aprovacao/
+├── index.html               # todos os meses: capas, nº de posts, "Abrir página", "Link da cliente"
+├── links.json               # {"AAAA-MM": "<link do claude.ai>"}, atualizado a cada publicação
+└── <AAAA-MM>/
+    ├── aprovacao.html           # arquivo para mandar
+    ├── aprovacao-artifact.html  # versão publicada no claude.ai
+    ├── manifesto.json           # posts, arquivos de origem e campos
+    ├── miniaturas/NN.jpg        # capas (usadas no índice)
+    └── respostas.json           # quando as respostas chegarem
+```
+O índice é refeito a cada geração. Depois de publicar um mês, gravar o link
+em `links.json` e refazer o índice (`gerar_indice` do script).
+
 ## O que a página faz
-- **Lista lateral** com todos os posts (miniatura, número, tipo, rótulo e
-  estado da resposta) e progresso "X de N revisados". No celular vira menu.
-- **Feed** em grade de 3 colunas como no perfil (post mais novo primeiro),
-  com número, tipo e estado em cada post.
-- **Visualizador:** slides deslizando com setas, pontos, contador, arrasto
-  com o dedo/mouse e setas do teclado; reel com capa e play; imagem única.
-  Legenda com hashtags/menções destacadas. Fecha com X, Esc ou clique fora.
+- **Perfil no formato do Instagram:** barra de aprovação no topo (marca da
+  cliente, mês, progresso "X de N revisados", "Enviar respostas"), cabeçalho
+  do perfil (logo como foto, @, nome, bio = `bio` ou `brand_manual.tagline`
+  do brand-kit; números só do que existe: posts novos e já publicados, nunca
+  seguidores inventados), abas e grade 3 colunas em **3:4**, que corta as
+  bordas como o Instagram faz hoje.
+- **Posts já publicados** (até `--anteriores`, padrão 9, das pastas de meses
+  anteriores) aparecem esmaecidos abaixo dos novos, para a cliente ver como
+  o mês encaixa no feed.
+- **Post aberto no formato do Instagram:** mídia à esquerda e coluna com
+  cabeçalho do @, legenda como comentário do @ (hashtags/menções
+  destacadas), ícones e data; no celular, tela cheia como no app. Slides
+  deslizam com setas, pontos, arrasto e teclado; reel com capa e play.
+  Fecha com X, Esc ou clique fora; setas laterais trocam de post.
+- Sem logo nem nome do Instagram: só o formato visual; a página é da cliente.
 - **Editar textos:** cada texto de cada slide vira um campo; a arte muda na
   hora. `[[trecho]]` mantém o destaque do design (span/em/strong); quebra de
   linha vira `<br>`. A legenda também é editável. "Desfazer" volta ao
