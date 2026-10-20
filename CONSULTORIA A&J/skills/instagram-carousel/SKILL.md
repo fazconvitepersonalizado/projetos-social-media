@@ -212,8 +212,9 @@ Only after explicit approval ("pode exportar" / "aprovado" / "ok"):
   density. Hero/CTA are not special-cased — they share the same layout.
 - **Real logo:** if `brand-kit.json` has `logo.type` in `["svg", "image"]`,
   render the actual logo (SVG inline or `<img>` base64) in the Hero and CTA
-  slides and as a small watermark (20px, opacity 0.5, top-left) on every
-  intermediate slide. The initial-in-circle is a fallback only — never use
+  slides and as the one-color corner logo ("Loguinho de canto" in
+  `references/design-system.md`: color picked per slide background for
+  contrast, chip only over a photo) on every intermediate slide. The initial-in-circle is a fallback only — never use
   it when a real logo file is available.
 - **Logo legibility:** when more than one color variant exists, always use
   the one that reads best against that slide's actual background, and

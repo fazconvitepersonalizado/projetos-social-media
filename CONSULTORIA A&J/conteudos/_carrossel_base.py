@@ -3,8 +3,8 @@
 
 Segue a decisão de design registrada em brand-kit.json ("design_assinatura",
 2026-10-19): fundos chapados (creme, petróleo, verde), degradê verde só no
-CTA, Lora + Poppins, 1 ou 2 itálicos por carrossel, logo com chip só na capa
-e no CTA, sem etiqueta acima do título, sem enfeite de canto, sem granulado.
+CTA, Lora + Poppins, 1 ou 2 itálicos por carrossel, logo completa na capa e
+no CTA e loguinho de canto de uma cor só no meio (desde 2026-10-20), sem etiqueta acima do título, sem enfeite de canto, sem granulado.
 Moldura com .ig-viewport/.ig-track (export_carousel.py), navegação de
 references/preview-nav.md e painel de references/edit-panel.md.
 """
@@ -27,6 +27,20 @@ P_TEXTO = "#4A8A2C"
 W, H = 420, 525
 
 LOGO = "data:image/png;base64," + base64.b64encode((ROOT / "logo" / "icon.png").read_bytes()).decode()
+
+
+def _icone_mascara(lado=96):
+    """Ícone reduzido só para a máscara da loguinho de canto (22px na tela, ~57px no PNG exportado)."""
+    import io
+    from PIL import Image
+    im = Image.open(ROOT / "logo" / "icon.png").convert("RGBA")
+    im.thumbnail((lado, lado), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "PNG", optimize=True)
+    return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+LOGO_MASCARA = _icone_mascara()
 
 
 def foto(path: Path) -> str:
@@ -140,10 +154,12 @@ def botao(n, text, role="cta", bg=None, fg=None):
 
 
 # ---------------------------------------------------------------- indicadores (sorteados)
-# Loguinho de canto nos slides do meio (teste pedido pelo Thiago em 2026-10-20; desligada por padrão).
-# AJ_MARCA_CANTO = "sem-chip" (chip só sobre foto) ou "com-chip" (sempre). O ícone vira uma cor só,
-# escolhida pelo fundo do slide: petróleo no claro e no verde, vinho no rosa-claro, branco nos escuros.
-MARCA_CANTO = os.environ.get("AJ_MARCA_CANTO", "")
+# Loguinho de canto nos slides do meio (aprovada pelo Thiago em 2026-10-20, versão A: chip só sobre foto).
+# Vem do brand-kit ("design_assinatura.logo_canto"); AJ_MARCA_CANTO="" desliga, "com-chip" põe chip sempre.
+# O ícone vira uma cor só, escolhida pelo fundo do slide: petróleo no claro e no verde, vinho no
+# rosa-claro, branco nos escuros.
+_lc = brand.get("design_assinatura", {}).get("logo_canto", {})
+MARCA_CANTO = os.environ.get("AJ_MARCA_CANTO", _lc.get("modo", "") if _lc.get("ativo") else "")
 
 
 def cor_marca(t):
@@ -168,7 +184,7 @@ def marca_canto(i, total, t, foto_no_canto=False, canto="tl"):
         fundo = (f"background:{'rgba(18,63,60,0.55)' if escuro else 'rgba(255,255,255,0.45)'};"
                  "padding:6px;border-radius:7px;")
     icone = (f'<div style="width:22px;height:21px;background:{cor};opacity:{op};'
-             f'-webkit-mask:url({LOGO}) center/contain no-repeat;mask:url({LOGO}) center/contain no-repeat;"></div>')
+             f'-webkit-mask:url({LOGO_MASCARA}) center/contain no-repeat;mask:url({LOGO_MASCARA}) center/contain no-repeat;"></div>')
     return f'<div data-ap-fixo data-ap-logo style="position:absolute;{pos}z-index:4;{fundo}">{icone}</div>'
 
 

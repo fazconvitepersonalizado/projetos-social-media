@@ -28,6 +28,10 @@ from pathlib import Path
 
 import requests
 
+# o terminal do Windows (cp1252) quebrava no "→" dos avisos e parava o envio no meio de um cartão
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 RAIZ = Path(__file__).resolve().parents[4]
 API = "https://api.trello.com/1"
 MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]

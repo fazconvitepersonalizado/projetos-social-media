@@ -98,6 +98,13 @@ projeto atual, pergunte antes de só aplicar e seguir:
   própria marca (ex.: `LIGHT_BG`/`LIGHT_BORDER` translúcido em fundo claro,
   `rgba(0,0,0,0.22-0.24)` em fundo escuro/gradiente) — nunca um quadrado
   forçado nem cor de outra marca.
+- **Loguinho de canto** (2026-10-20, todos os clientes): nos slides do meio,
+  o ícone da marca (sem o nome) pequeno no canto superior esquerdo, numa
+  cor só escolhida pelo fundo de cada slide para dar contraste (tom escuro
+  da marca no claro, branco no escuro, tom da campanha em data temática);
+  chip só quando há foto atrás do canto. Capa e CTA ficam com a logo
+  completa. Receita em `design-system.md` ("Loguinho de canto"); o
+  conferidor acusa a loguinho encostada em texto.
 - Tamanhos de fonte do design-system podem ficar pequenos demais no
   celular: antes de fechar, gerar um preview (screenshot na escala real de
   exportação) e checar legibilidade; se precisar aumentar, também apertar
@@ -473,3 +480,8 @@ projeto atual, pergunte antes de só aplicar e seguir:
   todos e do modelo e à conteudo-mensal. Testado em outubro (A&J) e em
   setembro (A&J e Sandra): pega os vícios antigos (etiqueta, contador, letra
   pequena, texto demais) e 2 slides de outubro só com texto e componente pequeno.
+- 2026-10-20 — Voltou a loguinho de canto (pedido do Thiago, versão A do teste
+  em outubro da A&J): ícone de uma cor só pelo fundo do slide, chip só sobre
+  foto. Substitui a marca-d'água colorida a 50% que tinha saído na revisão
+  anti-IA. Atualizados CLAUDE.md, design-system.md, anti-ia-design.md e SKILL.md
+  de todos os clientes e do modelo; conferidor checa encostar em texto.

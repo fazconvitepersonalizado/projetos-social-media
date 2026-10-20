@@ -34,7 +34,7 @@ dos outros clientes da pasta.
 | Etiqueta em maiúsculas espaçadas acima do título ("O QUE CONTA", "DICA PRÁTICA"), com tracinho embaixo | É o sinal de template de IA mais citado; repetido em todo slide vira carimbo | O título carrega o assunto. Numeração "n/total" no rodapé pode. |
 | Granulado (`feTurbulence`) | Lê como amador | Fundo limpo |
 | Brilho difuso / degradê radial em malha como fundo padrão | O detector marca como "spotlight glow" de IA | Fundos chapados nas cores da marca. Degradê só se for assinatura do cliente (item 1). |
-| Enfeite sem função em todo slide ("+" de canto, monograma marca-d'água, "01 / 07" no topo) | Decoração repetida = template | Só o que informa (numeração no rodapé, logo na capa e no CTA). |
+| Enfeite sem função em todo slide ("+" de canto, "01 / 07" no topo, logo colorida a 50% sem checar contraste) | Decoração repetida = template | Logo completa na capa e no CTA; nos slides do meio, só a loguinho de canto de uma cor só, com contraste pelo fundo (design-system.md, "Loguinho de canto"; padrão desde 2026-10-20). |
 | Itálico colorido em uma palavra de todo título | Virou o "editorial" padrão de IA | No máximo 1 ou 2 itálicos por carrossel, onde a marca pede. |
 | Pílulas, card de vidro, caixa arredondada com sombra suave para texto, ícone em quadradinho arredondado | Parece interface de app, não peça editorial | Texto direto no fundo; lista simples. |
 | Borda colorida lateral em citação | Vício de template | Citação grande em tipografia, sem borda. |

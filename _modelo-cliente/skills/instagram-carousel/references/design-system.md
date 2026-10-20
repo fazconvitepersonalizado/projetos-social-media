@@ -292,8 +292,8 @@ function swipeArrow(isLightSlide) {
 #### 3. Decorative layer (removida do padrão em 2026-10-19)
 
 Enfeite repetido em todo slide é vício de template (Impeccable). **Não usar**
-cruz de canto, marca-d'água "01 / 07" no topo nem tracinho sob etiqueta. O
-logo/monograma como marca-d'água só se for assinatura aprovada do cliente.
+cruz de canto, marca-d'água "01 / 07" no topo nem tracinho sob etiqueta. A
+loguinho de canto (ícone de uma cor só, ver "Loguinho de canto") é padrão da casa desde 2026-10-20.
 Registro do que existia:
 
 **Corner mark** — small SVG (cross/plus) anchored top-right:
@@ -316,7 +316,16 @@ Registro do que existia:
 <div style="width:40px;height:1px;background:{accent};opacity:0.6;margin:6px 0 18px;"></div>
 ```
 
-**Logo watermark** (slides 2..N-1, only when a real logo is provided in the brand kit) — see "Logo Lockup" section below. Placed top-left, 20px tall, opacity 0.5, **replaces** the textual slide watermark `0n / 0total` on those slides. On slides 1 and N (which carry the full logo lockup), no watermark is added.
+**Loguinho de canto** (slides 2..N-1, padrão geral desde 2026-10-20, quando há logo real): o ícone da
+marca, sem o nome, ~22px, no canto superior esquerdo (top 20px, left 22px), **numa cor só** escolhida
+pelo fundo daquele slide para dar contraste: o tom escuro da marca sobre fundo claro ou sobre a cor
+principal clara, o tom escuro da campanha sobre o tom claro de campanha (ex.: vinho no rosa-claro),
+branco sobre fundos escuros; opacidade ~0.72-0.82. Feito com o PNG/SVG do logo como máscara
+(`-webkit-mask` + `mask` com `background:{cor}`), marcado `data-ap-fixo data-ap-logo`. **Chip só
+quando há foto atrás do canto** (ícone branco, chip `rgba(<tom escuro>,0.55)`, padding 6px, raio
+7px); em fundo chapado fica sem chip. Se o canto estiver ocupado (título, desenho, rosto), usar outro
+canto livre, nunca o da setinha. O `conferir_carrossel.py` acusa a loguinho encostada em texto.
+Capa e CTA continuam com o lockup completo (logo + nome), sem loguinho.
 
 ---
 
@@ -488,7 +497,7 @@ if that means deviating from the table above.
 |---|---|---|
 | Slide 1 (Hero) | Lockup centered above the headline: logo + brand name side by side | 32×32 logo, 13px brand name |
 | Last slide (CTA) | Lockup centered above the CTA: logo + brand name | 48×48 logo, 15px brand name |
-| Slides 2..N-1 | Watermark, top-left corner, opacity 0.5. **Replaces** the `01/07` slide watermark on those slides. | 20×20 logo, no brand name |
+| Slides 2..N-1 | Loguinho de canto: ícone de uma cor só (cor pelo fundo do slide), canto superior esquerdo, chip só sobre foto. | ~22px, no brand name |
 
 **Lockup markup (Hero / CTA):**
 ```html
@@ -500,11 +509,13 @@ if that means deviating from the table above.
 </div>
 ```
 
-**Watermark markup (slides 2..N-1):**
+**Loguinho de canto markup (slides 2..N-1):**
 ```html
-<div style="position:absolute;top:20px;left:28px;opacity:0.5;z-index:5;">
-  <!-- inline <svg width="20" height="20"…> OR <img …> -->
+<div data-ap-fixo data-ap-logo style="position:absolute;top:20px;left:22px;z-index:4;">
+  <div style="width:22px;height:21px;background:{cor do fundo};opacity:0.8;
+       -webkit-mask:url({logo data URI}) center/contain no-repeat;mask:url({logo data URI}) center/contain no-repeat;"></div>
 </div>
+<!-- com foto atrás do canto: no div de fora, background:rgba(<tom escuro>,0.55);padding:6px;border-radius:7px; e cor #fff -->
 ```
 
 If `logo.type` is `initial` / `none`, fall back to the 40px circle described above on Hero and CTA, and use the textual `0n / 0total` watermark on slides 2..N-1 (see Decorative Layer).

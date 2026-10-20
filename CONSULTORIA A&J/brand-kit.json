@@ -32,14 +32,21 @@
       "logo + nome A&J Soluções em SSTMA na capa e no CTA",
       "botão creme arredondado no CTA",
       "fotos com véu verde-escuro",
-      "degradê verde (petróleo para verde) só no slide de CTA"
+      "degradê verde (petróleo para verde) só no slide de CTA",
+      "loguinho de canto nos slides do meio: ícone de uma cor só pelo fundo (petróleo no creme e no verde, vinho no rosa-claro, branco nos escuros), chip só sobre foto"
     ],
     "sai": [
       "etiqueta em maiúsculas acima do título e tracinho",
-      "+ de canto e logo como marca-d'água nos slides do meio",
+      "+ de canto",
       "lista em caixa de vidro com checks e ícones em quadradinho",
       "granulado",
       "degradê desfocado como fundo padrão dos outros slides"
-    ]
+    ],
+    "logo_canto": {
+      "ativo": true,
+      "modo": "sem-chip",
+      "decidido_em": "2026-10-20",
+      "motivo": "Thiago quis de volta a loguinho que usava antes; aprovada a versão A (chip só onde há foto)"
+    }
   }
 }
