@@ -176,6 +176,9 @@ def imprimir(s: dict, tema: str):
     print(f"Fotos nos slides: {s['slides_com_foto'] or 'nenhum'}\n")
     for i, c in enumerate(s["composicao"], 1):
         print(f"  {i:>2}. {c:<24} {desc[c]}")
+    print("\nRegras que valem por cima do sorteio (CLAUDE.md, 2026-10-20): capa nunca em fundo claro"
+          "\n(pelo menos 2 capas por mês com foto full e véu da marca); fundo claro em no máximo 2"
+          "\nslides; fotos full no miolo: 0 a 2, sorteadas; indicador perguntado (com ou sem).")
     print("\nSe um slide pedir material que não existe (dado real, fala real, foto do cliente),"
           "\nre-sorteie com outro --seed em vez de inventar o material.")
 

@@ -102,6 +102,21 @@ projeto atual, pergunte antes de só aplicar e seguir:
   celular: antes de fechar, gerar um preview (screenshot na escala real de
   exportação) e checar legibilidade; se precisar aumentar, também apertar
   o espaçamento pra caber no slide de 525px.
+- **Nenhum slide só com fundo e texto** (2026-10-20, todos os clientes):
+  todo slide sem foto ganha um recurso visual ligado ao texto, misturando
+  três tipos e sem repetir o mesmo em slides seguidos: ilustração em traço
+  nas cores da marca (grande, podendo sair pela borda: capacete,
+  prancheta, ata, cronômetro, balão...), formas e blocos de cor (faixa,
+  meio círculo, número ou sinal gigante vazado) e objeto de foto real
+  recortado (fundo liso, banco livre). Continua proibida ilustração
+  fofinha/genérica sem relação com o texto.
+- **Capa com cor e foto; pouco fundo claro** (2026-10-20, todos os clientes):
+  capa nunca em fundo branco/creme; no mês, pelo menos 2 capas com foto no
+  slide inteiro e o véu da marca (o efeito dos carrosséis antigos), com
+  texto legível pela receita de foto; as outras capas em fundo colorido.
+  Fundo claro (branco, creme, tom claro da marca) em no máximo 2 slides
+  por carrossel; os outros alternam as cores da marca. Fotos no slide
+  inteiro no miolo: quantidade (0 a 2) e posição sorteadas por post.
 - **Pouco texto por slide, slide sem vazio:** título de até ~10 palavras,
   apoio de até ~15; slide só de texto ganha tipografia maior e, quando
   fizer sentido, um elemento desenhado com função. Slide com mais de um
@@ -402,3 +417,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
 - 2026-10-20 — Indicador padrão da casa (todos os clientes), aprovado no
   outubro da A&J: selo "arraste" na capa + setinha do slide 2 ao penúltimo,
   último sem seta. Sempre perguntar com ou sem antes de montar.
+- 2026-10-20 — O Thiago achou as capas de outubro da A&J brancas demais.
+  Padrão geral novo: capa nunca clara, pelo menos 2 capas por mês com foto
+  full e véu, no máximo 2 slides de fundo claro por carrossel, fotos full
+  no miolo sorteadas (CLAUDE.md, anti-ia-design.md de todos, sorteio).
+- 2026-10-20 — O Thiago achou slides vazios, só fundo e texto. Padrão geral
+  novo: nenhum slide só com fundo e texto (traço temático, formas de cor
+  ou objeto recortado, misturados), no lugar da proibição anti-IA de
+  ilustração decorativa (CLAUDE.md, anti-ia-design.md de todos).

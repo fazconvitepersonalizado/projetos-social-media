@@ -50,6 +50,14 @@ dos outros clientes da pasta.
 - **Slide cheio de propósito**: ou o bloco de texto ocupa o slide com
   tipografia grande, ou divide o espaço com uma foto ou um elemento
   desenhado. Metade de slide vazia só se for intenção clara.
+- **Capa com cor e foto; pouco fundo claro** (Thiago, 2026-10-20, padrão
+  geral): capa nunca em fundo branco/creme; no mês, pelo menos 2 capas
+  com foto no slide inteiro e véu na cor escura da marca (degradê
+  dimensionado pelo texto + camada uniforme, ver `visual-qa.md`), título
+  branco no espaço livre da foto; as demais capas em fundo colorido da
+  marca. Fundo claro em no máximo 2 slides por carrossel. Fotos no slide
+  inteiro no miolo: 0 a 2 por post, sorteadas. Cor da marca chapada com
+  texto escuro só em texto grande ou em negrito (contraste 3:1).
 - **Pouco texto por slide, slide sem vazio** (Thiago, 2026-10-19, padrão
   geral): título de até ~10 palavras e apoio de até ~15; o que não couber
   vira outro slide ou sai. Slide só de texto ganha tipografia maior (o
@@ -67,7 +75,14 @@ dos outros clientes da pasta.
   corpo de 17 a 18px, nada abaixo de 12px.
 - **Elementos desenhados com função**, em SVG exato e nas cores da marca:
   linha do dia, prato dividido, escala, antes/depois, comparação. Nada de
-  ilustração "fofinha" ou ícone decorativo.
+  ilustração "fofinha" ou genérica, sem relação com o texto.
+- **Nenhum slide só com fundo e texto** (Thiago, 2026-10-20, padrão
+  geral): todo slide sem foto ganha um recurso visual ligado ao texto,
+  misturando três tipos e sem repetir o mesmo em slides seguidos:
+  ilustração em traço nas cores da marca (grande, podendo sair pela
+  borda: capacete, prancheta, ata, cronômetro, balão...), formas e blocos
+  de cor (faixa, meio círculo, número ou sinal gigante vazado) e objeto
+  de foto real recortado (fundo liso, banco livre).
 - **Fotos**: no máximo 1 a cada 3 slides; mostram exatamente o que o texto
   daquele slide diz; estilo variado (slide inteiro, dividindo o slide,
   emoldurada); tratamento conforme a escolha da rodada (vívida/suave).

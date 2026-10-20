@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """POST 02 · out/2026 · Quase acidente: o aviso que a empresa costuma ignorar.
-Sorteio: mito-e-verdade · cena-do-dia-a-dia · seed 1 · fundos em blocos · centralizado · contador.
-Revisão de 2026-10-20: texto curto por slide + elementos desenhados (alerta, grade de causas, ficha de registro)."""
+Sorteio: mito-e-verdade · cena-do-dia-a-dia · seed 1 · centralizado.
+2026-10-20: texto curto + elementos desenhados; capa com foto no slide inteiro e véu; creme só nos slides
+2 e 5; fotos full no miolo sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
+Nenhum slide só com fundo e texto: carrinho em traço (4), "?" vazado (7), caneta em traço (8)."""
 import sys
 from pathlib import Path
 
@@ -9,9 +11,10 @@ BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE.parent))
 from _carrossel_base import *  # noqa: E402,F403
 
-C, E = tom("claro"), tom("escuro")
-IND, N = "selo", 8  # 2026-10-20: sem contador nem barra; selo "arraste" só na capa (pedido do Thiago)
-FOTO1 = foto(BASE / "assets" / "edited" / "slide1-photo.jpg")
+C, E, PT, V, F = tom("claro"), tom("escuro"), tom("petroleo"), tom("verde"), tom("foto")
+IND, N = "selo", 8
+CAPA = foto(BASE / "assets" / "edited" / "slide1-full.jpg")
+CHIP_FOTO = "rgba(18,63,60,0.6)"
 
 
 def tres_momentos(n, t):
@@ -33,17 +36,15 @@ def tres_momentos(n, t):
 
 
 s = []
-# 1 · capa: foto emoldurada com o título encostado
-s.append(slide(C, bloco(
-    logo_lockup(C, gap_below=16)
-    + '<!-- foto: pexels.com/photo/5498025 -->'
-    f'<div style="border-radius:12px;overflow:hidden;"><img src="{FOTO1}" alt="" style="display:block;width:100%;height:172px;'
-    'object-fit:cover;object-position:50% 45%;"></div>'
-    + h(1, "O carrinho de carga tombou no corredor. Ninguém estava passando.", C, size=31, lh=1.08, align="center",
-        extra="margin-top:18px;")
-    + p(1, "E ninguém anotou nada.", C, role="subhead", size=20, align="center", gap=12),
-    align="center", anchor="top", pad="40px 32px 56px") + indicador(IND, 0, N, C)))
-# 2 · mito + alerta desenhado
+# 1 · capa: foto no slide inteiro + véu, título embaixo
+s.append(slide(F,
+    foto_full(CAPA, ate=0.72, pos="50% 40%", nota="pexels.com/photo/5498025")
+    + f'<div style="position:absolute;top:22px;left:24px;z-index:3;">{logo_lockup(F, size=26, fs=12, align="left", gap_below=0, chip=CHIP_FOTO)}</div>'
+    + bloco(h(1, "O carrinho de carga tombou no corredor. Ninguém estava passando.", F, size=36, lh=1.08)
+            + p(1, "E ninguém anotou nada.", F, role="subhead", size=21, gap=14, weight=500),
+            anchor="bottom", pad="64px 36px 66px")
+    + indicador(IND, 0, N, F)))
+# 2 · mito + alerta desenhado · creme 1/2
 s.append(slide(C, bloco(
     alerta(C, tam=120)
     + h(2, "Mito: ninguém se feriu, nada a registrar.", C, size=42, lh=1.05, align="center")
@@ -55,33 +56,37 @@ s.append(slide(E, bloco(
     + tres_momentos(3, E)
     + p(3, "É a última chance de agir antes da lesão.", E, size=22, align="center", gap=40, weight=500, color="#fff"),
     align="center", pad="64px 26px 76px") + indicador(IND, 2, N, E)))
-# 4 · frase gigante
-s.append(slide(E, bloco(
-    h(4, f"Da próxima vez, o carrinho pode tombar {it('em cima de alguém.', E)}", E, size=54, lh=1.03, align="center"),
-    align="center") + indicador(IND, 3, N, E)))
-# 5 · mito + grade de causas
+# 4 · frase gigante em verde chapado
+s.append(slide(V, bloco(
+    h(4, f"Da próxima vez, o carrinho pode tombar {it('em cima de alguém.', V)}", V, size=48, lh=1.03, align="center"),
+    align="center", anchor="top", pad="54px 36px 76px") + indicador(IND, 3, N, V),
+    layers=traco("carrinho", "#fff", 96, 292, 280, op=0.9, sw=6)))
+# 5 · mito + grade de causas · creme 2/2
 s.append(slide(C, bloco(
     h(5, "Mito: registrar é procurar culpado.", C, size=40, lh=1.05, align="center")
     + p(5, "O registro aponta a causa:", C, size=20, align="center", gap=16)
     + grade2x2(5, C, ["Piso", "Carga", "Pressa", "Equipamento"], size=27, gap_top=16),
     align="center") + indicador(IND, 4, N, C)))
-# 6 · ficha de registro
-s.append(slide(C, bloco(
-    h(6, "Registrar é simples.", C, size=46, align="center")
-    + ficha(6, C, ["O que houve", "Onde", "O que podia ter acontecido"], gap_top=24),
-    align="center") + indicador(IND, 5, N, C)))
+# 6 · ficha de registro em petróleo
+s.append(slide(PT, bloco(
+    h(6, "Registrar é simples.", PT, size=46, align="center")
+    + ficha(6, PT, ["O que houve", "Onde", "O que podia ter acontecido"], gap_top=24),
+    align="center") + indicador(IND, 5, N, PT)))
 # 7 · pergunta grande
 s.append(slide(E, bloco(
     h(7, "Qual foi o último quase acidente na sua empresa?", E, size=46, lh=1.06, align="center")
     + h(7, it("Alguém anotou?", E), E, size=46, lh=1.06, align="center", role="question", extra="margin-top:18px;"),
-    align="center") + indicador(IND, 6, N, E)))
-# 8 · CTA tipográfico (fundo claro, sem enfeite)
-s.append(slide(C, bloco(
-    logo_lockup(C, gap_below=26)
-    + h(8, "Quer um jeito simples de registrar quase acidentes?", C, size=42, lh=1.06, align="center")
-    + p(8, "A A&amp;J ajuda. Chama no direct.", C, role="cta", size=22, weight=600, align="center", gap=22, color=PD)
-    + p(8, HANDLE, C, role="handle", size=15, align="center", gap=10, color=C["mute"]),
-    align="center") + indicador(IND, 7, N, C)))
+    align="center") + indicador(IND, 6, N, E),
+    layers=sinal("?", PL, 210, 30, 470, op=0.16, contorno=4)))
+# 8 · CTA tipográfico em verde chapado
+s.append(slide(V, bloco(
+    logo_lockup(V, gap_below=26)
+    + h(8, "Quer um jeito simples de registrar quase acidentes?", V, size=42, lh=1.06, align="center")
+    + p(8, "A A&amp;J ajuda. Chama no direct.", V, role="cta", size=22, weight=700, align="center", gap=22, color=DBG)
+    + p(8, HANDLE, V, role="handle", size=15, align="center", gap=12, weight=600, color="#fff",
+        extra=f"display:table;margin-left:auto;margin-right:auto;background:{DBG};padding:5px 12px;border-radius:6px;"),
+    align="center") + indicador(IND, 7, N, V),
+    layers=traco("caneta", "#fff", -40, 372, 170, op=0.75, sw=6)))
 
 LABELS = {1: "Capa", 2: "Mito 1", 3: "Três momentos", 4: "Frase", 5: "Mito 2", 6: "Ficha", 7: "Pergunta", 8: "CTA"}
 html = pagina("Quase acidente", "Prevenção de acidentes",

@@ -17,6 +17,14 @@ FOTOS = [
     ("2026-10-28-outubro-rosa-na-empresa", "slide1-photo", 8385421, 4 / 3, 0.50, 0.45, 0.06),
     ("2026-10-28-outubro-rosa-na-empresa", "slide3-photo", 8487402, 210 / 525, 0.30, 0.50, 0.12),
     ("2026-10-30-precisa-de-consultoria-sst", "slide3-photo", 8293680, 4 / 3, 0.45, 0.55, 0.12),
+    # 2026-10-20: capas com foto no slide inteiro e fotos full sorteadas no miolo (seed 219932269)
+    ("2026-10-23-quase-acidente", "slide1-full", 5498025, 1080 / 1350, 0.45, 0.45, 0.12),
+    ("2026-10-26-dds-que-a-equipe-escuta", "slide1-full", 35082106, 1080 / 1350, 0.20, 0.62, 0.12),
+    ("2026-10-26-dds-que-a-equipe-escuta", "slide4-full", 12303760, 1080 / 1350, 0.40, 0.45, 0.08),
+    ("2026-10-28-outubro-rosa-na-empresa", "slide1-full", 8385421, 1080 / 1350, 0.50, 0.22, 0.05),
+    ("2026-10-30-precisa-de-consultoria-sst", "slide4-full", 8960995, 1080 / 1350, 0.15, 0.50, 0.12),
+    # 2026-10-20: 05 slide 4 com rosto e protetor no pescoço em cima, texto embaixo (aprovado)
+    ("2026-10-30-precisa-de-consultoria-sst", "slide4-split", 8960995, 420 / 262, 0.66, 0.50, 0.12),
 ]
 
 

@@ -36,8 +36,12 @@ def foto(path: Path) -> str:
 TONS = {
     "claro": {"bg": LBG, "h": DBG, "b": INK, "acc": P_TEXTO, "mute": "rgba(18,63,60,0.72)", "line": LBR},
     "escuro": {"bg": DBG, "h": "#fff", "b": "rgba(255,255,255,0.84)", "acc": PL, "mute": "rgba(255,255,255,0.55)", "line": "rgba(255,255,255,0.16)"},
-    "petroleo": {"bg": PD, "h": "#fff", "b": "rgba(255,255,255,0.86)", "acc": PL, "mute": "rgba(255,255,255,0.6)", "line": "rgba(255,255,255,0.18)"},
-    "verde": {"bg": P, "h": DBG, "b": DBG, "acc": "#fff", "mute": "rgba(18,63,60,0.7)", "line": "rgba(18,63,60,0.25)"},
+    # petróleo: esmaecido a 75% (~5:1), aprovado em 2026-10-20
+    "petroleo": {"bg": PD, "h": "#fff", "b": "rgba(255,255,255,0.86)", "acc": PL, "mute": "rgba(255,255,255,0.75)", "line": "rgba(255,255,255,0.18)"},
+    # verde chapado: texto escuro só grande ou em negrito (contraste 3,6:1); texto pequeno vai num chip escuro
+    "verde": {"bg": P, "h": DBG, "b": DBG, "acc": "#fff", "mute": DBG, "line": "rgba(18,63,60,0.28)",
+              "fill": DBG, "rule": DBG, "chip": "rgba(255,255,255,0.6)", "chip_border": "rgba(255,255,255,0.7)", "peso": 600,
+              "chip_pequeno": True},
     # assinatura da A&J: degradê petróleo → verde, só no CTA (com scrim de legibilidade)
     "cta": {"bg": None, "h": "#fff", "b": "rgba(255,255,255,0.9)", "acc": DBG, "mute": "rgba(255,255,255,0.7)", "line": "rgba(255,255,255,0.2)"},
     "foto": {"bg": DBG, "h": "#fff", "b": "rgba(255,255,255,0.9)", "acc": "#fff", "mute": "rgba(255,255,255,0.8)", "line": "rgba(255,255,255,0.25)"},
@@ -51,6 +55,11 @@ TONS.update({
               "line": "rgba(255,255,255,0.2)", "fill": "#fff", "rule": ROSA_SUAVE},
     "cta_rosa": {"bg": None, "h": "#fff", "b": "rgba(255,255,255,0.92)", "acc": "#fff", "mute": "rgba(255,255,255,0.78)",
                  "line": "rgba(255,255,255,0.2)", "fill": "#fff"},
+    # rosa forte mais fechado com texto branco (~4,6:1), aprovado em 2026-10-20
+    "rosa_forte": {"bg": "#C93A74", "h": "#fff", "b": "#fff", "acc": ROSA_CLARO, "mute": "rgba(255,255,255,0.85)",
+                   "line": "rgba(255,255,255,0.3)", "fill": "#fff", "rule": "#fff"},
+    "vinho_escuro": {"bg": "#5E1838", "h": "#fff", "b": "rgba(255,255,255,0.88)", "acc": ROSA_SUAVE,
+                     "mute": "rgba(255,255,255,0.7)", "line": "rgba(255,255,255,0.2)", "fill": "#fff", "rule": ROSA_SUAVE},
 })
 CTA_ROSA_BG = (f"background:radial-gradient(circle at 15% 20%, {ROSA_SUAVE} 0%, transparent 55%),"
                f"radial-gradient(circle at 90% 10%, {ROSA} 0%, transparent 50%),"
@@ -132,6 +141,10 @@ def botao(n, text, role="cta", bg=None, fg=None):
 # ---------------------------------------------------------------- indicadores (sorteados)
 def indicador(tipo, i, total, t):
     if tipo == "selo" and i == 0:
+        if t.get("chip_pequeno"):  # texto pequeno sobre cor chapada clara: chip escuro (>7:1)
+            return (f'<div class="sans" data-ap-fixo style="position:absolute;right:22px;bottom:20px;z-index:4;font-size:12px;'
+                    f'font-weight:600;letter-spacing:1.2px;color:#fff;background:{DBG};padding:6px 10px;border-radius:6px;">'
+                    f'ARRASTE PARA O LADO →</div>')
         return (f'<div class="sans" data-ap-fixo style="position:absolute;right:28px;bottom:26px;z-index:4;font-size:12px;'
                 f'font-weight:600;letter-spacing:1.2px;color:{t["mute"]};">ARRASTE PARA O LADO →</div>')
     if tipo == "selo" and 0 < i < total - 1:
@@ -160,7 +173,7 @@ def comparacao(n, t, cab_esq, cab_dir, linhas, size=16, gap_top=22, cab_serif=Fa
     rows = ""
     for k, (a, b) in enumerate(linhas, 1):
         rows += (f'<div class="sans" data-edit-id="slide{n}-row-{k}-a" style="{cel}color:{t["mute"]};">{a}</div>'
-                 f'<div class="sans" data-edit-id="slide{n}-row-{k}-b" style="{cel}color:{t["h"]};font-weight:500;">{b}</div>')
+                 f'<div class="sans" data-edit-id="slide{n}-row-{k}-b" style="{cel}color:{t["h"]};font-weight:{t.get("peso", 500)};">{b}</div>')
     cab = (f"class=\"serif\" style=\"font-size:{cab_size or 22}px;line-height:1.1;font-weight:600;" if cab_serif
            else f"class=\"sans\" style=\"font-size:{cab_size or 13}px;font-weight:600;letter-spacing:0.3px;")
     head = (f'<div {cab}color:{t["mute"]};padding-bottom:10px;" data-edit-id="slide{n}-col-a">{cab_esq}</div>'
@@ -179,7 +192,7 @@ def lista(n, t, itens, size=17, numerada=False, gap_top=20):
                  f'<span style="flex:none;width:14px;height:2px;margin-top:12px;background:{t["acc"]};"></span>')
         out += (f'<div style="display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid {t["line"]};">'
                 f'{marca}<span class="sans" data-edit-id="slide{n}-item-{k}" style="font-size:{size}px;line-height:1.35;'
-                f'color:{t["h"]};font-weight:500;">{txt}</span></div>')
+                f'color:{t["h"]};font-weight:{t.get("peso", 500)};">{txt}</span></div>')
     return f'<div style="margin-top:{gap_top}px;text-align:left;">{out}</div>'
 
 
@@ -197,7 +210,7 @@ def passos_verticais(n, t, etapas, retorno=None, size=17, gap_top=22, seta=False
                 f'background:{t["acc"]};color:{t["bg"] or DBG};font-size:12px;font-weight:700;display:flex;'
                 f'align-items:center;justify-content:center;">{k}</span>'
                 f'<span class="sans" data-edit-id="slide{n}-step-{k}" style="font-size:{size}px;line-height:1.3;'
-                f'color:{t["h"]};font-weight:500;padding-top:1px;">{txt}</span></div>')
+                f'color:{t["h"]};font-weight:{t.get("peso", 500)};padding-top:1px;">{txt}</span></div>')
     volta = ""
     if retorno:
         volta = (f'<div style="display:flex;gap:10px;align-items:center;margin-top:2px;">'
@@ -205,6 +218,17 @@ def passos_verticais(n, t, etapas, retorno=None, size=17, gap_top=22, seta=False
                  f'stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>'
                  f'<span class="sans" data-edit-id="slide{n}-loop" style="font-size:14px;color:{t["mute"]};">{retorno}</span></div>')
     return f'<div style="margin-top:{gap_top}px;text-align:left;">{out}{volta}</div>'
+
+
+def foto_full(src, rgb="18,63,60", ate=0.70, pos="50% 50%", nota=""):
+    """Foto no slide inteiro + véu na cor escura (degradê de baixo para cima até `ate` da altura,
+    dimensionado pelo texto) + camada uniforme de reforço. O texto vai embaixo, em branco."""
+    a = int(ate * 100)
+    return (f'<!-- foto: {nota} -->'
+            f'<img src="{src}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{pos};">'
+            f'<div style="position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba({rgb},0.95) 0%,'
+            f'rgba({rgb},0.88) {int(a*0.45)}%,rgba({rgb},0.62) {int(a*0.68)}%,rgba({rgb},0.25) {int(a*0.86)}%,rgba({rgb},0) {a}%);"></div>'
+            f'<div style="position:absolute;inset:0;z-index:1;background:rgba({rgb},0.16);"></div>')
 
 
 # ---------------------------------------------------------------- elementos desenhados (regra "slide sem vazio", 2026-10-19)
@@ -302,10 +326,13 @@ def ficha(n, t, campos, gap_top=22):
 def numero_passo(num, total, t, size=150):
     trilha = "".join(f'<span style="flex:1;height:4px;border-radius:2px;background:{t["acc"] if k < num else t["line"]};"></span>'
                      for k in range(total))
+    # no verde chapado o rótulo pequeno não passa no contraste: fica só a trilha (2026-10-20)
+    rotulo = ("" if t.get("chip_pequeno") else
+              f'<span class="sans" style="display:block;font-size:13px;font-weight:600;color:{t["mute"]};margin-bottom:8px;">'
+              f'passo {num} de {total}</span>')
     return (f'<div data-ap-fixo style="display:flex;align-items:flex-end;gap:16px;margin-bottom:6px;">'
             f'<span class="serif" style="font-size:{size}px;line-height:0.8;font-weight:600;color:{t["acc"]};">{num}</span>'
-            f'<div style="flex:1;padding-bottom:10px;"><span class="sans" style="display:block;font-size:13px;font-weight:600;'
-            f'color:{t["mute"]};margin-bottom:8px;">passo {num} de {total}</span><div style="display:flex;gap:5px;">{trilha}</div>'
+            f'<div style="flex:1;padding-bottom:10px;">{rotulo}<div style="display:flex;gap:5px;">{trilha}</div>'
             f'</div></div>')
 
 
@@ -319,9 +346,74 @@ def checklist(n, t, itens, marcados=0, size=19, gap_top=24):
                   f'stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>' if on else "")
                + "</span>")
         out += (f'<div style="display:flex;gap:14px;align-items:center;padding:9px 0;">{box}'
-                f'<span class="sans" data-edit-id="slide{n}-check-{k}" style="font-size:{size}px;font-weight:500;'
+                f'<span class="sans" data-edit-id="slide{n}-check-{k}" style="font-size:{size}px;font-weight:{t.get("peso", 500)};'
                 f'color:{t["h"]};">{txt}</span></div>')
     return f'<div style="margin-top:{gap_top}px;text-align:left;">{out}</div>'
+
+
+# ---------------------------------------------------------------- ilustração, formas e recorte (2026-10-20)
+# Regra geral: nenhum slide só com fundo e texto. Tudo aqui fica atrás do texto (z-index 1),
+# pode sair pela borda (x/y negativos) e é marcado como fixo para a página de aprovação.
+TRACOS = {
+    "ata": ('<rect x="42" y="18" width="116" height="164" rx="8"/>'
+            '<path d="M62 52h76M62 74h76M62 96h76M62 118h52"/>'
+            '<path d="M62 152c10-16 18 12 26-4s12-14 20 2 10 6 20-8"/>'
+            '<path d="M118 36l8 8 16-18"/>'),
+    "cronometro": ('<circle cx="100" cy="114" r="64"/><path d="M88 30h24M100 30v20"/>'
+                   '<path d="M100 114V74M100 114l30 16"/><path d="M150 64l12-12"/>'),
+    "carrinho": ('<path d="M20 150h120M20 138h120"/><rect x="138" y="112" width="24" height="44" rx="4"/>'
+                 '<circle cx="34" cy="162" r="8"/><circle cx="150" cy="166" r="8"/><path d="M150 112L172 44"/>'
+                 '<circle cx="175" cy="36" r="12"/><g transform="rotate(-24 64 82)"><rect x="34" y="56" width="62" height="50" rx="3"/>'
+                 '<path d="M34 74h62M65 56v18"/></g><path d="M106 66l14-6M108 90h16"/>'),
+    "caneta": ('<path d="M44 158L150 52l16 16L60 174z"/><path d="M44 158l-10 26 26-10"/>'
+               '<path d="M136 66l16 16"/><path d="M18 192h150"/>'),
+    "capacete": ('<path d="M34 134C34 76 66 44 100 44s66 32 66 90"/><path d="M14 136h172"/>'
+                 '<path d="M100 44v90M72 56c-8 22-10 50-8 78M128 56c8 22 10 50 8 78"/>'),
+    "laco": ('<path d="M100 128C58 88 62 30 100 30s42 58 0 98"/><path d="M100 128L58 186M100 128l42 58"/>'
+             '<path d="M84 108l32 0"/>'),
+    "estetoscopio": ('<path d="M60 26v46a40 40 0 0 0 80 0V26"/><path d="M100 112v22a28 28 0 0 0 56 0v-14"/>'
+                     '<circle cx="156" cy="104" r="16"/><path d="M50 26h20M130 26h20"/>'),
+    "megafone": ('<path d="M44 84L132 46v108L44 116z"/><path d="M22 82h22v36H22z"/>'
+                 '<path d="M70 112l10 38h16l-8-32"/><path d="M152 72q16 28 0 56M168 56q28 44 0 88"/>'),
+    "balao": ('<path d="M34 38h132a14 14 0 0 1 14 14v78a14 14 0 0 1-14 14H82l-32 30v-30H34a14 14 0 0 1-14-14V52a14 14 0 0 1 14-14z"/>'),
+}
+
+
+def traco(nome, cor, x, y, w, op=1.0, sw=5, rot=0):
+    """Ilustração em traço nas cores da marca (viewBox 200x200)."""
+    return (f'<div data-ap-fixo style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{w}px;z-index:1;'
+            f'opacity:{op};transform:rotate({rot}deg);pointer-events:none;">'
+            f'<svg viewBox="0 0 200 200" width="{w}" height="{w}" fill="none" stroke="{cor}" stroke-width="{sw}" '
+            f'stroke-linecap="round" stroke-linejoin="round">{TRACOS[nome]}</svg></div>')
+
+
+def bloco_cor(cor, x, y, w, h, r=0, op=1.0):
+    return (f'<div style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:{r}px;'
+            f'background:{cor};opacity:{op};z-index:1;pointer-events:none;"></div>')
+
+
+def circulo(cor, cx, cy, r, op=1.0, contorno=0):
+    estilo = f"border:{contorno}px solid {cor};" if contorno else f"background:{cor};"
+    return (f'<div style="position:absolute;left:{cx - r}px;top:{cy - r}px;width:{2 * r}px;height:{2 * r}px;'
+            f'border-radius:50%;{estilo}opacity:{op};z-index:1;pointer-events:none;"></div>')
+
+
+def sinal(txt, cor, x, y, size, op=1.0, contorno=3):
+    """Sinal ou número gigante vazado (só o contorno), atrás do texto."""
+    return (f'<div class="serif" data-ap-fixo style="position:absolute;left:{x}px;top:{y}px;z-index:1;font-size:{size}px;'
+            f'line-height:0.8;font-weight:700;color:transparent;-webkit-text-stroke:{contorno}px {cor};opacity:{op};'
+            f'pointer-events:none;">{txt}</div>')
+
+
+def png(path: Path) -> str:
+    return "data:image/png;base64," + base64.b64encode(Path(path).read_bytes()).decode()
+
+
+def recorte(src, x, y, w, rot=0, nota=""):
+    """Objeto de foto real recortado (PNG com fundo transparente), com sombra leve."""
+    return (f'<!-- recorte: {nota} --><img src="{src}" alt="" data-ap-fixo style="position:absolute;left:{x}px;top:{y}px;'
+            f'width:{w}px;z-index:1;transform:rotate({rot}deg);filter:drop-shadow(0 14px 18px rgba(0,0,0,0.28));'
+            f'pointer-events:none;">')
 
 
 # ---------------------------------------------------------------- moldura + navegação + painel

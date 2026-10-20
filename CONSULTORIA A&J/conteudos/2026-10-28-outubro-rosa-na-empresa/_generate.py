@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """POST 04 · out/2026 · Outubro Rosa na empresa: além do laço no crachá.
-Sorteio: comparacao · cena-do-dia-a-dia · seed 65 · fundos em blocos · esquerda · texto varia · barra segmentada.
-Revisão de 2026-10-20: data temática usa a cor da campanha (rosa domina; verde da A&J só no logo) + texto curto."""
+Sorteio: comparacao · cena-do-dia-a-dia · seed 65 · esquerda.
+2026-10-20: data temática usa a cor da campanha (rosa domina; verde da A&J só no logo) + texto curto;
+capa com foto no slide inteiro e véu vinho; rosa-claro só nos slides 3 e 5; fotos full no miolo
+sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
+Nenhum slide só com fundo e texto: meio círculo (2), laço em traço (4), estetoscópio em traço (6)."""
 import sys
 from pathlib import Path
 
@@ -9,11 +12,11 @@ BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE.parent))
 from _carrossel_base import *  # noqa: E402,F403
 
-RC, V, CR = tom("rosa"), tom("vinho"), tom("cta_rosa")
-IND, N = "selo", 8  # 2026-10-20: sem contador nem barra; selo "arraste" só na capa (pedido do Thiago)
+RC, V, VE, RF, CR, F = tom("rosa"), tom("vinho"), tom("vinho_escuro"), tom("rosa_forte"), tom("cta_rosa"), tom("foto")
+IND, N = "selo", 8
 ED = BASE / "assets" / "edited"
-FOTO1, FOTO3 = foto(ED / "slide1-photo.jpg"), foto(ED / "slide3-photo.jpg")
-VR = "140,36,83"  # VINHO em rgb
+CAPA, FOTO3 = foto(ED / "slide1-full.jpg"), foto(ED / "slide3-photo.jpg")
+VR_ESC = "94,24,56"  # vinho escuro em rgb, para o véu da capa
 
 
 def linha_do_ano(n, t):
@@ -34,53 +37,54 @@ def linha_do_ano(n, t):
 
 
 s = []
-# 1 · capa: foto emoldurada com o título encostado
-s.append(slide(RC, bloco(
-    logo_lockup(RC, align="left", gap_below=16)
-    + '<!-- foto: pexels.com/photo/8385421 -->'
-    f'<div style="border-radius:12px;overflow:hidden;"><img src="{FOTO1}" alt="" style="display:block;width:100%;height:186px;'
-    'object-fit:cover;object-position:40% 50%;"></div>'
-    + h(1, f"Em outubro, o laço rosa aparece no crachá. Em novembro, {it('some.', RC)}", RC, size=34, lh=1.08,
-        extra="margin-top:20px;"),
-    anchor="top", pad="42px 34px 60px") + indicador(IND, 0, N, RC)))
-# 2 · comparação (os cabeçalhos são o título)
-s.append(slide(RC, bloco(
-    comparacao(2, RC, "Fachada", "Cuidado", [
+# 1 · capa: laço no slide inteiro + véu vinho, título embaixo
+s.append(slide(F,
+    foto_full(CAPA, rgb=VR_ESC, ate=0.70, pos="30% 50%", nota="pexels.com/photo/8385421")
+    + f'<div style="position:absolute;top:22px;left:24px;z-index:3;">'
+      f'{logo_lockup(F, size=26, fs=12, align="left", gap_below=0, chip="rgba(94,24,56,0.55)")}</div>'
+    + bloco(h(1, f"Em outubro, o laço rosa aparece no crachá. Em novembro, {it('some.', F, color='#fff')}", F,
+              size=38, lh=1.08),
+            anchor="bottom", pad="64px 34px 66px")
+    + indicador(IND, 0, N, F)))
+# 2 · comparação em vinho (os cabeçalhos são o título)
+s.append(slide(V, bloco(
+    comparacao(2, V, "Fachada", "Cuidado", [
         ("Foto de rosa", "Horário livre para o exame"),
         ("Palestra em outubro", "Informação o ano todo"),
     ], size=21, gap_top=0, cab_serif=True, cab_size=40),
-    anchor="center") + indicador(IND, 1, N, RC)))
-# 3 · foto dividida: foto à esquerda, texto à direita
-s.append(slide(V,
+    anchor="center") + indicador(IND, 1, N, V),
+    layers=circulo(ROSA, 420, 525, 150, op=0.9)))
+# 3 · foto dividida: foto à esquerda, texto à direita em rosa-claro · claro 1/2
+s.append(slide(RC,
     '<!-- foto: pexels.com/photo/8487402 -->'
     f'<img src="{FOTO3}" alt="" style="position:absolute;left:0;top:0;width:200px;height:525px;object-fit:cover;object-position:50% 25%;">'
-    f'<div style="position:absolute;left:0;bottom:0;width:200px;height:64px;z-index:1;'
-    f'background:linear-gradient(0deg,rgba({VR},0.85) 0%,rgba({VR},0.55) 55%,rgba({VR},0) 100%);"></div>'
     + f'<div style="position:absolute;left:200px;right:0;top:0;bottom:0;z-index:2;display:flex;flex-direction:column;'
       f'justify-content:center;padding:40px 22px 70px 22px;">'
-    + h(3, "Exame que depende de favor ao chefe fica para depois.", V, size=27, lh=1.14)
-    + p(3, "Combinar a saída custa pouco.", V, size=18, gap=18, weight=500, color=ROSA_SUAVE)
-    + "</div>" + indicador(IND, 2, N, V)))
-# 4 · pergunta grande
-s.append(slide(V, bloco(
-    h(4, "Quem precisa sair para um exame sabe como pedir?", V, size=50, lh=1.05),
-    anchor="center") + indicador(IND, 3, N, V)))
-# 5 · diagrama: linha do ano
+    + h(3, "Exame que depende de favor ao chefe fica para depois.", RC, size=27, lh=1.14)
+    + p(3, "Combinar a saída custa pouco.", RC, size=18, gap=18, weight=600, color=VINHO)
+    + "</div>" + indicador(IND, 2, N, RC)))
+# 4 · pergunta grande em rosa forte
+s.append(slide(RF, bloco(
+    h(4, "Quem precisa sair para um exame sabe como pedir?", RF, size=50, lh=1.05),
+    anchor="center") + indicador(IND, 3, N, RF),
+    layers=traco("laco", "#fff", 196, 332, 250, op=0.4, sw=5, rot=-8)))
+# 5 · diagrama: linha do ano · claro 2/2
 s.append(slide(RC, bloco(
     h(5, "Outubro abre a conversa", RC, size=46, lh=1.04)
     + linha_do_ano(5, RC)
     + p(5, "Os outros onze meses mostram se a empresa levou a sério.", RC, size=22, gap=34, weight=500, color=VINHO,
         extra="font-family:'Lora',serif;line-height:1.3;"),
     anchor="center", pad="64px 30px 76px") + indicador(IND, 4, N, RC)))
-# 6 · comparação
-s.append(slide(RC, bloco(
-    h(6, "Quando alguém está em tratamento", RC, size=38, lh=1.06)
-    + comparacao(6, RC, "Sem cuidado", "Com cuidado", [
+# 6 · comparação em vinho escuro
+s.append(slide(VE, bloco(
+    h(6, "Quando alguém está em tratamento", VE, size=38, lh=1.06)
+    + comparacao(6, VE, "Sem cuidado", "Com cuidado", [
         ("Comentário no corredor", "Conversa reservada com o RH"),
         ("Volta sem plano", "Retorno avaliado pela medicina do trabalho (NR&#8209;7)"),
     ], size=19, gap_top=24, cab_size=15),
-    anchor="center") + indicador(IND, 5, N, RC)))
-# 7 · diagrama: do aviso ao exame
+    anchor="bottom", pad="64px 36px 64px") + indicador(IND, 5, N, VE),
+    layers=traco("estetoscopio", ROSA_SUAVE, 292, -26, 150, op=0.85, sw=5, rot=10)))
+# 7 · diagrama: do aviso ao exame, em vinho
 s.append(slide(V, bloco(
     h(7, "Do aviso ao exame", V, size=46)
     + passos_verticais(7, V, [
