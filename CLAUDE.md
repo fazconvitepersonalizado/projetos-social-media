@@ -100,6 +100,13 @@ projeto atual, pergunte antes de só aplicar e seguir:
   celular: antes de fechar, gerar um preview (screenshot na escala real de
   exportação) e checar legibilidade; se precisar aumentar, também apertar
   o espaçamento pra caber no slide de 525px.
+- **Pouco texto por slide, slide sem vazio:** título de até ~10 palavras,
+  apoio de até ~15; slide só de texto ganha tipografia maior e, quando
+  fizer sentido, um elemento desenhado com função. Slide com mais de um
+  terço vazio ou parágrafo longo é achado da verificação visual.
+- **Data temática usa a cor da campanha** (Outubro Rosa = rosa, Novembro
+  Azul = azul...): a cor da campanha domina fundos, destaques e CTA; a
+  marca do cliente fica no logo, nas fontes e no tom.
 - No slide de CTA com fundo gradiente da marca, nunca colorir uma frase ou
   título inteiro com o tom escuro da marca (baixo contraste) — esse tom só
   em destaque pontual de 1-2 palavras dentro de uma frase branca/clara.
@@ -380,3 +387,8 @@ projeto atual, pergunte antes de só aplicar e seguir:
   `conteudo-mensal/scripts/trello_api.py`: cria e nomeia etiquetas de mês e
   formato sozinho (o conector não faz) e anexa arquivos. Pedido do Thiago:
   nunca cadastrar etiqueta à mão.
+- 2026-10-19 — Revisando a arte de outubro da A&J, o Thiago achou slides
+  com texto demais e vazios, e o Outubro Rosa verde demais. Viraram padrão
+  geral: "pouco texto por slide, slide sem vazio" e "data temática usa a
+  cor da campanha", no `anti-ia-design.md` de todos os clientes e do
+  `_modelo-cliente/`.

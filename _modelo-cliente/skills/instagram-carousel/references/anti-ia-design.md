@@ -50,6 +50,19 @@ dos outros clientes da pasta.
 - **Slide cheio de propósito**: ou o bloco de texto ocupa o slide com
   tipografia grande, ou divide o espaço com uma foto ou um elemento
   desenhado. Metade de slide vazia só se for intenção clara.
+- **Pouco texto por slide, slide sem vazio** (Thiago, 2026-10-19, padrão
+  geral): título de até ~10 palavras e apoio de até ~15; o que não couber
+  vira outro slide ou sai. Slide só de texto ganha tipografia maior (o
+  bloco ocupa o slide) e, quando fizer sentido, um elemento desenhado com
+  função (número grande do passo, formulário, calendário, checklist,
+  linha do tempo). Na verificação visual, slide com mais de um terço
+  vazio ou com parágrafo longo é achado a reportar. Se encurtar mudar
+  texto já aprovado, mostrar antes → depois e esperar o OK.
+- **Data temática usa a cor da campanha** (Thiago, 2026-10-19, padrão
+  geral): post de campanha (Outubro Rosa, Novembro Azul, Setembro
+  Amarelo, Abril Verde...) tem a cor da campanha dominando fundos,
+  destaques e CTA; a marca do cliente fica no logo, nas fontes e no tom.
+  Conferir contraste dos tons da campanha como em qualquer paleta.
 - **Contraste de escala**: títulos grandes (40 a 58px no slide de 420px),
   corpo de 17 a 18px, nada abaixo de 12px.
 - **Elementos desenhados com função**, em SVG exato e nas cores da marca:

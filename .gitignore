@@ -13,3 +13,7 @@ desktop.ini
 *.env
 
 # .gallery-cache/ (miniaturas da galeria) é versionado (regra: tudo guardado no GitHub)
+
+# Cache do Python
+__pycache__/
+*.pyc

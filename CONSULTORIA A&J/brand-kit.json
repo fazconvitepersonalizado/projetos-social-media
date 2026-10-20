@@ -21,5 +21,25 @@
     "LIGHT_BORDER": "#E3DCCC",
     "DARK_BG": "#123F3C"
   },
-  "saved_at": "2026-09-01T00:27:55.684968+00:00"
+  "saved_at": "2026-09-01T00:27:55.684968+00:00",
+  "design_assinatura": {
+    "decidido_em": "2026-10-19",
+    "motivo": "primeira passada da A&J pelas regras anti-IA de design (outubro/2026), confirmada pelo Thiago",
+    "fica": [
+      "paleta verde #5FA23B + petróleo #1C5B57/#123F3C + creme #F4F0E7",
+      "Lora nos títulos, Poppins no texto",
+      "uma palavra-chave em Lora itálico (máx. 1 ou 2 por carrossel)",
+      "logo + nome A&J Soluções em SSTMA na capa e no CTA",
+      "botão creme arredondado no CTA",
+      "fotos com véu verde-escuro",
+      "degradê verde (petróleo para verde) só no slide de CTA"
+    ],
+    "sai": [
+      "etiqueta em maiúsculas acima do título e tracinho",
+      "+ de canto e logo como marca-d'água nos slides do meio",
+      "lista em caixa de vidro com checks e ícones em quadradinho",
+      "granulado",
+      "degradê desfocado como fundo padrão dos outros slides"
+    ]
+  }
 }
