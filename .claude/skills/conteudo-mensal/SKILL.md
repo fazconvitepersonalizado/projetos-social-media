@@ -54,6 +54,10 @@ Referências desta skill:
   etiquetas, cartão, registro de IDs `trello.json`).
 
 ## Fase 1: temas e formatos (no chat)
+0. Ler `<cliente>/material-real/` (coleta do mês: casos, dúvidas, fotos).
+   Material novo puxa tema e gancho primeiro. Se a coleta do mês ainda não
+   veio, avisar o Thiago e oferecer a mensagem das 3 perguntas
+   (`material-real/README.md`) antes de seguir.
 1. Ler a marca do cliente (ordem acima). Calcular quantos posts o mês tem
    pela **cadência** do cliente e as **datas reais** de cada post (dias da
    semana certos, feriados avisados, não chutar).

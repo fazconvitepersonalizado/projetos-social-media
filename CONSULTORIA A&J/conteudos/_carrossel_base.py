@@ -387,6 +387,11 @@ TRACOS = {
                      '<circle cx="156" cy="104" r="16"/><path d="M50 26h20M130 26h20"/>'),
     "megafone": ('<path d="M44 84L132 46v108L44 116z"/><path d="M22 82h22v36H22z"/>'
                  '<path d="M70 112l10 38h16l-8-32"/><path d="M152 72q16 28 0 56M168 56q28 44 0 88"/>'),
+    "calendario": ('<rect x="24" y="40" width="152" height="136" rx="10"/><path d="M24 76h152M62 26v28M138 26v28"/>'
+                   '<path d="M54 102h16M92 102h16M130 102h16M54 128h16M92 128h16M54 154h16M92 154h16"/>'
+                   '<circle cx="138" cy="141" r="20"/>'),
+    "prancheta": ('<rect x="38" y="30" width="124" height="158" rx="10"/><rect x="74" y="18" width="52" height="24" rx="6"/>'
+                  '<path d="M62 76l8 8 14-16M98 78h42M62 116l8 8 14-16M98 118h42M62 156h22M98 158h42"/>'),
     "balao": ('<path d="M34 38h132a14 14 0 0 1 14 14v78a14 14 0 0 1-14 14H82l-32 30v-30H34a14 14 0 0 1-14-14V52a14 14 0 0 1 14-14z"/>'),
 }
 

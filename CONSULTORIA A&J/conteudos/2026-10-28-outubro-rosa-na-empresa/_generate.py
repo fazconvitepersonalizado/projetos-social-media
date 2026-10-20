@@ -5,7 +5,8 @@ Sorteio: comparacao · cena-do-dia-a-dia · seed 65 · esquerda.
 capa com foto no slide inteiro e véu vinho; rosa-claro só nos slides 3 e 5; fotos full no miolo
 sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
 História: capa, por que importa (INCA), fachada x cuidado, obstáculo, pergunta, do aviso ao exame, tratamento, chamada.
-Nenhum slide só com fundo e texto: linha do ano (2), meio círculo (3), laço em traço (5), estetoscópio em traço (7)."""
+Nenhum slide só com fundo e texto: linha do ano (2), meio círculo (3), laço em traço (5), calendário em traço (6),
+estetoscópio em traço (7)."""
 import sys
 from pathlib import Path
 
@@ -87,7 +88,8 @@ s.append(slide(V, bloco(
         "Exame feito",
     ], seta=True, gap_top=28, size=21)
     + p(6, "Salva e manda pro RH.", V, role="cta", size=19, weight=600, color=ROSA_SUAVE, gap=12),
-    anchor="center") + indicador(IND, 5, N, V)))
+    anchor="center") + indicador(IND, 5, N, V),
+    layers=traco("calendario", ROSA_SUAVE, 292, 300, 180, op=0.8, sw=5, rot=-8)))
 # 7 · e depois do exame: quando alguém está em tratamento, em vinho escuro
 s.append(slide(VE, bloco(
     h(7, "Quando alguém está em tratamento", VE, size=38, lh=1.06)

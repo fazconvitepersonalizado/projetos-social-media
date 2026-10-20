@@ -174,6 +174,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
   skill `instagram-carousel` ("Fixing text-over-photo legibility").
 
 ## Conteúdo sem cara de IA (copy e design)
+- **Material real do cliente** (2026-10-20, todos os clientes): coleta mensal
+  de 3 perguntas (o que aconteceu, que dúvida um cliente fez, tem foto?)
+  antes de planejar o mês, guardada em `<cliente>/material-real/` (ver o
+  README da pasta). Caso, dúvida, fala e foto reais vêm antes de qualquer
+  recurso genérico; nunca completar o que faltou com invenção.
 - **Individualidade do cliente vem primeiro:** as regras anti-IA tiram só
   vícios genéricos de template. Voz, expressões, cores, fontes, logo,
   modelos de peça e elementos que o cliente aprovou como dele ficam, e

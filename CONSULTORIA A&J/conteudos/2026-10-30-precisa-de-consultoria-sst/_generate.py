@@ -83,11 +83,12 @@ s.append(slide(V, bloco(
     h(7, "Salva o teste e faz esta semana.", V, size=40, lh=1.05)
     + checklist(7, V, ["Documentos separados", "Datas conferidas", "Papel x rotina comparados", "Equipe ouvida"], gap_top=22)
     + p(7, "Dúvida em mais de um passo? Já vale uma conversa.", V, size=19, gap=20, weight=600, color=DBG),
-    anchor="bottom", pad=PAD) + indicador(IND, 6, N, V)))
+    anchor="bottom", pad=PAD) + indicador(IND, 6, N, V),
+    layers=traco("prancheta", "#fff", 226, -118, 210, op=0.9, sw=6, rot=12)))
 # 8 · CTA (degradê assinatura)
 s.append(slide(CTA, bloco(
     logo_lockup(CTA, size=40, fs=15)
-    + h(8, "A A&amp;J faz esse diagnóstico com você e acompanha o que vem depois.", CTA, size=38, lh=1.08, align="center")
+    + h(8, "A A&amp;J faz o diagnóstico e acompanha o depois.", CTA, size=38, lh=1.08, align="center")
     + botao(8, "Chama no direct")
     + p(8, HANDLE, CTA, size=15, role="handle", align="center", gap=18, weight=500),
     align="center")))
