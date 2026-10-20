@@ -34,7 +34,7 @@ s.append(slide(C, bloco(
     numero_passo(1, 4, C, size=100)
     + h(2, "Separe os documentos", C, size=40, extra="margin-top:18px;")
     + lista(2, C, ["PGR", "PCMSO", "Laudos (como o LTCAT)", "Certificados dos treinamentos de NR"], size=20, gap_top=18),
-    anchor="bottom", pad=PAD)))
+    anchor="bottom", pad=PAD) + indicador(IND, 1, N, C)))
 # 3 · passo 2: foto emoldurada
 s.append(slide(C, bloco(
     numero_passo(2, 4, C, size=96)
@@ -43,7 +43,7 @@ s.append(slide(C, bloco(
     'width:100%;height:170px;object-fit:cover;object-position:55% 45%;"></div>'
     + h(3, "Confira as datas.", C, size=36, extra="margin-top:16px;")
     + p(3, "Algo mudou no setor, na máquina ou na função depois do documento?", C, size=19, gap=10),
-    anchor="bottom", pad="40px 36px 56px")))
+    anchor="bottom", pad="40px 36px 56px") + indicador(IND, 2, N, C)))
 # 4 · passo 3: comparação
 s.append(slide(C, bloco(
     numero_passo(3, 4, C, size=100)
@@ -52,14 +52,14 @@ s.append(slide(C, bloco(
         ("Protetor auricular previsto", "Protetor no pescoço"),
         ("Equipe treinada", "Novato sem integração"),
     ], size=19, gap_top=20, cab_size=15),
-    anchor="bottom", pad=PAD)))
+    anchor="bottom", pad=PAD) + indicador(IND, 3, N, C)))
 # 5 · passo 4: pergunta gigante (a pausa escura)
 s.append(slide(E, bloco(
     numero_passo(4, 4, E, size=120)
     + p(5, "Pergunte a quem faz o serviço:", E, role="step", size=21, weight=500, gap=20, color="#fff")
     + h(5, "“Qual é o risco da sua tarefa?”", E, size=46, lh=1.05, role="question", extra="margin-top:10px;")
     + p(5, "Resposta vaga: o documento não chegou até ele.", E, size=19, gap=18),
-    anchor="bottom", pad=PAD)))
+    anchor="bottom", pad=PAD) + indicador(IND, 4, N, E)))
 # 6 · comparação
 s.append(slide(C, bloco(
     h(6, "Resolver dentro ou chamar consultoria?", C, size=40, lh=1.05)
@@ -67,13 +67,13 @@ s.append(slide(C, bloco(
         ("Ajuste que a equipe já sabe", "Documentos desatualizados"),
         ("Dúvida pontual", "Riscos novos, como os psicossociais (NR-1)"),
     ], size=19, gap_top=26, cab_size=15),
-    anchor="bottom", pad=PAD)))
+    anchor="bottom", pad=PAD) + indicador(IND, 5, N, C)))
 # 7 · checklist dos 4 passos
 s.append(slide(C, bloco(
     h(7, "Salva o teste e faz esta semana.", C, size=40, lh=1.05)
     + checklist(7, C, ["Documentos separados", "Datas conferidas", "Papel x rotina comparados", "Equipe ouvida"], gap_top=22)
     + p(7, "Dúvida em mais de um passo? Já vale uma conversa.", C, size=19, gap=20, weight=500, color=DBG),
-    anchor="bottom", pad=PAD)))
+    anchor="bottom", pad=PAD) + indicador(IND, 6, N, C)))
 # 8 · CTA (degradê assinatura)
 s.append(slide(CTA, bloco(
     logo_lockup(CTA, size=40, fs=15)

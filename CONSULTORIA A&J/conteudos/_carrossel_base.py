@@ -134,6 +134,10 @@ def indicador(tipo, i, total, t):
     if tipo == "selo" and i == 0:
         return (f'<div class="sans" style="position:absolute;right:28px;bottom:26px;z-index:4;font-size:12px;'
                 f'font-weight:600;letter-spacing:1.2px;color:{t["mute"]};">ARRASTE PARA O LADO →</div>')
+    if tipo == "selo" and 0 < i < total - 1:
+        # do slide 2 ao penúltimo, só uma setinha (Thiago, 2026-10-20); o último fica sem
+        return (f'<div class="sans" style="position:absolute;right:28px;bottom:20px;z-index:4;font-size:20px;'
+                f'font-weight:600;line-height:1;color:{t["mute"]};">→</div>')
     if tipo == "contador":
         return (f'<div class="sans" style="position:absolute;right:28px;bottom:24px;z-index:4;font-size:12px;'
                 f'font-weight:500;color:{t["mute"]};">{i + 1}/{total}</div>')
