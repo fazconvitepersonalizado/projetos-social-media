@@ -89,6 +89,12 @@ Só depois do OK da Fase 1.
    bater com a copy aprovada.
 3. Escrever cada post de conteúdo no modelo do formato (`formatos.md` + voz
    do cliente). Slots de vídeo: só o cabeçalho `POST NN · [terceiros]`.
+   **Carrossel começa pelo roteiro** (`references/roteiro.md`): arco + tabela
+   com função, título, apoio, dado e fonte e visual de cada slide, em
+   `<cliente>/conteudos/roteiros/<AAAA-MM>.md`; rodar
+   `python conferir_carrossel.py --roteiro "<arquivo>"` e resolver os
+   achados antes de mostrar. Depois do OK, o texto do roteiro vira o
+   "Texto da arte" do post no plano.
 4. **Revisão anti-IA** de toda copy por `references/anti-ia-copy.md` da skill
    `instagram-carousel` do cliente; anotar a nota (mínimo 35/50; abaixo
    disso, reescrever antes de mostrar). A voz do cliente fica.

@@ -127,6 +127,21 @@ projeto atual, pergunte antes de só aplicar e seguir:
 - No slide de CTA com fundo gradiente da marca, nunca colorir uma frase ou
   título inteiro com o tom escuro da marca (baixo contraste) — esse tom só
   em destaque pontual de 1-2 palavras dentro de uma frase branca/clara.
+- **Roteiro aprovado antes do HTML** (2026-10-20, todos os clientes): todo
+  carrossel começa por um roteiro (arco numa frase + tabela com função,
+  título, apoio, dado e fonte e visual de cada slide), em
+  `<cliente>/conteudos/roteiros/<AAAA-MM>.md`, no formato de
+  `.claude/skills/conteudo-mensal/references/roteiro.md`. O Thiago aprova
+  os roteiros do mês de uma vez; nenhum HTML antes disso.
+- **Conferidor automático** (2026-10-20, todos os clientes):
+  `python conferir_carrossel.py --roteiro <arquivo>` antes de mostrar o
+  roteiro e `python conferir_carrossel.py <pasta do carrossel>` (ou
+  `--mes <cliente> <AAAA-MM>`) antes da verificação visual. Ele mede as
+  regras desta seção (capa clara, fundos claros, slide só com fundo e texto,
+  vazio, texto longo, travessão, contador, seta no último, letra pequena,
+  número sem fonte, fotos full, 2 capas com foto no mês). Achado é avisado
+  como qualquer achado da verificação visual, nunca corrigido em silêncio.
+  Regra nova que dê para medir entra também no script.
 - **Verificação visual obrigatória antes de apresentar (qualquer carrossel
   com foto):** depois de gerar ou editar o HTML, sempre renderizar cada
   slide como imagem (screenshot) e ler de volta, conferindo por slide: (1)
@@ -445,3 +460,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
   fim (texto encaixado na composição sorteada, ideia repetida). Padrão geral:
   história primeiro, sorteio só no visual (CLAUDE.md, skill instagram-carousel
   de todos e do modelo, sorteio).
+- 2026-10-20 — Quase todas as rodadas de ajuste de outubro da A&J foram regras
+  que o Thiago pegou antes de mim. Criados o roteiro aprovado antes do HTML
+  (`conteudo-mensal/references/roteiro.md`, pasta `conteudos/roteiros/`) e o
+  `conferir_carrossel.py` na raiz, que mede as regras de carrossel no roteiro
+  e na arte renderizada. Ligados ao CLAUDE.md, à skill instagram-carousel de
+  todos e do modelo e à conteudo-mensal. Testado em outubro (A&J) e em
+  setembro (A&J e Sandra): pega os vícios antigos (etiqueta, contador, letra
+  pequena, texto demais) e 2 slides de outubro só com texto e componente pequeno.

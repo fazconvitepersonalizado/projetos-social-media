@@ -106,8 +106,13 @@ que muda → como fazer → chamada), uma ideia por slide, sem repetir. Depois
 distribua as composições do sorteio pelos slides; troque a ordem delas se a
 história pedir. Nunca dobre o texto para caber numa composição.
 
-Draft the slide-by-slide copy plan (hook, problem, solution, …) and **show it
-in chat** for approval before generating any HTML. Keep it short.
+**Roteiro aprovado antes do HTML (2026-10-20, padrão geral):** escreva o
+roteiro no formato de `.claude/skills/conteudo-mensal/references/roteiro.md`
+(na raiz do projeto): arco numa frase + tabela `# | Função | Título | Apoio |
+Dado e fonte | Visual`, em `<cliente>/conteudos/roteiros/<AAAA-MM>.md`. Se o
+carrossel veio do plano mensal, o roteiro já existe e já foi aprovado: use-o.
+Rode `python conferir_carrossel.py --roteiro "<arquivo>"` na raiz e **mostre
+o roteiro no chat** com o resultado do conferidor; nenhum HTML antes do OK.
 
 **Copy sem cara de IA (obrigatório):** antes de mostrar o plano, revise a
 copy por `references/anti-ia-copy.md` e mostre a nota nos 5 eixos junto do
@@ -134,7 +139,15 @@ Once the plan is approved:
    **Inject the edit panel** per `references/edit-panel.md`. Every text element
    that the user is likely to tweak gets a `data-edit-id="slideN-role"`
    attribute.
-5. **Run the visual QA pass per `references/visual-qa.md`** — render every
+5. **Run the automatic rule check first:** `python conferir_carrossel.py
+   "<pasta do carrossel>" --folha "<scratchpad>/qa"` (na raiz do projeto).
+   It renders every slide and flags the measurable house rules (capa clara,
+   mais de 2 fundos claros, slide só com fundo e texto, faixa vazia > 1/3,
+   título/apoio longos, travessão, contador, seta no último, letra < 12px,
+   número sem fonte, fotos full demais). Every ACHADO is reported to the
+   user with the proposed fix, like any visual QA finding. The `--folha`
+   renders are the ones to read back in the next step.
+6. **Run the visual QA pass per `references/visual-qa.md`** — render every
    slide as a screenshot and read each one back, checking text legibility
    and photo/text relevance, and run the Impeccable detector per
    `references/anti-ia-design.md` (section 4). This is mandatory, not optional, and runs again
@@ -142,7 +155,7 @@ Once the plan is approved:
    specific problem and proposed fix to the user; wait for approval before
    changing anything, even a small technical tweak like `object-position` or
    overlay opacity. If everything passes, say so explicitly.
-6. Tell the user the file path and instruct them to open it in a browser to
+7. Tell the user the file path and instruct them to open it in a browser to
    review and edit.
 
 ### Phase 4 — Review & edit
