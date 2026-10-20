@@ -85,7 +85,13 @@ em `links.json` e refazer o índice (`gerar_indice` do script).
   hora. `[[trecho]]` mantém o destaque do design (span/em/strong); quebra de
   linha vira `<br>`. A legenda também é editável. "Desfazer" volta ao
   original. Pontinho laranja nos slides alterados.
-- **Decisão por post:** Aprovar / Pedir ajuste + comentário.
+- **Decisão por post:** Aprovar / Pedir ajuste + comentário. Em carrossel,
+  "Pedir ajuste" abre o campo **"Ajuste no slide N de M"**, que acompanha o
+  slide aberto: a cliente passa os slides e escreve em cada um; slides com
+  pedido ganham contorno no pontinho e aparecem em "Pedidos em: Slide 2,
+  Slide 5" (clicáveis). O comentário vira "Comentário geral do post".
+  Salvo em `ajustes` (`{"3": "texto"}`), no banco, no resumo do WhatsApp e
+  no "Copiar dados completos".
 - **Enviar respostas:** resumo de tudo + botão do WhatsApp (mensagem pronta
   para o número em `config.json`) + "Copiar resumo" + "Copiar dados
   completos" (JSON com os textos alterados, para colar aqui).
@@ -174,7 +180,8 @@ Depois:
   `instagram-carousel` de novo para esses carrosséis;
 - legenda nova e status: atualizar o plano do mês;
 - Trello: mover cartões (aprovado → `Agendado`; ajuste → `Ajustes`, com o
-  comentário no cartão), confirmando antes de mover em massa;
+  comentário geral e os pedidos por slide no cartão, um por linha:
+  "Slide 3: ..."), confirmando antes de mover em massa;
 - commit local.
 
 ## Arquivos

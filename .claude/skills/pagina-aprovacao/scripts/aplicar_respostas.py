@@ -9,7 +9,8 @@ Uso (na raiz do projeto):
 <respostas.json> aceita:
   - o texto do botão "Copiar dados completos" da página: {"respostas": {"<post>": {...}}}
   - a lista de documentos da coleção "respostas" do banco da página
-    (cada um com "post", "status", "comentario", "edicoes", "legenda").
+    (cada um com "post", "status", "comentario", "edicoes", "legenda" e
+    "ajustes", os pedidos por slide: {"3": "texto"}).
 
 Sem --aplicar, só mostra o que mudaria (antes → depois). Com --aplicar,
 grava os arquivos. Usa o manifesto.json gerado junto com a página para saber
@@ -107,6 +108,11 @@ def main():
                 print(f"{pid}: não está no manifesto deste mês; ignorado.")
                 continue
             print(f"\nPOST {m['num']:02d} · {pid}: {st}" + (f" · comentário: {r['comentario']}" if r.get("comentario") else ""))
+            # Pedidos de ajuste por slide ({"3": "texto"}); só contam com status "ajuste".
+            if r.get("status") == "ajuste":
+                for s, t in sorted((r.get("ajustes") or {}).items(), key=lambda kv: int(kv[0])):
+                    if str(t).strip():
+                        print(f"   ajuste no slide {s}: {str(t).strip()}")
             edicoes = r.get("edicoes") or {}
             legenda = r.get("legenda")
             if not edicoes and legenda is None:

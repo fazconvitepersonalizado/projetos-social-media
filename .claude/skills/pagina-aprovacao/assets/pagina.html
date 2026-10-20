@@ -165,6 +165,7 @@ button.cel:hover .cel-ver, button.cel:focus-visible .cel-ver { opacity: 1; }
 .pontos { position: absolute; left: 0; right: 0; bottom: 14px; z-index: 3; display: flex; justify-content: center; gap: 4px; pointer-events: none; }
 .pontos button { pointer-events: auto; width: 6px; height: 6px; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.45); position: relative; transition: background .2s; }
 .pontos button[aria-current="true"] { background: #fff; }
+.pontos button.pedido { box-shadow: 0 0 0 2px var(--warn); }
 .pontos button.mudou::after { content: ""; position: absolute; left: 50%; top: -6px; width: 4px; height: 4px; margin-left: -2px; border-radius: 99px; background: var(--warn); }
 .play { position: absolute; inset: 0; z-index: 3; border: 0; background: rgba(0,0,0,.2); display: grid; place-items: center; color: #fff; }
 .play span { width: 64px; height: 64px; border-radius: 99px; background: rgba(0,0,0,.55); display: grid; place-items: center; }
@@ -223,6 +224,13 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
 .escolha button[data-st="aprovado"][aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: var(--on-ok); }
 .escolha button[data-st="ajuste"][aria-pressed="true"] { background: var(--warn); border-color: var(--warn); color: var(--on-warn); }
 .decisao textarea { min-height: 44px; background: var(--field); border-color: var(--line-strong); color: var(--ink); }
+.ajuste-slide { display: grid; gap: 6px; }
+.ajuste-slide label, .rot-coment { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warn-ink); }
+.rot-coment { color: var(--muted); }
+.ajuste-slide textarea { border-color: var(--warn); }
+.pedidos { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.pedidos button { border: 1px solid var(--warn); border-radius: 99px; background: none; padding: 2px 9px; font-size: 12px; font-weight: 600; color: var(--warn-ink); }
+.pedidos button[aria-current="true"] { background: var(--warn); color: var(--on-warn); }
 .entre-movel { display: none; }
 
 /* ---------- envio ---------- */
@@ -419,7 +427,12 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
           <button type="button" data-st="aprovado" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Aprovar</button>
           <button type="button" data-st="ajuste" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg>Pedir ajuste</button>
         </div>
-        <label class="sr" for="comentario">Comentário</label>
+        <div class="ajuste-slide" id="ajuste-box" hidden>
+          <label for="ajuste-slide" id="ajuste-rot">Ajuste no slide 1</label>
+          <textarea id="ajuste-slide" rows="2" placeholder="O que precisa mudar neste slide? Passe os slides para pedir em outros."></textarea>
+          <div class="pedidos" id="pedidos"></div>
+        </div>
+        <label class="sr" for="comentario" id="coment-rot">Comentário</label>
         <textarea id="comentario" rows="2" placeholder="Comentário para este post (opcional)"></textarea>
         <div class="entre-movel"><button type="button" id="m-ant">← Post anterior</button><button type="button" id="m-prox">Próximo post →</button></div>
       </div>
@@ -472,13 +485,19 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   var R = {};
   try { R = JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch (e) { R = {}; }
   function resp(id) {
-    if (!R[id]) R[id] = { status: null, comentario: "", edicoes: {}, legenda: null };
+    if (!R[id]) R[id] = { status: null, comentario: "", edicoes: {}, legenda: null, ajustes: {} };
     if (!R[id].edicoes) R[id].edicoes = {};
+    if (!R[id].ajustes) R[id].ajustes = {};
     return R[id];
   }
   function guardarLocal() { try { localStorage.setItem(CHAVE, JSON.stringify(R)); } catch (e) {} }
   function temEdicao(id) { var r = R[id]; return !!r && (Object.keys(r.edicoes || {}).length > 0 || r.legenda != null); }
   function legendaDe(p) { var r = R[p.id]; return r && r.legenda != null ? r.legenda : p.legenda; }
+  // Pedidos de ajuste por slide: {"3": "trocar a foto"}; só valem com status "ajuste".
+  function slidesComPedido(r) {
+    return Object.keys((r && r.ajustes) || {}).filter(function (k) { return String(r.ajustes[k] || "").trim(); })
+      .map(Number).sort(function (a, b) { return a - b; });
+  }
 
   var db = null, podeGravar = false, quem = null, pendente = {}, fila = {}, timers = {};
   function avisoSalvo(t) { $("salvo").textContent = t; }
@@ -498,7 +517,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
           snap.docs.forEach(function (doc) {
             if (!doc.exists || pendente[doc.id]) return;
             var v = doc.data() || {};
-            R[doc.id] = { status: v.status || null, comentario: v.comentario || "", edicoes: Object.assign({}, v.edicoes || {}), legenda: v.legenda == null ? null : v.legenda };
+            R[doc.id] = { status: v.status || null, comentario: v.comentario || "", edicoes: Object.assign({}, v.edicoes || {}), legenda: v.legenda == null ? null : v.legenda, ajustes: Object.assign({}, v.ajustes || {}) };
           });
           guardarLocal(); pintarEstados();
           if (atual) sincronizarPainel();
@@ -515,7 +534,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   }
   function gravar(id) {
     var r = resp(id), p = porId[id];
-    var corpo = { post: id, numero: p.num, status: r.status, comentario: r.comentario || "", edicoes: r.edicoes, legenda: r.legenda, atualizadoEm: new Date().toISOString(), por: quem };
+    var corpo = { post: id, numero: p.num, status: r.status, comentario: r.comentario || "", edicoes: r.edicoes, legenda: r.legenda, ajustes: r.ajustes || {}, atualizadoEm: new Date().toISOString(), por: quem };
     fila[id] = (fila[id] || Promise.resolve()).then(function () { return db.collection("respostas").doc(id).set(corpo); })
       .then(function () { delete pendente[id]; avisoSalvo("Salvo às " + new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) + "."); })
       .catch(function (e) {
@@ -718,6 +737,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     }
     atualizarNav();
     if (editando) desenharCampos();
+    desenharAjuste();
   }
   function atualizarNav() {
     var um = nSlides < 2;
@@ -728,10 +748,11 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   function desenharPontos() {
     var box = $("pontos"); box.innerHTML = "";
     if (nSlides < 2 || !atual) return;
-    var r = resp(atual.id);
+    var r = resp(atual.id), pedidos = r.status === "ajuste" ? slidesComPedido(r) : [];
     for (var k = 0; k < nSlides; k++) {
-      var b = document.createElement("button");
-      b.type = "button"; b.setAttribute("aria-label", "Ir para o slide " + (k + 1));
+      var b = document.createElement("button"), temPedido = pedidos.indexOf(k + 1) >= 0;
+      b.type = "button"; b.setAttribute("aria-label", "Ir para o slide " + (k + 1) + (temPedido ? " (tem pedido de ajuste)" : ""));
+      if (temPedido) b.classList.add("pedido");
       (function (k) { b.addEventListener("click", function () { irPara(k); }); })(k);
       if (Object.keys(r.edicoes).some(function (id) { return porCampo[id] ? porCampo[id].slide === k + 1 : new RegExp("^slide" + (k + 1) + "-").test(id); })) b.classList.add("mudou");
       box.appendChild(b);
@@ -787,10 +808,13 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     var ed = $("ed-legenda");
     if (document.activeElement !== ed) ed.value = legendaDe(atual) || "";
     $("campo-legenda").classList.toggle("mudou", r.legenda != null);
-    var cm = $("comentario");
+    var cm = $("comentario"), porSlide = r.status === "ajuste" && nSlides > 1;
     if (document.activeElement !== cm) cm.value = r.comentario || "";
-    cm.placeholder = r.status === "ajuste" ? "O que precisa mudar neste post?" : "Comentário para este post (opcional)";
+    cm.placeholder = porSlide ? "Algo que vale para o post todo? (opcional)" : r.status === "ajuste" ? "O que precisa mudar neste post?" : "Comentário para este post (opcional)";
+    $("coment-rot").textContent = porSlide ? "Comentário geral do post" : "Comentário";
+    $("coment-rot").className = porSlide ? "rot-coment" : "sr";
     document.querySelector(".decisao").classList.toggle("com-coment", !!r.status || !!r.comentario);
+    desenharAjuste();
     document.querySelectorAll(".escolha button").forEach(function (b) { b.setAttribute("aria-pressed", r.status === b.dataset.st ? "true" : "false"); });
     if (frameDoc) {
       campos.forEach(function (c) {
@@ -890,10 +914,39 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
       var r = resp(atual.id);
       r.status = r.status === b.dataset.st ? null : b.dataset.st;
       sincronizarPainel(); agendar(atual.id);
-      if (r.status === "ajuste") $("comentario").focus();
+      if (r.status === "ajuste") (nSlides > 1 ? $("ajuste-slide") : $("comentario")).focus({ preventScroll: true });
     });
   });
   $("comentario").addEventListener("input", function () { resp(atual.id).comentario = this.value; agendar(atual.id); });
+
+  // Campo de ajuste do slide que está aberto: acompanha o slide ao passar.
+  function desenharAjuste() {
+    if (!atual) return;
+    var r = resp(atual.id), on = r.status === "ajuste" && nSlides > 1;
+    $("ajuste-box").hidden = !on;
+    if (!on) return;
+    var ta = $("ajuste-slide"), n = String(idx + 1);
+    $("ajuste-rot").textContent = "Ajuste no slide " + n + " de " + nSlides;
+    if (document.activeElement !== ta || ta.dataset.slide !== n) ta.value = r.ajustes[n] || "";
+    ta.dataset.slide = n;
+    var lista = slidesComPedido(r), box = $("pedidos");
+    box.innerHTML = lista.length ? "<span>Pedidos em:</span>" : "<span>Nenhum slide com pedido ainda.</span>";
+    lista.forEach(function (s) {
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = "Slide " + s;
+      b.setAttribute("aria-current", s === idx + 1 ? "true" : "false");
+      b.addEventListener("click", function () { irPara(s - 1); });
+      box.appendChild(b);
+    });
+  }
+  $("ajuste-slide").addEventListener("input", function () {
+    var r = resp(atual.id), n = this.dataset.slide || String(idx + 1);
+    if (this.value.trim()) r.ajustes[n] = this.value; else delete r.ajustes[n];
+    agendar(atual.id);
+    var foco = document.activeElement;
+    desenharAjuste(); desenharPontos();
+    if (foco && foco !== document.activeElement) foco.focus();
+  });
 
   /* ---------- envio ---------- */
   function linhasPost(p) {
@@ -901,7 +954,8 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     var st = r.status === "aprovado" ? (temEdicao(p.id) ? "aprovado com alterações" : "aprovado") : r.status === "ajuste" ? "pedir ajuste" : "sem resposta";
     var ic = r.status === "aprovado" ? "✅" : r.status === "ajuste" ? "✏️" : "⏳";
     out.push(ic + " POST " + num(p.num) + " · " + p.rotulo + ": " + st);
-    if (r.comentario) out.push("   Comentário: " + r.comentario.trim());
+    if (r.status === "ajuste") slidesComPedido(r).forEach(function (s) { out.push("   Ajuste no slide " + s + ": " + String(r.ajustes[s]).trim().replace(/\n/g, " / ")); });
+    if (r.comentario) out.push("   " + (r.status === "ajuste" && slidesComPedido(r).length ? "Comentário geral" : "Comentário") + ": " + r.comentario.trim());
     Object.keys(r.edicoes || {}).forEach(function (id) {
       var m = id.match(/^slide(\d+)/), c = (p.campos || []).filter(function (x) { return x.id === id; })[0];
       out.push("   Slide " + (m ? m[1] : "?") + (c ? " (" + c.papel + ")" : "") + ": " + semMarcas(r.edicoes[id]).replace(/\n/g, " / "));
