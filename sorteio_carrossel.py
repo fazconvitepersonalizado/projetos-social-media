@@ -90,7 +90,7 @@ ALINHAMENTOS = ["esquerda", "centralizado", "misto (capa e CTA centralizados, mi
 APOIO_DO_TEXTO = ["topo", "base", "centro", "varia por slide"]
 # Barra de progresso saiu em 2026-10-20 (Thiago). O indicador sorteado é só sugestão:
 # perguntar ao Thiago, post a post, antes de montar (CLAUDE.md, pergunta 5).
-INDICADORES = ["selo 'arraste' só na capa", "contador discreto (n/total)", "sem indicador"]
+INDICADORES = ["selo 'arraste' na capa + setinha até o penúltimo", "sem indicador"]
 
 
 def historico_path(cliente: Path) -> Path:

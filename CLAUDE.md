@@ -83,11 +83,11 @@ projeto atual, pergunte antes de só aplicar e seguir:
   3. Texto sobre full-bleed: centralizado, ou deslocado pra cima/baixo
      conforme o espaço vazio daquela foto específica?
   4. Opacidade da foto: vívida ou suave/esmaecida?
-  5. Indicador de swipe, **perguntado à parte e de forma explícita**, dizendo
-     o que cada post vai ter (nunca embutido em "seguir o sorteio"): selo
-     discreto "ARRASTE PARA O LADO →" só na capa, contador "n/total" no
-     canto de baixo, ou nenhum. A barra de progresso segmentada saiu das
-     opções (2026-10-20). O sorteio só sugere.
+  5. Indicador de swipe, **sempre perguntado à parte: com ou sem**, dizendo
+     o que cada post vai ter (nunca embutido em "seguir o sorteio"). Padrão
+     da casa quando for "com": selo "ARRASTE PARA O LADO →" na capa, uma
+     setinha discreta "→" do slide 2 ao penúltimo e o último sem seta.
+     Sem contador "n/total" nem barra de progresso, salvo pedido (2026-10-20).
   6. Foto própria ou buscar uma livre de direitos?
   Não repetir a(s) mesma(s) posição(ões) de foto do carrossel anterior da
   mesma marca.
@@ -399,3 +399,6 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Agora o indicador é sempre perguntado à parte, post a post; a barra de
   progresso saiu das opções (CLAUDE.md, design-system.md de todos os
   clientes e do modelo, `sorteio_carrossel.py`).
+- 2026-10-20 — Indicador padrão da casa (todos os clientes), aprovado no
+  outubro da A&J: selo "arraste" na capa + setinha do slide 2 ao penúltimo,
+  último sem seta. Sempre perguntar com ou sem antes de montar.
