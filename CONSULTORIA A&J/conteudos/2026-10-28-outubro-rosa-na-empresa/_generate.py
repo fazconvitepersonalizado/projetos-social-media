@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""POST 04 · out/2026 · Outubro Rosa na empresa: além do laço no crachá.
+"""POST 04 · out/2026 · Outubro Rosa: o lembrete que vale pra ela também.
+2026-10-20 (2): conteúdo refeito a pedido do Thiago (o anterior soava como manual de RH); layout mantido.
 Sorteio: comparacao · cena-do-dia-a-dia · seed 65 · esquerda.
 2026-10-20: data temática usa a cor da campanha (rosa domina; verde da A&J só no logo) + texto curto;
 capa com foto no slide inteiro e véu vinho; rosa-claro só nos slides 3 e 5; fotos full no miolo
 sorteadas: 0 (seed 219932269); selo "arraste" na capa + setinha até o 7.
-História: capa, por que importa (INCA), fachada x cuidado, obstáculo, pergunta, do aviso ao exame, tratamento, chamada.
+História: capa (ela lembra a equipe), mês do lembrete (INCA), segurança x saúde, rotina dela, pergunta, três passos, SUS, chamada.
 Nenhum slide só com fundo e texto: linha do ano (2), meio círculo (3), laço em traço (5), calendário em traço (6),
 estetoscópio em traço (7)."""
 import sys
@@ -44,73 +45,74 @@ s.append(slide(F,
     foto_full(CAPA, rgb=VR_ESC, ate=0.70, pos="30% 50%", nota="pexels.com/photo/8385421")
     + f'<div style="position:absolute;top:22px;left:24px;z-index:3;">'
       f'{logo_lockup(F, size=26, fs=12, align="left", gap_below=0, chip="rgba(94,24,56,0.55)")}</div>'
-    + bloco(h(1, f"Em outubro, o laço rosa aparece no crachá. Em novembro, {it('some.', F, color='#fff')}", F,
-              size=38, lh=1.08),
+    + bloco(h(1, "Ela lembra a equipe do protetor auricular todo dia.", F, size=36, lh=1.08)
+            + p(1, f"Em outubro, o lembrete é {it('pra ela.', F, color='#fff')}", F, role="sub", size=21, gap=16,
+                weight=500, color="#fff"),
             anchor="bottom", pad="64px 34px 66px")
     + indicador(IND, 0, N, F)))
-# 2 · por que importa: o dado do INCA + linha do ano · claro 1/2
+# 2 · por que importa: o mês do lembrete + linha do ano · claro 1/2
 s.append(slide(RC, bloco(
-    h(2, "Outubro abre a conversa", RC, size=40, lh=1.04)
-    + numero_destaque(2, "78.610", "casos novos de câncer de mama por ano no Brasil",
-                      "Fonte: INCA, estimativa 2026–2028", RC, size=54, gap_top=14)
+    h(2, "Outubro é o mês do lembrete.", RC, size=42, lh=1.04)
     + linha_do_ano(2, RC)
-    + p(2, "Os outros onze meses mostram se a empresa levou a sério.", RC, size=20, gap=22, weight=500, color=VINHO,
-        extra="font-family:'Lora',serif;line-height:1.3;"),
+    + p(2, "O câncer de mama é o mais comum entre as brasileiras. O exame é simples.", RC, size=21, gap=26,
+        weight=500, color=VINHO, extra="font-family:'Lora',serif;line-height:1.3;")
+    + p(2, "Fonte: INCA", RC, role="fonte", size=13, gap=12, weight=500),
     anchor="center", pad="40px 30px 56px") + indicador(IND, 1, N, RC)))
-# 3 · o que muda: fachada x cuidado, em vinho (os cabeçalhos são o título)
+# 3 · o que muda: segurança x saúde, em vinho (os cabeçalhos são o título)
 s.append(slide(V, bloco(
-    comparacao(3, V, "Fachada", "Cuidado", [
-        ("Foto de rosa", "Horário livre para o exame"),
-        ("Palestra em outubro", "Informação o ano todo"),
-    ], size=21, gap_top=0, cab_serif=True, cab_size=40),
+    comparacao(3, V, "Na segurança", "Na saúde", [
+        ("Inspeção do andaime", "Mamografia de rotina"),
+        ("Antes de dar problema", "Antes de sentir qualquer coisa"),
+    ], size=21, gap_top=0, cab_serif=True, cab_size=38),
     anchor="center") + indicador(IND, 2, N, V),
     layers=circulo(ROSA, 420, 525, 150, op=0.9)))
-# 4 · o obstáculo real: foto à esquerda, texto à direita em rosa-claro · claro 2/2
+# 4 · a rotina dela: foto à esquerda, texto à direita em rosa-claro · claro 2/2
 s.append(slide(RC,
     '<!-- foto: pexels.com/photo/8487402 -->'
     f'<img src="{FOTO3}" alt="" style="position:absolute;left:0;top:0;width:200px;height:525px;object-fit:cover;object-position:50% 25%;">'
     + f'<div style="position:absolute;left:200px;right:0;top:0;bottom:0;z-index:2;display:flex;flex-direction:column;'
       f'justify-content:center;padding:40px 22px 70px 22px;">'
-    + h(4, "Exame que depende de favor ao chefe fica para depois.", RC, size=27, lh=1.14)
-    + p(4, "Combinar a saída custa pouco.", RC, size=18, gap=18, weight=600, color=VINHO)
+    + h(4, "Cuidar da equipe já é rotina dela.", RC, size=29, lh=1.12)
+    + p(4, "Marcar o próprio exame cabe na mesma agenda.", RC, size=18, gap=18, weight=600, color=VINHO)
     + "</div>" + indicador(IND, 3, N, RC, foto_no_canto=True)))
-# 5 · a pergunta para a empresa, em rosa forte
+# 5 · a pergunta, em rosa forte
 s.append(slide(RF, bloco(
-    h(5, "Quem precisa sair para um exame sabe como pedir?", RF, size=50, lh=1.05),
+    h(5, "E a sua, já está marcada?", RF, size=56, lh=1.04),
     anchor="center") + indicador(IND, 4, N, RF),
     layers=traco("laco", "#fff", 196, 332, 250, op=0.4, sw=5, rot=-8)))
-# 6 · como fazer: do aviso ao exame, em vinho
+# 6 · como fazer: três passos, em vinho
 s.append(slide(V, bloco(
-    h(6, "Do aviso ao exame", V, size=46)
+    h(6, "Três passos, uma manhã", V, size=40)
     + passos_verticais(6, V, [
-        "Informação com fonte (INCA, Ministério da Saúde)",
-        "Horário combinado",
-        "Exame feito",
-    ], seta=True, gap_top=28, size=21)
-    + p(6, "Salva e manda pro RH.", V, role="cta", size=19, weight=600, color=ROSA_SUAVE, gap=12),
-    anchor="center") + indicador(IND, 5, N, V),
-    layers=traco("calendario", ROSA_SUAVE, 292, 300, 180, op=0.8, sw=5, rot=-8)))
-# 7 · e depois do exame: quando alguém está em tratamento, em vinho escuro
+        "Vá ao posto de saúde mais perto",
+        "Peça a mamografia pelo SUS",
+        "Anote a data da próxima",
+    ], seta=True, gap_top=24, size=20)
+    + p(6, "Manda pra uma mulher que você quer bem.", V, role="cta", size=18, weight=600, color=ROSA_SUAVE, gap=14),
+    anchor="center", pad="64px 118px 76px 32px") + indicador(IND, 5, N, V),
+    layers=traco("calendario", ROSA_SUAVE, 300, 150, 230, op=0.8, sw=5, rot=-8)))
+# 7 · mamografia pelo SUS (Ministério da Saúde, set/2025), em vinho escuro
 s.append(slide(VE, bloco(
-    h(7, "Quando alguém está em tratamento", VE, size=38, lh=1.06)
-    + comparacao(7, VE, "Sem cuidado", "Com cuidado", [
-        ("Comentário no corredor", "Conversa reservada com o RH"),
-        ("Volta sem plano", "Retorno avaliado pela medicina do trabalho (NR&#8209;7)"),
-    ], size=19, gap_top=24, cab_size=15),
+    h(7, "Mamografia pelo SUS", VE, size=42, lh=1.06)
+    + comparacao(7, VE, "Idade", "Exame", [
+        ("50 a 74 anos", "A cada 2 anos"),
+        ("40 a 49 anos", "Conversar com o profissional do posto"),
+    ], size=19, gap_top=24, cab_size=15)
+    + p(7, "Fonte: Ministério da Saúde, 2025", VE, role="fonte", size=13, gap=14, weight=500),
     anchor="bottom", pad="64px 36px 64px") + indicador(IND, 6, N, VE),
     layers=traco("estetoscopio", ROSA_SUAVE, 292, -26, 150, op=0.85, sw=5, rot=10)))
 # 8 · CTA no degradê da campanha
 s.append(slide(CR, bloco(
     logo_lockup(CR, size=38, fs=14)
-    + h(8, "Saúde da mulher também é saúde do trabalho.", CR, size=40, lh=1.06, align="center")
-    + p(8, "A A&amp;J ajuda a montar ações que passam de outubro.", CR, size=19, align="center", gap=16)
-    + botao(8, "Chama no direct", bg="#fff", fg=VINHO)
+    + h(8, "A A&amp;J cuida de quem trabalha, o ano todo.", CR, size=38, lh=1.06, align="center")
+    + p(8, "Em outubro, com um laço rosa no capacete.", CR, size=19, align="center", gap=16)
+    + botao(8, "Manda pra ela", bg="#fff", fg=VINHO)
     + p(8, HANDLE, CR, role="handle", size=15, align="center", gap=16, weight=500),
     align="center") + indicador(IND, 7, N, CR)))
 
-LABELS = {1: "Capa", 2: "Por que importa", 3: "Fachada x cuidado", 4: "Foto + exame", 5: "Pergunta", 6: "Do aviso ao exame", 7: "Tratamento", 8: "CTA"}
-html = pagina("Outubro Rosa na empresa", "Saúde e segurança do trabalho",
-              "Outubro Rosa na empresa: ações de saúde que continuam depois do laço.", s, LABELS,
+LABELS = {1: "Capa", 2: "Mês do lembrete", 3: "Segurança x saúde", 4: "Foto + rotina", 5: "Pergunta", 6: "Três passos", 7: "SUS", 8: "CTA"}
+html = pagina("Outubro Rosa: o lembrete que vale pra ela", "Saúde e segurança do trabalho",
+              "Outubro Rosa: o lembrete que vale pra ela também.", s, LABELS,
               "conteudos/2026-10-28-outubro-rosa-na-empresa")
 # moldura da prévia: navegação no rosa da campanha
 html = html.replace(f"background:{P}; }}", f"background:{ROSA}; }}").replace(
