@@ -22,9 +22,13 @@ Referência compartilhada pelas skills `conteudo-mensal`, `alterar-conteudo`,
 - Limites do conector do claude.ai (testado em 2026-10-19): cria quadro,
   lista e cartão, edita, move, comenta e liga/desliga etiqueta que **já
   existe**, mas **não cria nem renomeia etiquetas** e **não envia anexos**.
-  Quadro novo nasce com 6 etiquetas de cor sem nome; nomear à mão no Trello
-  (mês, formato) e registrar os IDs no `trello.json`. Artes: anexar à mão
-  ou deixar o caminho local na descrição até haver outra via de upload.
+  O que falta é feito pela API oficial com a chave do Thiago
+  (`TRELLO_KEY`/`TRELLO_TOKEN` no `.env`, fora do git), pelo script
+  `conteudo-mensal/scripts/trello_api.py`:
+  `etiquetas "<cliente>" [AAAA-MM]` cria/nomeia as etiquetas de formato e
+  de mês e grava os IDs no `trello.json` (rodar ao abrir cada mês novo);
+  `anexar <cartão> <arquivos>` sobe os PNGs. Sem `.env`, dizer isso e não
+  inventar etiqueta.
 - Ler é ação sem efeito. **Criar, editar, mover ou anexar** é ação com efeito:
   mostrar o que vai ser feito e esperar o OK antes de escrever em massa.
 
@@ -77,11 +81,10 @@ Não escrever o cartão à mão quando houver página do mês.
   `17/09 · POST 03 · Post único · Quanto custa não prevenir?`).
   Slots de vídeo sem tema: `DD/MM · POST NN · Terceiros`.
 - **Data de entrega (due):** a data do post, 09:00 de Brasília (12:00Z).
-- **Etiquetas:** mês + formato. O conector não cria nem nomeia etiquetas:
-  usar as cores que o quadro já tem, convenção por quadro no `trello.json`
-  (ex.: roxo = Ago/2026, azul = Set/2026, verde = carrossel, amarelo = post
-  único); o Thiago dá o nome a cada cor uma vez. Mês novo: pedir para ele
-  criar a etiqueta e registrar o ID.
+- **Etiquetas:** mês + formato, criadas e nomeadas pelo `trello_api.py
+  etiquetas` (formato com cor fixa: carrossel verde, post único amarelo;
+  mês com cor em rodízio). IDs no `trello.json`; o conector só as aplica
+  nos cartões. Nunca pedir ao Thiago para cadastrar etiqueta à mão.
 - **Descrição em seções (Markdown):** linha de resumo (data, dia da semana,
   formato, nº de slides) + link da página de aprovação do mês + caminho dos
   arquivos; `## Legenda` (pronta para copiar); `## Texto da arte` com

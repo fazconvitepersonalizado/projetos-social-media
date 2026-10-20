@@ -376,3 +376,7 @@ projeto atual, pergunte antes de só aplicar e seguir:
   checklist, etiquetas de cor) e sincronizados com a página pelo
   `sincronizar_trello.py`, que compara os dois lados. A&J e Sandra
   migradas; A&J ganhou página de agosto.
+- 2026-10-19 — Chave da API do Trello no `.env` (fora do git) e script
+  `conteudo-mensal/scripts/trello_api.py`: cria e nomeia etiquetas de mês e
+  formato sozinho (o conector não faz) e anexa arquivos. Pedido do Thiago:
+  nunca cadastrar etiqueta à mão.

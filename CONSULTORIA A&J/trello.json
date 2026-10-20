@@ -14,12 +14,23 @@
     "Publicado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08f2895eb939171fc66"
   },
   "etiquetas": {
-    "Ago/2026 (roxo)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bb9e7d7b3956f2d03",
-    "Set/2026 (azul)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bb9e7d7b3956f2d04",
-    "carrossel (verde)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bb9e7d7b3956f2cff",
-    "post único (amarelo)": "ari:cloud:trello::label/workspace/687a90551a7947a8144f6d3d/6ad6c06bb9e7d7b3956f2d00"
+    "Ago/2026": {
+      "id": "6ad6c06bb9e7d7b3956f2d03",
+      "cor": "purple"
+    },
+    "Set/2026": {
+      "id": "6ad6c06bb9e7d7b3956f2d04",
+      "cor": "blue"
+    },
+    "carrossel": {
+      "id": "6ad6c06bb9e7d7b3956f2cff",
+      "cor": "green"
+    },
+    "post único": {
+      "id": "6ad6c06bb9e7d7b3956f2d00",
+      "cor": "yellow"
+    }
   },
-  "pendente": "Etiquetas criadas sem nome (o conector não nomeia). Dar nome no Trello a cada cor conforme a chave entre parênteses; mês novo pede uma etiqueta nova criada à mão.",
   "atualizado_em": "2026-10-19",
   "checklist": "Etapas: Texto revisado, Arte pronta, Enviado para aprovação, Aprovado pela cliente, Agendado, Publicado"
 }
