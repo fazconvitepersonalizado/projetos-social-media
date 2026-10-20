@@ -256,6 +256,12 @@ projeto atual, pergunte antes de só aplicar e seguir:
   <AAAA-MM>.md`, versionado); o Trello espelha. Divergência entre os dois:
   perguntar qual vale.
 - Relatórios de métricas em `<cliente>/relatorios/<AAAA-MM>/`.
+- **Aprovação da cliente** (skill `pagina-aprovacao`): página com o feed do
+  mês na marca da própria cliente, slides reais dos `carousel.html` com
+  edição de texto ao vivo e decisão por post. Entregue como link do
+  claude.ai e como arquivo HTML; respostas voltam pelo banco da página
+  (quem pode gravar) ou pelo WhatsApp do Thiago (`config.json`). Edição da
+  cliente só entra no carrossel depois de mostrar antes → depois ao Thiago.
 - **Ao incorporar skill ou conhecimento novo, o que já existe no projeto
   tem prioridade** (8 cards, sorteio, anti-IA, verificação visual, regras
   deste arquivo). O novo só substitui o existente quando melhora a criação
@@ -354,3 +360,8 @@ projeto atual, pergunte antes de só aplicar e seguir:
   com sorteio e anti-IA; relatório de métricas com paleta do brand-kit do
   cliente e textos automáticos que dependem dos números; tudo em PT-BR.
   Registrada a regra "o que já existe tem prioridade sobre o novo".
+- 2026-10-19 — Criada a skill `pagina-aprovacao` a partir de um prompt de
+  página de entrega de outra agência: identidade passou a ser a da cliente
+  (sem assinatura de agência), ganhou aprovação por post, edição dos textos
+  dos slides ao vivo (como o painel do instagram-carousel) e duas vias de
+  resposta (banco da página + WhatsApp). Testada com setembro da A&J.
