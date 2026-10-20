@@ -49,6 +49,15 @@ button { cursor: pointer; }
 .chip-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .chip-logo span { font-family: var(--f-display); font-size: 18px; color: var(--accent); }
 .rot { margin: 0 0 6px; font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.sel-mes { position: relative; }
+.sel-mes select {
+  width: 100%; min-height: 40px; padding: 8px 30px 8px 10px; border-radius: 10px; border: 1px solid var(--accent-line);
+  background: var(--accent-soft); color: var(--ink); font: 500 13px var(--f-body); cursor: pointer;
+  -webkit-appearance: none; appearance: none; text-overflow: ellipsis;
+}
+.sel-mes select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sel-mes svg { position: absolute; right: 10px; top: 50%; width: 14px; height: 14px; margin-top: -7px; pointer-events: none; color: var(--accent); }
+.sel-mes option { font-weight: 400; color: #1d1d1d; background: #fff; }
 .meses { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .meses a, .meses span.m {
   display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 10px; border-radius: 9px;
@@ -335,8 +344,11 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
       <div><p class="marca-sub">Aprovação de conteúdo</p><p class="marca-nome" data-marca></p></div>
     </div>
     <nav aria-label="Meses">
-      <p class="rot">Meses</p>
-      <ul class="meses" id="meses"></ul>
+      <label class="rot" for="sel-mes">Mês</label>
+      <div class="sel-mes">
+        <select id="sel-mes"></select>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
     </nav>
     <div class="prog">
       <p class="rot" style="margin:0" data-mes-rot></p>
@@ -598,14 +610,28 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   /* ---------- barra lateral: meses e posts ---------- */
   document.querySelectorAll("[data-mes-rot]").forEach(function (el) { el.textContent = D.mes; });
   var local = location.protocol === "file:";
+  // Seletor de meses: o atual vem marcado; mês sem página publicada fica
+  // desativado. Trocar abre a página daquele mês (no link, em outra aba).
+  var selMes = $("sel-mes"), alvos = {};
   (D.meses || []).forEach(function (m) {
-    var li = document.createElement("li"), alvo = local ? m.local : m.link;
+    var alvo = local ? m.local : m.link;
     var temPagina = m.atual || m.local || m.link;
-    var info = "<span>" + esc(m.rotulo) + "</span><small>" + m.posts + (temPagina || !m.confirmado ? " posts" : (m.posts === 1 ? " publicado" : " publicados")) + "</small>";
-    if (m.atual) li.innerHTML = '<span class="m atual" aria-current="page">' + info + "</span>";
-    else if (alvo) li.innerHTML = '<a href="' + esc(alvo) + '"' + (local ? "" : ' target="_blank" rel="noopener"') + ">" + info + "</a>";
-    else li.innerHTML = '<span class="m semlink" title="Página deste mês ainda não publicada">' + info + "</span>";
-    $("meses").appendChild(li);
+    var qtd = m.posts + (temPagina || !m.confirmado ? (m.posts === 1 ? " post" : " posts") : (m.posts === 1 ? " publicado" : " publicados"));
+    var o = document.createElement("option");
+    o.value = m.id; o.textContent = m.rotulo + " · " + qtd + (!m.atual && !alvo ? " · sem página" : "");
+    if (m.atual) o.selected = true;
+    if (!m.atual && !alvo) o.disabled = true;
+    alvos[m.id] = alvo;
+    selMes.appendChild(o);
+  });
+  if (selMes.options.length < 2) selMes.disabled = true;
+  var mesAtual = selMes.value;
+  selMes.addEventListener("change", function () {
+    var alvo = alvos[selMes.value];
+    if (!alvo) { selMes.value = mesAtual; return; }
+    if (local) { location.href = alvo; return; }
+    window.open(alvo, "_blank", "noopener");
+    selMes.value = mesAtual;
   });
   POSTS.forEach(function (p) {
     var li = document.createElement("li");

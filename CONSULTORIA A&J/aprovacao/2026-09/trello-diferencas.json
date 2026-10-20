@@ -1,0 +1,53 @@
+[
+ {
+  "post": 1,
+  "tipo": "legenda",
+  "trello": "NR-1 e riscos psicossociais: sua empresa já atualizou o PGR?\n\nDesde 26 de maio de 2026, o Programa de Gerenciamento de Riscos precisa mapear também sobrecarga, metas abusivas e assédio, ao lado dos riscos físicos, químicos, biológicos e ergonômicos. Empresa com PGR desatualizado fica exposta a autuação, passivo trabalhista e aumento do FAP.\n\nNo carrossel estão as 5 frentes que a norma exige e os 4 passos para colocar a empresa em dia: diagnóstico, atualização do PGR, implementação e monitoramento.\n\nSalve e consulte na revisão do PGR e mande para quem cuida da segurança do trabalho ou do RH na sua empresa.\n\n#NR1 #PGR #RiscosPsicossociais #SegurancaDoTrabalho #SST",
+  "local": "NR-1 e riscos psicossociais: sua empresa já atualizou o PGR?\n\nDesde 26 de maio de 2026, o Programa de Gerenciamento de Riscos precisa mapear também sobrecarga, metas abusivas e assédio, ao lado dos riscos físicos, químicos, biológicos e ergonômicos. Empresa com PGR desatualizado fica exposta a autuação, passivo trabalhista e aumento do FAP.\n\nNo carrossel estão as 5 frentes que a norma exige e os 4 passos para colocar a empresa em dia: diagnóstico, atualização do PGR, implementação e monitoramento.\n\nSalve para consultar na revisão do PGR e mande para quem cuida da segurança do trabalho ou do RH na sua empresa.\n\n#NR1 #PGR #RiscosPsicossociais #SegurancaDoTrabalho #SST"
+ },
+ {
+  "post": 1,
+  "tipo": "texto do slide 2",
+  "trello": [
+   "O QUE MUDOU NA NORMA",
+   "Segurança vai além do capacete",
+   "Por décadas, a NR-1 tratava risco como algo físico, químico ou biológico. Sobrecarga, metas abusivas e assédio ficavam de fora — até agora.",
+   "546 mil",
+   "afastamentos por transtorno mental em 2025 (+15,6%)",
+   "Fonte: INSS / ANAMT"
+  ],
+  "local": [
+   "O QUE MUDOU NA NORMA",
+   "Segurança não é só capacete",
+   "Por décadas, a NR-1 tratava risco como algo físico, químico ou biológico. Sobrecarga, metas abusivas e assédio ficavam de fora — até agora.",
+   "546 mil",
+   "afastamentos por transtorno mental em 2025 (+15,6%)",
+   "Fonte: INSS / ANAMT"
+  ],
+  "campos": [
+   "slide2-tag",
+   "slide2-headline",
+   "slide2-body",
+   "slide2-stat-number",
+   "slide2-stat-caption",
+   "slide2-stat-source"
+  ]
+ },
+ {
+  "post": 3,
+  "tipo": "data",
+  "trello": "2026-09-18",
+  "local": "2026-09-17"
+ },
+ {
+  "post": 5,
+  "tipo": "só na página",
+  "detalhe": "17/09 · POST 05 · Carrossel · Treinamento não é só certificado"
+ },
+ {
+  "post": 7,
+  "tipo": "só no Trello",
+  "detalhe": "20/09 · POST 07 · Carrossel · Post novo",
+  "lista": "Planejado"
+ }
+]

@@ -36,10 +36,11 @@ O índice é refeito a cada geração. Depois de publicar um mês, gravar o link
 em `links.json` e refazer o índice (`gerar_indice` do script).
 
 ## O que a página faz
-- **Barra lateral (marca da cliente):** seção **Meses** com todos os meses
-  da cliente (atual em destaque; meses com página viram link: caminho local
-  no arquivo, link do claude.ai na versão publicada; meses só com posts em
-  `conteudos/` aparecem como "N publicados"), progresso do mês, lista dos
+- **Barra lateral (marca da cliente):** seletor **Mês** em dropdown com
+  todos os meses da cliente ("Setembro de 2026 · 6 posts"; o atual vem
+  marcado; escolher outro abre a página daquele mês: caminho local no
+  arquivo, link do claude.ai em outra aba na versão publicada; mês sem
+  página aparece desativado, "· sem página"), progresso do mês, lista dos
   posts (miniatura, número, título, data, situação) e "Enviar respostas".
   No celular vira menu ("Posts e meses").
 - **Divisão por mês na grade:** divisória "Mês · N posts para aprovar"

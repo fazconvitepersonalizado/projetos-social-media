@@ -1,0 +1,798 @@
+{
+ "cliente": "CONSULTORIA A&J",
+ "mes": "2026-09",
+ "posts": [
+  {
+   "id": "2026-09-01-nr1-gerenciamento-riscos",
+   "num": 1,
+   "arquivo": "conteudos\\2026-09-01-nr1-gerenciamento-riscos\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "NR-1 · ATUALIZAÇÃO 2026"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Sua empresa já está]] [[fora do prazo?]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Desde 26 de maio, o PGR precisa cobrir também os riscos psicossociais — não só os físicos."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "O QUE MUDOU NA NORMA"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Segurança não é só capacete"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Por décadas, a NR-1 tratava risco como algo físico, químico ou biológico. Sobrecarga, metas abusivas e assédio ficavam de fora — até agora."
+    },
+    {
+     "id": "slide2-stat-number",
+     "slide": 2,
+     "papel": "stat-number",
+     "texto": "546 mil"
+    },
+    {
+     "id": "slide2-stat-caption",
+     "slide": 2,
+     "papel": "stat-caption",
+     "texto": "afastamentos por transtorno mental em 2025 (+15,6%)"
+    },
+    {
+     "id": "slide2-stat-source",
+     "slide": 2,
+     "papel": "stat-source",
+     "texto": "Fonte: INSS / ANAMT"
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "A RESPOSTA: GRO + PGR"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Gerenciar riscos, não improvisar segurança"
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "O Gerenciamento de Riscos Ocupacionais (GRO) e o PGR deixam de olhar só para o corpo — e passam a olhar para a rotina de trabalho como um todo."
+    },
+    {
+     "id": "slide3-quote-label",
+     "slide": 3,
+     "papel": "quote-label",
+     "texto": "O que muda no PGR"
+    },
+    {
+     "id": "slide3-quote",
+     "slide": 3,
+     "papel": "quote",
+     "texto": "\"Perigo físico, químico, biológico, ergonômico e psicossocial — tudo mapeado, documentado e revisado.\""
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "O QUE A NORMA EXIGE"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "5 frentes que sua empresa precisa cobrir"
+    },
+    {
+     "id": "slide4-item-1-title",
+     "slide": 4,
+     "papel": "item-1-title",
+     "texto": "Identificação de perigos"
+    },
+    {
+     "id": "slide4-item-1-desc",
+     "slide": 4,
+     "papel": "item-1-desc",
+     "texto": "Físico, químico, biológico e psicossocial."
+    },
+    {
+     "id": "slide4-item-2-title",
+     "slide": 4,
+     "papel": "item-2-title",
+     "texto": "Inventário de riscos"
+    },
+    {
+     "id": "slide4-item-2-desc",
+     "slide": 4,
+     "papel": "item-2-desc",
+     "texto": "Documento vivo, sempre atualizado."
+    },
+    {
+     "id": "slide4-item-3-title",
+     "slide": 4,
+     "papel": "item-3-title",
+     "texto": "Plano de ação"
+    },
+    {
+     "id": "slide4-item-3-desc",
+     "slide": 4,
+     "papel": "item-3-desc",
+     "texto": "Medidas de controle com prazo definido."
+    },
+    {
+     "id": "slide4-item-4-title",
+     "slide": 4,
+     "papel": "item-4-title",
+     "texto": "Monitoramento contínuo"
+    },
+    {
+     "id": "slide4-item-4-desc",
+     "slide": 4,
+     "papel": "item-4-desc",
+     "texto": "Revisão periódica, não só na fiscalização."
+    },
+    {
+     "id": "slide4-item-5-title",
+     "slide": 4,
+     "papel": "item-5-title",
+     "texto": "Evidências para fiscalização"
+    },
+    {
+     "id": "slide4-item-5-desc",
+     "slide": 4,
+     "papel": "item-5-desc",
+     "texto": "Registros prontos para auditoria."
+    },
+    {
+     "id": "slide5-tag",
+     "slide": 5,
+     "papel": "tag",
+     "texto": "O CUSTO DE IGNORAR"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Não é mais uma opção segura"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Sem isso: autuação, passivo trabalhista e aumento do custo do seguro acidente (FAP)."
+    },
+    {
+     "id": "slide5-quote",
+     "slide": 5,
+     "papel": "quote",
+     "texto": "\"A partir de 26/05/2026, a NR-1 passa a exigir a identificação de perigos e riscos, incluindo os psicossociais, no PGR de toda empresa.\""
+    },
+    {
+     "id": "slide5-quote-attribution",
+     "slide": 5,
+     "papel": "quote-attribution",
+     "texto": "NR-1 · Ministério do Trabalho e Emprego"
+    },
+    {
+     "id": "slide6-tag",
+     "slide": 6,
+     "papel": "tag",
+     "texto": "COMO SE ADEQUAR"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "4 passos para colocar sua empresa em dia"
+    },
+    {
+     "id": "slide6-t1",
+     "slide": 6,
+     "papel": "texto 1",
+     "texto": "01"
+    },
+    {
+     "id": "slide6-step-1-title",
+     "slide": 6,
+     "papel": "step-1-title",
+     "texto": "Diagnóstico"
+    },
+    {
+     "id": "slide6-step-1-desc",
+     "slide": 6,
+     "papel": "step-1-desc",
+     "texto": "Mapeie os riscos, incluindo os psicossociais."
+    },
+    {
+     "id": "slide6-t2",
+     "slide": 6,
+     "papel": "texto 2",
+     "texto": "02"
+    },
+    {
+     "id": "slide6-step-2-title",
+     "slide": 6,
+     "papel": "step-2-title",
+     "texto": "Atualize o PGR"
+    },
+    {
+     "id": "slide6-step-2-desc",
+     "slide": 6,
+     "papel": "step-2-desc",
+     "texto": "Documente perigos, riscos e medidas de controle."
+    },
+    {
+     "id": "slide6-t3",
+     "slide": 6,
+     "papel": "texto 3",
+     "texto": "03"
+    },
+    {
+     "id": "slide6-step-3-title",
+     "slide": 6,
+     "papel": "step-3-title",
+     "texto": "Implemente"
+    },
+    {
+     "id": "slide6-step-3-desc",
+     "slide": 6,
+     "papel": "step-3-desc",
+     "texto": "Treine lideranças e aplique as medidas."
+    },
+    {
+     "id": "slide6-t4",
+     "slide": 6,
+     "papel": "texto 4",
+     "texto": "04"
+    },
+    {
+     "id": "slide6-step-4-title",
+     "slide": 6,
+     "papel": "step-4-title",
+     "texto": "Monitore"
+    },
+    {
+     "id": "slide6-step-4-desc",
+     "slide": 6,
+     "papel": "step-4-desc",
+     "texto": "Revise e mantenha registros para auditoria."
+    },
+    {
+     "id": "slide7-t1",
+     "slide": 7,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Não espere a fiscalização bater na porta"
+    },
+    {
+     "id": "slide7-subhead",
+     "slide": 7,
+     "papel": "subhead",
+     "texto": "A A&J Soluções em SSTMA cuida do seu PGR do diagnóstico à conformidade."
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Fale com a gente"
+    },
+    {
+     "id": "slide7-t2",
+     "slide": 7,
+     "papel": "texto 2",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "NR-1 e riscos psicossociais: sua empresa já atualizou o PGR?\n\nDesde 26 de maio de 2026, o Programa de Gerenciamento de Riscos precisa mapear também sobrecarga, metas abusivas e assédio, ao lado dos riscos físicos, químicos, biológicos e ergonômicos. Empresa com PGR desatualizado fica exposta a autuação, passivo trabalhista e aumento do FAP.\n\nNo carrossel estão as 5 frentes que a norma exige e os 4 passos para colocar a empresa em dia: diagnóstico, atualização do PGR, implementação e monitoramento.\n\nSalve para consultar na revisão do PGR e mande para quem cuida da segurança do trabalho ou do RH na sua empresa.\n\n#NR1 #PGR #RiscosPsicossociais #SegurancaDoTrabalho #SST"
+  },
+  {
+   "id": "2026-09-17-diagnostico-em-acao",
+   "num": 2,
+   "arquivo": "conteudos\\2026-09-17-diagnostico-em-acao\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "DO DIAGNÓSTICO À AÇÃO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Documento pronto não significa]] [[problema resolvido.]]"
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "NOSSO JEITO DE TRABALHAR"
+    },
+    {
+     "id": "slide2-subhead",
+     "slide": 2,
+     "papel": "subhead",
+     "texto": "Na A&J, não acreditamos em soluções que ficam apenas no papel."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "[[Nosso trabalho é transformar diagnóstico em]][[ação.]]"
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "COMO TRABALHAMOS"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Entendemos a realidade de cada empresa e propomos melhorias que sejam:"
+    },
+    {
+     "id": "slide3-item-1",
+     "slide": 3,
+     "papel": "item-1",
+     "texto": "Viáveis"
+    },
+    {
+     "id": "slide3-item-2",
+     "slide": 3,
+     "papel": "item-2",
+     "texto": "Aplicáveis"
+    },
+    {
+     "id": "slide3-item-3",
+     "slide": 3,
+     "papel": "item-3",
+     "texto": "Possíveis de acompanhar"
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "E DEPOIS DA ENTREGA?"
+    },
+    {
+     "id": "slide4-highlight",
+     "slide": 4,
+     "papel": "highlight",
+     "texto": "Continuamos junto."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Orientamos, esclarecemos dúvidas e acompanhamos a implementação das ações."
+    },
+    {
+     "id": "slide5-t1",
+     "slide": 5,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide5-subhead",
+     "slide": 5,
+     "papel": "subhead",
+     "texto": "Nosso objetivo não é apenas entregar um documento."
+    },
+    {
+     "id": "slide5-highlight",
+     "slide": 5,
+     "papel": "highlight",
+     "texto": "É ajudar sua empresa a colocar as melhorias em prática."
+    },
+    {
+     "id": "slide5-tagline",
+     "slide": 5,
+     "papel": "tagline",
+     "texto": "A&J, soluções que saem do papel."
+    },
+    {
+     "id": "slide5-cta",
+     "slide": 5,
+     "papel": "cta",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Consultoria em segurança do trabalho que continua depois da entrega do documento.\n\nPGR, laudo ou plano de ação ajudam pouco quando ficam guardados na pasta. Na A&J, a gente entende a realidade de cada empresa e propõe melhorias viáveis, aplicáveis e possíveis de acompanhar. Depois da entrega, seguimos junto: orientamos a equipe, tiramos dúvidas e acompanhamos a implementação das ações.\n\nSua empresa tem algum documento de SST parado esperando virar prática? Conta nos comentários ou chama no direct.\n\n#ConsultoriaSST #SegurancaDoTrabalho #SaudeOcupacional #GestaoDeRiscos #SST"
+  },
+  {
+   "id": "2026-09-17-quanto-custa-nao-prevenir",
+   "num": 3,
+   "arquivo": "conteudos\\2026-09-17-quanto-custa-nao-prevenir\\carousel.html",
+   "campos": [
+    {
+     "id": "post-tag",
+     "slide": 1,
+     "papel": "post-tag",
+     "texto": "SST & GESTÃO"
+    },
+    {
+     "id": "post-headline",
+     "slide": 1,
+     "papel": "post-headline",
+     "texto": "[[Quanto custa]][[não prevenir?]]"
+    },
+    {
+     "id": "post-body",
+     "slide": 1,
+     "papel": "post-body",
+     "texto": "Um acidente, um afastamento, uma perda de produtividade ou um problema que poderia ter sido evitado."
+    },
+    {
+     "id": "post-highlight",
+     "slide": 1,
+     "papel": "post-highlight",
+     "texto": "Investir em SST é também cuidar da continuidade do negócio."
+    },
+    {
+     "id": "post-cta",
+     "slide": 1,
+     "papel": "post-cta",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Quanto custa um acidente de trabalho para a sua empresa?\n\nUm afastamento, uma queda de produtividade, um problema que poderia ter sido evitado. Esse custo quase nunca aparece no orçamento antes de acontecer. Investir em saúde e segurança do trabalho é também cuidar da continuidade do negócio.\n\nSalve este post para a próxima conversa sobre orçamento de SST na sua empresa.\n\n#SegurancaDoTrabalho #PrevencaoDeAcidentes #SaudeOcupacional #SST #GestaoEmpresarial"
+  },
+  {
+   "id": "2026-09-17-sst-negocio-saudavel",
+   "num": 4,
+   "arquivo": "conteudos\\2026-09-17-sst-negocio-saudavel\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "SST & GESTÃO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[SST também faz parte de um]][[negócio saudável.]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Cuidar da segurança e da saúde dos trabalhadores não é apenas cumprir uma obrigação."
+    },
+    {
+     "id": "slide1-highlight",
+     "slide": 1,
+     "papel": "highlight",
+     "texto": "É prevenir, melhorar e fortalecer a empresa."
+    },
+    {
+     "id": "slide2-t1",
+     "slide": 2,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "[[Prevenção também é]][[investimento.]]"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Mais segurança para quem trabalha.\nMais tranquilidade para quem empreende."
+    },
+    {
+     "id": "slide2-highlight",
+     "slide": 2,
+     "papel": "highlight",
+     "texto": "SST é cuidado que gera resultados."
+    },
+    {
+     "id": "slide2-cta",
+     "slide": 2,
+     "papel": "cta",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Saúde e segurança do trabalho também fazem parte de um negócio saudável.\n\nCumprir as normas regulamentadoras é o ponto de partida. Quando a empresa trata SST como gestão, quem trabalha tem mais segurança no dia a dia e quem empreende ganha tranquilidade, com menos afastamento e menos imprevisto na operação.\n\nNa sua empresa, prevenção entra no orçamento como custo ou como investimento? Conta pra gente nos comentários.\n\n#SST #SegurancaDoTrabalho #SaudeOcupacional #NormasRegulamentadoras #GestaoDeRiscos"
+  },
+  {
+   "id": "2026-09-17-treinamento-conhecimento-na-hora-certa",
+   "num": 5,
+   "arquivo": "conteudos\\2026-09-17-treinamento-conhecimento-na-hora-certa\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "TREINAMENTO COM PROPÓSITO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Treinamento não é só]] [[certificado.]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "É conhecimento que pode fazer diferença na hora certa."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "POR QUE ISSO IMPORTA"
+    },
+    {
+     "id": "slide2-quote",
+     "slide": 2,
+     "papel": "quote",
+     "texto": "\"Um trabalhador bem orientado entende melhor os riscos da sua atividade e sabe como agir diante deles.\""
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "TREINAMENTO PRECISA SER"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Por isso, treinamento precisa ser:"
+    },
+    {
+     "id": "slide3-item-1",
+     "slide": 3,
+     "papel": "item-1",
+     "texto": "Claro"
+    },
+    {
+     "id": "slide3-item-2",
+     "slide": 3,
+     "papel": "item-2",
+     "texto": "Prático"
+    },
+    {
+     "id": "slide3-item-3",
+     "slide": 3,
+     "papel": "item-3",
+     "texto": "Adequado à atividade"
+    },
+    {
+     "id": "slide3-item-4",
+     "slide": 3,
+     "papel": "item-4",
+     "texto": "Aplicável à rotina"
+    },
+    {
+     "id": "slide4-t1",
+     "slide": 4,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Porque segurança começa com conhecimento."
+    },
+    {
+     "id": "slide4-subhead",
+     "slide": 4,
+     "papel": "subhead",
+     "texto": "E conhecimento precisa sair da sala de treinamento e chegar à rotina."
+    },
+    {
+     "id": "slide4-t2",
+     "slide": 4,
+     "papel": "texto 2",
+     "texto": "@aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Treinamento de segurança do trabalho que sai da sala e chega à rotina.\n\nCertificado na pasta sozinho não protege ninguém. Um trabalhador bem orientado entende os riscos da própria atividade e sabe como agir quando algo sai do previsto. Por isso, treinamento de NR precisa ser claro, prático, adequado à atividade e aplicável no dia a dia.\n\nQuando foi o último treinamento da sua equipe? Ele ainda conversa com o que vocês fazem hoje?\n\n#TreinamentoNR #SegurancaDoTrabalho #CapacitacaoProfissional #PrevencaoDeAcidentes #SST"
+  },
+  {
+   "id": "2026-09-25-5-motivos-acidentes-trabalho",
+   "num": 6,
+   "arquivo": "conteudos\\2026-09-25-5-motivos-acidentes-trabalho\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-t2",
+     "slide": 1,
+     "papel": "texto 2",
+     "texto": "SEGURANÇA DO TRABALHO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[5 motivos que explicam]][[quase todo]][[acidente de trabalho]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Identificar cada um é o primeiro passo pra evitar o próximo."
+    },
+    {
+     "id": "slide2-t1",
+     "slide": 2,
+     "papel": "texto 1",
+     "texto": "MOTIVO 01"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Não usar o EPI certo"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Relaxar “só dessa vez” com capacete, luva ou óculos é o que mais aparece nos acidentes registrados."
+    },
+    {
+     "id": "slide3-t1",
+     "slide": 3,
+     "papel": "texto 1",
+     "texto": "MOTIVO 02"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Time sem treinamento adequado"
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Ninguém erra um procedimento que aprendeu de verdade; falta de capacitação é uma causa evitável."
+    },
+    {
+     "id": "slide4-t1",
+     "slide": 4,
+     "papel": "texto 1",
+     "texto": "MOTIVO 03"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Pressa e excesso de confiança"
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "“Sempre fiz assim e nunca aconteceu nada” é a frase que antecede boa parte dos acidentes."
+    },
+    {
+     "id": "slide5-t1",
+     "slide": 5,
+     "papel": "texto 1",
+     "texto": "MOTIVO 04"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Fadiga e jornadas exaustivas"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Corpo cansado erra cálculo, erra distância, erra reflexo; descanso também é segurança."
+    },
+    {
+     "id": "slide6-t1",
+     "slide": 6,
+     "papel": "texto 1",
+     "texto": "MOTIVO 05"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Ambiente sem manutenção"
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Piso escorregadio, fiação exposta, máquina sem revisão; o risco pode não ser do trabalhador."
+    },
+    {
+     "id": "slide7-t1",
+     "slide": 7,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide7-t2",
+     "slide": 7,
+     "papel": "texto 2",
+     "texto": "SIGA PARA MAIS CONTEÚDO"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Quantos desses motivos existem no seu canteiro hoje?"
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "Guarde esses 5 motivos e leve pro seu time; prevenir começa por reconhecer o risco antes dele virar acidente."
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Siga @aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "Os 5 motivos por trás da maioria dos acidentes de trabalho.\n\nDeixar o EPI de lado \"só dessa vez\", equipe sem treinamento adequado, pressa e excesso de confiança, fadiga de jornadas longas e ambiente sem manutenção. Reconhecer cada um no seu canteiro ou na sua fábrica é o primeiro passo para evitar o próximo acidente.\n\nQuantos desses você já viu acontecer? Salve o post e leve para o próximo DDS com a sua equipe.\n\n#AcidenteDeTrabalho #SegurancaDoTrabalho #EPI #PrevencaoDeAcidentes #DDS"
+  }
+ ]
+}

@@ -1,0 +1,460 @@
+{
+ "cliente": "CONSULTORIA A&J",
+ "mes": "2026-08",
+ "posts": [
+  {
+   "id": "2026-08-31-5-dicas-seguranca-trabalho",
+   "num": 1,
+   "arquivo": "conteudos\\2026-08-31-5-dicas-seguranca-trabalho\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "SEGURANÇA DO TRABALHO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[5 dicas que podem]][[evitar um acidente]][[no seu turno]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Simples de aplicar. Muito mais simples do que lidar com as consequências."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "DICA 01"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Use o EPI certo — sempre"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Achar que \"dessa vez não vai acontecer\" é a causa nº1 de acidente evitável. Capacete, luvas, óculos, botina — cada peça existe porque alguém, antes de você, se machucou sem ela."
+    },
+    {
+     "id": "slide2-stat-number",
+     "slide": 2,
+     "papel": "stat-number",
+     "texto": "68%"
+    },
+    {
+     "id": "slide2-stat-label",
+     "slide": 2,
+     "papel": "stat-label",
+     "texto": "dos acidentes de trabalho têm relação com uso incorreto ou ausência de EPI"
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "DICA 02"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Sinalize e isole a área de risco"
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Cone, fita zebrada, placa — pular a sinalização por \"ser rapidinho\" é a decisão que mais aparece nos relatórios de acidente. Isole antes, não depois."
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "DICA 03"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Não pule o DDS"
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "O Diálogo Diário de Segurança existe para pegar o risco antes que ele vire acidente. Cinco minutos de atenção evitam semanas de afastamento."
+    },
+    {
+     "id": "slide5-tag",
+     "slide": 5,
+     "papel": "tag",
+     "texto": "DICA 04"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Inspecione o equipamento antes de usar"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Cabo desgastado, trava solta, bateria fraca — um checklist rápido de 30 segundos detecta o que um turno inteiro de pressa deixa passar."
+    },
+    {
+     "id": "slide6-tag",
+     "slide": 6,
+     "papel": "tag",
+     "texto": "DICA 05"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Reporte até o quase acidente"
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "O incidente que quase aconteceu é o aviso mais barato que você vai receber. Ninguém te chama de dedo-duro por reportar — só evita que o próximo turno tenha um \"quase\" de verdade."
+    },
+    {
+     "id": "slide6-quote",
+     "slide": 6,
+     "papel": "quote",
+     "texto": "\"Quase acidente é aviso, não sorte.\""
+    },
+    {
+     "id": "slide6-t1",
+     "slide": 6,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide7-t1",
+     "slide": 7,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide7-t2",
+     "slide": 7,
+     "papel": "texto 2",
+     "texto": "SIGA PARA MAIS CONTEÚDO"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Segurança funciona quando vira rotina,\n[[não papelada.]]"
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "Guarde essas 5 dicas e leve pro seu time. Prevenção começa com quem repete o básico todos os dias."
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Siga @aejsolucoesemsstma"
+    }
+   ],
+   "legenda": "5 dicas de segurança do trabalho que podem evitar um acidente no seu turno.\n\nUsar o EPI certo sempre, sinalizar e isolar a área de risco, não pular o DDS, inspecionar o equipamento antes de usar e reportar até o quase acidente. É o básico, e é muito mais simples do que lidar com as consequências de um afastamento.\n\nSalve para revisar com a equipe e mande para quem coordena a segurança no seu canteiro ou na sua fábrica.\n\n#SegurancaDoTrabalho #PrevencaoDeAcidentes #EPI #DDS #SST"
+  },
+  {
+   "id": "2026-08-31-importancia-seguranca-trabalho",
+   "num": 2,
+   "arquivo": "conteudos\\2026-08-31-importancia-seguranca-trabalho\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-t1",
+     "slide": 1,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "SEGURANÇA DO TRABALHO"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[O que te leva pra casa no fim do turno]] [[é a segurança do trabalho.]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Toda norma, todo treinamento, todo EPI existe por um motivo: pessoas de verdade voltando pra casa inteiras no fim do dia."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "O PROBLEMA"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Muita empresa só lembra da segurança depois do acidente."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Enquanto isso, o risco vira rotina: o EPI que fica na gaveta, o procedimento que \"todo mundo pula\", o quase-acidente que ninguém registra."
+    },
+    {
+     "id": "slide2-stat-number",
+     "slide": 2,
+     "papel": "stat-number",
+     "texto": "15 seg"
+    },
+    {
+     "id": "slide2-stat-label",
+     "slide": 2,
+     "papel": "stat-label",
+     "texto": "é o intervalo entre uma morte no trabalho, segundo a OIT"
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "A RESPOSTA"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Cultura de segurança pesa mais\nque EPI pendurado na parede."
+    },
+    {
+     "id": "slide3-quote-label",
+     "slide": 3,
+     "papel": "quote-label",
+     "texto": "O que muda"
+    },
+    {
+     "id": "slide3-quote",
+     "slide": 3,
+     "papel": "quote",
+     "texto": "\"Quando todo mundo entende o porquê, ninguém precisa ser fiscalizado pra fazer certo.\""
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "O QUE MUDA NA PRÁTICA"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Uma cultura de segurança de verdade entrega:"
+    },
+    {
+     "id": "slide4-item-1-title",
+     "slide": 4,
+     "papel": "item-1-title",
+     "texto": "Menos afastamentos"
+    },
+    {
+     "id": "slide4-item-1-desc",
+     "slide": 4,
+     "papel": "item-1-desc",
+     "texto": "— menos dias parados."
+    },
+    {
+     "id": "slide4-item-2-title",
+     "slide": 4,
+     "papel": "item-2-title",
+     "texto": "Mais produtividade"
+    },
+    {
+     "id": "slide4-item-2-desc",
+     "slide": 4,
+     "papel": "item-2-desc",
+     "texto": "— foco, não medo."
+    },
+    {
+     "id": "slide4-item-3-title",
+     "slide": 4,
+     "papel": "item-3-title",
+     "texto": "Conformidade com as NRs"
+    },
+    {
+     "id": "slide4-item-3-desc",
+     "slide": 4,
+     "papel": "item-3-desc",
+     "texto": "— menos multa, menos risco."
+    },
+    {
+     "id": "slide4-item-4-title",
+     "slide": 4,
+     "papel": "item-4-title",
+     "texto": "Clima organizacional melhor"
+    },
+    {
+     "id": "slide4-item-4-desc",
+     "slide": 4,
+     "papel": "item-4-desc",
+     "texto": "— time veste a camisa."
+    },
+    {
+     "id": "slide5-tag",
+     "slide": 5,
+     "papel": "tag",
+     "texto": "O DIFERENCIAL"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Ter o procedimento no papel não garante segurança de verdade."
+    },
+    {
+     "id": "slide5-quote",
+     "slide": 5,
+     "papel": "quote",
+     "texto": "\"Cultura de segurança se mede pela liderança dando o exemplo todo santo dia — não pelo manual guardado na gaveta.\""
+    },
+    {
+     "id": "slide5-quote-attribution",
+     "slide": 5,
+     "papel": "quote-attribution",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide6-tag",
+     "slide": 6,
+     "papel": "tag",
+     "texto": "POR ONDE COMEÇAR"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "4 passos pra sair do papel"
+    },
+    {
+     "id": "slide6-t1",
+     "slide": 6,
+     "papel": "texto 1",
+     "texto": "1"
+    },
+    {
+     "id": "slide6-step-1-title",
+     "slide": 6,
+     "papel": "step-1-title",
+     "texto": "Mapear os riscos"
+    },
+    {
+     "id": "slide6-step-1-desc",
+     "slide": 6,
+     "papel": "step-1-desc",
+     "texto": "Onde e como os acidentes realmente acontecem."
+    },
+    {
+     "id": "slide6-t2",
+     "slide": 6,
+     "papel": "texto 2",
+     "texto": "2"
+    },
+    {
+     "id": "slide6-step-2-title",
+     "slide": 6,
+     "papel": "step-2-title",
+     "texto": "Treinar e engajar o time"
+    },
+    {
+     "id": "slide6-step-2-desc",
+     "slide": 6,
+     "papel": "step-2-desc",
+     "texto": "O que não é entendido não é seguido."
+    },
+    {
+     "id": "slide6-t3",
+     "slide": 6,
+     "papel": "texto 3",
+     "texto": "3"
+    },
+    {
+     "id": "slide6-step-3-title",
+     "slide": 6,
+     "papel": "step-3-title",
+     "texto": "Garantir o EPI adequado"
+    },
+    {
+     "id": "slide6-step-3-desc",
+     "slide": 6,
+     "papel": "step-3-desc",
+     "texto": "Certo, disponível e usado — não só comprado."
+    },
+    {
+     "id": "slide6-t4",
+     "slide": 6,
+     "papel": "texto 4",
+     "texto": "4"
+    },
+    {
+     "id": "slide6-step-4-title",
+     "slide": 6,
+     "papel": "step-4-title",
+     "texto": "Acompanhar indicadores"
+    },
+    {
+     "id": "slide6-step-4-desc",
+     "slide": 6,
+     "papel": "step-4-desc",
+     "texto": "Sem dado, toda melhoria é achismo."
+    },
+    {
+     "id": "slide7-t1",
+     "slide": 7,
+     "papel": "texto 1",
+     "texto": "A&J Soluções em SSTMA"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Sua empresa está realmente segura?"
+    },
+    {
+     "id": "slide7-subhead",
+     "slide": 7,
+     "papel": "subhead",
+     "texto": "A A&J Soluções em SSTMA ajuda seu time a transformar norma em rotina."
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Fale com a A&J SSTMA"
+    }
+   ],
+   "legenda": "Segurança do trabalho é o que leva cada pessoa de volta para casa no fim do turno.\n\nMuita empresa só lembra da segurança depois do acidente; até lá, o EPI fica na gaveta e o quase acidente não é registrado. Cultura de segurança aparece quando a liderança dá o exemplo todo dia, muito antes de a fiscalização chegar.\n\nNo carrossel estão os 4 passos para tirar a segurança do papel: mapear os riscos, treinar a equipe, garantir o EPI adequado e acompanhar indicadores.\n\nSua empresa já começou por qual deles? Conta nos comentários.\n\n#SegurancaDoTrabalho #CulturaDeSeguranca #SST #SaudeOcupacional #GestaoDeRiscos"
+  }
+ ]
+}

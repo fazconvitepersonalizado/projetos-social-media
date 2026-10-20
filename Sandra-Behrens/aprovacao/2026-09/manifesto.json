@@ -1,0 +1,634 @@
+{
+ "cliente": "Sandra-Behrens",
+ "mes": "2026-09",
+ "posts": [
+  {
+   "id": "2026-09-12-mulher-depois-da-menopausa",
+   "num": 1,
+   "arquivo": "conteudos\\2026-09-12-mulher-depois-da-menopausa\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-tag",
+     "slide": 1,
+     "papel": "tag",
+     "texto": "FASES DA VIDA"
+    },
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Existe uma mulher dentro de você que essa fase [[não levou]]."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "O QUE NINGUÉM CONTA"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Você não está desaparecendo. Só não te ensinaram a fase que vem depois."
+    },
+    {
+     "id": "slide2-stat-number",
+     "slide": 2,
+     "papel": "stat-number",
+     "texto": "51"
+    },
+    {
+     "id": "slide2-stat-caption",
+     "slide": 2,
+     "papel": "stat-caption",
+     "texto": "anos. O começo de uma fase que a cultura preferiu não nomear."
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "UM OUTRO JEITO DE OLHAR"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Essa fase não é o fim de uma mulher. É o começo de outra, [[mais livre, mais sua]]."
+    },
+    {
+     "id": "slide3-quote",
+     "slide": 3,
+     "papel": "quote",
+     "texto": "Vamos conversar sobre você."
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "O QUE ATRAVESSA COM VOCÊ"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Nem tudo se perde. [[Muito se revela.]]"
+    },
+    {
+     "id": "slide4-item-1-title",
+     "slide": 4,
+     "papel": "item-1-title",
+     "texto": "Autoconhecimento"
+    },
+    {
+     "id": "slide4-item-1-desc",
+     "slide": 4,
+     "papel": "item-1-desc",
+     "texto": "A clareza que só o tempo e a vivência trazem."
+    },
+    {
+     "id": "slide4-item-2-title",
+     "slide": 4,
+     "papel": "item-2-title",
+     "texto": "Liberdade"
+    },
+    {
+     "id": "slide4-item-2-desc",
+     "slide": 4,
+     "papel": "item-2-desc",
+     "texto": "Menos peso com o que os outros esperam de você."
+    },
+    {
+     "id": "slide4-item-3-title",
+     "slide": 4,
+     "papel": "item-3-title",
+     "texto": "Voz própria"
+    },
+    {
+     "id": "slide4-item-3-desc",
+     "slide": 4,
+     "papel": "item-3-desc",
+     "texto": "Menos filtro, mais verdade no que você diz."
+    },
+    {
+     "id": "slide4-item-4-title",
+     "slide": 4,
+     "papel": "item-4-title",
+     "texto": "Corpo em nova relação"
+    },
+    {
+     "id": "slide4-item-4-desc",
+     "slide": 4,
+     "papel": "item-4-desc",
+     "texto": "Reaprender a habitá-lo com gentileza."
+    },
+    {
+     "id": "slide5-tag",
+     "slide": 5,
+     "papel": "tag",
+     "texto": "COMO ISSO ACONTECE NA TERAPIA"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "EMDR e Arteterapia. Duas linguagens para processar o que a menopausa desperta."
+    },
+    {
+     "id": "slide5-item-1-title",
+     "slide": 5,
+     "papel": "item-1-title",
+     "texto": "EMDR"
+    },
+    {
+     "id": "slide5-item-1-desc",
+     "slide": 5,
+     "papel": "item-1-desc",
+     "texto": "Ajuda a processar memórias e crenças antigas que ainda pesam, como pensar que não serve mais ou que está velha demais."
+    },
+    {
+     "id": "slide5-item-2-title",
+     "slide": 5,
+     "papel": "item-2-title",
+     "texto": "Arteterapia"
+    },
+    {
+     "id": "slide5-item-2-desc",
+     "slide": 5,
+     "papel": "item-2-desc",
+     "texto": "Dá corpo e imagem ao que ainda não virou palavra."
+    },
+    {
+     "id": "slide6-tag",
+     "slide": 6,
+     "papel": "tag",
+     "texto": "POR ONDE COMEÇAR"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Pequenos passos para esse reencontro."
+    },
+    {
+     "id": "slide6-t1",
+     "slide": 6,
+     "papel": "texto 1",
+     "texto": "01"
+    },
+    {
+     "id": "slide6-step-1-title",
+     "slide": 6,
+     "papel": "step-1-title",
+     "texto": "Perceba"
+    },
+    {
+     "id": "slide6-step-1-desc",
+     "slide": 6,
+     "papel": "step-1-desc",
+     "texto": "Note quando o discurso interno é mais duro com você do que seria com uma amiga."
+    },
+    {
+     "id": "slide6-t2",
+     "slide": 6,
+     "papel": "texto 2",
+     "texto": "02"
+    },
+    {
+     "id": "slide6-step-2-title",
+     "slide": 6,
+     "papel": "step-2-title",
+     "texto": "Nomeie"
+    },
+    {
+     "id": "slide6-step-2-desc",
+     "slide": 6,
+     "papel": "step-2-desc",
+     "texto": "Dê nome ao que sente, sem pressa de resolver."
+    },
+    {
+     "id": "slide6-t3",
+     "slide": 6,
+     "papel": "texto 3",
+     "texto": "03"
+    },
+    {
+     "id": "slide6-step-3-title",
+     "slide": 6,
+     "papel": "step-3-title",
+     "texto": "Acompanhe-se"
+    },
+    {
+     "id": "slide6-step-3-desc",
+     "slide": 6,
+     "papel": "step-3-desc",
+     "texto": "Busque um espaço de escuta que sustente essa travessia."
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Vamos conversar sobre você?"
+    },
+    {
+     "id": "slide7-cta",
+     "slide": 7,
+     "papel": "cta",
+     "texto": "Agende sua sessão"
+    },
+    {
+     "id": "slide7-handle",
+     "slide": 7,
+     "papel": "handle",
+     "texto": "@psicologasandrabehrens"
+    }
+   ],
+   "legenda": "Menopausa e saúde emocional: existe uma mulher dentro de você que essa fase não levou.\n\nPor volta dos 51 anos começa uma fase da vida que a cultura preferiu não nomear. Muitas mulheres sentem que estão desaparecendo; o que costuma faltar é alguém falar sobre o que vem depois. Muito também se revela nesse caminho: autoconhecimento, liberdade, voz própria e uma nova relação com o corpo.\n\nNa terapia, EMDR e Arteterapia ajudam a processar o que a menopausa desperta, como crenças antigas de que você não serve mais e sentimentos que ainda não viraram palavra.\n\nVamos conversar sobre você? O link para agendar está na bio.\n\n#Menopausa #SaudeEmocionalDaMulher #EMDR #Arteterapia #Autoconhecimento"
+  },
+  {
+   "id": "2026-09-14-nao-precisa-agradar-todo-mundo",
+   "num": 2,
+   "arquivo": "conteudos\\2026-09-14-nao-precisa-agradar-todo-mundo\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Você não precisa mais ser]][[tudo para todo mundo.]]"
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "EXPECTATIVAS"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Talvez você tenha passado boa parte da vida tentando corresponder às expectativas."
+    },
+    {
+     "id": "slide2-item-1",
+     "slide": 2,
+     "papel": "item-1",
+     "texto": "Ser boa filha."
+    },
+    {
+     "id": "slide2-item-2",
+     "slide": 2,
+     "papel": "item-2",
+     "texto": "Boa mãe."
+    },
+    {
+     "id": "slide2-item-3",
+     "slide": 2,
+     "papel": "item-3",
+     "texto": "Boa esposa."
+    },
+    {
+     "id": "slide2-item-4",
+     "slide": 2,
+     "papel": "item-4",
+     "texto": "Boa profissional."
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "LIBERDADE"
+    },
+    {
+     "id": "slide3-subhead",
+     "slide": 3,
+     "papel": "subhead",
+     "texto": "Mas existe uma liberdade que chega quando você percebe:"
+    },
+    {
+     "id": "slide3-quote",
+     "slide": 3,
+     "papel": "quote",
+     "texto": "não é sua responsabilidade agradar a todos."
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "PARA VOCÊ"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Na maturidade, dizer [[“não”]] também pode ser uma forma de dizer [[“sim para mim.”]]"
+    },
+    {
+     "id": "slide4-cta",
+     "slide": 4,
+     "papel": "cta",
+     "texto": "Agende sua consulta."
+    },
+    {
+     "id": "slide4-handle",
+     "slide": 4,
+     "papel": "handle",
+     "texto": "@psicologasandrabehrens"
+    }
+   ],
+   "legenda": "Você não precisa mais ser tudo para todo mundo.\n\nBoa filha, boa mãe, boa esposa, boa profissional. Talvez você tenha passado boa parte da vida tentando dar conta dessas expectativas. Na maturidade, chega uma liberdade diferente: perceber que agradar a todos não é sua responsabilidade.\n\nColocar limites e dizer não para o que pesa também pode ser um jeito de dizer sim para você. Se esse tema mexeu com você, a terapia pode ser um espaço para olhar para isso com calma.\n\nAgende sua consulta pelo link da bio.\n\n#MaturidadeFeminina #SaudeEmocionalDaMulher #Autoconhecimento #TerapiaParaMulheres #Autocuidado"
+  },
+  {
+   "id": "2026-09-14-voce-nao-esta-perdida",
+   "num": 3,
+   "arquivo": "conteudos\\2026-09-14-voce-nao-esta-perdida\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Talvez você não esteja perdida.]] [[Talvez esteja se reencontrando.]]"
+    },
+    {
+     "id": "slide2-t1",
+     "slide": 2,
+     "papel": "texto 1",
+     "texto": "FASES DA VIDA"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "[[Há fases da vida em que aquilo que antes fazia sentido já não faz mais.]]"
+    },
+    {
+     "id": "slide3-t1",
+     "slide": 3,
+     "papel": "texto 1",
+     "texto": "CONVITE"
+    },
+    {
+     "id": "slide3-subhead",
+     "slide": 3,
+     "papel": "subhead",
+     "texto": "E isso pode assustar."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Mas também pode ser um convite para descobrir novos desejos, novos limites e novas possibilidades."
+    },
+    {
+     "id": "slide4-t1",
+     "slide": 4,
+     "papel": "texto 1",
+     "texto": "RECOMEÇO"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "[[Nem todo fim é uma perda.]][[Às vezes, é o começo de uma]][[versão mais verdadeira]][[de você.]]"
+    },
+    {
+     "id": "slide5-cta",
+     "slide": 5,
+     "papel": "cta",
+     "texto": "Agende sua consulta."
+    },
+    {
+     "id": "slide5-handle",
+     "slide": 5,
+     "papel": "handle",
+     "texto": "@psicologasandrabehrens"
+    }
+   ],
+   "legenda": "Talvez você não esteja perdida. Talvez esteja se reencontrando.\n\nHá fases da vida em que aquilo que fazia sentido deixa de fazer, seja a rotina ou a imagem que você tinha de si. Isso pode assustar. E também pode abrir espaço para novos desejos, novos limites e novas possibilidades.\n\nÀs vezes um fim é o começo de uma versão mais verdadeira de você. A terapia pode acompanhar esse recomeço com escuta e sem pressa.\n\nAgende sua consulta pelo link da bio.\n\n#Autoconhecimento #FasesDaVida #SaudeEmocionalDaMulher #TerapiaParaMulheres #Recomeco"
+  },
+  {
+   "id": "2026-09-15-a-mulher-que-continua-ai",
+   "num": 4,
+   "arquivo": "conteudos\\2026-09-15-a-mulher-que-continua-ai\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[A mulher que você era]][[ainda está aí.]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Talvez você só tenha se afastado um pouco de si."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "QUEM VOCÊ FOI"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Durante muitos anos, você cuidou de todos."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Foi mãe, esposa, profissional, filha, cuidadora…"
+    },
+    {
+     "id": "slide2-quote-lead",
+     "slide": 2,
+     "papel": "quote-lead",
+     "texto": "E talvez tenha esquecido de perguntar:"
+    },
+    {
+     "id": "slide2-quote",
+     "slide": 2,
+     "papel": "quote",
+     "texto": "“E eu? Quem sou agora?”"
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "REENCONTRO"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "A menopausa não precisa ser apenas sobre aquilo que mudou."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Pode ser também sobre se reencontrar, reconhecer seus desejos e descobrir uma nova versão de si."
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "PARA VOCÊ"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Você não precisa voltar a ser quem era."
+    },
+    {
+     "id": "slide4-subhead",
+     "slide": 4,
+     "papel": "subhead",
+     "texto": "Talvez seja hora de descobrir quem você pode ser daqui para frente. 🤍"
+    },
+    {
+     "id": "slide4-attribution",
+     "slide": 4,
+     "papel": "attribution",
+     "texto": "Uma reflexão inspirada no universo de Clarice Lispector."
+    },
+    {
+     "id": "slide4-cta",
+     "slide": 4,
+     "papel": "cta",
+     "texto": "Agende sua consulta."
+    },
+    {
+     "id": "slide4-handle",
+     "slide": 4,
+     "papel": "handle",
+     "texto": "@psicologasandrabehrens"
+    }
+   ],
+   "legenda": "A mulher que você era ainda está aí. Talvez você só tenha se afastado um pouco de si.\n\nDurante anos, você cuidou de todo mundo: foi mãe, esposa, profissional, filha, cuidadora. Em algum momento ficou a pergunta: \"E eu? Quem sou agora?\"\n\nA menopausa fala do que mudou no corpo e também pode ser um tempo de reencontro, de reconhecer seus desejos e descobrir quem você pode ser daqui para frente. Uma reflexão inspirada no universo de Clarice Lispector. 🤍\n\nAgende sua consulta pelo link da bio.\n\n#Menopausa #MaturidadeFeminina #Autoconhecimento #SaudeEmocionalDaMulher #ClariceLispector"
+  },
+  {
+   "id": "2026-09-15-nem-todo-silencio-e-vazio",
+   "num": 5,
+   "arquivo": "conteudos\\2026-09-15-nem-todo-silencio-e-vazio\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "[[Nem todo silêncio é]][[vazio.]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Há momentos em que a mulher simplesmente precisa parar de ouvir tantas vozes externas para conseguir escutar a própria."
+    },
+    {
+     "id": "slide1-closing",
+     "slide": 1,
+     "papel": "closing",
+     "texto": "Na maturidade, talvez o silêncio deixe de ser ausência e passe a ser encontro."
+    },
+    {
+     "id": "slide2-tag",
+     "slide": 2,
+     "papel": "tag",
+     "texto": "UM ENCONTRO"
+    },
+    {
+     "id": "slide2-line1",
+     "slide": 2,
+     "papel": "line1",
+     "texto": "Com aquilo que você sente."
+    },
+    {
+     "id": "slide2-line2",
+     "slide": 2,
+     "papel": "line2",
+     "texto": "Com aquilo que você deseja."
+    },
+    {
+     "id": "slide2-line3",
+     "slide": 2,
+     "papel": "line3",
+     "texto": "Com aquilo que você já não aceita."
+    },
+    {
+     "id": "slide2-attribution",
+     "slide": 2,
+     "papel": "attribution",
+     "texto": "Uma reflexão inspirada no universo de Clarice Lispector."
+    },
+    {
+     "id": "slide3-tag",
+     "slide": 3,
+     "papel": "tag",
+     "texto": "O RUÍDO DE FORA"
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Passamos anos aprendendo a escutar todo mundo."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Os pais, os filhos, o parceiro, o trabalho, as expectativas — vozes que ensinam, cobram, esperam. E que, aos poucos, abafam a que mais importa: a sua."
+    },
+    {
+     "id": "slide4-tag",
+     "slide": 4,
+     "papel": "tag",
+     "texto": "O SILÊNCIO POSSÍVEL"
+    },
+    {
+     "id": "slide4-quote",
+     "slide": 4,
+     "papel": "quote",
+     "texto": "\"Existe um silêncio que não é solidão. É espaço.\""
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Espaço para ouvir, sem pressa, o que você mesma tem para dizer."
+    },
+    {
+     "id": "slide5-tag",
+     "slide": 5,
+     "papel": "tag",
+     "texto": "PARA VOCÊ"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Se esse silêncio tem te dito algo, talvez valha a pena escutá-lo com companhia."
+    },
+    {
+     "id": "slide5-caption",
+     "slide": 5,
+     "papel": "caption",
+     "texto": "Um espaço de escuta, com Sandra Behrens."
+    },
+    {
+     "id": "slide5-cta",
+     "slide": 5,
+     "papel": "cta",
+     "texto": "Agende uma conversa."
+    },
+    {
+     "id": "slide5-handle",
+     "slide": 5,
+     "papel": "handle",
+     "texto": "@psicologasandrabehrens"
+    }
+   ],
+   "legenda": "Nem todo silêncio é vazio.\n\nPassamos anos escutando todo mundo: os pais, os filhos, o parceiro, o trabalho, as expectativas. Aos poucos, essas vozes abafam a que mais importa, a sua. Na maturidade, o silêncio pode deixar de ser ausência e virar encontro com o que você sente, com o que deseja e com o que já não aceita.\n\nSe esse silêncio tem te dito algo, talvez valha escutá-lo com companhia. A terapia é um espaço de escuta para isso.\n\nAgende uma conversa pelo link da bio.\n\n#SaudeEmocionalDaMulher #Autoconhecimento #MaturidadeFeminina #TerapiaParaMulheres #Autocuidado"
+  }
+ ]
+}
