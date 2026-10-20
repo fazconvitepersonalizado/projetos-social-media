@@ -694,148 +694,130 @@
      "texto": "Faça o teste de 4 passos."
     },
     {
+     "id": "slide2-dado",
+     "slide": 2,
+     "papel": "dado",
+     "texto": "2,3 milhões"
+    },
+    {
+     "id": "slide2-dado-frase",
+     "slide": 2,
+     "papel": "dado-frase",
+     "texto": "afastamentos pelo INSS por acidente e doença do trabalho, de 2012 a 2022"
+    },
+    {
+     "id": "slide2-fonte",
+     "slide": 2,
+     "papel": "fonte",
+     "texto": "Fonte: Observatório de Segurança e Saúde no Trabalho (MPT e OIT)"
+    },
+    {
      "id": "slide2-headline",
      "slide": 2,
      "papel": "headline",
-     "texto": "Separe os documentos"
-    },
-    {
-     "id": "slide2-item-1",
-     "slide": 2,
-     "papel": "item-1",
-     "texto": "PGR"
-    },
-    {
-     "id": "slide2-item-2",
-     "slide": 2,
-     "papel": "item-2",
-     "texto": "PCMSO"
-    },
-    {
-     "id": "slide2-item-3",
-     "slide": 2,
-     "papel": "item-3",
-     "texto": "Laudos (como o LTCAT)"
-    },
-    {
-     "id": "slide2-item-4",
-     "slide": 2,
-     "papel": "item-4",
-     "texto": "Certificados dos treinamentos de NR"
+     "texto": "Documento desatualizado não protege ninguém."
     },
     {
      "id": "slide3-headline",
      "slide": 3,
      "papel": "headline",
-     "texto": "Confira as datas."
+     "texto": "Separe os documentos"
     },
     {
-     "id": "slide3-body",
+     "id": "slide3-item-1",
      "slide": 3,
-     "papel": "body",
-     "texto": "Entrou máquina nova, mudou o layout, surgiu uma função? O PGR precisa acompanhar."
+     "papel": "item-1",
+     "texto": "PGR"
+    },
+    {
+     "id": "slide3-item-2",
+     "slide": 3,
+     "papel": "item-2",
+     "texto": "PCMSO"
+    },
+    {
+     "id": "slide3-item-3",
+     "slide": 3,
+     "papel": "item-3",
+     "texto": "Laudos (como o LTCAT)"
+    },
+    {
+     "id": "slide3-item-4",
+     "slide": 3,
+     "papel": "item-4",
+     "texto": "Certificados dos treinamentos de NR"
     },
     {
      "id": "slide4-headline",
      "slide": 4,
      "papel": "headline",
+     "texto": "Confira as datas."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Entrou máquina nova, mudou o layout, surgiu uma função? O PGR precisa acompanhar."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
      "texto": "Compare papel e rotina"
     },
     {
-     "id": "slide4-col-a",
-     "slide": 4,
+     "id": "slide5-col-a",
+     "slide": 5,
      "papel": "col-a",
      "texto": "No PGR"
     },
     {
-     "id": "slide4-col-b",
-     "slide": 4,
+     "id": "slide5-col-b",
+     "slide": 5,
      "papel": "col-b",
      "texto": "Na rotina"
     },
     {
-     "id": "slide4-row-1-a",
-     "slide": 4,
+     "id": "slide5-row-1-a",
+     "slide": 5,
      "papel": "row-1-a",
      "texto": "Protetor auricular previsto"
     },
     {
-     "id": "slide4-row-1-b",
-     "slide": 4,
+     "id": "slide5-row-1-b",
+     "slide": 5,
      "papel": "row-1-b",
      "texto": "Protetor no pescoço"
     },
     {
-     "id": "slide4-row-2-a",
-     "slide": 4,
+     "id": "slide5-row-2-a",
+     "slide": 5,
      "papel": "row-2-a",
      "texto": "Equipe treinada"
     },
     {
-     "id": "slide4-row-2-b",
-     "slide": 4,
+     "id": "slide5-row-2-b",
+     "slide": 5,
      "papel": "row-2-b",
      "texto": "Novato sem integração"
     },
     {
-     "id": "slide5-step",
-     "slide": 5,
+     "id": "slide6-step",
+     "slide": 6,
      "papel": "step",
      "texto": "Pergunte a quem faz o serviço:"
     },
     {
-     "id": "slide5-question",
-     "slide": 5,
+     "id": "slide6-question",
+     "slide": 6,
      "papel": "question",
      "texto": "“Qual é o risco da sua tarefa?”"
     },
     {
-     "id": "slide5-body",
-     "slide": 5,
+     "id": "slide6-body",
+     "slide": 6,
      "papel": "body",
      "texto": "Resposta vaga: o documento não chegou até ele."
-    },
-    {
-     "id": "slide6-headline",
-     "slide": 6,
-     "papel": "headline",
-     "texto": "Resolver dentro ou chamar consultoria?"
-    },
-    {
-     "id": "slide6-col-a",
-     "slide": 6,
-     "papel": "col-a",
-     "texto": "Resolver dentro"
-    },
-    {
-     "id": "slide6-col-b",
-     "slide": 6,
-     "papel": "col-b",
-     "texto": "Chamar consultoria"
-    },
-    {
-     "id": "slide6-row-1-a",
-     "slide": 6,
-     "papel": "row-1-a",
-     "texto": "Ajuste que a equipe já sabe"
-    },
-    {
-     "id": "slide6-row-1-b",
-     "slide": 6,
-     "papel": "row-1-b",
-     "texto": "Documentos desatualizados"
-    },
-    {
-     "id": "slide6-row-2-a",
-     "slide": 6,
-     "papel": "row-2-a",
-     "texto": "Dúvida pontual"
-    },
-    {
-     "id": "slide6-row-2-b",
-     "slide": 6,
-     "papel": "row-2-b",
-     "texto": "Riscos novos, como os psicossociais (NR‑1)"
     },
     {
      "id": "slide7-headline",
@@ -877,7 +859,7 @@
      "id": "slide8-headline",
      "slide": 8,
      "papel": "headline",
-     "texto": "A A&J faz esse diagnóstico com você e acompanha o que vem depois."
+     "texto": "A A&J faz o diagnóstico e acompanha o depois."
     },
     {
      "id": "slide8-cta",
@@ -892,7 +874,7 @@
      "texto": "@aejsolucoesemsstma"
     }
    ],
-   "legenda": "Consultoria em SST: um teste rápido para saber se a sua empresa precisa.\n\nSeparar PGR, PCMSO, laudos e certificados, conferir as datas, comparar o que está no papel com o que acontece na rotina e perguntar a quem faz o serviço. Em quatro passos dá para ver se a segurança do trabalho da empresa está em dia ou se só os documentos estão.\n\nFez o teste e ficou com dúvida? Chama a A&J no direct.\n\n#ConsultoriaSST #SegurancaDoTrabalho #PGR #SaudeOcupacional #SST"
+   "legenda": "Consultoria em SST: um teste rápido para saber se a sua empresa precisa.\n\nSeparar PGR, PCMSO, laudos e certificados, conferir as datas, comparar o que está no papel com o que acontece na rotina e perguntar a quem faz o serviço. Em quatro passos dá para ver se a segurança do trabalho da empresa está em dia ou se só os documentos estão.\n\nVale fazer: de 2012 a 2022 foram 2,3 milhões de afastamentos pelo INSS por acidente e doença do trabalho, segundo o Observatório de Segurança e Saúde no Trabalho (MPT e OIT).\n\nFez o teste e ficou com dúvida? Chama a A&J no direct.\n\n#ConsultoriaSST #SegurancaDoTrabalho #PGR #SaudeOcupacional #SST"
   }
  ]
 }
