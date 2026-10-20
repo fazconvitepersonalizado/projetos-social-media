@@ -337,6 +337,32 @@ def gerar_indice(cli: Path, bk: dict, marca: str, logo, f_t, f_c, claro, escuro)
     return base / "index.html"
 
 
+def lista_meses(cli: Path, atual: str, n_atual: int):
+    """Meses da cliente para a barra lateral: os que têm página de aprovação
+    (com link do claude.ai e caminho local) e os que só têm posts em conteudos/."""
+    base = cli / "aprovacao"
+    links = json.loads((base / "links.json").read_text(encoding="utf-8")) if (base / "links.json").exists() else {}
+    meses = {}
+    for p in (cli / "conteudos").glob("*"):
+        m = re.match(r"^(\d{4}-\d{2})-\d{2}-", p.name)
+        if m and (p / "carousel.html").exists():
+            meses.setdefault(m.group(1), {"posts": 0, "pagina": False})["posts"] += 1
+    if base.exists():
+        for p in base.iterdir():
+            if p.is_dir() and re.match(r"^\d{4}-\d{2}$", p.name) and (p / "manifesto.json").exists():
+                n = len(json.loads((p / "manifesto.json").read_text(encoding="utf-8"))["posts"])
+                meses[p.name] = {"posts": n, "pagina": True}
+    meses[atual] = {"posts": n_atual, "pagina": True}
+    out = []
+    for mid in sorted(meses, reverse=True):
+        ano, mes = map(int, mid.split("-"))
+        info = meses[mid]
+        out.append({"id": mid, "rotulo": f"{MESES[mes - 1].capitalize()} de {ano}", "posts": info["posts"],
+                    "atual": mid == atual, "link": links.get(mid),
+                    "local": f"../{mid}/aprovacao.html" if info["pagina"] and mid != atual else None})
+    return out
+
+
 # ---------------------------------------------------------------- principal
 def main():
     try:
@@ -428,7 +454,8 @@ def main():
                 continue
             m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", pasta.name)
             antigos.append({"thumb": "data:image/jpeg;base64," + base64.b64encode(thumb).decode(),
-                            "data": f"{int(m.group(3))} de {MESES[int(m.group(2)) - 1]}"})
+                            "data": f"{int(m.group(3))} de {MESES[int(m.group(2)) - 1]}",
+                            "mesRotulo": f"{MESES[int(m.group(2)) - 1].capitalize()} de {m.group(1)}"})
         if antigos:
             print(f"{len(antigos)} posts já publicados entram esmaecidos na grade")
         nav.close()
@@ -446,6 +473,7 @@ def main():
         "whatsapp": cfg.get("whatsapp", ""),
         "posts": posts,
         "anteriores": antigos,
+        "meses": lista_meses(cli, a.mes, len(posts)),
     }
     f_t = bk.get("heading_font") or "Lora"
     f_c = bk.get("body_font") or "Poppins"

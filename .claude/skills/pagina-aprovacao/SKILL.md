@@ -36,8 +36,15 @@ O índice é refeito a cada geração. Depois de publicar um mês, gravar o link
 em `links.json` e refazer o índice (`gerar_indice` do script).
 
 ## O que a página faz
-- **Perfil no formato do Instagram:** barra de aprovação no topo (marca da
-  cliente, mês, progresso "X de N revisados", "Enviar respostas"), cabeçalho
+- **Barra lateral (marca da cliente):** seção **Meses** com todos os meses
+  da cliente (atual em destaque; meses com página viram link: caminho local
+  no arquivo, link do claude.ai na versão publicada; meses só com posts em
+  `conteudos/` aparecem como "N publicados"), progresso do mês, lista dos
+  posts (miniatura, número, título, data, situação) e "Enviar respostas".
+  No celular vira menu ("Posts e meses").
+- **Divisão por mês na grade:** divisória "Mês · N posts para aprovar"
+  acima dos novos e "Mês · N publicados" acima dos de cada mês anterior.
+- **Perfil no formato do Instagram (compacto, até 700px):** cabeçalho
   do perfil (logo como foto, @, nome, bio = `bio` ou `brand_manual.tagline`
   do brand-kit; números só do que existe: posts novos e já publicados, nunca
   seguidores inventados), abas e grade 3 colunas em **3:4**, que corta as
