@@ -76,7 +76,8 @@ em `links.json` e refazer o índice (`gerar_indice` do script).
    `atualizado_em` antes de usar.
 - **Post aberto no formato do Instagram:** mídia à esquerda e coluna com
   cabeçalho do @, legenda como comentário do @ (hashtags/menções
-  destacadas), ícones e data; no celular, tela cheia como no app. Slides
+  destacadas) com botão "Copiar legenda", ícones e data; no celular e no
+  tablet em pé, tela cheia como no app. Slides
   deslizam com setas, pontos, arrasto e teclado; reel com capa e play.
   Fecha com X, Esc ou clique fora; setas laterais trocam de post.
 - Sem logo nem nome do Instagram: só o formato visual; a página é da cliente.
@@ -113,6 +114,17 @@ python .claude/skills/pagina-aprovacao/scripts/gerar_aprovacao.py "<pasta do cli
   `--arquivo pasta=carousel-foto.html` usa outra versão do HTML.
 - Legenda: a do plano; se não houver, a do `.ig-caption` do carrossel.
   Post sem legenda aparece como "sem legenda cadastrada"; avisar o Thiago.
+- **Legenda pronta para busca (regra desta página, pedido do Thiago em
+  2026-10-19):** antes de gerar, conferir se cada legenda do plano tem
+  palavra-chave do assunto na primeira linha e de novo no texto (do jeito
+  que o público procuraria: "NR-1", "PGR", "menopausa", "saúde emocional da
+  mulher"), um chamado no fim (salvar, comentar, agendar pelo link da bio)
+  e **até 5 hashtags de nicho** no final (limite do Instagram), em
+  CamelCase e sem acento. Legenda curta ou sem hashtag: reescrever no
+  plano, na voz da marca e pela revisão anti-IA (sem travessão, sem fato
+  novo), e espelhar no cartão do Trello. Na página, cada legenda tem o
+  botão **Copiar legenda** (copia a versão atual, com as edições da
+  cliente).
 - **Só mandar para a cliente o que já passou pela aprovação interna** (copy
   revisada, verificação visual do `instagram-carousel` feita). Se houver
   duas versões do mesmo carrossel (ex.: `carousel.html` e
@@ -123,8 +135,11 @@ python .claude/skills/pagina-aprovacao/scripts/gerar_aprovacao.py "<pasta do cli
   com `--posts`).
 
 ### 2. Conferir (uma vez)
-Abrir `aprovacao.html` no navegador (Playwright) em largura de desktop e de
-celular e olhar: grade, um carrossel aberto, a aba de edição. Problema
+Abrir `aprovacao.html` no navegador (Playwright) nas larguras 320, 390,
+768, 1024 e 1440 e olhar: sem rolagem lateral (`scrollWidth` igual à
+largura), grade, um post aberto com a legenda e o botão "Copiar legenda"
+visíveis, a aba de edição. Até 960px o post abre em tela cheia (celular e
+tablet em pé); acima disso, arte e legenda lado a lado. Problema
 encontrado: **avisar antes de mexer** (regra do `CLAUDE.md`).
 
 ### 3. Entregar

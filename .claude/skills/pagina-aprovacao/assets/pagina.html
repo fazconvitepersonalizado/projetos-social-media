@@ -111,9 +111,9 @@ button { cursor: pointer; }
 .mes-div { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 18px 2px 8px; font-family: var(--f-body); }
 .mes-div:first-child { padding-top: 6px; }
 .mes-div b { font-family: var(--f-display); font-weight: 600; font-size: 16px; color: var(--ig-ink); white-space: nowrap; }
-.mes-div span { font-size: 12px; color: var(--ig-muted); white-space: nowrap; }
+.mes-div span { font-size: 12px; color: var(--ig-muted); min-width: 0; }
 .mes-div::after { content: ""; flex: 1; height: 1px; background: var(--ig-line); }
-.mes-div .tag-novo { padding: 2px 9px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-weight: 600; font-size: 11px; }
+.mes-div .tag-novo { white-space: nowrap; padding: 2px 9px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-weight: 600; font-size: 11px; }
 .cel { position: relative; aspect-ratio: 3 / 4; padding: 0; border: 0; overflow: hidden; background: var(--ig-soft); max-width: 100%; display: block; }
 .cel img { width: 100%; height: 100%; object-fit: cover; display: block; }
 button.cel::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background .25s; }
@@ -186,6 +186,12 @@ button.cel:hover .cel-ver, button.cel:focus-visible .cel-ver { opacity: 1; }
 .comentario-cap .tag { color: var(--ig-link); }
 .comentario-cap small { display: block; margin-top: 8px; color: var(--ig-muted); font-size: 12px; }
 .sem-leg { color: var(--ig-muted); font-style: italic; }
+.leg-acoes { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; padding-left: 44px; margin-top: 10px; }
+.leg-acoes[hidden] { display: none; }
+.btn-copiar-leg { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; border: 1px solid var(--ig-line); border-radius: 99px; padding: 6px 12px; background: var(--ig-bg); color: var(--ig-ink); font-size: 13px; font-weight: 600; }
+.btn-copiar-leg svg { width: 14px; height: 14px; }
+.btn-copiar-leg.ok { border-color: var(--ok); color: var(--ok); }
+#leg-status { font-size: 12px; color: var(--ig-muted); }
 .editor { display: grid; gap: 12px; font-family: var(--f-body); }
 .editor-cab { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
 .editor-cab b { font-family: var(--f-display); font-weight: 600; font-size: 17px; }
@@ -265,7 +271,12 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   .cel-num { left: 5px; top: 5px; height: 18px; min-width: 18px; font-size: 10px; }
   .cel-tipo { right: 5px; top: 5px; } .cel-tipo svg { width: 16px; height: 16px; }
   .selo { left: 5px; bottom: 5px; height: 20px; padding: 0 5px; } .selo b { display: none; }
-  .viewer { padding: 0; place-items: stretch; background: var(--ig-bg); }
+}
+/* post aberto em tela cheia, como no app: celular e tablet em pé.
+   Lado a lado só a partir de 961px, onde a arte e a legenda cabem juntas. */
+@media (max-width: 960px) {
+  .viewer { padding: 0; place-items: stretch; justify-items: center; background: var(--ig-bg); }
+  .post { width: 100%; max-width: 620px; }
   .fora { display: none; }
   .post { --h: auto; height: 100%; flex-direction: column; overflow-y: auto; border-radius: 0; animation: none; }
   .voltar-movel { order: -2; display: flex; align-items: center; gap: 14px; position: sticky; top: 0; z-index: 5; background: var(--ig-bg);
@@ -289,6 +300,16 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   .entre-movel button { border: 0; background: none; color: var(--muted); font-size: 13px; padding: 4px 2px; }
   .entre-movel button[disabled] { visibility: hidden; }
   .linha2 { grid-template-columns: 1fr; }
+}
+/* celular pequeno (iPhone SE, Androids de 320 a 380px) */
+@media (max-width: 380px) {
+  .cab { grid-template-columns: 70px minmax(0, 1fr); gap: 14px; }
+  .avatar-anel { width: 70px; height: 70px; }
+  .handle { font-size: 16px; }
+  .numeros { gap: 14px; font-size: 13px; }
+  .mes-div { gap: 8px; }
+  .mes-div b { font-size: 15px; }
+  .leg-acoes { padding-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
@@ -373,6 +394,10 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
         <h2 class="sr" id="v-titulo"></h2>
         <div id="sec-leg">
           <div class="comentario-cap"><span class="mini-av" data-mini-av></span><div><p id="v-legenda"></p></div></div>
+          <div class="leg-acoes" id="leg-acoes">
+            <button class="btn-copiar-leg" id="copiar-leg" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span>Copiar legenda</span></button>
+            <span id="leg-status" role="status"></span>
+          </div>
         </div>
         <div class="editor" id="sec-ed" hidden>
           <div class="editor-cab"><b>Editar textos</b><button class="link-sutil" id="desfazer" type="button">Desfazer alterações</button></div>
@@ -752,12 +777,13 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   function legendaHtml(t) {
     var nome = "<b>" + esc(HANDLE) + "</b>";
     if (!t) return nome + '<span class="sem-leg">Sem legenda cadastrada para este post.</span>';
-    return nome + esc(t).replace(/(^|[\s(])([#@][\wÀ-ÿ._]+)/g, '$1<span class="tag">$2</span>');
+    return nome + '<span class="leg-txt">' + esc(t).replace(/(^|[\s(])([#@][\wÀ-ÿ._]+)/g, '$1<span class="tag">$2</span>') + '</span>';
   }
   function sincronizarPainel() {
     if (!atual) return;
     var r = resp(atual.id);
     $("v-legenda").innerHTML = legendaHtml(legendaDe(atual));
+    $("leg-acoes").hidden = !legendaDe(atual);
     var ed = $("ed-legenda");
     if (document.activeElement !== ed) ed.value = legendaDe(atual) || "";
     $("campo-legenda").classList.toggle("mudou", r.legenda != null);
@@ -783,6 +809,36 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     if (on) desenharCampos();
   }
   $("btn-editar").addEventListener("click", function () { modoEdicao(!editando); });
+
+  // Copia a legenda atual (com as edições da cliente). Sem acesso à área de
+  // transferência (alguns navegadores e iframes bloqueiam), tenta o modo
+  // antigo; se também falhar, seleciona o texto para copiar à mão.
+  var legTimer = null;
+  function copiarLegenda() {
+    var t = legendaDe(atual) || "", btn = $("copiar-leg");
+    if (!t) return;
+    var ok = function () {
+      btn.classList.add("ok"); btn.querySelector("span").textContent = "Legenda copiada";
+      $("leg-status").textContent = "";
+      clearTimeout(legTimer);
+      legTimer = setTimeout(function () { btn.classList.remove("ok"); btn.querySelector("span").textContent = "Copiar legenda"; }, 2500);
+    };
+    var antigo = function () {
+      var ta = document.createElement("textarea");
+      ta.value = t; ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;";
+      document.body.appendChild(ta); ta.select();
+      var feito = false;
+      try { feito = document.execCommand("copy"); } catch (e) { feito = false; }
+      document.body.removeChild(ta);
+      if (feito) { ok(); return; }
+      var r = document.createRange(); r.selectNodeContents($("v-legenda").querySelector(".leg-txt") || $("v-legenda"));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      $("leg-status").textContent = "Texto selecionado; copie com Ctrl+C ou segurando o dedo.";
+    };
+    try { navigator.clipboard.writeText(t).then(ok, antigo); } catch (e) { antigo(); }
+  }
+  $("copiar-leg").addEventListener("click", copiarLegenda);
 
   function desenharCampos() {
     var box = $("campos"); if (!box || !atual) return;
