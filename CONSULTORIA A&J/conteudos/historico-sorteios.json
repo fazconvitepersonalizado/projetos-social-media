@@ -1,0 +1,135 @@
+[
+  {
+    "data": "2026-10-19",
+    "tema": "CIPA no papel x CIPA que funciona",
+    "seed": 1,
+    "estrutura": "erro-comum",
+    "gancho": "cena-do-dia-a-dia",
+    "ritmo": "alternado",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "varia por slide",
+    "indicador": "selo 'arraste' só na capa",
+    "composicao": [
+      "capa-tipografica",
+      "titulo-e-apoio",
+      "comparacao-lado-a-lado",
+      "lista-curta",
+      "comparacao-lado-a-lado",
+      "diagrama",
+      "foto-dividida",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      7
+    ],
+    "digital": "0520fceac485",
+    "tentativas": 1
+  },
+  {
+    "data": "2026-10-19",
+    "tema": "Quase acidente: o aviso que a empresa costuma ignorar",
+    "seed": 1,
+    "estrutura": "mito-e-verdade",
+    "gancho": "cena-do-dia-a-dia",
+    "ritmo": "blocos",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "topo",
+    "indicador": "contador discreto (n/total)",
+    "composicao": [
+      "capa-foto-recortada",
+      "titulo-e-apoio",
+      "diagrama",
+      "frase-gigante",
+      "titulo-e-apoio",
+      "frase-gigante",
+      "pergunta-grande",
+      "cta-tipografico"
+    ],
+    "slides_com_foto": [
+      1
+    ],
+    "digital": "a0d95366ff6b",
+    "tentativas": 2
+  },
+  {
+    "data": "2026-10-19",
+    "tema": "DDS que a equipe escuta",
+    "seed": 43,
+    "estrutura": "passo-a-passo",
+    "gancho": "pergunta",
+    "ritmo": "blocos",
+    "alinhamento": "misto (capa e CTA centralizados, miolo à esquerda)",
+    "apoio_do_texto": "varia por slide",
+    "indicador": "contador discreto (n/total)",
+    "composicao": [
+      "capa-foto-dividida",
+      "foto-cheia",
+      "frase-gigante",
+      "pergunta-grande",
+      "frase-gigante",
+      "pergunta-grande",
+      "titulo-e-apoio",
+      "cta-foto"
+    ],
+    "slides_com_foto": [
+      1,
+      2,
+      8
+    ],
+    "digital": "a79e3dd3bd9e",
+    "tentativas": 2
+  },
+  {
+    "data": "2026-10-19",
+    "tema": "Outubro Rosa na empresa: além do laço no crachá",
+    "seed": 65,
+    "estrutura": "comparacao",
+    "gancho": "cena-do-dia-a-dia",
+    "ritmo": "blocos",
+    "alinhamento": "esquerda",
+    "apoio_do_texto": "varia por slide",
+    "indicador": "barra de progresso segmentada",
+    "composicao": [
+      "capa-foto-recortada",
+      "comparacao-lado-a-lado",
+      "foto-dividida",
+      "pergunta-grande",
+      "diagrama",
+      "comparacao-lado-a-lado",
+      "diagrama",
+      "cta-tipografico"
+    ],
+    "slides_com_foto": [
+      1,
+      3
+    ],
+    "digital": "f04489c57630",
+    "tentativas": 1
+  },
+  {
+    "data": "2026-10-19",
+    "tema": "Sinais de que sua empresa precisa de uma consultoria em SST",
+    "seed": 62,
+    "estrutura": "passo-a-passo",
+    "gancho": "pergunta",
+    "ritmo": "claro-com-pausa",
+    "alinhamento": "misto (capa e CTA centralizados, miolo à esquerda)",
+    "apoio_do_texto": "base",
+    "indicador": "selo 'arraste' só na capa",
+    "composicao": [
+      "capa-tipografica",
+      "lista-curta",
+      "foto-emoldurada",
+      "comparacao-lado-a-lado",
+      "titulo-e-apoio",
+      "comparacao-lado-a-lado",
+      "titulo-e-apoio",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      3
+    ],
+    "digital": "88969df3e9aa",
+    "tentativas": 1
+  }
+]
