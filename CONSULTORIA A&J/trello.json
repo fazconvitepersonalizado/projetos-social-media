@@ -1,0 +1,19 @@
+{
+  "quadro": {
+    "id": "ari:cloud:trello::board/workspace/687a90551a7947a8144f6d3d/6ad6c06bb9e7d7b3956f2cd4",
+    "nome": "A&J Soluções em SSTMA · Conteúdo",
+    "url": "https://trello.com/b/AldlmrP0/aj-solu%C3%A7%C3%B5es-em-sstma-conte%C3%BAdo"
+  },
+  "listas": {
+    "Gaveta": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08a0390141a39eb5de8",
+    "Planejado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08b1aa812f165f44a74",
+    "Em produção": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08c1688564e7a2570ee",
+    "Aprovação do cliente": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08cb9793f104aaf08e8",
+    "Ajustes": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08d0a1193cbbba69328",
+    "Agendado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08eca5c2d593859e6e0",
+    "Publicado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08f2895eb939171fc66"
+  },
+  "etiquetas": {},
+  "pendente": "Etiquetas de mês e formato ainda não criadas: o conector do Trello não cria nem renomeia etiquetas. Criar no Trello e registrar os IDs aqui.",
+  "atualizado_em": "2026-10-19"
+}

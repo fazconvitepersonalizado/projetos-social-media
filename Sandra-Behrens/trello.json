@@ -1,0 +1,19 @@
+{
+  "quadro": {
+    "id": "ari:cloud:trello::board/workspace/687a90551a7947a8144f6d3d/6ad6c06bdabcd5380b166070",
+    "nome": "Sandra Behrens · Conteúdo",
+    "url": "https://trello.com/b/MvpABnNw/sandra-behrens-conte%C3%BAdo"
+  },
+  "listas": {
+    "Gaveta": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c08f1b4ed9f9f2b3d0db",
+    "Planejado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c0900bd81fd59dabe0d2",
+    "Em produção": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c091b5e8c8c5c317620d",
+    "Aprovação do cliente": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c091e5510b5eb4a28c04",
+    "Ajustes": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c0927c42ef58006cd7b1",
+    "Agendado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c09351894d08a483dbeb",
+    "Publicado": "ari:cloud:trello::list/workspace/687a90551a7947a8144f6d3d/6ad6c093a098399e5e72b2bf"
+  },
+  "etiquetas": {},
+  "pendente": "Etiquetas de mês e formato ainda não criadas: o conector do Trello não cria nem renomeia etiquetas. Criar no Trello e registrar os IDs aqui.",
+  "atualizado_em": "2026-10-19"
+}

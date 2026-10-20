@@ -19,6 +19,12 @@ Referência compartilhada pelas skills `conteudo-mensal`, `alterar-conteudo`,
 - Se as ferramentas do Trello não aparecerem na sessão, **dizer isso
   exatamente** (não fingir que escreveu), seguir só com os arquivos locais e
   deixar anotado no plano o que falta espelhar ("Pendente no Trello").
+- Limites do conector do claude.ai (testado em 2026-10-19): cria quadro,
+  lista e cartão, edita, move, comenta e liga/desliga etiqueta que **já
+  existe**, mas **não cria nem renomeia etiquetas** e **não envia anexos**.
+  Quadro novo nasce com 6 etiquetas de cor sem nome; nomear à mão no Trello
+  (mês, formato) e registrar os IDs no `trello.json`. Artes: anexar à mão
+  ou deixar o caminho local na descrição até haver outra via de upload.
 - Ler é ação sem efeito. **Criar, editar, mover ou anexar** é ação com efeito:
   mostrar o que vai ser feito e esperar o OK antes de escrever em massa.
 
