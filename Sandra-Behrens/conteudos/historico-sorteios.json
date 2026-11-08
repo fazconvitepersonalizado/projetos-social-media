@@ -1,0 +1,152 @@
+[
+  {
+    "data": "2026-11-08",
+    "tema": "Mandalaterapia: muito além de colorir",
+    "seed": 23,
+    "estrutura": "comparacao",
+    "gancho": "contra-o-senso-comum",
+    "ritmo": "blocos",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "varia por slide",
+    "indicador": "selo 'arraste' na capa + setinha até o penúltimo",
+    "composicao": [
+      "capa-foto-dividida",
+      "lista-curta",
+      "diagrama",
+      "lista-curta",
+      "comparacao-lado-a-lado",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      1
+    ],
+    "digital": "dfd64f8c2474",
+    "tentativas": 1
+  },
+  {
+    "data": "2026-11-08",
+    "tema": "Menopausa: por que tantas mulheres sentem que já não se reconhecem?",
+    "seed": 13,
+    "estrutura": "um-dia-na-rotina",
+    "gancho": "cena-do-dia-a-dia",
+    "ritmo": "blocos",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "centro",
+    "indicador": "selo 'arraste' na capa + setinha até o penúltimo",
+    "composicao": [
+      "capa-foto-cheia",
+      "frase-gigante",
+      "diagrama",
+      "pergunta-grande",
+      "titulo-e-apoio",
+      "frase-gigante",
+      "cta-foto"
+    ],
+    "slides_com_foto": [
+      1,
+      7
+    ],
+    "digital": "d5bde6117748",
+    "tentativas": 2
+  },
+  {
+    "data": "2026-11-08",
+    "tema": "O que as cores escolhidas em uma mandala podem representar?",
+    "seed": 62,
+    "estrutura": "passo-a-passo",
+    "gancho": "contra-o-senso-comum",
+    "ritmo": "alternado",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "base",
+    "indicador": "selo 'arraste' na capa + setinha até o penúltimo",
+    "composicao": [
+      "capa-tipografica",
+      "lista-curta",
+      "foto-emoldurada",
+      "comparacao-lado-a-lado",
+      "titulo-e-apoio",
+      "comparacao-lado-a-lado",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      3
+    ],
+    "digital": "44186453afa9",
+    "tentativas": 1
+  },
+  {
+    "data": "2026-11-08",
+    "tema": "Menopausa e autoestima: como acolher as mudanças do próprio corpo?",
+    "seed": 1,
+    "estrutura": "comparacao",
+    "gancho": "pergunta",
+    "ritmo": "alternado",
+    "alinhamento": "esquerda",
+    "apoio_do_texto": "topo",
+    "indicador": "sem indicador",
+    "composicao": [
+      "capa-foto-recortada",
+      "foto-emoldurada",
+      "diagrama",
+      "comparacao-lado-a-lado",
+      "frase-gigante",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      1,
+      2
+    ],
+    "digital": "b0d924cfe159",
+    "tentativas": 2
+  },
+  {
+    "data": "2026-11-08",
+    "tema": "Você não precisa dar conta de tudo, o tempo todo",
+    "seed": 64,
+    "estrutura": "historia-de-caso",
+    "gancho": "contra-o-senso-comum",
+    "ritmo": "alternado",
+    "alinhamento": "centralizado",
+    "apoio_do_texto": "varia por slide",
+    "indicador": "selo 'arraste' na capa + setinha até o penúltimo",
+    "composicao": [
+      "capa-foto-recortada",
+      "comparacao-lado-a-lado",
+      "frase-gigante",
+      "foto-emoldurada",
+      "lista-curta",
+      "cta-cor-chapada"
+    ],
+    "slides_com_foto": [
+      1,
+      4
+    ],
+    "digital": "265d6e61e04b",
+    "tentativas": 1
+  },
+  {
+    "data": "2026-11-08",
+    "tema": "Envelhecer também é descobrir novas versões de si mesma",
+    "seed": 30,
+    "estrutura": "mito-e-verdade",
+    "gancho": "contra-o-senso-comum",
+    "ritmo": "cor-da-marca",
+    "alinhamento": "misto (capa e CTA centralizados, miolo à esquerda)",
+    "apoio_do_texto": "centro",
+    "indicador": "sem indicador",
+    "composicao": [
+      "capa-foto-cheia",
+      "comparacao-lado-a-lado",
+      "lista-curta",
+      "frase-gigante",
+      "lista-curta",
+      "cta-foto"
+    ],
+    "slides_com_foto": [
+      1,
+      6
+    ],
+    "digital": "2a90cfbb43f5",
+    "tentativas": 2
+  }
+]
