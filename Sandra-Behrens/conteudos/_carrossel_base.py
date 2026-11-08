@@ -229,6 +229,11 @@ FONTES = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght
 
 
 def pagina(titulo, subtitulo, legenda, slides, labels, pasta_rel):
+    # legenda final do post: <pasta>/legenda.txt (lida também pela página de aprovação)
+    arq = ROOT / pasta_rel / "legenda.txt"
+    if arq.exists():
+        legenda = arq.read_text(encoding="utf-8").strip()
+    legenda = legenda.replace("\n", "<br>")
     total = len(slides)
     dots = "".join(f'<button class="ig-dot" type="button" aria-label="Ir para o slide {i + 1}" data-go="{i}"></button>'
                    for i in range(total))
@@ -287,7 +292,7 @@ def pagina(titulo, subtitulo, legenda, slides, labels, pasta_rel):
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="#262626" stroke-width="1.5" stroke-linejoin="round"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left:auto;"><path d="M6 3h12v18l-6-4-6 4V3z" stroke="#262626" stroke-width="1.5" stroke-linejoin="round"/></svg>
   </div>
-  <div class="ig-caption"><b>{HANDLE.lstrip('@')}</b> {legenda}<span class="ts">2 HORAS ATRÁS</span></div>
+  <div class="ig-caption"><p style="margin:0;"><strong>{HANDLE}</strong> {legenda}</p><span class="ts">2 HORAS ATRÁS</span></div>
 </div>
 
 <aside id="carousel-editor" style="width:360px;max-height:90vh;overflow:auto;background:#fff;border:1px solid #e5e5e5;border-radius:14px;padding:18px;font-family:system-ui,sans-serif;font-size:13px;box-shadow:0 4px 24px rgba(0,0,0,0.06);position:sticky;top:24px;">

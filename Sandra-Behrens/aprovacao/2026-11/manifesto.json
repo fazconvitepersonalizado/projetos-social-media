@@ -1,0 +1,578 @@
+{
+ "cliente": "Sandra-Behrens",
+ "mes": "2026-11",
+ "posts": [
+  {
+   "id": "2026-11-12-mandalaterapia",
+   "num": 1,
+   "arquivo": "conteudos\\2026-11-12-mandalaterapia\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Mandalaterapia: muito além de [[colorir]]"
+    },
+    {
+     "id": "slide1-subhead",
+     "slide": 1,
+     "papel": "subhead",
+     "texto": "Um caminho de conexão, expressão e autoconhecimento."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Já parou para olhar para [[dentro]] de si?"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Alguns minutos com uma mandala podem ser essa oportunidade."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "A prática convida você a desacelerar."
+    },
+    {
+     "id": "slide3-item-1",
+     "slide": 3,
+     "papel": "item-1",
+     "texto": "Concentrar a atenção"
+    },
+    {
+     "id": "slide3-item-2",
+     "slide": 3,
+     "papel": "item-2",
+     "texto": "Se conectar com o momento presente"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Escolher as cores também é explorar [[sentimentos.]]"
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Dá espaço para expressar emoções e exercitar a criatividade."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Cada pessoa vive esse processo de um jeito [[único.]]"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Respeitando suas experiências, suas emoções e o seu tempo."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Permita-se experimentar."
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Às vezes, tudo o que precisamos é de um momento para nos reconectar conosco."
+    },
+    {
+     "id": "slide6-assinatura",
+     "slide": 6,
+     "papel": "assinatura",
+     "texto": "Vamos conversar sobre você?"
+    }
+   ],
+   "legenda": "Mandalaterapia: muito além de colorir.\n\nAlguns minutos com uma mandala podem virar um momento de olhar para dentro. Na mandalaterapia, escolher as cores e preencher cada espaço convida a desacelerar, prestar atenção no presente e expressar o que às vezes ainda não virou palavra.\n\nCada pessoa vive esse processo do seu jeito e no seu tempo. Na Arteterapia, a mandala pode ser um caminho de conexão e autoconhecimento.\n\nSalve este post para lembrar de se dar esse momento. E se quiser conversar sobre você, o link para agendar está na bio.\n\n#Mandalaterapia #Arteterapia #Autoconhecimento #SaudeEmocionalDaMulher #Autocuidado"
+  },
+  {
+   "id": "2026-11-14-menopausa-nao-se-reconhecem",
+   "num": 2,
+   "arquivo": "conteudos\\2026-11-14-menopausa-nao-se-reconhecem\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Menopausa: por que tantas mulheres sentem que já não se [[reconhecem?]]"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "O corpo muda e os hormônios se [[transformam.]]"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Muitas vezes, as emoções parecem acompanhar essa nova fase."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "O que pode fazer parte dessa experiência"
+    },
+    {
+     "id": "slide3-item-1",
+     "slide": 3,
+     "papel": "item-1",
+     "texto": "Alterações no sono"
+    },
+    {
+     "id": "slide3-item-2",
+     "slide": 3,
+     "papel": "item-2",
+     "texto": "Ondas de calor"
+    },
+    {
+     "id": "slide3-item-3",
+     "slide": 3,
+     "papel": "item-3",
+     "texto": "Irritabilidade"
+    },
+    {
+     "id": "slide3-item-4",
+     "slide": 3,
+     "papel": "item-4",
+     "texto": "Mudanças na disposição"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "As mudanças vão além do corpo."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "A autoestima, a sexualidade e a forma como você se vê também podem mudar."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "É comum não reconhecer o [[próprio corpo.]]"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Ou sentir falta de quem você era antes."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Nesse momento, o que ajuda:"
+    },
+    {
+     "id": "slide6-item-1",
+     "slide": 6,
+     "papel": "item-1",
+     "texto": "Acolher suas emoções"
+    },
+    {
+     "id": "slide6-item-2",
+     "slide": 6,
+     "papel": "item-2",
+     "texto": "Buscar informação"
+    },
+    {
+     "id": "slide6-item-3",
+     "slide": 6,
+     "papel": "item-3",
+     "texto": "Contar com apoio profissional"
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Você não deixou de ser [[você.]]"
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "Está vivendo uma nova fase e merece atravessá-la com acolhimento, cuidado e respeito."
+    },
+    {
+     "id": "slide7-assinatura",
+     "slide": 7,
+     "papel": "assinatura",
+     "texto": "Vamos conversar sobre você?"
+    }
+   ],
+   "legenda": "Menopausa: por que tantas mulheres sentem que já não se reconhecem?\n\nNa menopausa, o corpo muda e os hormônios se transformam. Sono alterado, ondas de calor, irritabilidade e menos disposição podem fazer parte dessa fase, e as mudanças também chegam à autoestima, à sexualidade e ao jeito de se ver no espelho.\n\nSentir falta de quem você era antes é comum. Acolher essas emoções, buscar informação e contar com apoio profissional ajuda a atravessar esse momento com mais cuidado.\n\nVocê não deixou de ser você. Vamos conversar sobre você? O link para agendar está na bio.\n\n#Menopausa #SaudeEmocionalDaMulher #Climaterio #Autoestima #TerapiaParaMulheres"
+  },
+  {
+   "id": "2026-11-17-voce-cuida-de-todos",
+   "num": 3,
+   "arquivo": "conteudos\\2026-11-17-voce-cuida-de-todos\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Você cuida de todos, mas tem cuidado de [[si mesma?]]"
+    },
+    {
+     "id": "slide1-body",
+     "slide": 1,
+     "papel": "body",
+     "texto": "Não se deixe para depois. Você também merece atenção, carinho e cuidado."
+    }
+   ],
+   "legenda": "Você cuida de todos, mas tem cuidado de si mesma?\n\nFilhos, casa, trabalho, pais. Muitas mulheres passam o dia resolvendo a vida de todo mundo e deixam o próprio cuidado para depois. Autocuidado também é parar alguns minutos para um café, um livro ou um descanso sem culpa.\n\nNão se deixe para depois. Você também merece atenção, carinho e cuidado.\n\nMarque aquela amiga que cuida de todo mundo. E se quiser um espaço só seu, o link para agendar está na bio.\n\n#Autocuidado #SaudeEmocionalDaMulher #SaudeMental #TerapiaParaMulheres #CuidarDeSi"
+  },
+  {
+   "id": "2026-11-19-cores-da-mandala",
+   "num": 4,
+   "arquivo": "conteudos\\2026-11-19-cores-da-mandala\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "O que as cores escolhidas em uma mandala podem [[representar?]]"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "[[Azul:]] tranquilidade e serenidade."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "Uma cor frequentemente associada à calma, à confiança e à introspecção."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "[[Amarelo:]] alegria e vitalidade."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Uma cor que pode remeter à energia, ao otimismo e à criatividade."
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "[[Verde:]] equilíbrio e renovação."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Uma cor associada à natureza, ao crescimento e à sensação de harmonia."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "[[Vermelho:]] intensidade e energia."
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Uma cor que pode representar força, movimento e emoções intensas."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "[[Lilás:]] sensibilidade e espiritualidade."
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Uma cor frequentemente relacionada à imaginação, à delicadeza e à introspecção."
+    },
+    {
+     "id": "slide7-headline",
+     "slide": 7,
+     "papel": "headline",
+     "texto": "Não existe uma interpretação única para cada cor."
+    },
+    {
+     "id": "slide7-body",
+     "slide": 7,
+     "papel": "body",
+     "texto": "O significado também passa pelas suas experiências. E você, quais cores costuma escolher?"
+    }
+   ],
+   "legenda": "O que as cores escolhidas em uma mandala podem representar?\n\nNa mandalaterapia, as cores costumam ser associadas a sensações: azul à calma, amarelo à alegria, verde ao equilíbrio, vermelho à intensidade e lilás à sensibilidade.\n\nMas não existe uma interpretação única para cada cor. O significado das cores da mandala também passa pelas suas experiências e pelo que você sente na hora de escolher.\n\nE você, quais cores costuma escolher para suas mandalas? Conta aqui nos comentários.\n\n#Mandalaterapia #Arteterapia #Mandala #Autoconhecimento #SaudeEmocionalDaMulher"
+  },
+  {
+   "id": "2026-11-24-menopausa-e-autoestima",
+   "num": 5,
+   "arquivo": "conteudos\\2026-11-24-menopausa-e-autoestima\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Menopausa e autoestima: como acolher as mudanças do [[próprio corpo?]]"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "As mudanças hormonais trazem transformações físicas e [[emocionais.]]"
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "E elas afetam a maneira como a mulher se percebe."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Talvez você esteja se olhando de um jeito diferente."
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Sentindo insegurança ou comparando seu corpo com o de outras fases da vida."
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Seu valor não está na aparência nem na [[idade.]]"
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Nem na capacidade de manter a mesma versão de si para sempre."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Comece respeitando seu corpo."
+    },
+    {
+     "id": "slide5-item-1",
+     "slide": 5,
+     "papel": "item-1",
+     "texto": "Reconheça suas necessidades"
+    },
+    {
+     "id": "slide5-item-2",
+     "slide": 5,
+     "papel": "item-2",
+     "texto": "Cuide da sua saúde"
+    },
+    {
+     "id": "slide5-item-3",
+     "slide": 5,
+     "papel": "item-3",
+     "texto": "Viva essa fase com menos cobrança"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Seu corpo tem uma [[história.]]"
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Olhe para ele com mais carinho e permita-se construir uma nova relação consigo mesma."
+    },
+    {
+     "id": "slide6-assinatura",
+     "slide": 6,
+     "papel": "assinatura",
+     "texto": "Vamos conversar sobre você?"
+    }
+   ],
+   "legenda": "Menopausa e autoestima: como acolher as mudanças do próprio corpo?\n\nAs mudanças hormonais da menopausa trazem transformações físicas e emocionais. Talvez você esteja se olhando de um jeito diferente, sentindo insegurança ou comparando seu corpo com o de outras fases da vida.\n\nSeu valor não está na aparência nem na idade. Um começo possível é respeitar o corpo, reconhecer suas necessidades, cuidar da saúde e viver essa fase com menos cobrança.\n\nSeu corpo tem uma história. Vamos conversar sobre você? O link para agendar está na bio.\n\n#Menopausa #Autoestima #SaudeEmocionalDaMulher #MaturidadeFeminina #AutoestimaFeminina"
+  },
+  {
+   "id": "2026-11-26-nao-precisa-dar-conta-de-tudo",
+   "num": 6,
+   "arquivo": "conteudos\\2026-11-26-nao-precisa-dar-conta-de-tudo\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Você não precisa dar conta de tudo, o [[tempo todo.]]"
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Vivemos tentando cumprir compromissos e atender expectativas."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "E resolver tudo o que está ao nosso redor."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Nessa rotina, esquecemos de perceber nossos sinais de [[cansaço.]]"
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Respeitar seus limites também significa:"
+    },
+    {
+     "id": "slide4-item-1",
+     "slide": 4,
+     "papel": "item-1",
+     "texto": "Descansar quando precisa"
+    },
+    {
+     "id": "slide4-item-2",
+     "slide": 4,
+     "papel": "item-2",
+     "texto": "Dizer não"
+    },
+    {
+     "id": "slide4-item-3",
+     "slide": 4,
+     "papel": "item-3",
+     "texto": "Reservar momentos para si"
+    },
+    {
+     "id": "slide4-item-4",
+     "slide": 4,
+     "papel": "item-4",
+     "texto": "Deixar para amanhã o que pode esperar"
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Desacelerar é reconhecer que você também precisa de [[cuidado.]]"
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Não espere chegar ao limite para cuidar de si."
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Permita-se respirar, descansar e recomeçar."
+    },
+    {
+     "id": "slide6-assinatura",
+     "slide": 6,
+     "papel": "assinatura",
+     "texto": "Vamos conversar sobre você?"
+    }
+   ],
+   "legenda": "Você não precisa dar conta de tudo, o tempo todo.\n\nCompromissos, expectativas, problemas dos outros para resolver. Nessa rotina, é fácil esquecer de perceber os próprios sinais de cansaço.\n\nRespeitar seus limites também é descansar quando precisa, dizer não, reservar momentos para si e deixar para amanhã o que pode esperar. Desacelerar é reconhecer que você também precisa de cuidado.\n\nSalve para reler naquele dia corrido. E se quiser conversar sobre isso, o link para agendar está na bio.\n\n#Autocuidado #SaudeEmocionalDaMulher #SaudeMental #Limites #TerapiaParaMulheres"
+  },
+  {
+   "id": "2026-11-28-envelhecer-novas-versoes",
+   "num": 7,
+   "arquivo": "conteudos\\2026-11-28-envelhecer-novas-versoes\\carousel.html",
+   "campos": [
+    {
+     "id": "slide1-headline",
+     "slide": 1,
+     "papel": "headline",
+     "texto": "Envelhecer também é descobrir novas [[versões]] de si mesma."
+    },
+    {
+     "id": "slide2-headline",
+     "slide": 2,
+     "papel": "headline",
+     "texto": "Com os anos, mudam nossos desejos e prioridades."
+    },
+    {
+     "id": "slide2-body",
+     "slide": 2,
+     "papel": "body",
+     "texto": "E também a maneira como enxergamos o mundo."
+    },
+    {
+     "id": "slide3-headline",
+     "slide": 3,
+     "papel": "headline",
+     "texto": "Você pode descobrir novos [[interesses.]]"
+    },
+    {
+     "id": "slide3-body",
+     "slide": 3,
+     "papel": "body",
+     "texto": "Desenvolver habilidades e viver experiências que antes nem imaginava."
+    },
+    {
+     "id": "slide4-headline",
+     "slide": 4,
+     "papel": "headline",
+     "texto": "Também pode aprender a respeitar mais seus limites."
+    },
+    {
+     "id": "slide4-body",
+     "slide": 4,
+     "papel": "body",
+     "texto": "Reconhecer suas conquistas e largar cobranças que já não fazem sentido."
+    },
+    {
+     "id": "slide5-headline",
+     "slide": 5,
+     "papel": "headline",
+     "texto": "Envelhecer não significa deixar de [[sonhar.]]"
+    },
+    {
+     "id": "slide5-body",
+     "slide": 5,
+     "papel": "body",
+     "texto": "Nem de desejar, aprender ou construir novos caminhos."
+    },
+    {
+     "id": "slide6-headline",
+     "slide": 6,
+     "papel": "headline",
+     "texto": "Você não precisa ser a mesma mulher de [[ontem.]]"
+    },
+    {
+     "id": "slide6-body",
+     "slide": 6,
+     "papel": "body",
+     "texto": "Ainda existem muitas versões suas esperando para florescer."
+    }
+   ],
+   "legenda": "Envelhecer também é descobrir novas versões de si mesma.\n\nCom os anos, mudam os desejos, as prioridades e a maneira de enxergar o mundo. Envelhecer pode trazer novos interesses, habilidades e experiências que antes nem pareciam possíveis, e também mais respeito pelos próprios limites.\n\nEnvelhecer não significa deixar de sonhar, aprender ou construir novos caminhos. Ainda existem muitas versões suas esperando para florescer.\n\nVamos conversar sobre você? O link para agendar está na bio.\n\n#Envelhecimento #MaturidadeFeminina #SaudeEmocionalDaMulher #Autoconhecimento #EnvelhecerBem"
+  }
+ ]
+}

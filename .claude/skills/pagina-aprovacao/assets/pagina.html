@@ -589,7 +589,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
     b.className = "cel"; b.type = "button"; b.dataset.id = p.id;
     b.setAttribute("aria-label", "Post " + p.num + ": " + p.titulo);
     b.innerHTML = '<img src="' + p.thumb + '" alt="" loading="lazy"><span class="cel-num">' + p.num + "</span>" +
-      (ICONE[p.tipo] ? '<span class="cel-tipo">' + ICONE[p.tipo] + "</span>" : "") +
+      (ICONE[p.tipo] && !(p.tipo === "carrossel" && p.slides < 2) ? '<span class="cel-tipo">' + ICONE[p.tipo] + "</span>" : "") +
       '<span class="cel-ver">Ver post</span><span class="selo" data-selo="' + esc(p.id) + '"></span>';
     grade.appendChild(b);
   });
@@ -636,7 +636,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
   POSTS.forEach(function (p) {
     var li = document.createElement("li");
     li.innerHTML = '<button class="item" type="button" data-id="' + esc(p.id) + '"><img src="' + p.thumb + '" alt="">' +
-      "<span><b>" + num(p.num) + " · " + esc(p.rotulo) + "</b><small>" + (p.dataCurta ? esc(p.dataCurta) + " · " : "") + (p.slides > 1 ? p.slides + " slides" : p.tipo) + "</small></span>" +
+      "<span><b>" + num(p.num) + " · " + esc(p.rotulo) + "</b><small>" + (p.dataCurta ? esc(p.dataCurta) + " · " : "") + (p.slides > 1 ? p.slides + " slides" : (p.tipo === "carrossel" ? "post único" : p.tipo)) + "</small></span>" +
       '<span class="pt" data-pt="' + esc(p.id) + '"></span></button>';
     $("lista").appendChild(li);
   });
