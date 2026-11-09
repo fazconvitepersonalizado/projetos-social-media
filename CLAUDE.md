@@ -180,6 +180,16 @@ projeto atual, pergunte antes de só aplicar e seguir:
   Receita completa com exemplos de código em `references/visual-qa.md` da
   skill `instagram-carousel` ("Fixing text-over-photo legibility").
 
+- **Repertório criativo: variar o tipo de post, não só o tema** (2026-11-08, todos os
+  clientes, tirado do estudo da Publipost): o sorteio traz o tipo de post (tema que vira lição,
+  guia, série de anáfora, comparativo, caso, bastidores, antes e depois...) sem repetir o do
+  anterior, a sequência de funções e 2 recursos de slide (anotação à mão, palavra de impacto,
+  marca-texto, selo numérico, dois cartões, mockup, prova real). Viradas novas: "Isso tem nome"
+  (só conceito real) e "O que isso muda em você / na sua empresa" (perguntas no lugar da frase
+  de efeito). Cada cliente pode ter 1 ou 2 quadros fixos por mês. **Entra o esqueleto, nunca a
+  pele:** recursos vestidos com fonte, cor e tom do cliente; o que não combina com a marca não
+  entra. Catálogo em `.claude/skills/conteudo-mensal/references/repertorio-criativo.md`.
+
 ## Conteúdo sem cara de IA (copy e design)
 - **Material real do cliente** (2026-10-20, todos os clientes): coleta mensal
   de 3 perguntas (o que aconteceu, que dúvida um cliente fez, tem foto?)
@@ -485,3 +495,9 @@ projeto atual, pergunte antes de só aplicar e seguir:
   foto. Substitui a marca-d'água colorida a 50% que tinha saído na revisão
   anti-IA. Atualizados CLAUDE.md, design-system.md, anti-ia-design.md e SKILL.md
   de todos os clientes e do modelo; conferidor checa encostar em texto.
+- 2026-11-08 — Estudo da Publipost (método inspirado no @v4company) virou repertório criativo
+  para todos, sem tirar a identidade de ninguém (pedido do Thiago): tipos de post com sequência,
+  viradas "Isso tem nome" e "O que isso muda", recursos de slide e quadros fixos. Sorteio sorteia
+  tipo e 2 recursos sem repetir o anterior; conferidor lê a linha `Tipo:` do roteiro e aceita as
+  funções novas. `repertorio-criativo.md`, roteiro.md, conteudo-mensal, instagram-carousel e
+  design-system.md de todos os clientes e do modelo, marca-cliente/template.md.

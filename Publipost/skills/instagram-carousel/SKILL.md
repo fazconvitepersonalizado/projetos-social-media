@@ -100,6 +100,11 @@ cliente), sorteie de novo com outro `--seed` em vez de inventar. Se o Thiago
 indicar manualmente os slides com foto, a indicação dele vence. Use
 `--simular` só para testes (não grava no histórico).
 
+**Repertório criativo (2026-11-08, padrão geral):** o sorteio também traz o tipo de post (com a
+sequência de funções) e 2 recursos de slide; o catálogo e como cada marca veste cada recurso estão em
+`.claude/skills/conteudo-mensal/references/repertorio-criativo.md` (na raiz do projeto). Entra o esqueleto, nunca a pele: recurso que não
+combina com a marca é trocado, e fonte, cor e tom continuam os do cliente.
+
 **História primeiro (2026-10-20, padrão geral):** escreva a história antes de
 olhar a composição sorteada: começo, meio e fim (gancho → por que importa → o
 que muda → como fazer → chamada), uma ideia por slide, sem repetir. Depois

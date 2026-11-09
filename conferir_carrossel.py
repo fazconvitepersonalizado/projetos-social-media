@@ -41,7 +41,11 @@ VISUAL_MIN, VISUAL_BOM = 0.06, 0.12         # pegada do recurso visual (fração
 VAZIO_MAX = 1 / 3
 GRANDE = 48                                 # px: texto deste tamanho conta como elemento visual (número gigante)
 FUNCOES = ["gancho", "por que importa", "o que muda", "como fazer", "chamada"]
-FUNCOES_EXTRAS = ["contexto", "consequência", "virada", "exemplo", "pergunta", "dado"]
+FUNCOES_EXTRAS = ["contexto", "consequência", "virada", "exemplo", "pergunta", "dado",
+                  # repertório criativo (2026-11-08): conteudo-mensal/references/repertorio-criativo.md
+                  "conceito", "lição", "item", "passo", "bordão", "antes", "depois", "momento", "lado a", "lado b"]
+# tipos de post cuja história não passa por "por que importa / o que muda / como fazer"
+TIPOS_HISTORIA_LIVRE = {"serie-de-anafora", "perguntas-e-respostas", "frase-de-autoridade", "um-dia-na-rotina"}
 PARADAS = set("""a o as os um uma uns umas de do da dos das no na nos nas em por para pra com sem que se
 e ou mas é ser foi são tem ter sua seu suas seus isso esta este essa esse não sim mais menos
 muito pouco quando como onde qual quem já só também aqui ali lá ao aos à às""".split())
@@ -342,8 +346,10 @@ def ler_roteiro(path: Path):
     posts, atual = [], None
     for linha in path.read_text(encoding="utf-8").splitlines():
         if linha.startswith("## "):
-            atual = {"nome": linha[3:].strip(), "arco": "", "slides": []}
+            atual = {"nome": linha[3:].strip(), "arco": "", "tipo": "", "slides": []}
             posts.append(atual)
+        elif atual and linha.lower().startswith("tipo:"):
+            atual["tipo"] = sem_acento(linha.split(":", 1)[1].strip().split()[0]) if linha.split(":", 1)[1].strip() else ""
         elif atual and linha.lower().startswith("arco:"):
             atual["arco"] = linha.split(":", 1)[1].strip()
         elif atual and linha.startswith("|"):
@@ -372,8 +378,13 @@ def conferir_roteiro(path: Path):
             rel.achado("história", "o primeiro slide não é o gancho")
         if funcs[-1] != "chamada":
             rel.achado("história", "o último slide não é a chamada")
-        for f in FUNCOES[1:4]:
-            if sem_acento(f) not in funcs:
+        livre = post["tipo"] in TIPOS_HISTORIA_LIVRE
+        if "licao" in funcs and "como fazer" not in funcs:
+            funcs_hist = funcs + ["como fazer"]  # a lição ("O que isso muda em você") faz o papel do como fazer
+        else:
+            funcs_hist = funcs
+        for f in ([] if livre else FUNCOES[1:4]):
+            if sem_acento(f) not in funcs_hist:
                 rel.achado("história", f"falta um slide de '{f}' (gancho → por que importa → o que muda → como fazer → chamada)")
         if "por que importa" in funcs and "como fazer" in funcs and funcs.index("por que importa") > funcs.index("como fazer"):
             rel.achado("história", "'por que importa' vem depois de 'como fazer'")

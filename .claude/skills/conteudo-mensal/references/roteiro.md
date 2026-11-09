@@ -12,6 +12,7 @@ sendo a fonte da verdade. No roteiro, anotar "Aprovado em AAAA-MM-DD" no topo.
 ## Formato
 ```
 ## POST NN · tema
+Tipo: tema-que-vira-licao (tipo de post do sorteio; ver repertorio-criativo.md)
 Arco: de onde a história parte e aonde chega, numa frase.
 
 | # | Função | Título | Apoio | Dado e fonte | Visual |
@@ -30,6 +31,12 @@ Arco: de onde a história parte e aonde chega, numa frase.
 - **Visual**: fundo + recurso (traço temático, forma de cor, recorte, foto). Nunca vazio.
   Escrever "creme", "claro" ou "branco" quando o fundo for claro (máximo 2; capa nunca).
 - A composição do sorteio entra só aqui, na coluna Visual, depois da história escrita.
+
+**Funções do repertório criativo (2026-11-08):** conceito ("Isso tem nome: …", só termo real), lição
+("O que isso muda em você / na sua empresa" + perguntas; conta como "como fazer") e as de cada tipo
+(item, passo, bordão, antes, depois, momento, lado A, lado B). Em série de anáfora, perguntas e
+respostas, frase de autoridade e um dia na rotina, o conferidor não exige "por que importa / o que muda /
+como fazer". Recursos sugeridos pelo sorteio entram na coluna Visual, vestidos pela marca.
 
 ## Conferir antes de mostrar
 ```bash

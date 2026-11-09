@@ -110,6 +110,11 @@ COR PRINCIPAL: **A DEFINIR com o cliente ({{Opção A}} ou {{Opção B}}).** Enq
 - **Chamada para {{oferta}}:** {{composição}}, {{3 benefícios}}, botão "{{CTA}}" na cor principal.
 - **Story {{interativo}}:** {{descrição}}.
 
+## Repertório criativo (ver `conteudo-mensal/references/repertorio-criativo.md`)
+- Quadros fixos (1 vez por mês cada, só com OK do Thiago): {{nome do quadro}} · {{tipo de post}} · {{elemento visual que se repete}}.
+- Como a marca veste os recursos: anotação à mão {{fonte manuscrita ou "não usa"}} · palavra de impacto {{fonte e cor}} · marca-texto {{cor}} · lição {{"O que isso muda em você" / "na sua empresa" e o jeito das perguntas}}.
+- Recursos que não combinam com a marca (não usar): {{lista}}.
+
 ## Pendências com o cliente (perguntar só se forem relevantes para a peça)
 - {{Pendência 1}}
 - {{Pendência 2}}

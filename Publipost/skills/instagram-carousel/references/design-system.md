@@ -163,6 +163,17 @@ The first slide must stop the scroll in under 1 second. Prioritize these formats
 
 ---
 
+## Repertório criativo (2026-11-08)
+
+Tipos de post, as viradas "Isso tem nome" e "O que isso muda em você", recursos de slide
+(anotação à mão, palavra de impacto, marca-texto, selo numérico, dois cartões, mockup de celular,
+prova real) e quadros fixos: `.claude/skills/conteudo-mensal/references/repertorio-criativo.md` (raiz do projeto). Cada recurso usa as
+fontes e cores desta marca; sem fonte manuscrita, nada de anotação à mão. Limites: uma palavra
+destacada por título, uma faixa ou marca-texto por slide, uma palavra de impacto e um marca-texto
+por carrossel.
+
+---
+
 ## Slide Sequences
 
 > **Substituídas pelo sorteio** (`sorteio_carrossel.py`, Fase 2 da skill):

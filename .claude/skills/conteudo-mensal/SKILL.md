@@ -68,6 +68,10 @@ Referências desta skill:
    Conferir a rotação descrita contra o histórico real (pastas em
    `conteudos/`, planos anteriores, cartões em `Publicado`): às vezes a
    praticada difere da descrita; se diferir, mostrar e perguntar qual vale.
+3b. **Variar o tipo de post, não só o tema** (`references/repertorio-criativo.md`): no mês,
+   alternar tipos (tema que vira lição, guia, série, comparativo, caso, bastidores...) sem repetir o
+   do post anterior; tipo que pede material real só com o material em `material-real/`. Quadros
+   fixos do cliente (se houver) entram 1 vez por mês cada.
 4. Para cada post de **conteúdo** (carrossel, post único, frase, roteiro),
    sugerir **tema principal + 2 alternativas**, na voz e nos pilares do
    cliente, com etiqueta de origem ([B]/[P]/[S]) e sem repetir tema já
