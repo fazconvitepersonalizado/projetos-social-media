@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,700;0,800;1,800&family=Caveat:wght@700&display=swap">
+<style>
+:root{--azul:#1A4DFF;--fundo:#0B2A99;--marinho:#070D24;--ciano:#2EE6FF;--gelo:#F2F4F9;--grafite:#10142A;--cinza:#5B6280;--linha:#D9DEEC}
+*{box-sizing:border-box;margin:0}
+body{background:#888;font-family:Archivo,Arial,sans-serif;display:grid;gap:40px;padding:40px;justify-content:center}
+.slide{width:1080px;height:1440px;position:relative;overflow:hidden;color:var(--grafite);background:var(--gelo)}
+.slide.dark{background:var(--marinho);color:#fff}
+.slide.blue{background:linear-gradient(160deg,var(--azul),var(--fundo));color:#fff}
+.abs{position:absolute}
+.mono{position:absolute;left:76px;top:76px;width:96px;height:96px}
+.mono.c{left:492px}
+.title{position:absolute;left:76px;top:210px;width:928px;font:800 70px/1.12 Archivo;letter-spacing:-.5px}
+.blue-t{color:var(--azul)}
+.dark .blue-t,.blue .blue-t{color:var(--ciano)}
+.body{position:absolute;left:76px;width:928px;display:grid;gap:30px;font-size:42px;line-height:1.4}
+.body b{font-weight:800}
+.tarja{background:var(--azul);color:#fff;padding:0 14px;border-radius:8px;font-weight:800;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.photo{position:absolute;border-radius:26px;overflow:hidden}
+.photo img,.full img{width:100%;height:100%;object-fit:cover;display:block}
+.full{position:absolute;inset:0}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,36,0) 0,rgba(7,13,36,0) 34%,rgba(7,13,36,.95) 100%)}
+.bar{position:absolute;left:54px;top:1321px;width:972px;height:119px;background:var(--azul);color:#fff;border-radius:28px 28px 0 0;display:flex;align-items:center;justify-content:center;gap:22px;font:700 42px Archivo}
+.blue .bar{background:#fff;color:var(--azul)}
+.arr{width:58px;height:58px;border:5px solid currentColor;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-size:32px;font-weight:800}
+.num{display:inline-flex;align-items:center;justify-content:center;width:96px;height:74px;border-radius:13px;background:var(--azul);color:#fff;font:800 44px Archivo;flex:none}
+.numrow{position:absolute;left:76px;top:210px;width:928px;display:flex;gap:24px;align-items:center;font:800 64px/1.1 Archivo;letter-spacing:-.5px}
+.hand{position:absolute;font:700 56px/1 Caveat;color:var(--azul)}
+.big{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:.9;font-weight:400}
+.check{display:grid;gap:26px}
+.check div{display:flex;gap:22px;align-items:flex-start;font-size:40px;line-height:1.3}
+.check div::before{content:"✓";flex:none;width:46px;height:46px;border-radius:50%;border:4px solid var(--azul);color:var(--azul);display:inline-flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;margin-top:2px}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="m" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#1A4DFF"/><path fill="#fff" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/><rect x="64" y="70" width="12" height="12" rx="2" fill="#fff"/></symbol>
+<symbol id="mw" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#fff"/><path fill="#1A4DFF" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/><rect x="64" y="70" width="12" height="12" rx="2" fill="#1A4DFF"/></symbol>
+</defs></svg>
+
+<!-- 01 · C1 Capa notícia -->
+<section class="slide dark" id="s1">
+  <div class="full"><img src="../../manual/img/social.jpg" style="object-position:62% 20%"></div>
+  <div class="shade"></div>
+  <svg class="mono c"><use href="#m"/></svg>
+  <div class="abs" style="left:76px;width:928px;bottom:92px;display:grid;justify-items:center;gap:18px;text-align:center">
+    <span style="font:800 56px Archivo">Social media é o cargo mais</span>
+    <span class="big" style="font-size:250px;color:#fff">Ignorado</span>
+    <span class="tarja" style="font-size:58px;padding:4px 22px">da sua empresa</span>
+  </div>
+</section>
+
+<!-- 02 · I1 Contexto -->
+<section class="slide" id="s2">
+  <svg class="mono"><use href="#m"/></svg>
+  <h1 class="title">Postar é só a parte <span class="blue-t">que aparece</span></h1>
+  <div class="body" style="top:405px">
+    <p>Por trás de cada post tem <b>pesquisa de pauta, roteiro, design, legenda</b> e leitura dos números.</p>
+    <p>Quando ninguém cuida disso, o perfil vira um <span class="tarja">mural de promoções</span> que ninguém para pra ler.</p>
+  </div>
+  <div class="photo" style="left:76px;top:850px;width:928px;height:440px"><img src="../../manual/img/celular.jpg" style="object-position:center 22%"></div>
+  <div class="bar">Mas o que ele faz de verdade? <span class="arr">→</span></div>
+</section>
+
+<!-- 03 · I2 Numerado -->
+<section class="slide" id="s3">
+  <svg class="mono"><use href="#m"/></svg>
+  <div class="numrow"><span class="num">01</span><span>Ele escuta o seu <span class="blue-t">cliente</span></span></div>
+  <div class="body" style="top:340px;width:444px;font-size:40px;gap:28px">
+    <p>Cada comentário e cada direct é <b>pesquisa de mercado de graça.</b></p>
+    <p>As dúvidas que se repetem viram <b>pauta dos próximos posts.</b></p>
+    <p><b class="blue-t">Mas atenção:</b> isso só funciona se alguém responder todo dia.</p>
+  </div>
+  <div class="photo" style="left:556px;top:340px;width:448px;height:860px"><img src="../../manual/img/empresario.jpg" style="object-position:40% center"></div>
+  <span class="hand" style="left:96px;top:1170px;transform:rotate(-5deg)">quem responde, vende ↗</span>
+  <div class="bar">E não para por aí <span class="arr">→</span></div>
+</section>
+
+<!-- 04 · I2 Numerado (fundo marinho) -->
+<section class="slide dark" id="s4">
+  <svg class="mono"><use href="#mw"/></svg>
+  <div class="numrow"><span class="num">02</span><span>Ele deixa a marca <span class="blue-t">reconhecível</span></span></div>
+  <div class="body" style="top:420px;color:#C5CCE4">
+    <p>Mesmo tom de voz, mesmas cores, mesma frequência.</p>
+    <p>É isso que faz alguém <b style="color:#fff">reconhecer você no feed antes de ler o nome.</b></p>
+  </div>
+  <div class="abs" style="left:76px;top:780px;width:928px;height:470px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:8px">
+    <div style="position:relative;overflow:hidden"><img src="../../manual/img/empresario.jpg" style="width:100%;height:100%;object-fit:cover"><span class="big abs" style="left:0;right:0;bottom:12px;text-align:center;font-size:54px;color:#fff;text-shadow:0 2px 12px #000">Vender</span></div>
+    <div style="background:var(--gelo);display:grid;place-items:center;text-align:center;color:var(--grafite)"><div style="display:grid;gap:10px"><div style="font:800 24px/1 Archivo">Branding</div><div class="big" style="font-size:64px;line-height:1;color:var(--azul)">Não é</div><div style="font:800 22px/1 Archivo">o seu logo</div></div></div>
+    <div style="background:linear-gradient(160deg,var(--azul),var(--fundo));display:grid;place-items:center"><span class="big" style="font-size:50px">Campeões</span></div>
+    <div style="position:relative;overflow:hidden"><img src="../../manual/img/equipe.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 25%"></div>
+    <div style="background:var(--gelo);padding:20px;color:var(--grafite)"><div class="big" style="font-size:70px;color:var(--azul);line-height:.6">“</div><div style="font:800 22px/1.25 Archivo">Marca forte é a que o cliente <span style="color:var(--azul)">explica</span> por você.</div></div>
+    <div style="position:relative;overflow:hidden"><img src="../../manual/img/confronto.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"><span class="big abs" style="left:0;right:0;bottom:12px;text-align:center;font-size:54px;color:#fff;text-shadow:0 2px 12px #000">Sumiu</span></div>
+  </div>
+  <span class="hand" style="left:600px;top:700px;color:var(--ciano);transform:rotate(-4deg)">dá pra reconhecer ↘</span>
+  <div class="bar">E tem o mais importante <span class="arr">→</span></div>
+</section>
+
+<!-- 05 · I4 Impacto (fundo azul) -->
+<section class="slide blue" id="s5">
+  <svg class="mono"><use href="#mw"/></svg>
+  <h1 class="title">O direct é o novo <span class="blue-t">balcão da loja</span></h1>
+  <div class="body" style="top:410px"><p>Quem pergunta o preço no direct está com a <b>carteira na mão.</b> Cada hora sem resposta é uma chance a mais de o concorrente responder primeiro.</p></div>
+  <div class="abs" style="left:40px;top:770px;width:1000px;height:230px;background:var(--ciano);border-radius:10px;display:grid;place-items:center"><span class="big" style="font-size:170px;color:var(--marinho);line-height:1">Tempo é venda</span></div>
+  <div class="body" style="top:1060px"><p>Ter alguém dedicado às redes é ter <b>alguém no balcão o dia inteiro.</b></p></div>
+  <div class="bar">Então por que tanta empresa ignora? <span class="arr">→</span></div>
+</section>
+
+<!-- 06 · Comparativo -->
+<section class="slide" id="s6">
+  <svg class="mono"><use href="#m"/></svg>
+  <h1 class="title">O mesmo perfil, <span class="blue-t">dois resultados</span></h1>
+  <div class="abs" style="left:76px;top:420px;width:928px;display:grid;grid-template-columns:1fr 1fr;gap:32px">
+    <div style="background:#fff;border-radius:26px;padding:44px 38px;display:grid;gap:28px;align-content:start;border:2px solid var(--linha)">
+      <div style="font:800 30px Archivo;letter-spacing:2px;text-transform:uppercase;color:var(--cinza)">Sem social media</div>
+      <div style="font-size:38px;line-height:1.3;display:grid;gap:26px;color:var(--cinza)">
+        <p>✕ Posta quando lembra</p><p>✕ Só fala de promoção</p><p>✕ Comentário sem resposta</p><p>✕ Ninguém sabe o que funciona</p>
+      </div>
+    </div>
+    <div style="background:linear-gradient(160deg,var(--azul),var(--fundo));color:#fff;border-radius:26px;padding:44px 38px;display:grid;gap:28px;align-content:start">
+      <div style="font:800 30px Archivo;letter-spacing:2px;text-transform:uppercase;color:var(--ciano)">Com social media</div>
+      <div style="font-size:38px;line-height:1.3;display:grid;gap:26px;font-weight:700">
+        <p>✓ Calendário fixo</p><p>✓ Conteúdo que ensina e vende</p><p>✓ Resposta no mesmo dia</p><p>✓ Decisão com base em números</p>
+      </div>
+    </div>
+  </div>
+  <span class="hand" style="left:560px;top:1170px;transform:rotate(-4deg)">qual é o seu? ↖</span>
+  <div class="bar">Isso tem nome <span class="arr">→</span></div>
+</section>
+
+<!-- 07 · I7 Conceito -->
+<section class="slide" id="s7">
+  <svg class="mono c"><use href="#m"/></svg>
+  <h1 class="title" style="text-align:center;left:120px;width:840px">Isso tem nome: <span class="blue-t">constância estratégica</span></h1>
+  <div class="body" style="top:430px;left:150px;width:780px;text-align:center"><p>É publicar com plano, repetir o que funciona e cortar o que não traz resultado.</p></div>
+  <div class="abs" style="left:0;right:0;top:720px;text-align:center"><span class="big" style="font-size:190px;color:var(--azul);display:block">Constância<br>vende</span></div>
+  <span class="hand" style="left:0;right:0;top:1130px;text-align:center;color:var(--cinza)">sorte não é estratégia ↙</span>
+  <div class="bar">Agora, no seu negócio <span class="arr">→</span></div>
+</section>
+
+<!-- 08 · I8 Lição -->
+<section class="slide" id="s8">
+  <svg class="mono"><use href="#m"/></svg>
+  <h1 class="title">O que isso <i class="blue-t">muda no seu negócio</i></h1>
+  <div class="body" style="top:400px"><p>Cortar o social media parece economia. Na prática, é <b>deixar sem ninguém a porta mais visitada da sua empresa.</b></p></div>
+  <p class="abs" style="left:76px;top:690px;font:800 42px Archivo;color:var(--azul)">Antes de decidir, pergunte:</p>
+  <div class="check abs" style="left:76px;top:780px;width:928px">
+    <div>Quem responde meus comentários hoje?</div>
+    <div>Quando foi meu último post planejado?</div>
+    <div>Sei qual post me trouxe cliente este mês?</div>
+    <div>Meu perfil mostra o que eu vendo em 3 segundos?</div>
+  </div>
+  <div class="photo" style="left:560px;top:1150px;width:520px;height:360px;border-radius:26px 0 0 0"><img src="../../manual/img/megafone.jpg" style="object-position:center 55%"></div>
+  <span class="hand" style="left:96px;top:1240px;transform:rotate(-4deg)">salva pra revisar depois ↗</span>
+</section>
+
+<!-- 09 · F1 CTA fixo -->
+<section class="slide dark" id="s9">
+  <div class="full"><img src="../../manual/img/equipe.jpg" style="object-position:center 10%"></div>
+  <div class="shade" style="background:linear-gradient(180deg,rgba(7,13,36,0) 30%,rgba(7,13,36,.96) 62%)"></div>
+  <svg class="mono"><use href="#mw"/></svg>
+  <div class="abs" style="left:120px;top:690px;width:840px;background:#fff;color:#111;border-radius:28px;padding:36px;display:grid;gap:22px;box-shadow:0 20px 50px rgba(0,0,0,.45)">
+    <div style="display:flex;gap:28px;align-items:center">
+      <svg width="130" height="130" style="border-radius:50%;flex:none"><use href="#m"/></svg>
+      <div style="display:grid;gap:6px"><b style="font-size:38px">publipost</b><span style="font-size:28px;color:#555">Marketing & Conteúdo</span>
+        <div style="display:flex;gap:34px;font-size:24px;color:#333;margin-top:6px"><span><b>248</b> posts</span><span><b>[nº]</b> seguidores</span></div></div>
+    </div>
+    <p style="font-size:27px;line-height:1.4;color:#222">Toda notícia vira uma decisão pro seu negócio.<br>👇 Peça seu diagnóstico de conteúdo grátis</p>
+    <div style="border:4px solid var(--azul);background:#EEF2FF;border-radius:14px;padding:12px 20px;font:700 30px Archivo;color:var(--azul)">🔗 publipost.com.br/diagnostico</div>
+  </div>
+  <p class="abs" style="left:110px;width:860px;top:1170px;text-align:center;font:800 54px/1.25 Archivo">Clique no link da bio e peça seu diagnóstico de conteúdo</p>
+</section>
+
+</body></html>

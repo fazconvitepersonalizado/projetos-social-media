@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "skills": {
+    "instagram-publish": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "skills/instagram-publish/SKILL.md"
+    },
+    "instagram-carousel": {
+      "source": "marcolang/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "instagram-carousel/SKILL.md",
+      "computedHash": "faf1562f25d67301b1349eb335b41c4ebc56e0f7065a0787c0110c76685da820"
+    }
+  }
+}

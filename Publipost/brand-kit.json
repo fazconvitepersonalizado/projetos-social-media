@@ -1,0 +1,46 @@
+{
+  "brand_name": "Publipost",
+  "instagram_handle": "@publipost",
+  "primary_color": "#1A4DFF",
+  "logo": {
+    "type": "svg",
+    "path": "C:\\Users\\thiag\\OneDrive\\faz convite\\SOCIAL MEDIA\\PROJETOS SOCIAL MEDIA\\Publipost\\logo\\logo-primary.svg",
+    "variants": {
+      "primary": "C:\\Users\\thiag\\OneDrive\\faz convite\\SOCIAL MEDIA\\PROJETOS SOCIAL MEDIA\\Publipost\\logo\\logo-primary.svg",
+      "white": "C:\\Users\\thiag\\OneDrive\\faz convite\\SOCIAL MEDIA\\PROJETOS SOCIAL MEDIA\\Publipost\\logo\\logo-white.svg",
+      "dark": "C:\\Users\\thiag\\OneDrive\\faz convite\\SOCIAL MEDIA\\PROJETOS SOCIAL MEDIA\\Publipost\\logo\\logo-dark.svg"
+    },
+    "initial_fallback": "P",
+    "lockup_sizes": {
+      "hero": {"width": 96, "height": 96},
+      "watermark": {"width": 96, "height": 96},
+      "cta": {"width": 130, "height": 130},
+      "note": "Padrão fixado em 2026-11-08 no manual Publipost: monograma 96x96 em x76,y76 (slides internos) ou centralizado em x492,y76 (capas e slides centralizados), num slide de 1080x1440. Sobre azul ou foto escura usar a variante white."
+    }
+  },
+  "heading_font": "Anton",
+  "body_font": "Archivo",
+  "accent_font": "Caveat",
+  "tone": "direto, curioso e bem-informado; todo post termina numa lição para o negócio de quem lê",
+  "language": "pt-BR",
+  "default_format": "3:4 (1080x1440)",
+  "derived": {
+    "BRAND_PRIMARY": "#1A4DFF",
+    "BRAND_DARK": "#0B2A99",
+    "BRAND_ACCENT": "#2EE6FF",
+    "LIGHT_BG": "#F2F4F9",
+    "LIGHT_BORDER": "#D9DEEC",
+    "DARK_BG": "#070D24",
+    "TEXT": "#10142A",
+    "TEXT_MUTED": "#5B6280",
+    "ALT_PRIMARY": "#0A84FF",
+    "ALT_DARK": "#0050B8"
+  },
+  "saved_at": "2026-11-08T21:45:00-03:00",
+  "brand_manual": {
+    "source": "manual/manual-publipost.html + manual/MARCA-PUBLIPOST.md (regras completas, receitas das 14 variações de slide)",
+    "published_link": "https://claude.ai/artifact/Gs1oPBCeRh7EtQDB4rvnnC",
+    "concept": "Todo post é uma aula de negócio.",
+    "reference": "Método e ritmo inspirados no perfil @v4company; nenhum elemento gráfico da V4 é reproduzido."
+  }
+}

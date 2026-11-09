@@ -1,0 +1,1122 @@
+<title>Manual Publipost</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,700&family=Caveat:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap">
+<style>
+/* Layout: manual em faixas largas alternando gelo/branco/marinho; cada faixa tem número de seção, título em Anton e conteúdo em grade. Peças de Instagram desenhadas em CSS na proporção real 3:4. */
+:root{
+  /* Paleta Publipost (versão principal: Azul Publi) */
+  --azul:#1A4DFF;          /* cor de destaque */
+  --azul-fundo:#0B2A99;    /* fim do degradê */
+  --azul-claro:#E8EEFF;    /* tinta suave para chips e fundos */
+  --marinho:#070D24;       /* substitui o preto */
+  --ciano:#2EE6FF;         /* sinal: marca-texto, uso pontual */
+  --gelo:#F2F4F9;          /* fundo claro dos slides */
+  --branco:#FFFFFF;
+  --grafite:#10142A;       /* texto */
+  --cinza:#5B6280;         /* texto secundário, com viés azul */
+  --linha:#D9DEEC;
+  --sobre-azul:#FFFFFF;    /* texto sobre a cor de destaque */
+
+  --f-destaque:"Anton","Bebas Neue","Impact","Arial Narrow",sans-serif;
+  --f-texto:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-mao:"Caveat","Segoe Print","Comic Sans MS",cursive;
+  --f-manchete:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+:root[data-cor="ceu"]{ --azul:#0A84FF; --azul-fundo:#0050B8; --azul-claro:#E5F2FF; --sobre-azul:#FFFFFF; }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--gelo);color:var(--grafite);font-family:var(--f-texto);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--azul)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+.band.white{background:var(--branco)}
+.band.navy{background:var(--marinho);color:#E6EAF7}
+.band.navy .lead,.band.navy .muted{color:#AEB6D3}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:end;margin-bottom:36px}
+.sec-num{font-family:var(--f-destaque);font-size:15px;letter-spacing:.08em;background:var(--azul);color:var(--sobre-azul);padding:4px 9px;border-radius:4px;align-self:center}
+.sec-head h2{font-family:var(--f-destaque);font-weight:400;font-size:clamp(34px,5vw,56px);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+.sec-head .lead{grid-column:1/-1;max-width:68ch;color:var(--cinza);font-size:17px;margin-top:10px}
+.muted{color:var(--cinza)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--azul)}
+.band.navy .eyebrow{color:var(--ciano)}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.grid>*{min-width:0}
+.box{background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:22px}
+.band.white .box{background:var(--gelo);border-color:transparent}
+.band.navy .box{background:#0F1735;border-color:#1E2A55}
+.box h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.box p+p{margin-top:8px}
+ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ul.clean li{padding-left:22px;position:relative}
+ul.clean li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:3px;background:var(--azul)}
+.band.navy ul.clean li::before{background:var(--ciano)}
+b,strong{font-weight:800}
+.mark{background:linear-gradient(transparent 55%,var(--ciano) 55%);padding:0 2px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--azul-claro);color:var(--azul-fundo)}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--marinho);color:#fff;padding-block:56px 64px;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero .kicker{display:flex;gap:12px;align-items:center;margin-bottom:22px}
+.hero h1{font-family:var(--f-destaque);font-weight:400;font-size:clamp(64px,11vw,148px);line-height:.86;text-transform:uppercase}
+.hero h1 .bar{display:inline-block;background:var(--azul);padding:0 .12em;transform:rotate(-1.2deg)}
+.hero p{max-width:52ch;color:#C5CCE4;font-size:18px;margin-top:22px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .meta span{font-size:13px;border:1px solid #2A3664;border-radius:99px;padding:5px 12px;color:#C5CCE4}
+.switch{display:inline-flex;border:1px solid #2A3664;border-radius:99px;padding:3px;gap:3px;margin-top:22px}
+.switch button{font:700 13px var(--f-texto);border:0;border-radius:99px;padding:7px 14px;background:transparent;color:#C5CCE4;cursor:pointer;display:flex;align-items:center;gap:8px}
+.switch button[aria-pressed="true"]{background:#fff;color:var(--marinho)}
+.switch i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.switch button:focus-visible{outline:2px solid var(--ciano);outline-offset:2px}
+
+/* ---------- MARCA ---------- */
+.logo-mono{width:100%;height:auto;display:block}
+.wordmark{font-family:var(--f-texto);font-weight:900;letter-spacing:-.045em;line-height:1;display:inline-flex;align-items:center;gap:.28em}
+.wordmark .dot{width:.36em;height:.36em;background:var(--azul);display:inline-block;border-radius:2px;transform:translateY(.12em)}
+.logo-stage{border-radius:10px;display:grid;place-items:center;min-height:200px;padding:28px}
+.ls-light{background:var(--branco);border:1px solid var(--linha)}
+.ls-dark{background:var(--marinho);color:#fff}
+.ls-blue{background:var(--azul);color:#fff}
+.ls-blue .wordmark .dot{background:#fff}
+.respiro{position:relative;display:inline-block;padding:28px;outline:1px dashed var(--azul);outline-offset:-1px}
+.respiro::after{content:"x";position:absolute;top:4px;left:8px;font:700 11px var(--f-texto);color:var(--azul)}
+.dont{position:relative}
+.dont::after{content:"";position:absolute;inset:10px;background:linear-gradient(to top right,transparent calc(50% - 1.5px),#E5484D calc(50% - 1.5px),#E5484D calc(50% + 1.5px),transparent calc(50% + 1.5px));pointer-events:none;opacity:.85}
+
+/* ---------- CORES ---------- */
+.sw{border-radius:10px;overflow:hidden;border:1px solid var(--linha);background:var(--branco)}
+.sw .chip{height:120px;display:flex;align-items:flex-end;padding:12px;font:700 13px var(--f-texto)}
+.sw .info{padding:12px 14px;font-size:13px;line-height:1.45}
+.sw .info b{display:block;font-size:15px}
+.sw code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;color:var(--cinza)}
+.prop{display:flex;height:34px;border-radius:8px;overflow:hidden;margin-top:18px;border:1px solid var(--linha)}
+.prop div{display:flex;align-items:center;justify-content:center;font:700 11px var(--f-texto);min-width:0;overflow:hidden;white-space:nowrap}
+
+/* ---------- TIPOGRAFIA ---------- */
+.type-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;padding-block:26px;border-top:1px solid var(--linha);align-items:center}
+.type-row .name{font-size:13px;color:var(--cinza)}
+.type-row .name b{display:block;font-size:20px;color:var(--grafite);overflow-wrap:anywhere}
+.sample-anton{font-family:var(--f-destaque);font-size:clamp(46px,7vw,84px);line-height:.9;text-transform:uppercase}
+.sample-archivo{font-family:var(--f-texto);font-size:28px;font-weight:800;line-height:1.15}
+.sample-caveat{font-family:var(--f-mao);font-size:40px;color:var(--azul);line-height:1}
+.sample-serif{font-family:var(--f-manchete);font-size:26px;font-weight:700;line-height:1.15}
+.scale{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+.scale th,.scale td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--linha);vertical-align:top}
+.scale th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cinza)}
+.tablewrap{overflow-x:auto}
+
+/* ---------- SLIDES (peças 3:4) ---------- */
+.slides{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:22px;align-items:start}
+.slides figure{margin:0;min-width:0}
+.slides figcaption{font-size:13px;color:var(--cinza);margin-top:10px;line-height:1.45}
+.slides figcaption b{color:var(--grafite)}
+.band.navy .slides figcaption{color:#AEB6D3}.band.navy .slides figcaption b{color:#fff}
+.s{container-type:inline-size;aspect-ratio:3/4;width:100%;max-width:100%;border-radius:6px;overflow:hidden;position:relative;background:var(--gelo);color:var(--grafite);box-shadow:0 1px 0 rgba(7,13,36,.06),0 10px 30px -14px rgba(7,13,36,.35);font-family:var(--f-texto)}
+.s.dark{background:var(--marinho);color:#fff}
+.s.blue{background:linear-gradient(160deg,var(--azul) 0%,var(--azul-fundo) 100%);color:#fff}
+.s .in{position:absolute;inset:0;padding:7cqw 7cqw 0;display:flex;flex-direction:column;gap:3.2cqw}
+.s .mono{width:9cqw;height:9cqw;flex:none}
+.s .mono.center{align-self:center}
+.s .t{font-weight:800;font-size:6.6cqw;line-height:1.12;letter-spacing:-.01em}
+.s .t.c{text-align:center}
+.s .b{font-size:4.1cqw;line-height:1.38}
+.s .b b{font-weight:800}
+.s .hl{color:var(--azul)}
+.s.blue .hl,.s.dark .hl{color:var(--ciano)}
+.s .num{display:inline-flex;align-items:center;justify-content:center;background:var(--azul);color:#fff;font-weight:800;font-size:4.2cqw;width:9cqw;height:7cqw;border-radius:1.2cqw}
+.s.blue .num{background:#fff;color:var(--azul)}
+.s .tarja{display:inline-block;background:var(--azul);color:#fff;padding:.05em .3em;border-radius:.12em;font-weight:800}
+.s .tarja.ciano{background:var(--ciano);color:var(--marinho)}
+.s .tarja.branca{background:#fff;color:var(--azul)}
+.s .big{font-family:var(--f-destaque);text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+.s .mao{font-family:var(--f-mao);font-weight:700;line-height:1}
+.s .ph{position:relative;border-radius:2.4cqw;overflow:hidden;background:
+  radial-gradient(28cqw 30cqw at 50% 58%,#55618C 0 45%,transparent 46%),
+  radial-gradient(14cqw 15cqw at 50% 30%,#6C79A6 0 70%,transparent 72%),
+  linear-gradient(180deg,#2B3560,#141B3A)}
+.s .ph::after{content:attr(data-l);position:absolute;left:3cqw;bottom:2.6cqw;font:700 2.8cqw var(--f-texto);letter-spacing:.06em;text-transform:uppercase;color:#C9D2F2;background:rgba(7,13,36,.55);padding:.5cqw 1.6cqw;border-radius:99px}
+.s .ph.has,.ph.has{background:var(--im) center/cover no-repeat}
+.s .ph.has::after{display:none}
+.s .ph.full{position:absolute;inset:0;border-radius:0}
+.s .ph.full::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,36,0) 35%,rgba(7,13,36,.92) 72%)}
+.s .ph.full::after{top:3cqw;bottom:auto;right:3cqw;left:auto}
+.s .cta{position:absolute;left:5cqw;right:5cqw;bottom:0;height:11cqw;background:var(--azul);color:#fff;border-radius:2.6cqw 2.6cqw 0 0;display:flex;align-items:center;justify-content:center;gap:2.4cqw;font-weight:700;font-size:4cqw}
+.s.blue .cta{background:#fff;color:var(--azul)}
+.s .cta .arr{width:5.4cqw;height:5.4cqw;border:.5cqw solid currentColor;border-radius:1.3cqw;display:inline-flex;align-items:center;justify-content:center;font-size:3.4cqw;line-height:1}
+.s .dots{position:absolute;left:0;right:0;bottom:2.2cqw;display:flex;justify-content:center;gap:1cqw}
+.s .news{background:#fff;color:#111;border-radius:1.6cqw;padding:3cqw 3.6cqw;box-shadow:0 1.2cqw 3cqw rgba(7,13,36,.28);transform:rotate(-2.2deg)}
+.s .news small{display:block;font:800 2.6cqw var(--f-texto);letter-spacing:.06em;text-transform:uppercase;color:var(--azul);margin-bottom:1cqw}
+.s .news span{font:700 4.4cqw/1.12 var(--f-manchete)}
+.s .under{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 50 2, 120 12, 198 5' fill='none' stroke='%232EE6FF' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:100% .32em;background-position:0 100%;padding-bottom:.14em}
+.s .check{display:grid;gap:1.6cqw}
+.s .check div{display:flex;gap:2cqw;align-items:flex-start;font-size:4cqw;line-height:1.3}
+.s .check div::before{content:"✓";flex:none;width:4.6cqw;height:4.6cqw;border-radius:50%;border:.45cqw solid currentColor;display:inline-flex;align-items:center;justify-content:center;font-size:2.8cqw;font-weight:900;margin-top:.3cqw}
+.s .stat{display:grid;gap:1.6cqw}
+.s .bar{height:3.2cqw;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden}
+.s .bar i{display:block;height:100%;background:var(--ciano);border-radius:99px}
+.s .row{display:flex;gap:3cqw;align-items:stretch;min-height:0}
+.s .row>*{min-width:0}
+.s .profile-card{background:#fff;color:#111;border-radius:2.6cqw;padding:3.4cqw;display:grid;gap:2cqw;box-shadow:0 1.4cqw 4cqw rgba(0,0,0,.35)}
+.s .profile-card .top{display:flex;gap:3cqw;align-items:center}
+.s .profile-card .av{width:14cqw;height:14cqw;border-radius:50%;background:var(--azul);flex:none;display:grid;place-items:center}
+.s .profile-card .link{border:.4cqw solid var(--azul);border-radius:1.4cqw;padding:1cqw 1.8cqw;color:var(--azul);font-weight:700;font-size:3.3cqw}
+
+/* ---------- PERFIL INSTAGRAM ---------- */
+.phone{width:100%;min-width:0;max-width:430px;margin:0 auto;background:#fff;border-radius:34px;border:10px solid #0B1022;box-shadow:0 30px 60px -30px rgba(7,13,36,.5);overflow:hidden;color:#0B0F1C}
+.ig-top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;font-weight:800;font-size:17px}
+.ig-head{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding:6px 16px}
+.ig-av{width:84px;height:84px;border-radius:50%;padding:3px;background:conic-gradient(var(--azul),var(--ciano),var(--azul))}
+.ig-av>div{width:100%;height:100%;border-radius:50%;border:3px solid #fff;overflow:hidden;background:var(--azul);display:grid;place-items:center}
+.ig-stats{display:flex;justify-content:space-around;text-align:center;font-size:13px;line-height:1.2}
+.ig-stats b{display:block;font-size:16px}
+.ig-bio{padding:8px 16px 4px;font-size:13.5px;line-height:1.42}
+.ig-bio .cat{color:#737B90}
+.ig-bio a{color:#00376B;font-weight:600;text-decoration:none}
+.ig-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:10px 16px}
+.ig-btns span{background:#EFF1F5;border-radius:8px;text-align:center;font-size:13px;font-weight:700;padding:7px 0}
+.ig-btns span.pri{background:var(--azul);color:#fff}
+.ig-hl{display:flex;gap:14px;padding:8px 16px 14px;overflow-x:auto}
+.ig-hl div{flex:none;width:66px;text-align:center;font-size:11.5px}
+.ig-hl .ring{width:62px;height:62px;border-radius:50%;border:1.5px solid #D7DBE6;padding:3px;margin:0 auto 5px}
+.ig-hl .ring span{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 50% 35%,var(--azul),var(--azul-fundo));display:grid;place-items:center}
+.ig-hl svg{width:24px;height:24px}
+.ig-tabs{display:flex;justify-content:space-around;border-top:1px solid #E6E8EE;padding:9px 0;font-size:12px;font-weight:700;color:#8A90A2}
+.ig-tabs span.on{color:#0B0F1C;border-bottom:2px solid #0B0F1C;padding-bottom:6px;margin-bottom:-10px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.ig-grid>*,.ig-head>*{min-width:0}
+.ig-head{grid-template-columns:auto minmax(0,1fr)}
+.ig-grid .s{border-radius:0;box-shadow:none}
+
+/* story */
+.story{container-type:inline-size;aspect-ratio:9/16;max-width:300px;width:100%;margin:0 auto;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(170deg,var(--azul),var(--marinho) 75%);color:#fff;font-family:var(--f-texto)}
+.story .in{position:absolute;inset:0;padding:12cqw 8cqw;display:flex;flex-direction:column;gap:5cqw}
+.story .prog{position:absolute;top:4cqw;left:4cqw;right:4cqw;display:flex;gap:1.4cqw}
+.story .prog i{flex:1;height:.8cqw;border-radius:9px;background:rgba(255,255,255,.35)}
+.story .prog i:first-child{background:#fff}
+.poll{background:#fff;color:#111;border-radius:4cqw;padding:5cqw;display:grid;gap:3cqw;box-shadow:0 3cqw 8cqw rgba(0,0,0,.3)}
+.poll b{font-size:5.6cqw;line-height:1.15;text-align:center}
+.poll span{border:.5cqw solid #E2E5EE;border-radius:99px;padding:3cqw;text-align:center;font-weight:800;font-size:5cqw}
+
+/* legenda */
+.caption{background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:22px;font-size:15px;line-height:1.6;white-space:pre-line;max-width:62ch}
+.anat{display:grid;gap:10px;counter-reset:a}
+.anat div{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:15px}
+.anat div::before{counter-increment:a;content:counter(a);width:24px;height:24px;border-radius:50%;background:var(--azul);color:#fff;font:800 12px/24px var(--f-texto);text-align:center}
+.band.navy .anat div::before{background:var(--ciano);color:var(--marinho)}
+
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;overflow:hidden;border:1px solid var(--linha)}
+.vs>div{padding:14px 16px;font-size:14.5px;border-top:1px solid var(--linha);min-width:0}
+.vs .h{font:800 12px var(--f-texto);letter-spacing:.1em;text-transform:uppercase;border-top:0}
+.vs .no{background:#FFF1F1}.vs .yes{background:var(--azul-claro)}
+.vs .h.no{color:#B42318}.vs .h.yes{color:var(--azul-fundo)}
+
+.pill-bar{display:flex;height:46px;border-radius:10px;overflow:hidden}
+.pill-bar div{display:flex;align-items:center;padding:0 10px;color:#fff;font:800 13px var(--f-texto);white-space:nowrap;overflow:hidden;min-width:0}
+
+.todo{display:grid;gap:10px}
+.todo label{display:flex;gap:12px;align-items:flex-start;background:var(--branco);border:1px solid var(--linha);border-radius:8px;padding:12px 14px;font-size:15px}
+.todo input{margin-top:4px;accent-color:var(--azul);width:16px;height:16px;flex:none}
+
+/* ---------- RECEITAS (wireframes) ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13px;color:var(--cinza);margin-bottom:26px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.lg{width:22px;height:14px;border-radius:3px;display:inline-block}
+.sub{font-family:var(--f-destaque);font-weight:400;text-transform:uppercase;font-size:30px;margin:48px 0 18px;letter-spacing:.01em}
+.rc-list{display:grid;gap:18px}
+.rc{display:grid;grid-template-columns:230px minmax(0,1fr);gap:26px;background:var(--gelo);border-radius:12px;padding:22px;align-items:start}
+.rc.base{background:var(--azul-claro)}
+.rc-body{min-width:0}
+.rc-body h3{font-size:21px;font-weight:800;margin:4px 0 4px}
+.rc-body .when{color:var(--cinza);font-size:15px;margin-bottom:12px;max-width:70ch}
+.code{font:800 12px var(--f-texto);background:var(--azul);color:#fff;border-radius:4px;padding:2px 7px;margin-right:6px;letter-spacing:.04em}
+table.spec{width:100%;border-collapse:collapse;font-size:14.5px}
+table.spec th{width:150px;text-align:left;vertical-align:top;padding:8px 12px 8px 0;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--azul-fundo);border-top:1px solid var(--linha)}
+table.spec td{padding:8px 0;border-top:1px solid var(--linha);vertical-align:top}
+.rc .dont-list{margin-top:10px;font-size:14px;color:#9A2A20}
+.rc .dont-list b{color:#9A2A20}
+.wf{aspect-ratio:3/4;position:relative;border-radius:6px;overflow:hidden;width:100%;max-width:100%;container-type:inline-size}
+.wf.light{background:var(--gelo);border:1px solid var(--linha)}
+.rc .wf.light{background:#fff}
+.wf.dark{background:var(--marinho)}
+.wf.blue{background:linear-gradient(160deg,var(--azul),var(--azul-fundo))}
+.z{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;font:700 max(8px,4.2cqw)/1.12 var(--f-texto);padding:1px 3px;overflow:hidden;color:var(--azul)}
+.wf.dark .z,.wf.blue .z{color:#B9C8FF}
+.z.img,.lg.img{background:repeating-linear-gradient(45deg,rgba(110,122,170,.38) 0 6px,rgba(110,122,170,.16) 6px 12px);color:#6A7398}
+.wf.dark .z.img{color:#AEB8DC}
+.z.grad{background:linear-gradient(180deg,rgba(7,13,36,0),rgba(7,13,36,.95));color:transparent}
+.z.txt,.lg.txt{border:1.5px dashed currentColor;border-radius:3px}
+.lg.txt{color:var(--azul);background:transparent}
+.z.big,.lg.big{background:rgba(26,77,255,.16);border:2px solid var(--azul);border-radius:3px;font-family:var(--f-destaque);font-weight:400;text-transform:uppercase;font-size:max(9px,5.4cqw)}
+.wf.dark .z.big,.wf.blue .z.big{background:rgba(255,255,255,.14);border-color:#fff;color:#fff}
+.z.tarja,.lg.tarja{background:var(--azul);color:#fff!important;border-radius:3px}
+.z.tarjaC,.lg.tarjaC{background:var(--ciano);color:var(--marinho)!important;border-radius:3px}
+.z.bar{background:var(--azul);color:#fff!important;border-radius:6px 6px 0 0}
+.wf.blue .z.bar{background:#fff;color:var(--azul)!important}
+.z.mono{background:var(--azul);border-radius:18%;color:transparent}
+.wf.blue .z.mono{background:#fff}
+.z.hand,.lg.hand{border:1.5px dashed #0E9FB8;color:#0E9FB8!important;font-family:var(--f-mao);font-size:max(10px,6cqw);border-radius:3px}
+.lg.hand{background:transparent}
+.z.card,.lg.card{background:#fff;color:#333!important;border-radius:3px;box-shadow:0 3px 8px rgba(7,13,36,.3)}
+.lg.card{border:1px solid var(--linha)}
+.z.band{background:var(--azul);opacity:.75;color:#fff!important}
+.z.line{background:var(--linha);padding:0}
+.z.rot1{transform:rotate(-2deg)}.z.rot2{transform:rotate(1.5deg)}
+.combo td{font-size:14.5px}
+@media (max-width:720px){
+  .rc{grid-template-columns:1fr}
+  .rc .wf{max-width:240px}
+  table.spec th{width:104px}
+}
+
+footer{padding-block:36px;font-size:13px;color:var(--cinza)}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .type-row{grid-template-columns:1fr;gap:10px}
+  .band{padding-block:52px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .switch button{transition:background .2s,color .2s}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mono" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="20" fill="var(--azul)"/>
+      <path fill="#fff" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/>
+      <rect x="64" y="70" width="12" height="12" rx="2" fill="#fff"/>
+    </symbol>
+    <symbol id="mono-w" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="20" fill="#fff"/>
+      <path fill="var(--azul)" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/>
+      <rect x="64" y="70" width="12" height="12" rx="2" fill="var(--azul)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker"><svg width="44" height="44" aria-hidden="true"><use href="#mono"/></svg><span class="eyebrow" style="color:var(--ciano)">Manual da marca · Instagram</span></div>
+      <h1>Publi<span class="bar">post</span></h1>
+      <p>Identidade visual, verbal e editorial da Publipost no Instagram, construída a partir do estudo do perfil da V4 Company: o que eles fazem, por que funciona e como aplicar em azul.</p>
+      <div class="meta"><span>Formato 1080 × 1440 (3:4)</span><span>Carrossel de 8 slides</span><span>Anton · Archivo · Caveat</span></div>
+      <div class="switch" role="group" aria-label="Versão de cor">
+        <button type="button" id="cor-publi" aria-pressed="true" data-cor="publi"><i style="background:#1A4DFF"></i>Azul Publi</button>
+        <button type="button" id="cor-ceu" aria-pressed="false" data-cor="ceu"><i style="background:#0A84FF"></i>Azul Céu (alternativa)</button>
+      </div>
+    </div>
+    <div class="slides" style="grid-template-columns:1fr;max-width:320px;justify-self:center;width:100%">
+      <div class="s dark">
+        <div class="ph full has" style="--im:url(img/empresario.jpg)"></div>
+        <div class="in" style="justify-content:space-between;padding-bottom:9cqw">
+          <svg class="mono center" aria-hidden="true"><use href="#mono"/></svg>
+          <div style="text-align:center;display:grid;gap:1.6cqw;justify-items:center">
+            <span class="tarja" style="font-size:5.4cqw">A marca que todo mundo copia</span>
+            <span class="big" style="font-size:24cqw;color:#fff">Virou meme</span>
+            <span style="font-weight:700;font-size:5.4cqw"><span class="under">e vendeu o dobro</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 01 ESTUDO ================= -->
+<section class="band white" id="estudo">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>O estudo da referência</h2>
+      <p class="lead">Analisamos o perfil @v4company slide a slide: 15 carrosséis completos, cerca de 50 capas da grade e as legendas. Abaixo, os padrões que se repetem em praticamente todas as peças. Eles são a base de tudo o que vem depois neste manual.</p></div>
+
+    <div class="grid g3">
+      <div class="box"><span class="eyebrow">Fórmula editorial</span><h3>Notícia que vira lição de negócio</h3><p>Quase todo carrossel parte de um fato quente (Instagram, F1, Wimbledon, bancos, Halloween, reforma tributária) e termina com "o que isso muda no seu negócio". A notícia atrai, a lição dá autoridade, o último slide vende.</p></div>
+      <div class="box"><span class="eyebrow">Capa</span><h3>Rosto famoso + uma palavra gigante</h3><p>Foto de impacto ocupando 100% do quadro, escurecida embaixo. Logo pequeno no topo, centralizado. Frase curta em cima, <b>uma palavra-chave enorme</b> em fonte condensada caixa alta (BANIDOS, REFORMA, GEN Z) e um complemento pequeno embaixo.</p></div>
+      <div class="box"><span class="eyebrow">Cor</span><h3>Uma cor só, usada sem medo</h3><p>Vermelho, preto e branco/gelo. O vermelho aparece em tarjas atrás de palavras, na barra de continuação, nos números e em slides inteiros com degradê. Amarelo surge só como marca-texto pontual.</p></div>
+      <div class="box"><span class="eyebrow">Slides internos</span><h3>Título à esquerda, prova à direita</h3><p>Título em 2 linhas, negrito, alinhado à esquerda, com a palavra-chave colorida. Corpo em parágrafos de 2 a 3 linhas com <b>trechos em negrito</b>. Ao lado ou abaixo, a prova: print de notícia, print de app, foto recortada ou gráfico.</p></div>
+      <div class="box"><span class="eyebrow">Ritmo</span><h3>Fundo alternado a cada slide</h3><p>A sequência alterna gelo, preto e vermelho. Isso dá sensação de avanço e evita que o carrossel pareça uma apostila. O slide de "virada" (a conclusão) costuma vir no fundo colorido.</p></div>
+      <div class="box"><span class="eyebrow">Retenção</span><h3>Barra de continuação no rodapé</h3><p>Todo slide interno termina com uma barra colorida, colada na borda de baixo, com uma frase-gancho e uma seta: "Mas tem um detalhe →", "E isso muda bastante coisa →", "Agora, a verdade →". É o recurso mais característico do perfil.</p></div>
+      <div class="box"><span class="eyebrow">Toque humano</span><h3>Anotações à mão</h3><p>Setas e frases manuscritas apontando para pessoas ("Ex-CEO da F1"), sublinhados tortos sob palavras-chave e trechos circulados. Quebra a rigidez do layout e parece que alguém explicou o slide pra você.</p></div>
+      <div class="box"><span class="eyebrow">Prova</span><h3>Prints de manchete e de comentários</h3><p>Recortes de manchete em cartão branco levemente inclinado, com fonte serifada de jornal e o nome do veículo. Prints de comentários reais do público flutuando sobre o slide. Tudo para mostrar que não é opinião.</p></div>
+      <div class="box"><span class="eyebrow">Fechamento</span><h3>Último slide é sempre o mesmo</h3><p>Foto dos fundadores + print do próprio perfil com o link da bio contornado + "Clique no link da bio e agende uma demonstração gratuita". Repetir o mesmo slide cria reconhecimento e treina o seguidor a clicar.</p></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:28px">
+      <div class="box">
+        <h3>Anatomia do carrossel padrão (8 slides)</h3>
+        <div class="anat" style="margin-top:12px">
+          <div><span><b>Capa</b>: foto + palavra gigante. Promete uma história.</span></div>
+          <div><span><b>Contexto</b>: o fato em 3 parágrafos curtos, com o dado mais forte em tarja.</span></div>
+          <div><span><b>Desenvolvimento 1</b>: primeiro ponto, numerado (01) ou narrativo.</span></div>
+          <div><span><b>Desenvolvimento 2</b>: print de manchete ou gráfico como prova.</span></div>
+          <div><span><b>Desenvolvimento 3</b>: o detalhe surpreendente, a virada.</span></div>
+          <div><span><b>Conceito</b>: dá nome ao fenômeno ("isso tem nome: transporte narrativo").</span></div>
+          <div><span><b>Lição pro seu negócio</b>: perguntas ou checklist para o leitor aplicar.</span></div>
+          <div><span><b>CTA fixo</b>: fundadores + print do perfil + link da bio.</span></div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Outros formatos que aparecem na grade</h3>
+        <ul class="clean" style="margin-top:12px">
+          <li><b>Série de anáfora</b>: o mesmo bordão em todos os slides ("Branding NÃO É o seu logo", "NÃO É só longo prazo"...).</li>
+          <li><b>Guia numerado</b>: "Guia com as 4 novas atualizações", cada slide com selo 01, 02, 03.</li>
+          <li><b>Frase de autoridade</b>: aspas grandes coloridas, citação curta, nome e cargo, foto em P&B com faixa colorida.</li>
+          <li><b>Comparativo de dados</b>: barras horizontais em fundo colorido, com a fonte citada no rodapé.</li>
+          <li><b>Reels com legenda</b>: palestra ou fala do fundador, legenda branca centralizada.</li>
+          <li><b>"Primeiro você começa / Depois você melhora"</b>: capa dividida em antes e depois.</li>
+        </ul>
+        <h3 style="margin-top:20px">Legenda</h3>
+        <ul class="clean" style="margin-top:8px">
+          <li>Abre com a pergunta que a pessoa digitaria na busca.</li>
+          <li>Conta a história em parágrafos de 1 a 3 frases.</li>
+          <li>Vira para o negócio do leitor e termina com 👇 + chamada para o link da bio.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 ESSÊNCIA ================= -->
+<section class="band" id="essencia">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Essência</h2>
+      <p class="lead">Publipost é uma marca de conteúdo e marketing que transforma o que está acontecendo no mundo em decisões para o negócio de quem segue. Ela herda o método da referência e troca o vermelho de urgência por um azul de confiança.</p></div>
+    <div class="grid g3">
+      <div class="box"><span class="eyebrow">Conceito</span><h3>"Todo post é uma aula de negócio."</h3><p>O nome junta <b>publi</b> (publicidade, publicação) e <b>post</b>. A promessa é que nenhum post da marca é só notícia: sempre termina em algo que o leitor pode aplicar.</p></div>
+      <div class="box"><span class="eyebrow">Para quem</span><h3>Donos de empresa e times de marketing</h3><p>Gente ocupada que quer entender o que mudou no mercado sem ler 10 matérias. Consome no celular, salva o que é útil e encaminha para o sócio.</p></div>
+      <div class="box"><span class="eyebrow">Personalidade</span><h3>Direta, curiosa, bem-informada</h3><p>Fala como quem leu a notícia antes de você e já sabe o que ela significa. Usa dados, cita a fonte e não tem medo de uma capa provocativa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 NOME E PERFIL ================= -->
+<section class="band white" id="perfil">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Nome e perfil</h2>
+      <p class="lead">A bio segue a mesma estrutura de 4 linhas da referência: o que é, a promessa, a prova em números e a chamada para o link.</p></div>
+    <div class="grid g2">
+      <div class="box">
+        <h3>Sugestões de @</h3>
+        <ul class="clean" style="margin-top:10px">
+          <li><b>@publipost</b> <span class="tag">recomendado</span><br><span class="muted">Mais curto e fácil de buscar. Primeira opção se estiver livre.</span></li>
+          <li><b>@publipost.br</b><br><span class="muted">Mesma leitura, com indicação de país.</span></li>
+          <li><b>@soupublipost</b><br><span class="muted">Alternativa falável, boa para indicação boca a boca.</span></li>
+          <li><b>@publipost.mkt</b><br><span class="muted">Deixa claro o assunto no próprio @.</span></li>
+        </ul>
+        <h3 style="margin-top:20px">Nome de exibição</h3>
+        <p><b>Publipost | Marketing & Conteúdo</b><br><span class="muted">A palavra-chave depois da barra faz o perfil aparecer na busca por "marketing".</span></p>
+      </div>
+      <div class="box">
+        <h3>Bio pronta</h3>
+        <div class="caption" style="margin-top:10px;background:var(--branco)">Publipost | Marketing & Conteúdo
+Toda notícia vira uma decisão pro seu negócio.
++[nº] marcas atendidas | conteúdo novo todo dia útil.
+👇 Peça seu diagnóstico de conteúdo grátis
+publipost.com.br/diagnostico</div>
+        <p class="muted" style="margin-top:10px;font-size:14px">Os números entre colchetes entram quando forem reais. Nunca invente prova social.</p>
+        <h3 style="margin-top:18px">Destaques</h3>
+        <p>Fale conosco · Clientes · Serviços · Diagnóstico · Bastidores · Vagas. Capas em círculo azul com ícone branco de traço grosso, iguais entre si.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 ASSINATURA ================= -->
+<section class="band" id="assinatura">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Assinatura</h2>
+      <p class="lead">Duas peças: o wordmark para usos horizontais e o monograma "P" para foto de perfil, canto dos slides e capas de destaque. O quadradinho no pé do P é o "post": um pixel publicado.</p></div>
+    <div class="grid g4">
+      <div><div class="logo-stage ls-light"><span class="wordmark" style="font-size:44px">publipost<span class="dot"></span></span></div><p class="muted" style="font-size:13px;margin-top:8px">Wordmark sobre claro</p></div>
+      <div><div class="logo-stage ls-dark"><span class="wordmark" style="font-size:44px">publipost<span class="dot"></span></span></div><p class="muted" style="font-size:13px;margin-top:8px">Wordmark sobre marinho</p></div>
+      <div><div class="logo-stage ls-blue"><span class="wordmark" style="font-size:44px">publipost<span class="dot"></span></span></div><p class="muted" style="font-size:13px;margin-top:8px">Wordmark sobre azul (versão branca)</p></div>
+      <div><div class="logo-stage ls-light" style="gap:16px;grid-auto-flow:column"><svg width="74" height="74" aria-label="Monograma azul"><use href="#mono"/></svg><svg width="74" height="74" aria-label="Monograma branco" style="filter:drop-shadow(0 0 0 #ccc);outline:1px solid var(--linha);border-radius:15px"><use href="#mono-w"/></svg></div><p class="muted" style="font-size:13px;margin-top:8px">Monograma azul e invertido</p></div>
+    </div>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="box">
+        <h3>Área de respiro</h3>
+        <div style="display:grid;place-items:center;padding:14px 0"><span class="respiro"><svg width="70" height="70" aria-hidden="true"><use href="#mono"/></svg></span></div>
+        <p class="muted" style="font-size:14px">Espaço livre mínimo igual a 40% da largura do monograma (x) em todos os lados. Nos slides, o monograma ocupa 9% da largura e fica a 7% da borda.</p>
+      </div>
+      <div class="box">
+        <h3>Posição nos slides</h3>
+        <ul class="clean">
+          <li><b>Capa</b>: topo, centralizado.</li>
+          <li><b>Slides internos</b>: canto superior esquerdo.</li>
+          <li><b>Slides centralizados</b> (citação, conceito): topo, centralizado.</li>
+          <li>Em fundo azul, sempre a versão branca.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Usos proibidos</h3>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-block:10px">
+          <span class="dont" style="display:inline-block;padding:10px"><svg width="54" height="54" aria-hidden="true" style="transform:scaleX(1.5)"><use href="#mono"/></svg></span>
+          <span class="dont" style="display:inline-block;padding:10px"><svg width="54" height="54" aria-hidden="true" style="filter:hue-rotate(140deg)"><use href="#mono"/></svg></span>
+          <span class="dont" style="display:inline-block;padding:10px"><svg width="54" height="54" aria-hidden="true" style="transform:rotate(-14deg);filter:drop-shadow(4px 4px 3px rgba(0,0,0,.5))"><use href="#mono"/></svg></span>
+        </div>
+        <p class="muted" style="font-size:14px">Não esticar, não trocar a cor, não girar, não aplicar sombra ou contorno. Não colocar o monograma azul sobre o fundo azul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 CORES ================= -->
+<section class="band white" id="cores">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Cores</h2>
+      <p class="lead">Mesma lógica da referência: neutros fortes e uma única cor de destaque usada com coragem. O vermelho vira Azul Publi e o preto vira um marinho quase preto. Use o seletor no topo para ver o manual inteiro na cor alternativa.</p></div>
+    <div class="grid g4">
+      <div class="sw"><div class="chip" style="background:var(--azul);color:#fff">Destaque</div><div class="info"><b>Azul Publi</b><code id="hex-azul">#1A4DFF</code><br>Tarjas, barra de continuação, números, palavra-chave</div></div>
+      <div class="sw"><div class="chip" style="background:linear-gradient(160deg,var(--azul),var(--azul-fundo));color:#fff">Degradê</div><div class="info"><b>Azul Fundo</b><code id="hex-fundo">#0B2A99</code><br>Fim do degradê nos slides azuis inteiros</div></div>
+      <div class="sw"><div class="chip" style="background:var(--marinho);color:#fff">Escuro</div><div class="info"><b>Marinho Noite</b><code>#070D24</code><br>Fundos escuros, capas com foto, texto forte</div></div>
+      <div class="sw"><div class="chip" style="background:var(--gelo);color:var(--grafite)">Claro</div><div class="info"><b>Gelo</b><code>#F2F4F9</code><br>Fundo claro dos slides (nunca branco puro)</div></div>
+      <div class="sw"><div class="chip" style="background:var(--ciano);color:var(--marinho)">Sinal</div><div class="info"><b>Ciano Sinal</b><code>#2EE6FF</code><br>Marca-texto e sublinhado à mão. Até 5% da peça</div></div>
+      <div class="sw"><div class="chip" style="background:var(--grafite);color:#fff">Texto</div><div class="info"><b>Grafite</b><code>#10142A</code><br>Texto corrido sobre fundo claro</div></div>
+      <div class="sw"><div class="chip" style="background:#fff;color:var(--grafite);border-bottom:1px solid var(--linha)">Base</div><div class="info"><b>Branco</b><code>#FFFFFF</code><br>Texto sobre azul e marinho, cartões de print</div></div>
+      <div class="sw"><div class="chip" style="background:var(--cinza);color:#fff">Apoio</div><div class="info"><b>Cinza Azulado</b><code>#5B6280</code><br>Fontes, créditos, legendas de foto</div></div>
+    </div>
+    <h3 style="margin-top:30px;font-size:16px">Proporção de uso no feed</h3>
+    <div class="prop">
+      <div style="flex:38;background:var(--gelo);color:var(--grafite)">Gelo 38%</div>
+      <div style="flex:30;background:var(--marinho);color:#fff">Marinho 30%</div>
+      <div style="flex:22;background:var(--azul);color:#fff">Azul 22%</div>
+      <div style="flex:6;background:#fff;color:var(--grafite)">6%</div>
+      <div style="flex:4;background:var(--ciano);color:var(--marinho)">4%</div>
+    </div>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="box"><h3>Contraste</h3><p>Texto sobre o Azul Publi é sempre <b>branco</b> (contraste 5,9:1). Na versão Azul Céu o contraste cai para 3,6:1: use branco só em textos grandes (títulos e tarjas) e mantenha o corpo de texto no fundo gelo ou marinho. Sobre o Ciano, o texto é sempre <b>marinho</b>.</p></div>
+      <div class="box"><h3>Por que não amarelo?</h3><p>A referência usa amarelo como marca-texto. Para manter a Publipost 100% em tons de azul, o papel do amarelo passa para o <b>Ciano Sinal</b>, que tem a mesma função: chamar o olho para uma palavra só.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 TIPOGRAFIA ================= -->
+<section class="band" id="tipografia">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Tipografia</h2>
+      <p class="lead">Todas do Google Fonts, disponíveis no Canva. A condensada pesada é o que dá a cara de "manchete" das capas da referência.</p></div>
+    <div class="type-row"><div class="name"><b>Anton</b>Destaque · só caixa alta · capas e palavras gigantes</div><div class="sample-anton">Banidos do feed</div></div>
+    <div class="type-row"><div class="name"><b>Archivo</b>Títulos (ExtraBold 800) e texto (Regular 400 / Bold 700)</div><div><div class="sample-archivo">O Instagram mudou e sua estratégia ainda é a mesma?</div><p style="margin-top:10px;max-width:56ch">Corpo de texto em parágrafos curtos, com <b>trechos em negrito</b> para quem só passa o olho.</p></div></div>
+    <div class="type-row"><div class="name"><b>Caveat</b>Utilitária · anotações à mão, setas, comentários</div><div class="sample-caveat">ex-CEO da empresa ↘</div></div>
+    <div class="type-row"><div class="name"><b>Source Serif 4</b>Apenas em recortes de manchete (simula jornal)</div><div class="sample-serif">Marca brasileira dobra vendas com campanha no Instagram</div></div>
+    <h3 style="margin-top:26px;font-size:16px">Escala no slide de 1080 × 1440 px</h3>
+    <div class="tablewrap"><table class="scale">
+      <thead><tr><th>Elemento</th><th>Fonte</th><th>Tamanho</th><th>Regra</th></tr></thead>
+      <tbody>
+        <tr><td>Palavra gigante da capa</td><td>Anton</td><td>200 a 260 px</td><td>1 a 2 palavras, caixa alta, entrelinha 0,9</td></tr>
+        <tr><td>Frase de apoio da capa</td><td>Archivo 800</td><td>56 a 60 px</td><td>Em tarja azul ou branca</td></tr>
+        <tr><td>Título do slide</td><td>Archivo 800</td><td>70 px</td><td>Máx. 2 linhas, palavra-chave em azul</td></tr>
+        <tr><td>Corpo</td><td>Archivo 400 / 700</td><td>42 a 44 px</td><td>Máx. 3 linhas por parágrafo, 3 parágrafos por slide</td></tr>
+        <tr><td>Barra de continuação</td><td>Archivo 700</td><td>42 px</td><td>Frase de 3 a 6 palavras + seta</td></tr>
+        <tr><td>Anotação à mão</td><td>Caveat 700</td><td>48 a 60 px</td><td>Sempre com seta apontando para algo</td></tr>
+        <tr><td>Fonte / crédito</td><td>Archivo 400</td><td>26 px</td><td>Cinza azulado, rodapé</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ================= 07 TEMPLATES ================= -->
+<section class="band navy" id="carrossel">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2>O carrossel Publipost</h2>
+      <p class="lead">Os 8 slides do formato principal, já com as regras de cor, fonte e posição. Exemplo de tema: uma marca que viralizou com um erro. As fotos são exemplos gerados com IA; no dia a dia entram as imagens da notícia ou do banco licenciado.</p></div>
+    <div class="slides">
+      <figure>
+        <div class="s dark"><div class="ph full has" style="--im:url(img/confronto.jpg)"></div>
+          <div class="in" style="justify-content:space-between;padding-bottom:9cqw">
+            <svg class="mono center" aria-hidden="true"><use href="#mono"/></svg>
+            <div style="text-align:center;display:grid;gap:1.4cqw;justify-items:center">
+              <span style="font-weight:800;font-size:5.6cqw">O erro que fez essa marca</span>
+              <span class="big" style="font-size:25cqw">Vender</span>
+              <span class="tarja" style="font-size:5.4cqw">o dobro em 30 dias</span>
+            </div>
+          </div></div>
+        <figcaption><b>1 · Capa.</b> Foto em tela cheia escurecida embaixo, monograma no topo, frase + palavra gigante + tarja.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div class="in">
+          <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+          <div class="t">Um post errado virou o <span class="hl">mais visto do ano</span></div>
+          <p class="b">A marca publicou o preço errado de um produto e, em vez de apagar, <b>assumiu o erro nos comentários.</b></p>
+          <p class="b">Em 48 horas o post tinha <span class="tarja">12 milhões de views.</span></p>
+          <div class="ph has" style="flex:1;margin-bottom:14cqw;--im:url(img/celular.jpg);background-position:center 20%"></div>
+        </div><div class="cta">Mas tem um detalhe <span class="arr">→</span></div></div>
+        <figcaption><b>2 · Contexto.</b> Monograma à esquerda, título com palavra azul, dado forte em tarja, barra de continuação.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div class="in">
+          <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+          <div style="display:flex;gap:2.4cqw;align-items:center"><span class="num">01</span><span class="t" style="font-size:6cqw">Resposta em 10 minutos</span></div>
+          <div class="row" style="flex:1;margin-bottom:14cqw">
+            <div style="flex:1;display:grid;gap:3cqw;align-content:start">
+              <p class="b">O social media respondeu com humor <b>antes</b> de o assunto virar crise.</p>
+              <p class="b"><b class="hl">Mas atenção:</b> isso só funciona com tom de voz já definido.</p>
+            </div>
+            <div style="flex:1;position:relative"><div class="ph has" style="position:absolute;inset:0;--im:url(img/social.jpg);background-position:70% center"></div>
+              <span class="mao" style="position:absolute;left:-8cqw;bottom:-2cqw;font-size:6cqw;color:var(--azul);transform:rotate(-6deg)">o comentário ↗</span></div>
+          </div>
+        </div><div class="cta">E aí veio a virada <span class="arr">→</span></div></div>
+        <figcaption><b>3 · Ponto numerado.</b> Selo 01 azul, texto à esquerda, prova à direita, anotação manuscrita com seta.</figcaption>
+      </figure>
+      <figure>
+        <div class="s dark"><div class="in">
+          <svg class="mono" aria-hidden="true"><use href="#mono-w"/></svg>
+          <div class="t">A imprensa <span class="hl">fez o resto</span></div>
+          <p class="b" style="color:#C5CCE4">Três portais repercutiram o caso no mesmo dia. Mídia espontânea que <b style="color:#fff">nenhuma campanha paga compraria.</b></p>
+          <div style="display:grid;gap:3cqw;margin-top:2cqw">
+            <div class="news"><small>Portal de Negócios</small><span>Erro de preço vira case e marca dobra vendas</span></div>
+            <div class="news" style="transform:rotate(1.6deg);margin-left:8cqw"><small>Revista Marketing</small><span>Como um post errado virou estratégia</span></div>
+          </div>
+        </div><div class="cta">Isso tem nome <span class="arr">→</span></div></div>
+        <figcaption><b>4 · Prova.</b> Fundo marinho, recortes de manchete em cartão branco inclinado, fonte serifada de jornal.</figcaption>
+      </figure>
+      <figure>
+        <div class="s blue"><div class="in">
+          <svg class="mono" aria-hidden="true"><use href="#mono-w"/></svg>
+          <div class="t">Mais que o <span class="under">dobro de alcance</span></div>
+          <p class="b">Compartilhamentos por formato, mesma marca, mesmo mês:</p>
+          <div class="stat">
+            <div style="font-size:3.6cqw;font-weight:700">Post do erro · 100%</div><div class="bar"><i style="width:100%"></i></div>
+            <div style="font-size:3.6cqw;font-weight:700">Melhor post do ano anterior · 41%</div><div class="bar"><i style="width:41%;background:#fff"></i></div>
+            <div style="font-size:3.6cqw;font-weight:700">Média dos posts · 12%</div><div class="bar"><i style="width:12%;background:#fff"></i></div>
+          </div>
+          <p style="font-size:2.8cqw;opacity:.75">Fonte: dados ilustrativos do modelo. Sempre citar a fonte real.</p>
+        </div><div class="cta">E o que isso ensina? <span class="arr">→</span></div></div>
+        <figcaption><b>5 · Dado.</b> Slide azul inteiro com degradê, barras em ciano e branco, fonte citada no rodapé. Barra de CTA inverte para branco.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div class="in" style="align-items:center;text-align:center">
+          <svg class="mono center" aria-hidden="true"><use href="#mono"/></svg>
+          <div class="t c">Isso tem nome: <span class="hl">marketing de resposta</span></div>
+          <p class="b">É quando a marca usa a conversa do público como pauta, em vez de seguir só o calendário.</p>
+          <span class="big" style="font-size:15cqw;color:var(--azul);margin-top:2cqw">Ouvir vende</span>
+          <span class="mao" style="font-size:6.4cqw;color:var(--cinza)">e custa zero ↙</span>
+        </div><div class="cta">Agora, no seu negócio <span class="arr">→</span></div></div>
+        <figcaption><b>6 · Conceito.</b> Layout centralizado, dá nome ao fenômeno, frase curta em Anton azul.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div class="in">
+          <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+          <div class="t">O que isso <span class="hl" style="font-style:italic">muda no seu negócio</span></div>
+          <p class="b">Seu público já está falando. A pergunta é se a sua marca está ouvindo.</p>
+          <p class="b" style="font-weight:800;color:var(--azul)">Antes do próximo post, pergunte:</p>
+          <div class="check">
+            <div>O que meu cliente mais comentou este mês?</div>
+            <div>Que dúvida se repete no direct?</div>
+            <div>Qual erro meu daria uma boa história?</div>
+          </div>
+        </div></div>
+        <figcaption><b>7 · Lição.</b> Sem barra de continuação. Checklist para o leitor aplicar. É o slide que gera salvamento.</figcaption>
+      </figure>
+      <figure>
+        <div class="s dark"><div class="ph full has" style="--im:url(img/equipe.jpg)"></div>
+          <div class="in" style="justify-content:flex-end;padding-bottom:7cqw">
+            <svg class="mono" aria-hidden="true" style="position:absolute;top:7cqw;left:7cqw"><use href="#mono-w"/></svg>
+            <div class="profile-card">
+              <div class="top"><div class="av"><svg width="60%" height="60%" viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/><rect x="64" y="70" width="12" height="12" rx="2" fill="#fff"/></svg></div>
+                <div style="font-size:3.4cqw;line-height:1.3"><b style="font-size:4cqw">publipost</b><br>Marketing & Conteúdo</div></div>
+              <div class="link">publipost.com.br/diagnostico</div>
+            </div>
+            <p style="text-align:center;font-weight:800;font-size:5cqw;line-height:1.25">Clique no link da bio e peça seu diagnóstico de conteúdo</p>
+          </div></div>
+        <figcaption><b>8 · CTA fixo.</b> Foto da equipe, print do perfil com o link contornado, chamada única. Igual em todos os carrosséis.</figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:22px;color:#fff">Frases para a barra de continuação</h3>
+    <p class="muted" style="margin-top:6px">Curtas, criam curiosidade e nunca entregam a resposta. Use uma diferente por slide.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px">
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">Mas tem um detalhe →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">E isso muda tudo →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">Agora, a verdade →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">E aí veio a virada →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">Isso tem nome →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">E o que isso ensina? →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">Só que tem um problema →</span>
+      <span class="tag" style="background:var(--azul);color:#fff;font-size:14px;padding:7px 14px">Agora, no seu negócio →</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 RECEITAS DAS VARIAÇÕES ================= -->
+<section class="band white" id="variacoes">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Como montar cada variação</h2>
+      <p class="lead">A receita de cada tipo de slide, com as medidas em pixels no arquivo de 1080 × 1440. No Canva, crie um design personalizado com esse tamanho, ative as réguas e marque as guias da grade base. Cada esquema mostra onde fica cada elemento: a área tracejada é texto, a listrada é foto, a azul cheia é tarja ou barra.</p></div>
+
+    <div class="legend">
+      <span><i class="lg img"></i>Foto / print</span>
+      <span><i class="lg txt"></i>Texto</span>
+      <span><i class="lg big"></i>Palavra gigante (Anton)</span>
+      <span><i class="lg tarja"></i>Tarja / barra azul</span>
+      <span><i class="lg tarjaC"></i>Tarja ciano</span>
+      <span><i class="lg card"></i>Cartão branco</span>
+      <span><i class="lg hand"></i>Anotação à mão</span>
+    </div>
+
+    <div class="rc base">
+      <div class="wf light" id="wf-base"></div>
+      <div class="rc-body">
+        <span class="eyebrow">Grade base · vale para todos os slides</span>
+        <h3>As medidas que nunca mudam</h3>
+        <table class="spec">
+          <tr><th>Arquivo</th><td>1080 × 1440 px (3:4). Exportar PNG. É o formato que o Instagram mostra inteiro na grade.</td></tr>
+          <tr><th>Margens</th><td>76 px nas laterais e no topo. Área útil de texto: 928 px de largura (x 76 → 1004).</td></tr>
+          <tr><th>Monograma</th><td>96 × 96 px em x 76, y 76 (slides internos) ou centralizado em x 492, y 76 (capas e slides centralizados).</td></tr>
+          <tr><th>Início do texto</th><td>y 210. O título começa sempre na mesma altura em todos os slides, para o texto não "pular" quando a pessoa passa.</td></tr>
+          <tr><th>Barra de continuação</th><td>972 × 119 px em x 54, y 1321, colada na borda de baixo. Cantos de cima com raio 28 px. Texto Archivo Bold 42 px + seta em quadrado de 58 px com contorno de 5 px.</td></tr>
+          <tr><th>Fim do conteúdo</th><td>Nada importante abaixo de y 1290 (fica atrás da barra e dos pontinhos do carrossel).</td></tr>
+          <tr><th>Duas colunas</th><td>Texto em x 76 → 520 (444 px), imagem em x 556 → 1004 (448 px) ou sangrando até 1080.</td></tr>
+          <tr><th>Cantos</th><td>Fotos e prints dentro do slide: raio 26 px. Tarjas: raio 8 px. Selo numérico: raio 13 px.</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="sub">Capas</h3>
+    <div class="rc-list" data-group="capa"></div>
+
+    <h3 class="sub">Slides internos</h3>
+    <div class="rc-list" data-group="miolo"></div>
+
+    <h3 class="sub">Fechamento</h3>
+    <div class="rc-list" data-group="fim"></div>
+
+    <h3 class="sub">Que slides usar em cada tipo de post</h3>
+    <div class="tablewrap"><table class="scale combo">
+      <thead><tr><th>Tipo de post</th><th>Sequência de slides</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td><b>Notícia que vira lição</b></td><td>C1 Capa notícia → I1 Contexto → I2 Numerado ou I1 → I3 Prova → I5 Dado ou I4 Impacto → I7 Conceito → I8 Lição → F1 CTA</td><td>8</td></tr>
+        <tr><td><b>Guia numerado</b></td><td>C3 Capa guia → I1 Contexto → I2 Numerado × 3 a 5 (um por item) → I8 Lição → F1 CTA</td><td>7 a 9</td></tr>
+        <tr><td><b>Série de anáfora</b></td><td>C2 Capa tipográfica → C2 repetida com novo complemento × 4 a 6 → I8 Lição (o que a coisa É) → F1 CTA</td><td>7 a 9</td></tr>
+        <tr><td><b>Comparativo de dados</b></td><td>C1 ou C3 → I1 Contexto → I5 Dado × 2 a 3 → I2 Numerado (um por conclusão) → I8 Lição → F1 CTA</td><td>8</td></tr>
+        <tr><td><b>Novidade de app ou ferramenta</b></td><td>C1 Capa notícia → I6 Print de app × 3 a 4 → I7 Conceito → I8 Lição → F1 CTA</td><td>7 a 8</td></tr>
+        <tr><td><b>Case de cliente</b></td><td>C1 (foto do cliente) → I1 Contexto (o problema) → I4 Impacto (a virada) → I5 Dado (o resultado) → I3 Prova (comentários) → I8 Lição → F1 CTA</td><td>7</td></tr>
+        <tr><td><b>Frase de autoridade</b></td><td>C4 sozinha (post único) ou C4 + I1 + I8 + F1</td><td>1 ou 4</td></tr>
+        <tr><td><b>Bastidores</b></td><td>C5 Antes e depois → fotos de bastidor com legenda curta em tarja → F1 CTA</td><td>4 a 6</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="grid g2" style="margin-top:26px">
+      <div class="box">
+        <h3>Regras de sequência de fundo</h3>
+        <ul class="clean">
+          <li>Nunca três slides seguidos com o mesmo fundo.</li>
+          <li>Slide azul inteiro (degradê) no máximo 2 vezes por carrossel, e nunca colado na capa.</li>
+          <li>O slide de dado ou de virada é o melhor lugar para o azul.</li>
+          <li>Sequência padrão: foto → gelo → gelo → marinho → azul → gelo → gelo → foto.</li>
+          <li>Na grade, alterne capas escuras (com foto) e claras (tipográficas): no máximo 2 capas claras seguidas.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Checklist antes de exportar</h3>
+        <ul class="clean">
+          <li>Monograma na mesma posição em todos os slides internos.</li>
+          <li>Título começando em y 210 em todos os slides.</li>
+          <li>Uma palavra azul por título, uma tarja por slide, um marca-texto ciano no máximo.</li>
+          <li>Cada barra de continuação com uma frase diferente.</li>
+          <li>Toda prova com a fonte escrita (veículo, estudo ou print real).</li>
+          <li>Nenhum texto sobre o rosto da foto.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 ELEMENTOS & OUTROS FORMATOS ================= -->
+<section class="band" id="formatos">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Outros formatos</h2>
+      <p class="lead">Variações que dão ritmo à grade sem sair da identidade. Cada uma tem uma capa reconhecível.</p></div>
+    <div class="slides">
+      <figure>
+        <div class="s"><div class="in" style="align-items:center;text-align:center;gap:1cqw">
+          <svg class="mono center" aria-hidden="true"><use href="#mono"/></svg>
+          <span style="font-weight:800;font-size:9cqw;margin-top:4cqw">Marketing</span>
+          <span class="big" style="font-size:27cqw;color:var(--azul)">Não é</span>
+          <span style="font-weight:800;font-size:8cqw">postar todo dia</span>
+          <div class="ph has" style="width:70%;flex:1;margin:4cqw 0 7cqw;--im:url(img/megafone.jpg)"></div>
+        </div></div>
+        <figcaption><b>Série de anáfora.</b> O mesmo bordão em todos os slides, só o complemento muda. Fundo gelo, palavra gigante azul.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div class="row" style="position:absolute;inset:0;gap:0">
+          <div style="flex:1.1;padding:7cqw;display:flex;flex-direction:column;gap:3cqw">
+            <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+            <span class="big" style="font-size:22cqw;color:var(--azul);line-height:.6;margin-top:6cqw">“</span>
+            <p style="font-size:5cqw;line-height:1.35"><b>Marca forte</b> é a que o cliente <b class="hl">explica</b> por você.</p>
+            <div style="height:.4cqw;background:var(--linha);margin-top:2cqw"></div>
+            <p style="font-size:3.2cqw;color:var(--cinza);font-style:italic">Nome do autor<br>Cargo, empresa</p>
+          </div>
+          <div style="flex:.9;position:relative;background:url(img/palestrante.jpg) 30% center/cover no-repeat"><div style="position:absolute;inset:0 30% 0 22%;background:var(--azul);mix-blend-mode:multiply"></div></div>
+        </div></div>
+        <figcaption><b>Frase de autoridade.</b> Aspas gigantes azuis, citação curta, foto em P&B à direita cortada por uma faixa azul.</figcaption>
+      </figure>
+      <figure>
+        <div class="s dark"><div class="ph full has" style="--im:url(img/celular.jpg)"></div>
+          <div class="in" style="justify-content:flex-end;padding-bottom:9cqw;text-align:center;align-items:center">
+            <svg class="mono center" aria-hidden="true" style="position:absolute;top:7cqw;left:45.5cqw"><use href="#mono"/></svg>
+            <span class="tarja" style="font-size:5.4cqw">Guia com as 5 novas</span>
+            <span class="big" style="font-size:19cqw">Regras do feed</span>
+            <span class="tarja branca" style="font-size:4.6cqw">em 2027</span>
+          </div></div>
+        <figcaption><b>Guia numerado (capa).</b> Promessa de quantidade na tarja, depois um slide por item com selo 01, 02, 03.</figcaption>
+      </figure>
+      <figure>
+        <div class="s"><div style="position:absolute;inset:0;display:grid;grid-template-rows:1fr 1fr">
+          <div style="position:relative;background:url(img/social.jpg) center 30%/cover no-repeat"><span class="tarja" style="position:absolute;left:6cqw;bottom:5cqw;font-size:5.6cqw;padding:.2em .4em">Primeiro você começa…</span><svg class="mono" aria-hidden="true" style="position:absolute;top:6cqw;left:6cqw"><use href="#mono"/></svg></div>
+          <div style="position:relative;background:url(img/equipe.jpg) center 70%/cover no-repeat"><span class="tarja ciano" style="position:absolute;left:6cqw;bottom:6cqw;font-size:5.6cqw;padding:.2em .4em">Depois você melhora.</span></div>
+        </div></div>
+        <figcaption><b>Antes e depois.</b> Capa dividida em duas fotos: começo simples em cima, versão profissional embaixo. Ótimo para bastidores.</figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:22px">Kit de elementos gráficos</h3>
+    <div class="grid g4" style="margin-top:16px">
+      <div class="box" style="display:grid;gap:10px;justify-items:start"><span style="background:var(--azul);color:#fff;font-weight:800;padding:4px 10px;border-radius:4px">Tarja azul</span><p class="muted" style="font-size:14px">Atrás de uma frase ou dado. Cantos levemente arredondados (raio = 12% da altura).</p></div>
+      <div class="box" style="display:grid;gap:10px;justify-items:start"><span style="font-weight:800;font-size:20px"><span class="mark">marca-texto ciano</span></span><p class="muted" style="font-size:14px">Cobre a metade de baixo da palavra. Uma vez por slide, no máximo.</p></div>
+      <div class="box" style="display:grid;gap:10px;justify-items:start"><span style="font-family:var(--f-mao);font-weight:700;font-size:28px;color:var(--azul)">ex-CEO da marca ↘</span><p class="muted" style="font-size:14px">Anotação à mão em Caveat, sempre com seta para uma pessoa ou número.</p></div>
+      <div class="box" style="display:grid;gap:10px;justify-items:start"><span style="display:inline-flex;align-items:center;justify-content:center;background:var(--azul);color:#fff;font-weight:800;width:40px;height:32px;border-radius:5px">01</span><p class="muted" style="font-size:14px">Selo numérico. Só quando o carrossel é uma lista de verdade.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 IMAGEM ================= -->
+<section class="band white" id="imagem">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Estilo de imagem</h2>
+      <p class="lead">A referência vive de fotos: rostos conhecidos da notícia, expressões fortes, produtos em close. A Publipost segue o mesmo caminho, com um cuidado extra de direitos de imagem.</p></div>
+    <div class="grid g3">
+      <div class="box"><h3>O que usar</h3><ul class="clean"><li>Rosto em close com expressão clara (surpresa, dúvida, confiança).</li><li>Pessoa recortada com o fundo do tema atrás.</li><li>Produto ou logo da notícia em destaque.</li><li>Prints reais: post, comentário, manchete, gráfico.</li></ul></div>
+      <div class="box"><h3>Tratamento</h3><ul class="clean"><li>Contraste alto, cores naturais e um pouco frias.</li><li>Degradê marinho de baixo para cima nas capas (de 35% a 72% da altura).</li><li>Fotos de autoridade em preto e branco, com faixa azul.</li><li>Nunca filtro quente ou sépia.</li></ul></div>
+      <div class="box"><h3>Direitos de imagem</h3><p>Fotos de figuras públicas em contexto jornalístico são comuns na referência, mas cada uso tem risco. Prefira fotos de agência licenciadas, imagens oficiais de imprensa das marcas citadas ou imagens geradas por IA sem rostos reais.</p></div>
+    </div>
+    <div class="box" style="margin-top:20px">
+      <h3>Prompt base para gerar imagens com IA</h3>
+      <p style="font-family:ui-monospace,Consolas,monospace;font-size:13.5px;background:var(--gelo);padding:14px;border-radius:8px;margin-top:8px;overflow-wrap:anywhere">Editorial photograph for a business news Instagram cover, 3:4 vertical. [cena: pessoa / produto / situação]. Close-up, strong facial expression, sharp focus, high contrast, slightly cool color grade, subtle electric blue (#1A4DFF) rim light. Bottom 40% of the frame darker and less busy to receive large headline text. No text, no logos.</p>
+      <p class="muted" style="margin-top:10px;font-size:14px">As fotos de exemplo deste manual foram geradas com IA a partir deste prompt. As pessoas nelas não existem e não devem ser apresentadas como clientes ou equipe reais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10 TOM DE VOZ ================= -->
+<section class="band" id="voz">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Tom de voz</h2>
+      <p class="lead">Como a referência: frases curtas, números concretos, curiosidade em cada passagem de slide e o leitor sempre no centro ("o seu negócio", "a sua empresa").</p></div>
+    <div class="grid g2">
+      <div class="vs">
+        <div class="h no">Evitar</div><div class="h yes">Usar</div>
+        <div class="no">Neste post vamos falar sobre a importância do branding.</div><div class="yes">Branding não é o seu logo.</div>
+        <div class="no">Muitas empresas tiveram resultados positivos.</div><div class="yes">A marca vendeu 27% mais em 4 meses.</div>
+        <div class="no">Confira mais no próximo slide!</div><div class="yes">Mas tem um detalhe →</div>
+        <div class="no">Somos especialistas em soluções de marketing 360°.</div><div class="yes">Em 30 dias, a gente organiza o seu conteúdo para o ano todo.</div>
+        <div class="no">Arrasta pro lado 🔥🔥🔥</div><div class="yes">Encaminhe para quem precisa saber disso.</div>
+      </div>
+      <div>
+        <h3 style="font-size:18px;margin-bottom:10px">Legenda modelo</h3>
+        <div class="caption">Por que uma marca que errou o preço vendeu o dobro?
+
+Na semana passada, uma loja publicou um produto com o preço errado. Em vez de apagar, o time respondeu nos comentários com humor.
+
+Em 48 horas, o post passou de 12 milhões de visualizações e três portais repercutiram o caso.
+
+O erro não foi o que vendeu. O que vendeu foi a velocidade da resposta e um tom de voz que o público já reconhecia.
+
+E é aqui que entra o seu negócio: o seu público já está falando com você nos comentários e no direct. A pergunta é se alguém está ouvindo.
+
+👇 Clique no link da bio e peça seu diagnóstico de conteúdo.</div>
+        <p class="muted" style="font-size:13px;margin-top:8px">Caso fictício, apenas para mostrar a estrutura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11 CONTEÚDO ================= -->
+<section class="band white" id="conteudo">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Conteúdo</h2>
+      <p class="lead">Pilares e frequência inspirados no ritmo da referência, que publica praticamente todo dia, quase sempre em carrossel.</p></div>
+    <div class="pill-bar">
+      <div style="flex:40;background:var(--azul)">Notícia → lição 40%</div>
+      <div style="flex:25;background:var(--azul-fundo)">Guias 25%</div>
+      <div style="flex:15;background:var(--marinho)">Autoridade 15%</div>
+      <div style="flex:10;background:var(--cinza)">Cases 10%</div>
+      <div style="flex:10;background:#0E9FB8">Oferta 10%</div>
+    </div>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="box"><h3>Notícia que vira lição · 40%</h3><p>O carrossel de 8 slides. Assunto quente da semana (redes sociais, grandes marcas, esporte, economia) ligado a uma decisão de negócio.</p></div>
+      <div class="box"><h3>Guias · 25%</h3><p>"Guia com as 5 novas regras", "3 formatos campeões". Conteúdo para salvar, com selos numerados.</p></div>
+      <div class="box"><h3>Autoridade · 15%</h3><p>Frases de especialistas, bastidores, eventos, Reels com fala do fundador legendada.</p></div>
+      <div class="box"><h3>Cases · 10%</h3><p>Resultados de clientes no mesmo formato da notícia: antes, virada, número, lição.</p></div>
+      <div class="box"><h3>Oferta · 10%</h3><p>Convite direto para o diagnóstico. Capa provocativa e CTA no próprio corpo do carrossel.</p></div>
+      <div class="box"><h3>Frequência</h3><p><b>5 carrosséis por semana</b> (um por dia útil) + <b>2 Reels</b> + Stories diários com enquete puxando para o post do dia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12 PRÉVIA ================= -->
+<section class="band" id="previa">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">13</span><h2>Prévia do Instagram</h2>
+      <p class="lead">Como o perfil fica com bio, destaques e as 12 primeiras publicações. A grade alterna fundo escuro, claro e azul, como na referência.</p></div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:start;gap:40px">
+      <div class="phone">
+        <div class="ig-top"><span>publipost</span><span style="font-size:20px">☰</span></div>
+        <div class="ig-head">
+          <div class="ig-av"><div><svg width="70%" height="70%" viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M27 20h28c14.4 0 24 9.2 24 22.5S69.4 65 55 65H43v15H27V20Zm16 14v17h11c5.4 0 8.6-3.2 8.6-8.5S59.4 34 54 34H43Z"/><rect x="64" y="70" width="12" height="12" rx="2" fill="#fff"/></svg></div></div>
+          <div class="ig-stats"><div><b>248</b>posts</div><div><b>[nº]</b>seguidores</div><div><b>112</b>seguindo</div></div>
+        </div>
+        <div class="ig-bio"><b>Publipost | Marketing & Conteúdo</b><br><span class="cat">Agência de marketing</span><br>Toda notícia vira uma decisão pro seu negócio.<br>+[nº] marcas atendidas | conteúdo novo todo dia útil.<br>👇 Peça seu diagnóstico de conteúdo grátis<br><a href="#previa">🔗 publipost.com.br/diagnostico</a></div>
+        <div class="ig-btns"><span class="pri">Seguir</span><span>Mensagem</span><span>Contato</span></div>
+        <div class="ig-hl">
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span></div>Fale conosco</div>
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14c2.8 0 5 2.2 5 5"/></svg></span></div>Clientes</div>
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 10h16M10 10v10"/></svg></span></div>Serviços</div>
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-4 3 3 5-6"/></svg></span></div>Diagnóstico</div>
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.6-3h4.8L16 7"/></svg></span></div>Bastidores</div>
+          <div><div class="ring"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3"/></svg></span></div>Vagas</div>
+        </div>
+        <div class="ig-tabs"><span class="on">▦ Posts</span><span>▷ Reels</span><span>◫ Marcados</span></div>
+        <div class="ig-grid" id="grade"></div>
+      </div>
+      <div style="display:grid;gap:28px">
+        <div>
+          <h3 style="font-size:18px">Story com enquete</h3>
+          <p class="muted" style="font-size:14px;margin:4px 0 14px">Todo dia, um story puxa para o carrossel do dia com uma pergunta de sim ou não.</p>
+          <div class="story" style="background:linear-gradient(180deg,rgba(7,13,36,.15),rgba(7,13,36,.55) 45%,rgba(7,13,36,.9)),url(img/story.jpg) center/cover no-repeat"><div class="prog"><i></i><i></i><i></i></div>
+            <div class="in">
+              <div style="display:flex;gap:3cqw;align-items:center"><svg width="12%" style="aspect-ratio:1" aria-hidden="true"><use href="#mono"/></svg><b style="font-size:5cqw">publipost</b><span style="font-size:4.4cqw;opacity:.7">2 h</span></div>
+              <span class="mao" style="font-family:var(--f-mao);font-size:9cqw;line-height:1;margin-top:6cqw">pergunta rápida ↓</span>
+              <span style="font-family:var(--f-destaque);font-size:17cqw;line-height:.92;text-transform:uppercase">Você apagaria o post errado?</span>
+              <div class="poll"><b>Responde aí</b><span style="color:var(--azul)">Apagaria na hora</span><span style="color:var(--azul)">Responderia com humor</span></div>
+              <span style="text-align:center;font-size:4.4cqw;font-weight:700;margin-top:auto">A resposta certa está no post de hoje →</span>
+            </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 13 PENDÊNCIAS ================= -->
+<section class="band white" id="pendencias">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">14</span><h2>Pendências</h2>
+      <p class="lead">O que precisa ser validado antes de colocar a marca no ar. As caixas de seleção servem só para conferir na tela e não ficam salvas.</p></div>
+    <div class="todo">
+      <label><input type="checkbox" id="p1"> Conferir disponibilidade do @publipost (e das alternativas) no Instagram e do domínio publipost.com.br.</label>
+      <label><input type="checkbox" id="p2"> Fazer uma busca de marca no INPI para "Publipost" na classe de serviços de publicidade (35).</label>
+      <label><input type="checkbox" id="p3"> Substituir os [nº] da bio e do perfil por números reais de clientes e resultados.</label>
+      <label><input type="checkbox" id="p4"> Escolher a cor final: Azul Publi (principal) ou Azul Céu (alternativa).</label>
+      <label><input type="checkbox" id="p5"> Definir a fonte das fotos: banco licenciado, fotos próprias da equipe ou imagens geradas por IA.</label>
+      <label><input type="checkbox" id="p6"> Fotografar a equipe para o slide final fixo (slide 8).</label>
+      <label><input type="checkbox" id="p7"> Montar os templates no Canva a partir das medidas deste manual.</label>
+      <label><input type="checkbox" id="p8"> Validar o monograma "P" com um designer antes de registrar.</label>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Manual Publipost · estudo baseado no perfil público @v4company, usado apenas como referência de método e estrutura. Nenhum elemento gráfico da V4 Company foi reproduzido.</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var btns=document.querySelectorAll('.switch button');
+  var hex={publi:['#1A4DFF','#0B2A99'],ceu:['#0A84FF','#0050B8']};
+  function setCor(c){
+    if(c==='ceu') root.setAttribute('data-cor','ceu'); else root.removeAttribute('data-cor');
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.cor===c));});
+    document.getElementById('hex-azul').textContent=hex[c][0];
+    document.getElementById('hex-fundo').textContent=hex[c][1];
+    try{localStorage.setItem('publipost-cor',c);}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){setCor(b.dataset.cor);});});
+  var saved=null; try{saved=localStorage.getItem('publipost-cor');}catch(e){}
+  if(saved==='ceu') setCor('ceu');
+
+  // Grade de 12 capas
+  var mono='<svg class="mono center" aria-hidden="true"><use href="#mono"/></svg>';
+  var monoW='<svg class="mono center" aria-hidden="true"><use href="#mono-w"/></svg>';
+  var capas=[
+    {k:'dark',a:'O erro que fez a marca',w:'Vender',t:'o dobro em 30 dias'},
+    {k:'light',a:'Marketing',w:'Não é',t:'postar todo dia'},
+    {k:'dark',a:'O Instagram',w:'Mudou',t:'de novo',tw:1},
+    {k:'blue',a:'Guia dos 3 formatos',w:'Campeões',t:'do feed'},
+    {k:'dark',a:'A marca que',w:'Sumiu',t:'do mercado'},
+    {k:'quote'},
+    {k:'dark',a:'Por que a gigante',w:'Desistiu',t:'da TV?'},
+    {k:'light',a:'Branding',w:'Não é',t:'o seu logo'},
+    {k:'dark',a:'A IA que',w:'Trabalha',t:'por você',tw:1},
+    {k:'blue',a:'5 sinais de que',w:'Seu post',t:'não vende'},
+    {k:'dark',a:'O comercial mais',w:'Polêmico',t:'do ano'},
+    {k:'light',a:'Branding',w:'Não é',t:'só longo prazo'}
+  ];
+  var IM=['empresario','confronto','celular','social','equipe','palestrante'];var di=0;
+  var html=capas.map(function(c){
+    if(c.k==='quote') return '<div class="s"><div class="in" style="gap:2cqw">'+mono.replace(' center','')+'<span class="big" style="font-size:24cqw;color:var(--azul);line-height:.6;margin-top:5cqw">“</span><p style="font-size:7cqw;line-height:1.25;font-weight:800">Marca forte é a que o cliente <span class="hl">explica</span> por você.</p><p style="font-size:4.4cqw;color:var(--cinza)">Nome do autor</p></div></div>';
+    if(c.k==='light') return '<div class="s"><div class="in" style="align-items:center;text-align:center;gap:.6cqw">'+mono+'<span style="font-weight:800;font-size:9cqw;margin-top:5cqw">'+c.a+'</span><span class="big" style="font-size:28cqw;color:var(--azul)">'+c.w+'</span><span style="font-weight:800;font-size:8cqw">'+c.t+'</span><div class="ph has" style="width:64%;flex:1;margin:4cqw 0 8cqw;--im:url(img/megafone.jpg)"></div></div></div>';
+    if(c.k==='blue') return '<div class="s blue"><div class="in" style="align-items:center;text-align:center;justify-content:center;gap:1.2cqw">'+monoW+'<span class="tarja branca" style="font-size:6.4cqw;margin-top:8cqw">'+c.a+'</span><span class="big" style="font-size:24cqw">'+c.w+'</span><span style="font-weight:800;font-size:7cqw">'+c.t+'</span></div></div>';
+    return '<div class="s dark"><div class="ph full has" style="--im:url(img/'+IM[(di++)%IM.length]+'.jpg)"></div><div class="in" style="justify-content:space-between;padding-bottom:8cqw">'+mono+'<div style="text-align:center;display:grid;gap:1.4cqw;justify-items:center"><span class="tarja" style="font-size:6.4cqw">'+c.a+'</span><span class="big" style="font-size:25cqw">'+c.w+'</span><span style="font-weight:800;font-size:7cqw">'+(c.tw?'<span class="under">'+c.t+'</span>':c.t)+'</span></div></div></div>';
+  }).join('');
+  document.getElementById('grade').innerHTML=html;
+})();
+</script>
+
+<script>
+(function(){
+  // Coordenadas em px no arquivo 1080 x 1440: [tipo, x, y, largura, altura, rótulo, classe extra]
+  var MONO_L=['mono',76,76,96,96,''], MONO_C=['mono',492,76,96,96,''], BAR=['bar',54,1321,972,119,'barra de continuação →'];
+  var R=[
+  {g:'capa',c:'C1',n:'Capa notícia',bg:'dark',
+   w:'O formato principal. Use quando o assunto tem um rosto, uma marca ou um objeto que o público reconhece na hora.',
+   z:[['img',0,0,1080,1440,'foto sangrada'],['grad',0,500,1080,940,''],MONO_C,['txt',150,905,780,70,'frase de apoio 56px'],['big',76,990,928,270,'PALAVRA 250px'],['tarja',250,1278,580,74,'complemento 58px']],
+   s:[['Foto','Sangrada em 1080 × 1440. Olhos da pessoa entre y 380 e y 520. Cabeça nunca cortada no topo. Para confronto, duas pessoas lado a lado, uma em cada metade.'],
+      ['Degradê','Marinho #070D24 de 0% em y 500 até 95% em y 1440. Garante leitura do texto branco sem caixa atrás.'],
+      ['Frase de apoio','Archivo ExtraBold 56 px, branca, até 32 caracteres. Pode ir em tarja azul quando a foto for muito clara.'],
+      ['Palavra gigante','Anton 230 a 270 px, caixa alta, branca, entrelinha 0,9. 1 linha de até 10 caracteres, ou 2 linhas curtas. É a palavra que resume a história (BANIDOS, VENDEU, SUMIU).'],
+      ['Complemento','Archivo ExtraBold 58 px, até 28 caracteres. Em tarja azul ou com sublinhado à mão ciano.'],
+      ['Base do bloco','Última linha termina em y 1350. Centralizado.']],
+   d:'Texto sobre o rosto. Duas palavras gigantes em cores diferentes. Foto escura sem degradê (o texto some).'},
+  {g:'capa',c:'C2',n:'Capa tipográfica (série)',bg:'light',
+   w:'Para séries de bordão ("Marketing NÃO É…") e opiniões fortes sem um rosto. Equilibra a grade entre capas escuras.',
+   z:[MONO_C,['txt',200,250,680,110,'linha 1 · 96px'],['big',110,375,860,300,'NÃO É · 300px'],['txt',140,695,800,96,'complemento 80px'],['img',190,830,700,520,'objeto recortado (PNG)']],
+   s:[['Fundo','Gelo #F2F4F9 liso.'],
+      ['Linha 1','Archivo ExtraBold 96 px, grafite, o tema da série (Marketing, Branding, Vender).'],
+      ['Bordão','Anton 300 px, Azul Publi, centralizado. Igual em todos os slides da série.'],
+      ['Complemento','Archivo ExtraBold 80 px, grafite, até 24 caracteres. Muda a cada slide.'],
+      ['Imagem','Objeto ou símbolo recortado, sem fundo, centralizado de y 830 a y 1350, até 700 px de largura. Pode ser um mosaico 2 × 2 de logos ou um antes/depois.']],
+   d:'Foto de pessoa com fundo (vira capa notícia). Mudar a cor do bordão entre slides.'},
+  {g:'capa',c:'C3',n:'Capa guia numerado',bg:'dark',
+   w:'Para conteúdo de salvar: listas, passo a passo, atualizações. O número na tarja promete quanto conteúdo vem.',
+   z:[['img',0,0,1080,1440,'foto do tema'],['grad',0,450,1080,990,''],MONO_C,['tarja',170,900,740,80,'Guia com as N…'],['big',76,1000,928,270,'PALAVRA'],['tarja',330,1290,420,66,'complemento','w']],
+   s:[['Tarja de cima','Azul Publi, Archivo ExtraBold 58 px. Sempre com número: "Guia com as 5 novas", "3 formatos campeões".'],
+      ['Palavra gigante','Anton 220 a 260 px. O assunto do guia (REGRAS, FORMATOS, ATUALIZAÇÕES).'],
+      ['Tarja de baixo','Branca com texto azul, Archivo ExtraBold 48 px. Contexto curto ("do Instagram", "em 2027").'],
+      ['Miolo','Um slide I2 (numerado) por item da lista. O número da capa tem que bater com a quantidade de slides.']],
+   d:'Prometer 5 itens e entregar 4. Usar a capa guia para notícia (o número precisa existir).'},
+  {g:'capa',c:'C4',n:'Frase de autoridade',bg:'light',
+   w:'Post único (ou abertura curta) com uma citação de especialista, cliente ou fundador. Dá autoridade e é muito compartilhado.',
+   z:[['img',580,0,500,1440,'foto P&B'],['band',650,0,170,1440,''],MONO_L,['big',76,250,200,170,'“'],['txt',76,450,470,400,'citação 54px'],['line',76,890,470,4,''],['txt',76,920,470,110,'nome + cargo']],
+   s:[['Divisão','Texto em fundo gelo de x 0 a x 580. Foto em preto e branco de x 580 a x 1080, sangrada.'],
+      ['Faixa azul','Retângulo Azul Publi de x 650 a x 820, altura total, em modo "multiplicar" sobre a foto.'],
+      ['Aspas','Anton 240 px, Azul Publi.'],
+      ['Citação','Archivo 54 px, até 120 caracteres. Negrito nas 2 a 4 palavras centrais; a palavra-chave em azul.'],
+      ['Assinatura','Linha de 4 px cinza claro, depois nome em Archivo Bold Itálico 30 px e cargo em 26 px cinza azulado.'],
+      ['Variação evento','Faixa marinho no topo (0 a 150 px) com monograma + "| nome do parceiro". Foto colorida em quadro com sombra azul deslocada 20 px.']],
+   d:'Citação longa (mais de 3 linhas no celular). Foto colorida na versão padrão.'},
+  {g:'capa',c:'C5',n:'Antes e depois',bg:'light',
+   w:'Bastidores, evolução de cliente, "como era / como ficou". Capa dividida ao meio.',
+   z:[['img',0,0,1080,720,'foto antes'],['img',0,720,1080,720,'foto depois'],MONO_L,['tarja',60,590,640,84,'Primeiro você começa…'],['tarjaC',60,1290,560,84,'Depois você melhora.']],
+   s:[['Fotos','Duas fotos de 1080 × 720. A de cima mais simples, a de baixo com mais produção.'],
+      ['Tarja 1','Azul Publi, Archivo ExtraBold 60 px, alinhada à esquerda (x 60), encostada na base da foto de cima.'],
+      ['Tarja 2','Ciano com texto marinho, mesmo tamanho, encostada na base da foto de baixo.'],
+      ['Texto','Duas frases curtas que se completam. Sem palavra gigante.']],
+   d:'Linha divisória entre as fotos (o corte seco já separa).'},
+
+  {g:'miolo',c:'I1',n:'Contexto',bg:'light',
+   w:'O slide 2 de quase todo carrossel: conta o fato. Também serve para qualquer passo narrativo sem número.',
+   z:[MONO_L,['txt',76,210,928,170,'título 70px · 2 linhas'],['txt',76,405,928,300,'corpo 42px · 2–3 parágrafos'],['tarja',76,725,560,64,'dado em tarja'],['img',76,830,928,460,'foto / print'],BAR],
+   s:[['Título','Archivo ExtraBold 70 px, até 50 caracteres em 2 linhas. A palavra-chave em Azul Publi.'],
+      ['Corpo','Archivo 42 px, entrelinha 1,4. Parágrafos de até 140 caracteres. Negrito no trecho que a pessoa leria se só passasse o olho.'],
+      ['Dado','O número mais forte vai em tarja azul com texto branco, dentro do parágrafo ou sozinho na linha.'],
+      ['Imagem','Embaixo (x 76 a 1004, y 830 a 1290, raio 26 px) ou em coluna à direita sangrando para fora do slide.'],
+      ['Fundo','Gelo. Pode alternar para marinho se o slide anterior também for gelo duas vezes.']],
+   d:'Mais de 3 parágrafos. Título em 3 linhas. Imagem invadindo a barra de continuação.'},
+  {g:'miolo',c:'I2',n:'Numerado',bg:'light',
+   w:'Cada item de uma lista ou guia. O selo mostra em que ponto a pessoa está.',
+   z:[MONO_L,['tarja',76,210,96,74,'01'],['txt',196,210,808,74,'título 64px'],['txt',76,330,444,560,'texto 42px'],['txt',76,920,444,220,'"Mas atenção:"'],['img',556,330,448,860,'print / foto'],['hand',470,1170,320,74,'anotação ↗'],BAR],
+   s:[['Selo','Retângulo 96 × 74 px, Azul Publi, raio 13 px, número em Archivo ExtraBold 44 px branco, sempre com dois dígitos (01, 02).'],
+      ['Título','Archivo ExtraBold 64 px, na mesma linha do selo, a 24 px dele. Até 2 linhas.'],
+      ['Duas colunas','Texto de x 76 a x 520. Prova de x 556 a x 1004 (print com raio 26 px) ou foto recortada sangrando à direita.'],
+      ['Ressalva','Bloco "Mas atenção:" em Archivo ExtraBold azul + 1 frase. Opcional, no pé da coluna de texto.'],
+      ['Anotação','Caveat 52 px azul, com seta curva apontando para o print. Levemente girada (−6°).']],
+   d:'Selo de uma casa só (1, 2). Usar numeração em carrossel que não é lista.'},
+  {g:'miolo',c:'I3',n:'Prova (manchetes e comentários)',bg:'dark',
+   w:'Mostra que não é opinião: recortes de notícia, prints de comentários reais ou de posts de terceiros.',
+   z:[MONO_L,['txt',76,210,928,150,'título 70px'],['txt',76,380,928,200,'corpo 42px'],['card',130,640,820,230,'manchete 1 · −2°','rot1'],['card',210,920,820,230,'manchete 2 · +1,5°','rot2'],BAR],
+   s:[['Fundo','Marinho. Texto do corpo em branco 80%, negritos em branco 100%.'],
+      ['Cartão de manchete','Branco, 820 px de largura, padding 34 × 40 px, raio 18 px, sombra azulada (0 14 32 px, 28%). Girado −2° e o segundo +1,5°.'],
+      ['Dentro do cartão','Nome do veículo em Archivo ExtraBold 26 px azul caixa alta; manchete em Source Serif Bold 48 px preta.'],
+      ['Variação comentários','Prints de comentários em cartões brancos de 620 px, girados ±2°, sobrepostos à foto, com @ e foto de perfil borrados se não forem públicos.'],
+      ['Regra','Sempre o nome real do veículo ou da fonte. Nunca inventar manchete.']],
+   d:'Mais de 2 cartões (vira bagunça). Print ilegível no celular.'},
+  {g:'miolo',c:'I4',n:'Impacto (palavra no meio)',bg:'dark',
+   w:'A virada da história: o momento em que um número ou uma palavra precisa gritar.',
+   z:[['img',0,0,1080,1440,'foto de fundo'],['grad',0,0,1080,1440,''],MONO_L,['txt',76,210,700,280,'contexto 42px'],['tarjaC',40,640,1000,230,'PALAVRA · Anton 200px'],['txt',76,920,700,220,'fecho 42px'],BAR],
+   s:[['Fundo','Foto do tema escurecida em 60% ou marinho liso.'],
+      ['Palavra','Anton 190 a 220 px, em tarja ciano (texto marinho) ou azul (texto branco), de borda a borda (x 40 a 1040). Até 12 caracteres: "SEM PILOTO!", "R$ 2,3 BILHÕES".'],
+      ['Antes e depois da palavra','Uma frase de contexto em cima e uma de fecho embaixo, Archivo 42 px, até 120 caracteres cada.']],
+   d:'Usar mais de uma vez por carrossel. Palavra gigante com mais de 2 linhas.'},
+  {g:'miolo',c:'I5',n:'Dado (gráfico de barras)',bg:'blue',
+   w:'Comparar números: formatos, antes e depois, marcas concorrentes. É o melhor lugar para o slide azul inteiro.',
+   z:[['mono',76,76,96,96,''],['txt',76,210,928,150,'título 70px branco'],['txt',76,380,928,70,'subtítulo 40px'],['txt',76,500,928,44,'rótulo 38px'],['tarjaC',76,555,928,36,'barra destaque'],['txt',76,640,928,44,'rótulo'],['card',76,695,520,36,''],['txt',76,780,928,44,'rótulo'],['card',76,835,260,36,''],['txt',76,1200,928,60,'fonte 28px'],BAR],
+   s:[['Fundo','Degradê de Azul Publi (topo esquerdo) para Azul Fundo (base direita), 160°.'],
+      ['Barras','Altura 34 px, cantos totalmente arredondados, trilho em branco 18%. A barra que conta a história em ciano; as outras em branco.'],
+      ['Rótulos','Archivo Bold 38 px branco, acima de cada barra, com o valor no fim ("Reels · 33").'],
+      ['Fonte','Archivo 28 px, branco 75%, no rodapé (y 1200). Obrigatória.'],
+      ['Barra de continuação','Invertida: fundo branco, texto azul.']],
+   d:'Gráfico de pizza. Mais de 4 barras. Barra sem valor escrito.'},
+  {g:'miolo',c:'I6',n:'Print de app',bg:'light',
+   w:'Novidades de ferramentas e redes sociais. O print mostra exatamente onde clicar.',
+   z:[MONO_L,['txt',76,210,500,170,'título 70px'],['txt',76,410,450,620,'corpo + lista ✓'],['img',570,230,460,1000,'celular / print'],['hand',150,1080,380,80,'"olha aqui" ↗'],BAR],
+   s:[['Mockup','Moldura de celular preta com raio 60 px e borda de 22 px, de x 570 a x 1030, sem girar. Pode sair um pouco pela direita.'],
+      ['Três telas','Variação com 3 celulares lado a lado (cada um com 300 px de largura) e uma tarja azul de observação na base.'],
+      ['Lista','Itens com ícone de check em círculo de 40 px, Archivo 40 px.'],
+      ['Destaque no print','Retângulo de contorno azul de 6 px com raio 12 px em volta do botão ou número que importa.']],
+   d:'Print de computador espremido no celular. Print com dados de clientes à mostra.'},
+  {g:'miolo',c:'I7',n:'Conceito',bg:'light',
+   w:'Dá nome ao fenômeno ("Isso tem nome: transporte narrativo"). Transforma a história em ensinamento.',
+   z:[MONO_C,['txt',130,230,820,170,'"Isso tem nome:" 70px'],['txt',150,425,780,170,'explicação 42px'],['big',120,640,840,200,'FRASE · Anton 160px'],['hand',330,870,420,80,'Caveat ↙'],BAR],
+   s:[['Alinhamento','Tudo centralizado. Monograma no topo, ao centro.'],
+      ['Título','Archivo ExtraBold 70 px. "Isso tem nome:" em grafite + o nome do conceito em azul.'],
+      ['Frase de efeito','Anton 150 a 170 px, Azul Publi, até 16 caracteres ("OUVIR VENDE").'],
+      ['Anotação','Caveat 56 px cinza azulado, complementa a frase com humor.']],
+   d:'Conceito inventado sem explicação. Mais de uma frase em Anton.'},
+  {g:'miolo',c:'I8',n:'Lição pro seu negócio',bg:'light',
+   w:'Penúltimo slide de todo carrossel. Leva a história para a empresa de quem lê. É o slide que gera salvamento.',
+   z:[MONO_L,['txt',76,210,928,170,'O que isso muda no seu negócio'],['txt',76,400,928,150,'frase de ponte 42px'],['txt',76,580,928,60,'"Antes de…, pergunte:"'],['txt',76,660,928,360,'checklist 3–5 itens'],['img',380,1060,700,380,'objeto do tema (opcional)']],
+   s:[['Título fixo','"O que isso muda no seu negócio", Archivo ExtraBold 70 px, com "muda no seu negócio" em azul itálico. Sempre igual: vira assinatura.'],
+      ['Ponte','1 a 2 frases ligando a história ao leitor, Archivo 42 px.'],
+      ['Chamada','"Antes de [ação], pergunte:" em Archivo ExtraBold 40 px azul.'],
+      ['Checklist','3 a 5 perguntas ou ações, Archivo 40 px, com marcador de check. Cada item em até 2 linhas.'],
+      ['Sem barra','Este slide não tem barra de continuação. O próximo é o CTA.']],
+   d:'Lição genérica que serve para qualquer post. Vender aqui (a venda é no slide seguinte).'},
+
+  {g:'fim',c:'F1',n:'CTA fixo',bg:'dark',
+   w:'Último slide de todos os carrosséis, sempre idêntico. Repetir é o que treina o seguidor a clicar no link.',
+   z:[['img',0,0,1080,1440,'foto da equipe'],['grad',0,600,1080,840,''],['mono',76,76,96,96,''],['card',120,690,840,390,'print do perfil + link contornado'],['txt',120,1140,840,160,'Clique no link da bio… 54px']],
+   s:[['Foto','Equipe ou fundadores com roupa azul ou marinho, sorrindo, de frente. Mesma foto por pelo menos 3 meses.'],
+      ['Print do perfil','Cartão branco (840 px, raio 28 px) com foto, nome, números e bio. O link vem contornado em azul (4 px) com fundo azul claro.'],
+      ['Chamada','Archivo ExtraBold 54 px branca, centralizada, 2 linhas: "Clique no link da bio e peça seu diagnóstico de conteúdo".'],
+      ['Regra','Este slide não muda de um post para o outro. Só se troca quando a oferta mudar.']],
+   d:'Chamada diferente a cada post. Mais de uma ação ("siga, curta, comente e clique").'}
+  ];
+
+  function px(v,t){return (v/t*100).toFixed(3)+'%';}
+  function wf(bg,zones){
+    return '<div class="wf '+bg+'">'+zones.map(function(z){
+      return '<div class="z '+z[0]+(z[6]?' '+z[6]:'')+'" style="left:'+px(z[1],1080)+';top:'+px(z[2],1440)+';width:'+px(z[3],1080)+';height:'+px(z[4],1440)+'">'+(z[5]||'')+'</div>';
+    }).join('')+'</div>';
+  }
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  document.querySelectorAll('.rc-list').forEach(function(list){
+    list.innerHTML=R.filter(function(r){return r.g===list.dataset.group;}).map(function(r){
+      return '<article class="rc" id="var-'+r.c.toLowerCase()+'">'+wf(r.bg,r.z)+
+        '<div class="rc-body"><h3><span class="code">'+r.c+'</span>'+esc(r.n)+'</h3><p class="when">'+esc(r.w)+'</p>'+
+        '<table class="spec">'+r.s.map(function(s){return '<tr><th>'+esc(s[0])+'</th><td>'+esc(s[1])+'</td></tr>';}).join('')+'</table>'+
+        '<p class="dont-list"><b>Evitar:</b> '+esc(r.d)+'</p></div></article>';
+    }).join('');
+  });
+  // Grade base
+  var base=document.getElementById('wf-base');
+  if(base){base.outerHTML=wf('light',[MONO_L,['txt',76,210,928,1080,'área útil 928 px'],['line',520,330,2,960,''],['line',556,330,2,960,''],['txt',76,76,96,96,''],BAR,['hand',600,180,420,70,'y 210 ↓']]);}
+})();
+</script>
