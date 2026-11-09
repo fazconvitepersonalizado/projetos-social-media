@@ -79,7 +79,7 @@ seção "Repertório criativo") e só são criados com o OK do Thiago.
 - lição: "O que isso muda em você", perguntas gentis de autopercepção, nunca diagnóstico.
 - conceito: só termo real da psicologia ou da Arteterapia, explicado em linguagem simples.
 - prova-real: só fala de paciente com autorização escrita; não usar print de comentário de terceiro.
-- Quadros sugeridos (a confirmar): série "Menopausa não é…"; "Cores da mandala" (uma cor por mês).
+- Quadros fixos (aprovados pelo Thiago em 2026-11-08): série "Menopausa não é…" (serie-de-anafora); "Cores da mandala" (uma cor por mês).
 
 ### CONSULTORIA A&J (técnica, prática, segurança do trabalho)
 - anotacao-a-mao: não usa (a marca não tem fonte manuscrita); no lugar, nota curta em Lora itálico.
@@ -87,7 +87,7 @@ seção "Repertório criativo") e só são criados com o OK do Thiago.
 - lição: "O que isso muda na sua empresa", checklist "Antes de [ação], confira:".
 - conceito: termo da NR ou da SST ("Isso tem nome: ato inseguro"), com a norma citada.
 - prova-real: manchete ou dado oficial (MPT, OIT, Observatório de SST) com fonte.
-- Quadros sugeridos (a confirmar): "NR em 1 minuto"; "Acidente da semana" (caso real anonimizado).
+- Quadros fixos (aprovados pelo Thiago em 2026-11-08): "NR em 1 minuto"; "Acidente da semana" (caso real anonimizado, só com material real).
 
 ### Publipost
 - Repertório completo no próprio manual (`Publipost/manual/MARCA-PUBLIPOST.md`).
